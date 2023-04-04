@@ -1,21 +1,35 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DailyDoze" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.DailyDoze" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">
+            @style/CustomActivityAnimation</item>
     </style>
 
-    <style name="Theme.DailyDoze.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="CustomActivityAnimation"
+        parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">
+            @anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">
+            @anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">
+            @anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">
+            @anim/slide_out_right</item>
+    </style>
+
+    <style name="Theme.DailyDoze.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -30,11 +44,25 @@
         <!-- Customize your theme here. -->
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowAnimationStyle">
+            @style/CustomActivityAnimation</item>
     </style>
 
     <style name="NavDrawerTextStyle" parent="Base.TextAppearance.AppCompat">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
+
+    <style name="BlackCheckbox" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+    <style name="WhiteCheckbox" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
 </resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1052342056649",
+    "project_id": "dailydoze-12db3",
+    "firebase_url": "https://dailydoze-12db3-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "storage_bucket": "dailydoze-12db3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052342056649:android:cb55f41caf6bc79e2bff18",
+        "android_client_info": {
+          "package_name": "com.android.dailydoze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052342056649-tcjnfn1qtecss06ssl74pj26svumea5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA7txBmbSUm4jn-ZEcMlJE2TLsIkqBVas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052342056649-tcjnfn1qtecss06ssl74pj26svumea5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

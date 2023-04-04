@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -20,15 +21,25 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        Animation slide = AnimationUtils.loadAnimation(this, R.anim.slide);
+        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         ImageView imageView = findViewById(R.id.splashScreenImage);
-        imageView.startAnimation(slide);
+        imageView.startAnimation(fadeIn);
 
         Handler h = new Handler();
         h.postDelayed(() -> {
-            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
+            SharedPreferences mPrefs = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+            SharedPreferences.Editor prefsEditor = mPrefs.edit();
+            Boolean b = mPrefs.getBoolean("user",false);
+
+            if(b){
+                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }else {
+                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }, 2000);
     }
 }

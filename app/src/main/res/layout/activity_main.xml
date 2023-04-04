@@ -21,14 +21,985 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:fontFamily="sans-serif-condensed-medium">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/beans_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/beans"
+                        android:scaleType="centerInside"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="Beans"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/beans_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/beans_cb2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox" />
+
+                        <CheckBox
+                            android:id="@+id/beans_cb3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/berries_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/berries"
+                        android:scaleType="centerInside"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="Berries"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/berries_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/fruits_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/fruits"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Other"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Fruits"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/of_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/of_cb2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/of_cb3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/cruciferous_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cruciferous"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Cruciferous"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Vegetables"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cv_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/greenvege_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/green_vegetables"
+                        android:scaleType="centerInside"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="Greens"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/greens_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/greens_cb2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/othervege_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/other_vegetables"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Other"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Vegetables"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/othervege_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/othervege_cb2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/flexseeds_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/flexseeds"
+                        android:scaleType="centerInside"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="Flaxseeds"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/flexseeds_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/herbs_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/herbs"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Herbs and"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Spices"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/herbs_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/nuts_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/nuts"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Nuts and"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Seeds"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/nuts_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/grains_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/grains"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Whole"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="25dp"
+                            android:text="Grains"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/grains_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/grains_cb2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/grains_cb3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/beverages_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/beverages"
+                        android:scaleType="centerInside"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="Beverages"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/beverages_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/beverages_cb2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/beverages_cb3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/beverages_cb4"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                        <CheckBox
+                            android:id="@+id/beverages_cb5"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/exercise_theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/exercise"
+                        android:scaleType="centerInside"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:text="Exercise"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_gravity="right|center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/exercise_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 
@@ -38,13 +1009,11 @@
         android:layout_height="match_parent"
         app:itemTextAppearance="@style/NavDrawerTextStyle"
         app:itemTextColor="@color/black"
-        app:itemIconPadding="5dp"
         android:background="#FFFFFF"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_menu_header"
-        app:itemIconTint="@color/black"
         app:menu="@menu/navigation_menu"
-        app:itemIconSize="35dp"
+        app:itemIconSize="40dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:textStyle="bold"/>
 
