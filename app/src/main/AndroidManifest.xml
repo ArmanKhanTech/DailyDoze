@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -14,13 +14,21 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.SignupActivity"
+            android:name=".Activity.CalenderActivity"
             android:exported="false"
             android:theme="@style/Theme.DailyDoze"/>
         <activity
-            android:name=".Activity.LoginActivity"
+            android:name=".Activity.InfoActivity"
             android:exported="false"
             android:theme="@style/Theme.DailyDoze"/>
+        <activity
+            android:name=".Activity.SignupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze" />
         <activity
             android:name=".Activity.TweakActivity"
             android:exported="false"

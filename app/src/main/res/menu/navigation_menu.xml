@@ -3,11 +3,22 @@
 
     <item
         android:id="@+id/menu1"
-        android:title="Tweaks"
+        android:title="21 Tweaks"
         android:icon="@drawable/tweaks_icon"/>
 
     <item
         android:id="@+id/menu2"
+        android:title="Jump to Date"
+        android:icon="@drawable/date_icon"/>
+
+    <item
+        android:id="@+id/menu3"
+        android:title="Notifications"
+        android:icon="@drawable/noti_icon"/>
+
+    <item
+        android:id="@+id/menu4"
         android:title="Logout"
         android:icon="@drawable/logout"/>
+
 </menu>

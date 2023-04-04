@@ -21,6 +21,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12 April 2023"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:textAlignment="center"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/info_img_theme"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -36,7 +51,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/beans_theme">
@@ -66,11 +81,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="beansInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
+                            android:onClick="beansCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_black"/>
@@ -146,11 +163,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="berriesInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
+                            android:onClick="berriesCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_white"/>
@@ -228,11 +247,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="fruitsInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
+                            android:onClick="fruitsCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_black"/>
@@ -326,11 +347,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="crucivegeInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
+                            android:onClick="crucivegeCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_white"/>
@@ -390,11 +413,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="greensInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
+                            android:onClick="greenCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_black"/>
@@ -478,11 +503,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="othervegeInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
+                            android:onClick="othervegeInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_white"/>
@@ -550,11 +577,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="flexseedsInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
+                            android:onClick="flexseedsCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_black"/>
@@ -630,11 +659,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="herbsInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
+                            android:onClick="herbsCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_white"/>
@@ -712,11 +743,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="nutsInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
+                            android:onClick="nutsCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_black"/>
@@ -792,11 +825,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="grainsInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
+                            android:onClick="grainsCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_white"/>
@@ -872,11 +907,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="beveragesInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
+                            android:onClick="beveragesCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_black"/>
@@ -968,11 +1005,13 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
+                            android:onClick="exerciseInfo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
+                            android:onClick="exerciseCal"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:src="@drawable/calender_icon_white"/>
@@ -1013,7 +1052,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_menu_header"
         app:menu="@menu/navigation_menu"
-        app:itemIconSize="40dp"
+        app:itemIconSize="30dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:textStyle="bold"/>
 
