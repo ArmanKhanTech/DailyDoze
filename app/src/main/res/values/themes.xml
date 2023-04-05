@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/black</item>
         <item name="colorSecondaryVariant">@color/black</item>
@@ -63,6 +63,60 @@
     <style name="WhiteCheckbox" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@color/white</item>
         <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">#039BE5</item>
+        <item name="android:weekNumberColor">#F4511E</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Medium">
+        <item name="android:textColor">#F4511E</item>
+    </style>
+
+    <style name="Theme.DailyDoze.Calender" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#039BE5</item>
+        <item name="colorPrimaryVariant">#039BE5</item>
+        <item name="colorOnPrimary">#039BE5</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FF4081</item>
+        <item name="colorSecondaryVariant">#FF4081</item>
+        <item name="colorOnSecondary">#FF4081</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowAnimationStyle">
+            @style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="Theme.DailyDoze.Tweaks" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowAnimationStyle">
+            @style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="MyCustomTabAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">25sp</item>
+        <item name="fontFamily">sans-serif-condensed-medium</item>
     </style>
 
 </resources>

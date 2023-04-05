@@ -28,18 +28,16 @@ public class SplashScreenActivity extends AppCompatActivity {
         Handler h = new Handler();
         h.postDelayed(() -> {
             SharedPreferences mPrefs = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-            SharedPreferences.Editor prefsEditor = mPrefs.edit();
-            Boolean b = mPrefs.getBoolean("user",false);
+            boolean b = mPrefs.getBoolean("user",false);
 
+            Intent intent;
             if(b){
-                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+                intent = new Intent(SplashScreenActivity.this, MainActivity.class);
             }else {
-                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
+                intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
             }
+            startActivity(intent);
+            finish();
         }, 2000);
     }
 }

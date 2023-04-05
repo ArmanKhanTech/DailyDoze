@@ -14,4 +14,7 @@
     <string name="nuts">¼ cup nuts or seeds \n2 tablespoons nuts or sed butter</string>
     <string name="grains">½ cup hot cereal or cooked grains, pasta or corn kernels \n1 cup cold cereal \n1 tortilla or slice of bread \n½ a bagel or English muffin \n3 cups popped popcorn</string>
     <string name="exercise">90 minutes of moderate-intensity activities \n40 minutes of vigorous-intensity activity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nuts_and">Nuts &amp;</string>
+    <string name="herbs_and">Herbs &amp;</string>
 </resources>

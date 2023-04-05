@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         pass = findViewById(R.id.login_password);
         email = findViewById(R.id.login_email);
 
-        loadDB loadDB = new loadDB();
+        LoadDB loadDB = new LoadDB();
         loadDB.execute();
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     @SuppressLint("StaticFieldLeak")
-    private final class loadDB extends AsyncTask<Void,Void,Void> {
+    private final class LoadDB extends AsyncTask<Void,Void,Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
