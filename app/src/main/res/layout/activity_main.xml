@@ -472,8 +472,8 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginLeft="5dp"
-                            android:theme="@style/WhiteCheckbox"
-                            android:button="@drawable/white_checkbox"/>
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/of_cb3"
@@ -632,8 +632,8 @@
                             android:id="@+id/flexseeds_cb1"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:theme="@style/WhiteCheckbox"
-                            android:button="@drawable/white_checkbox"/>
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
 
                     </LinearLayout>
 
@@ -715,8 +715,8 @@
                             android:id="@+id/herbs_cb1"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                     </LinearLayout>
 
@@ -1060,8 +1060,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center_horizontal">
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="bottom|center_horizontal">
 
                         <CheckBox
                             android:id="@+id/exercise_cb1"

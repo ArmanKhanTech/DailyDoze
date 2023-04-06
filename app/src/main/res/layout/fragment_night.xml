@@ -11,9 +11,42 @@
         android:orientation="vertical"
         android:fontFamily="sans-serif-condensed-medium">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:elevation="2dp"
+            android:background="@drawable/info_img_theme">
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/jump_back_tweak_night"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/jump_back_icon"/>
+
+            <TextView
+                android:id="@+id/date_tweak_night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12 April 2023"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+        </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <FrameLayout
@@ -23,7 +56,7 @@
             android:layout_weight="1"
             android:elevation="3dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/berries_theme">
@@ -52,7 +85,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
                     android:textAlignment="center"
                     android:text="7:00 pm"
                     android:textColor="@color/white"
@@ -68,13 +100,13 @@
                 android:layout_gravity="bottom|center">
 
                 <ImageView
-                    android:onClick="fastInfo"
+                    android:id="@+id/fastInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/info_icon_white"/>
 
                 <ImageView
-                    android:onClick="fastCal"
+                    android:id="@+id/fastCal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/calender_icon_white"/>
@@ -106,7 +138,7 @@
             android:layout_weight="1"
             android:elevation="3dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/othervege_theme">
 
@@ -149,13 +181,13 @@
                 android:layout_gravity="bottom|center">
 
                 <ImageView
-                    android:onClick="beansInfo"
+                    android:id="@+id/sleepInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/info_icon_white"/>
 
                 <ImageView
-                    android:onClick="beansCal"
+                    android:id="@+id/sleepCal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/calender_icon_white"/>
@@ -188,7 +220,7 @@
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/beverages_theme">
@@ -210,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:text="Experiment Mild"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -219,7 +251,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:text="Trendelenburg"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -232,13 +264,13 @@
                 android:layout_gravity="bottom|center">
 
                 <ImageView
-                    android:onClick="beansInfo"
+                    android:id="@+id/expInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/info_icon_black"/>
 
                 <ImageView
-                    android:onClick="beansCal"
+                    android:id="@+id/expCal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/calender_icon_black"/>

@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     myEdit.putBoolean("user", false);
                     myEdit.apply();
                     startActivity(new Intent(this, LoginActivity.class));
+                    finish();
                     break;
             }
             return false;

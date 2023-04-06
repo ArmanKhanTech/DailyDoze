@@ -14,7 +14,14 @@
     <string name="nuts">¼ cup nuts or seeds \n2 tablespoons nuts or sed butter</string>
     <string name="grains">½ cup hot cereal or cooked grains, pasta or corn kernels \n1 cup cold cereal \n1 tortilla or slice of bread \n½ a bagel or English muffin \n3 cups popped popcorn</string>
     <string name="exercise">90 minutes of moderate-intensity activities \n40 minutes of vigorous-intensity activity</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="nuts_and">Nuts &amp;</string>
     <string name="herbs_and">Herbs &amp;</string>
+    <string name="fast">Due to our circadian rhythms, food eaten at night is more fattening than the exact same food eaten earlier in the day, so fast every night for at least twelve hours starting before 7:00 p.m. The fewer calories after sundown, the better.</string>
+    <string name="sleep">Check this box if you get at least seven hours of sleep at your regular bedtime.</string>
+    <string name="trendelenburg">Try spending at least four hours a night lying with your body tilted head-down six degrees by elevating the posts at the foot of your bed by eight inches (or by nine inches if you have a California king). Be extremely careful when you get out of bed, as this causes orthostatic intolerance in most people, even if you’re young and healthy—meaning if you get up too fast, you can feel dizzy, faint, or light-headed and could fall and hurt yourself. So get up slowly. Drinking two cups of cold water thirty minutes before rising may also help prevent this potentially hazardous side effect.</string>
+    <string name="water">Time your metabolism-boosting two cups of cool or cold unflavored water before each meal to also take advantage of its preload benefits.</string>
+    <string name="neg">As the first course, start each meal with an apple or a Green Light soup or salad containing fewer than one hundred calories per cup.</string>
+    <string name="vinegar">Never drink vinegar straight. Instead, flavor meals or dress a side salad with any of the sweet and savory vinegars out there. If you want to drink it, make sure to mix it in a glass of water and, afterward, be sure to rinse your mouth out with water to protect your tooth enamel.</string>
+    <string name="un_meal">Don’t eat while watching TV or playing on your phone. Give yourself a check for each meal you’re able to eat without distraction.</string>
+    <string name="twemin">Whether through increasing viscosity or the number of chews, or decreasing bite size and eating rate, dozens of studies have demonstrated that no matter how we boost the amount of time food is in our mouths, it can result in lower caloric intake. So extend meal duration to at least twenty minutes to allow your natural satiety signals to take full effect. How? By choosing foods that take longer to eat and eating them in a way that prolongs the time they stay in your mouth. Think bulkier, hardier, chewier foods in smaller, well-chewed bites.</string>
 </resources>

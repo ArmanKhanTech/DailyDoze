@@ -6,7 +6,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.ProgressBar;
@@ -96,7 +95,32 @@ public class CalenderActivity extends AppCompatActivity {
             case "exercise":
                 name.setText("Exercise");
                 break;
+            case "fast":
+                name.setText("Fast After 7:00 pm");
+                break;
+            case "sleep":
+                name.setText("Sufficient Sleep");
+                break;
+            case "exp":
+                name.setText("Experiment Mild Trendelenburg");
+                break;
+            case "water":
+                name.setText("Preload with Water");
+                break;
+            case "neg":
+                name.setText("Preload with 'Negative Calories' Meal");
+                break;
+            case "vinegar":
+                name.setText("Incorporate Vinegar");
+                break;
+            case "un_meal":
+                name.setText("Enjoy Meal Undistracted");
+                break;
+            case "twemin":
+                name.setText("Follow 20 Minutes Rule");
+                break;
             default:
+                break;
         }
     }
 

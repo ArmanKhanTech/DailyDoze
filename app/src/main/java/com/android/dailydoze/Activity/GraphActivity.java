@@ -2,9 +2,11 @@ package com.android.dailydoze.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.android.dailydoze.R;
 import com.github.mikephil.charting.charts.BarChart;
@@ -21,11 +23,21 @@ public class GraphActivity extends AppCompatActivity {
     BarData barData;
     BarDataSet barDataSet;
     ArrayList barEntriesArrayList;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
+
+        tv = findViewById(R.id.graphTitle);
+
+        Intent i = getIntent();
+        boolean b = i.getBooleanExtra("tweak",false);
+
+        if(b){
+            tv.setText("Daily Tweaks History");
+        }
 
         barChart = findViewById(R.id.idBarChart);
 

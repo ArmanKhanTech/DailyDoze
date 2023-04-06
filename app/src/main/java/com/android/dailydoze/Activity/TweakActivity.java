@@ -3,6 +3,7 @@ package com.android.dailydoze.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -31,12 +32,18 @@ public class TweakActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager_tweaks);
         viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new DayFragment(),"Day");
-        viewPagerAdapter.addFragment(new EachMealFragment(),"Meal");
+        viewPagerAdapter.addFragment(new EachMealFragment(),"Meals");
         viewPagerAdapter.addFragment(new NightFragment(),"Night");
         viewPager.setOffscreenPageLimit(0);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
+
+    public void gotoGraphTweaks(View v){
+        Intent i = new Intent(this, GraphActivity.class);
+        i.putExtra("tweak",true);
+        startActivity(i);
+;    }
 
     public void tweaksFinish(View v){
         finish();

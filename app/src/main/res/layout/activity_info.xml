@@ -24,6 +24,7 @@
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <TextView
+            android:id="@+id/infoTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -49,16 +50,24 @@
         android:textSize="25sp"
         android:fontFamily="sans-serif-condensed-medium"/>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="30dp">
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:elevation="2dp"
-        android:background="@drawable/info_img_theme"
+        android:scaleType="centerInside"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/beans" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/textView4"
@@ -66,9 +75,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:layout_margin="20dp"
         android:padding="20dp"
-        android:elevation="2dp"
+        android:layout_margin="20dp"
+        android:elevation="3dp"
         android:background="@drawable/info_text_theme"
         android:text="@string/beans"
         android:textColor="@color/black"
