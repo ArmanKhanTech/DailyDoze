@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.android.dailydoze.Fragments.DayFragment;
 import com.android.dailydoze.Fragments.EachMealFragment;
@@ -18,13 +22,17 @@ public class TweakActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
+    ProgressBar pb;
+    LinearLayout lll;
+    TextView tvv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tweak);
 
-        loadFragment();
+        LoadFragment loadFragment = new LoadFragment();
+        loadFragment.execute();
     }
 
     private void loadFragment(){
@@ -44,6 +52,34 @@ public class TweakActivity extends AppCompatActivity {
         i.putExtra("tweak",true);
         startActivity(i);
 ;    }
+
+    private final class LoadFragment extends AsyncTask<Void, Void, Void>{
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            pb = findViewById(R.id.loadingFragment);
+            pb.setVisibility(View.VISIBLE);
+            lll = findViewById(R.id.lll);
+            lll.setVisibility(View.GONE);
+            tvv = findViewById(R.id.tvv);
+            tvv.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            loadFragment();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void unused) {
+            lll.setVisibility(View.VISIBLE);
+            pb.setVisibility(View.GONE);
+            tvv.setVisibility(View.GONE);
+        }
+    }
 
     public void tweaksFinish(View v){
         finish();

@@ -7,11 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".Activity.CalenderActivity">
 
-    <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:visibility="visible"
+            android:indeterminateTint="@color/blue"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_marginTop="10dp"
+            android:text="Please Wait"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@android:color/black">
 
     <LinearLayout
         android:id="@+id/calLayout"
@@ -67,10 +93,13 @@
             android:layout_width="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:elevation="2dp"
             android:background="@drawable/calender_theme"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

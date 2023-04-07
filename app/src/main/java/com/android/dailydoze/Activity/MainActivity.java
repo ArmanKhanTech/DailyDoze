@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Button b;
     DrawerLayout drawerLayout;
 
+    //TODO:FIX green and othervege, negcal, un_meal, frontload image(getting streched)
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

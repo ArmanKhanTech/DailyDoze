@@ -3,12 +3,1333 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.DayFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Day" />
+        android:scrollbarThumbVertical="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:fontFamily="sans-serif-condensed-medium">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:elevation="2dp"
+            android:background="@drawable/info_img_theme">
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/jump_back_tweak_day"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/jump_back_icon"/>
+
+            <TextView
+                android:id="@+id/date_tweak_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12 April 2023"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take Your Daily Doses : "
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+         <HorizontalScrollView
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:layout_marginBottom="10dp"
+             android:scrollbars="none">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal">
+
+                 <FrameLayout
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:elevation="3dp"
+                     android:layout_marginLeft="15dp"
+                     android:background="@drawable/othervege_theme">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:elevation="3dp"
+                         android:layout_gravity="center">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Black"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold"  />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Cumin"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="(¼ tsp)"
+                             android:textColor="@color/white"
+                             android:textSize="15dp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_gravity="bottom|center">
+
+                         <ImageView
+                             android:id="@+id/cuminInfo"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/info_icon_white"/>
+
+                         <ImageView
+                             android:id="@+id/cuminCal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/calender_icon_white"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         android:layout_gravity="center_horizontal">
+
+                         <CheckBox
+                             android:id="@+id/cumin_cb1"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/black_cumin"
+                             android:scaleType="centerCrop"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                 </FrameLayout>
+
+                 <FrameLayout
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:elevation="3dp"
+                     android:layout_marginLeft="20dp"
+                     android:background="@drawable/othervege_theme">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:elevation="3dp"
+                         android:layout_gravity="center">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Gralic"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold"  />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Powder"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="(¼ tsp)"
+                             android:textColor="@color/white"
+                             android:textSize="15dp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_gravity="bottom|center">
+
+                         <ImageView
+                             android:id="@+id/garlicInfo"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/info_icon_white"/>
+
+                         <ImageView
+                             android:id="@+id/garlicCal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/calender_icon_white"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         android:layout_gravity="center_horizontal">
+
+                         <CheckBox
+                             android:id="@+id/garlic_cb1"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/garlic"
+                             android:scaleType="centerCrop"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                 </FrameLayout>
+
+                 <FrameLayout
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:elevation="3dp"
+                     android:layout_marginLeft="20dp"
+                     android:background="@drawable/othervege_theme">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:elevation="3dp"
+                         android:layout_gravity="center">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Ground"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold"  />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Ginger"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="(1 tsp)"
+                             android:textColor="@color/white"
+                             android:textSize="15dp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_gravity="bottom|center">
+
+                         <ImageView
+                             android:id="@+id/gingerInfo"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/info_icon_white"/>
+
+                         <ImageView
+                             android:id="@+id/gingerCal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/calender_icon_white"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         android:layout_gravity="center_horizontal">
+
+                         <CheckBox
+                             android:id="@+id/ginger_cb1"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/ginger"
+                             android:scaleType="centerCrop"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                 </FrameLayout>
+
+                 <FrameLayout
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:elevation="3dp"
+                     android:layout_marginLeft="20dp"
+                     android:background="@drawable/othervege_theme">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:elevation="3dp"
+                         android:layout_gravity="center">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Yeast"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="(2 tsp)"
+                             android:textColor="@color/white"
+                             android:textSize="15dp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_gravity="bottom|center">
+
+                         <ImageView
+                             android:id="@+id/yeastInfo"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/info_icon_white"/>
+
+                         <ImageView
+                             android:id="@+id/yeastCal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/calender_icon_white"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         android:layout_gravity="center_horizontal">
+
+                         <CheckBox
+                             android:id="@+id/yeast_cb1"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/yeast"
+                             android:scaleType="centerCrop"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                 </FrameLayout>
+
+                 <FrameLayout
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:elevation="3dp"
+                     android:layout_marginLeft="20dp"
+                     android:background="@drawable/othervege_theme">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:elevation="3dp"
+                         android:layout_gravity="center">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Cumin"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="(½ tsp)"
+                             android:textColor="@color/white"
+                             android:textSize="15dp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_gravity="bottom|center">
+
+                         <ImageView
+                             android:id="@+id/cumin2Info"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/info_icon_white"/>
+
+                         <ImageView
+                             android:id="@+id/cumin2Cal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/calender_icon_white"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         android:layout_gravity="center_horizontal">
+
+                         <CheckBox
+                             android:id="@+id/cumin2_cb1"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                         <CheckBox
+                             android:id="@+id/cumin2_cb2"
+                             android:layout_marginLeft="5dp"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/cumin"
+                             android:scaleType="centerCrop"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                 </FrameLayout>
+
+                 <FrameLayout
+                     android:layout_width="100dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:elevation="3dp"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginRight="20dp"
+                     android:background="@drawable/othervege_theme">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical"
+                         android:elevation="3dp"
+                         android:layout_gravity="center">
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Green"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="Tea"
+                             android:textColor="@color/white"
+                             android:textSize="25dp"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:textAlignment="center"
+                             android:text="(3 cups)"
+                             android:textColor="@color/white"
+                             android:textSize="15dp"
+                             android:textStyle="bold" />
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:layout_marginBottom="10dp"
+                         android:layout_gravity="bottom|center">
+
+                         <ImageView
+                             android:id="@+id/cumin2Info"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/info_icon_white"/>
+
+                         <ImageView
+                             android:id="@+id/cumin2Cal"
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/calender_icon_white"/>
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:elevation="3dp"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="10dp"
+                         android:layout_gravity="center_horizontal">
+
+                         <CheckBox
+                             android:id="@+id/green_cb1"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                         <CheckBox
+                             android:id="@+id/green_cb2"
+                             android:layout_marginLeft="5dp"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                         <CheckBox
+                             android:id="@+id/green_cb3"
+                             android:layout_marginLeft="5dp"
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:theme="@style/WhiteCheckbox"
+                             android:button="@drawable/white_checkbox"/>
+
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <ImageView
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:src="@drawable/green_tea"
+                             android:scaleType="centerCrop"/>
+
+                     </androidx.cardview.widget.CardView>
+
+                 </FrameLayout>
+
+             </LinearLayout>
+
+         </HorizontalScrollView>
+
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:elevation="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/berries_theme">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="3dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Stay"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Hydrated"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="3dp"
+                        android:layout_gravity="bottom|center">
+
+                        <ImageView
+                            android:id="@+id/hydInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:id="@+id/hydCal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:elevation="3dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/hyd_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/water"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:elevation="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/othervege_theme">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="3dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Deflour"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Your Diet"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="3dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="bottom|center">
+
+                        <ImageView
+                            android:id="@+id/deflourInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/deflourCal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="3dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/deflour_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/deflour"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+         <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/beverages_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Front-Load"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Your Calories"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/frontInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/info_icon_black"/>
+
+                    <ImageView
+                        android:id="@+id/frontCal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calender_icon_black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/front_cb1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/BlackCheckbox"
+                        android:button="@drawable/black_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/frontload"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+         <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/beverages_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time-Restrict"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Your Eatings"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/restrictInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/info_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/restrictCal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calender_icon_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/restrict_cb1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/restrict"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+         <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/beverages_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Optimize Your"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Exercise"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/optimizeInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/info_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/optimizeCal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calender_icon_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/optimize_cb1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/optimize"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+         <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/beverages_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weigh Yourself"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Twice a Day"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/weighInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/info_icon_black"/>
+
+                    <ImageView
+                        android:id="@+id/weighCal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calender_icon_black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/weigh_cb1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/BlackCheckbox"
+                        android:button="@drawable/black_checkbox"/>
+
+                    <CheckBox
+                        android:id="@+id/weigh_cb2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:theme="@style/BlackCheckbox"
+                        android:button="@drawable/black_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/weigh"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+         <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/beverages_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Complete Your"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Implementation Intentions"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/intenInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/info_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/intenCal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calender_icon_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/inten_cb1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                    <CheckBox
+                        android:id="@+id/inten_cb2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                    <CheckBox
+                        android:id="@+id/inten_cb3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

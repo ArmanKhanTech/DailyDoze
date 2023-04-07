@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:scrollbarThumbVertical="@android:color/black">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -187,7 +186,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="Incorporate"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -196,7 +195,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="Vinegar"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -213,13 +212,13 @@
                         android:id="@+id/vinegarInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/info_icon_black"/>
+                        android:src="@drawable/info_icon_white"/>
 
                     <ImageView
                         android:id="@+id/vinegarCal"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/calender_icon_black"/>
+                        android:src="@drawable/calender_icon_white"/>
 
                 </LinearLayout>
 
@@ -236,15 +235,15 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/vinegar_cb2"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="5dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:theme="@style/BlackCheckbox"
+                        android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/vinegar_cb3"
@@ -252,7 +251,7 @@
                         android:layout_height="20dp"
                         android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:button="@drawable/white_checkbox"/>
 
                 </LinearLayout>
 
@@ -278,7 +277,6 @@
             android:layout_height="150dp"
             android:elevation="3dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -297,7 +295,7 @@
                     android:layout_height="wrap_content"
                     android:text="Preload with"
                     android:layout_gravity="center"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -306,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:text="'Negative Calories' Food"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -323,13 +321,13 @@
                     android:id="@+id/negInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/info_icon_black"/>
+                    android:src="@drawable/info_icon_white"/>
 
                 <ImageView
                     android:id="@+id/negCal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/calender_icon_black"/>
+                    android:src="@drawable/calender_icon_white"/>
 
             </LinearLayout>
 
@@ -345,24 +343,24 @@
                     android:id="@+id/neg_cb1"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:theme="@style/BlackCheckbox"
-                    android:button="@drawable/black_checkbox"/>
+                    android:theme="@style/WhiteCheckbox"
+                    android:button="@drawable/white_checkbox"/>
 
                 <CheckBox
                     android:id="@+id/neg_cb2"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="5dp"
-                    android:theme="@style/BlackCheckbox"
-                    android:button="@drawable/black_checkbox"/>
+                    android:theme="@style/WhiteCheckbox"
+                    android:button="@drawable/white_checkbox"/>
 
                 <CheckBox
                     android:id="@+id/neg_cb3"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginLeft="5dp"
-                    android:theme="@style/BlackCheckbox"
-                    android:button="@drawable/black_checkbox"/>
+                    android:theme="@style/WhiteCheckbox"
+                    android:button="@drawable/white_checkbox"/>
 
             </LinearLayout>
 

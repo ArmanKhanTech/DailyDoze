@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.NightFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@android:color/black">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -223,13 +228,12 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:background="@drawable/beverages_theme">
+            android:background="@drawable/beans_theme">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/sleep2"
-                android:scaleType="centerInside"/>
+                android:scaleType="centerCrop"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -296,5 +300,7 @@
         </FrameLayout>
 
     </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>
