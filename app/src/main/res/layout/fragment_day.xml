@@ -37,7 +37,7 @@
                 android:src="@drawable/jump_back_icon"/>
 
             <TextView
-                android:id="@+id/date_tweak_meal"
+                android:id="@+id/date_tweak_day"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="12 April 2023"
@@ -599,13 +599,13 @@
                          android:layout_gravity="bottom|center">
 
                          <ImageView
-                             android:id="@+id/cumin2Info"
+                             android:id="@+id/greenInfo"
                              android:layout_width="wrap_content"
                              android:layout_height="match_parent"
                              android:src="@drawable/info_icon_white"/>
 
                          <ImageView
-                             android:id="@+id/cumin2Cal"
+                             android:id="@+id/greenCal"
                              android:layout_width="wrap_content"
                              android:layout_height="match_parent"
                              android:src="@drawable/calender_icon_white"/>

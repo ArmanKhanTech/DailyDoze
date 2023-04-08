@@ -161,6 +161,84 @@ public class InfoActivity extends AppCompatActivity {
                 txt.setText(getResources().getString(R.string.twemin));
                 name.setText("Follow 20 Minutes Rule");
                 break;
+            case "garlic":
+                drawable = getDrawable(R.drawable.garlic);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_garlic_text));
+                name.setText("Garlic Powder");
+                break;
+            case "cumin":
+                drawable = getDrawable(R.drawable.black_cumin);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_blackcumin_text));
+                name.setText("Black Cumin");
+                break;
+            case "ginger":
+                drawable = getDrawable(R.drawable.ginger);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_ginger_text));
+                name.setText("Ground Ginger");
+                break;
+            case "yeast":
+                drawable = getDrawable(R.drawable.yeast);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_nutriyeast_text));
+                name.setText("Yeast");
+                break;
+            case "cumin2":
+                drawable = getDrawable(R.drawable.cumin);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_cumin_text));
+                name.setText("Cumin");
+                break;
+            case "green":
+                drawable = getDrawable(R.drawable.green_tea);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_greentea_text));
+                name.setText("Green Tea");
+                break;
+            case "hyd":
+                drawable = getDrawable(R.drawable.water);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_hydrate_text));
+                name.setText("Stay Hydrated");
+                break;
+            case "deflour":
+                drawable = getDrawable(R.drawable.deflour);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_deflourdiet_text));
+                name.setText("Deflour Your Diet");
+                break;
+            case "front":
+                drawable = getDrawable(R.drawable.frontload);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_frontload_text));
+                name.setText("Front Your Diet");
+                break;
+            case "restrict":
+                drawable = getDrawable(R.drawable.restrict);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.daily_timerestrict_text));
+                name.setText("Time-Restrict Your Eatings");
+                break;
+            case "optimize":
+                drawable = getDrawable(R.drawable.optimize);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.exercise_timing_text));
+                name.setText("Optimize Your Exercise");
+                break;
+            case "weigh":
+                drawable = getDrawable(R.drawable.weigh);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.weigh_twice_text));
+                name.setText("Weigh Yourself Twice a Day");
+                break;
+            case "inten":
+                drawable = getDrawable(R.drawable.sleep2);
+                img.setImageDrawable(drawable);
+                txt.setText(getResources().getString(R.string.complete_intentions_text));
+                name.setText("Complete Your Implementation Intentions");
+                break;
             default:
                 break;
         }

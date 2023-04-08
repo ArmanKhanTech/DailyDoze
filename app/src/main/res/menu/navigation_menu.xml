@@ -18,6 +18,16 @@
 
     <item
         android:id="@+id/menu4"
+        android:title="Fast-Watch"
+        android:icon="@drawable/fastwatch_icon"/>
+
+    <item
+        android:id="@+id/menu5"
+        android:title="Meditation"
+        android:icon="@drawable/medi_icon"/>
+
+    <item
+        android:id="@+id/menu6"
         android:title="Logout"
         android:icon="@drawable/logout"/>
 

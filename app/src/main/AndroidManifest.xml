@@ -14,9 +14,21 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.GraphActivity"
+            android:name=".Activity.NotiActivity"
             android:exported="false"
             android:theme="@style/Theme.DailyDoze"/>
+        <activity
+            android:name=".Activity.MediActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze"/>
+        <activity
+            android:name=".Activity.FastActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze"/>
+        <activity
+            android:name=".Activity.GraphActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze" />
         <activity
             android:name=".Activity.CalenderActivity"
             android:exported="false"
@@ -43,14 +55,13 @@
             android:theme="@style/Theme.DailyDoze.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activity.MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze" />
+            android:theme="@style/Theme.DailyDoze"/>
     </application>
 
 </manifest>

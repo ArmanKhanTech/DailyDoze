@@ -119,6 +119,45 @@ public class CalenderActivity extends AppCompatActivity {
             case "twemin":
                 name.setText("Follow 20 Minutes Rule");
                 break;
+            case "cumin":
+                name.setText("Black Cumin");
+                break;
+            case "ginger":
+                name.setText("Ground Ginger");
+                break;
+            case "garlic":
+                name.setText("Gralic Powder");
+                break;
+            case "cumin2":
+                name.setText("Cumin");
+                break;
+            case "Yeast":
+                name.setText("Yeast");
+                break;
+            case "green":
+                name.setText("Green Tea");
+                break;
+            case "hyd":
+                name.setText("Stay Hydrated");
+                break;
+            case "deflour":
+                name.setText("Deflour Your Diet");
+                break;
+            case "optimize":
+                name.setText("Optimize Your Exercise");
+                break;
+            case "restrict":
+                name.setText("Time-Restrict Your Eatings");
+                break;
+            case "front":
+                name.setText("Front Load Your Diet");
+                break;
+            case "weign":
+                name.setText("Weigh Yourself Twice a Day");
+                break;
+            case "inten":
+                name.setText("Complete Your Implementation Intentions");
+                break;
             default:
                 break;
         }

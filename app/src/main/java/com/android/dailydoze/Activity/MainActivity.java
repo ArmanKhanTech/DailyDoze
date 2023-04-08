@@ -1,30 +1,29 @@
 package com.android.dailydoze.Activity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PersistableBundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.viewpager.widget.ViewPager;
 
 import com.android.dailydoze.R;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-
     Button b;
     DrawerLayout drawerLayout;
 
@@ -51,12 +50,30 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.menu2:
+                    LayoutInflater layoutInflater = (LayoutInflater)
+                            this.getSystemService(LAYOUT_INFLATER_SERVICE);
+                    @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.date_popup, null);
+                    int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                    int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                    final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+                    popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+                    dimBehind(popupWindow);
+                    drawerLayout.close();
                     break;
 
                 case R.id.menu3:
+                    startActivity(new Intent(this, NotiActivity.class));
                     break;
 
                 case R.id.menu4:
+                    startActivity(new Intent(this, FastActivity.class));
+                    break;
+
+                case R.id.menu5:
+                    startActivity(new Intent(this, MediActivity.class));
+                    break;
+
+                case R.id.menu6:
                     SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
                     SharedPreferences.Editor myEdit = sharedPreferences.edit();
                     myEdit.putBoolean("user", false);
@@ -67,6 +84,16 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
     }
 
     public void setCurrentDate(){
