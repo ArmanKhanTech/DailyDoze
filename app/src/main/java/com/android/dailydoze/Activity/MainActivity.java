@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Button b;
     DrawerLayout drawerLayout;
 
-    //TODO:FIX green and othervege, negcal, un_meal, frontload image(getting streched)
+    //TODO:FIX green and othervege, negcal, un_meal, frontload image(getting streched) & fix day_fragment layout
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.menu3:
-                    startActivity(new Intent(this, NotiActivity.class));
+                    startActivity(new Intent(this, NotificationActivity.class));
                     break;
 
                 case R.id.menu4:
