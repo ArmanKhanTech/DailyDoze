@@ -16,7 +16,7 @@
         android:layout_margin="15dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/back_button"
+        app:srcCompat="@drawable/back_button_black"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <ImageView

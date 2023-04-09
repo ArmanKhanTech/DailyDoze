@@ -19,21 +19,25 @@
         <receiver
             android:name="com.android.dailydoze.Receiver.AlarmReceiver"
             android:enabled="true"
-            android:process=":remote"
-            android:exported="true">
+            android:exported="true"
+            android:process=":remote">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
+            android:name=".Activity.PerformMeditationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze.PerformMeditation"/>
+        <activity
             android:name=".Activity.NotificationActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze" />
+            android:theme="@style/Theme.DailyDoze.Notification" />
         <activity
-            android:name=".Activity.MediActivity"
+            android:name=".Activity.MeditationActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze" />
+            android:theme="@style/Theme.DailyDoze.Meditation" />
         <activity
             android:name=".Activity.FastActivity"
             android:exported="false"

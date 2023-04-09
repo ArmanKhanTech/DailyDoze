@@ -1,5 +1,6 @@
 package com.android.dailydoze.Receiver;
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -7,6 +8,9 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
 import androidx.core.app.NotificationCompat;
 
 import com.android.dailydoze.Activity.SplashScreenActivity;
@@ -16,6 +20,9 @@ public class AlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        Bundle bundle = intent.getExtras();
+        int id = bundle.getInt("id");
 
         Intent intentTo = new Intent(context, SplashScreenActivity.class);
         intentTo.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -42,6 +49,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         mBuilder.setChannelId(channelId);
 
         Notification notification = mBuilder.build();
-        notificationManager.notify(1, notification);
+        notificationManager.notify(id, notification);
     }
 }

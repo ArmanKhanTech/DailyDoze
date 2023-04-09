@@ -328,7 +328,6 @@ public class DayFragment extends Fragment {
                 "August", "September", "October", "November",
                 "December"};
         String month=monthName[c.get(Calendar.MONTH)];
-        System.out.println("Month name:"+month);
         int year=c.get(Calendar.YEAR);
         int date=c.get(Calendar.DATE);
         textView.setText(date+" "+month+" "+year);

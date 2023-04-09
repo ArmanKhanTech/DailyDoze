@@ -10,10 +10,9 @@
     android:background="@drawable/info_img_theme">
 
     <ImageView
+        android:id="@+id/list_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:contentDescription="appIcon"
-        android:src="@drawable/noti_vec_icon"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/noti_time"
+        android:id="@+id/list_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"

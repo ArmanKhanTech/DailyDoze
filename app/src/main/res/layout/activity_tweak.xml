@@ -32,7 +32,7 @@
                 android:background="@color/white"
                 android:onClick="tweaksFinish"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/back_button"
+                app:srcCompat="@drawable/back_button_black"
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <TextView

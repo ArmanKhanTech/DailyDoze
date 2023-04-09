@@ -7,4 +7,5 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class ViewHolder{
     TextView textInListView;
+    ImageView imageInListView;
 }

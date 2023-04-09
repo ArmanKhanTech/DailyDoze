@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Button b;
     DrawerLayout drawerLayout;
 
-    //TODO:FIX green and othervege, negcal, un_meal, frontload image(getting streched) & fix day_fragment layout
+    //TODO:FIX green and othervege, negcal, un_meal, frontload image(getting streched) & fix day_fragment layout & improve noti icon, delay while switching layout , login black screen, list not updating after delete(noti)
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.menu5:
-                    startActivity(new Intent(this, MediActivity.class));
+                    startActivity(new Intent(this, MeditationActivity.class));
                     break;
 
                 case R.id.menu6:
@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 "August", "September", "October", "November",
                 "December"};
         String month=monthName[c.get(Calendar.MONTH)];
-        System.out.println("Month name:"+month);
         int year=c.get(Calendar.YEAR);
         int date=c.get(Calendar.DATE);
         TextView textView = (TextView)findViewById(R.id.date);

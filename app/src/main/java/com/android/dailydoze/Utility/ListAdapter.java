@@ -13,10 +13,10 @@ import java.util.ArrayList;
 public class ListAdapter extends BaseAdapter {
 
     public LayoutInflater layoutInflater;
-    public ArrayList<NotiList> listStorage;
+    public ArrayList<DataList> listStorage;
     Context mContext;
 
-    public ListAdapter(Context context, ArrayList<NotiList> customizedListView) {
+    public ListAdapter(Context context, ArrayList<DataList> customizedListView) {
         layoutInflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         listStorage = customizedListView;
         mContext=context;
@@ -28,7 +28,7 @@ public class ListAdapter extends BaseAdapter {
     }
 
     @Override
-    public NotiList getItem(int position) {
+    public DataList getItem(int position) {
         return listStorage.get(position);
     }
 
@@ -43,13 +43,15 @@ public class ListAdapter extends BaseAdapter {
         ViewHolder listViewHolder;
         if(convertView == null){
             listViewHolder = new ViewHolder();
-            convertView = layoutInflater.inflate(R.layout.noti_list, parent, false);
-            listViewHolder.textInListView = convertView.findViewById(R.id.noti_time);
+            convertView = layoutInflater.inflate(R.layout.list, parent, false);
+            listViewHolder.textInListView = convertView.findViewById(R.id.list_text);
+            listViewHolder.imageInListView = convertView.findViewById(R.id.list_icon);
             convertView.setTag(listViewHolder);
         }else{
             listViewHolder = (ViewHolder)convertView.getTag();
         }
-        listViewHolder.textInListView.setText(listStorage.get(position).getTime());
+        listViewHolder.textInListView.setText(listStorage.get(position).getText());
+        listViewHolder.imageInListView.setImageDrawable(listStorage.get(position).getIcon());
 
         return convertView;
     }

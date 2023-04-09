@@ -22,10 +22,10 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="15dp"
-                android:background="@color/white"
+                android:background="@color/transparent"
                 android:onClick="notiFinish"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/back_button"
+                app:srcCompat="@drawable/back_button_black"
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <TextView
@@ -40,14 +40,15 @@
         </LinearLayout>
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/setTime"
-            android:layout_height="40dp"
             android:layout_width="40dp"
-            android:background="@color/white"
-            android:layout_marginRight="20dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
-            android:src="@drawable/noti_add_icon"/>
+            android:layout_marginRight="20dp"
+            android:background="@color/transparent"
+            android:src="@drawable/noti_add_icon" />
 
 
     </RelativeLayout>
@@ -57,7 +58,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@drawable/noti_bg_theme"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp">
@@ -71,21 +72,22 @@
             android:layout_centerInParent="true"
             android:layout_alignParentStart="true"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:layout_marginLeft="20dp"/>
 
 
         <Switch
             android:id="@+id/sw_noti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:theme="@style/SwitchTheme"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginRight="20dp"/>
 
     </RelativeLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/lll2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -93,7 +95,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/noti_list_theme"
-        android:elevation="3dp"
         android:padding="10dp">
 
         <ListView
@@ -101,11 +102,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:choiceMode="multipleChoice"
-            android:divider="@color/white"
-            android:dividerHeight="2sp"
+            android:divider="@color/transparent"
+            android:dividerHeight="10sp"
+            android:visibility="gone"
             android:scrollbars="none"/>
 
+        <TextView
+            android:id="@+id/notiStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Notifications Disabled"
+            android:textColor="@color/blue"
+            android:textSize="20sp"/>
 
-    </LinearLayout>
+
+    </FrameLayout>
 
 </LinearLayout>
