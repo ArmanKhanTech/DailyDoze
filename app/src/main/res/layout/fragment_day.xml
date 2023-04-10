@@ -20,7 +20,6 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:elevation="2dp"
@@ -44,7 +43,7 @@
                 android:textAlignment="center"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="25dp"
                 android:fontFamily="sans-serif-condensed-medium"/>
 
         </FrameLayout>
@@ -57,7 +56,7 @@
             android:paddingBottom="10dp"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:fontFamily="sans-serif-condensed-medium"/>
 
          <HorizontalScrollView
@@ -944,194 +943,210 @@
 
             </FrameLayout>
 
-         <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:elevation="3dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/beverages_theme">
+                android:layout_height="200dp"
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Time-Restrict"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Your Eatings"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
+                    android:background="@drawable/beverages_theme">
 
-                    <ImageView
-                        android:id="@+id/restrictInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/restrictCal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/restrict_cb1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/restrict"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-         <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:elevation="3dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/beverages_theme">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Optimize Your"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Exercise"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical"
+                        android:elevation="3dp"
+                        android:layout_gravity="center">
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time-Restrict"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Your Eatings"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="3dp"
+                        android:layout_gravity="bottom|center">
+
+                        <ImageView
+                            android:id="@+id/restrictInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/restrictCal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:elevation="3dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/restrict_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/restrict"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="3dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
+                    android:background="@drawable/beverages_theme">
 
-                    <ImageView
-                        android:id="@+id/optimizeInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/optimizeCal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/optimize_cb1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/optimize"
-                        android:scaleType="centerCrop"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="3dp"
+                        android:layout_gravity="center">
 
-                </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Optimize Your"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
 
-            </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Exercise"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
 
-         <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="3dp"
+                        android:layout_gravity="bottom|center">
+
+                        <ImageView
+                            android:id="@+id/optimizeInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/info_icon_black"/>
+
+                        <ImageView
+                            android:id="@+id/optimizeCal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calender_icon_black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:elevation="3dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/optimize_cb1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:theme="@style/BlackCheckbox"
+                            android:button="@drawable/black_checkbox"/>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/optimize"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:elevation="3dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
                 android:background="@drawable/beverages_theme">
 
                 <LinearLayout
@@ -1222,12 +1237,13 @@
 
             </FrameLayout>
 
-         <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:elevation="3dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="10dp"
@@ -1253,7 +1269,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:text="Implementation Intentions"
+                        android:text="Implementation"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Intentions"
                         android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
@@ -1327,6 +1352,8 @@
                 </androidx.cardview.widget.CardView>
 
             </FrameLayout>
+
+        </LinearLayout>
 
         </LinearLayout>
 

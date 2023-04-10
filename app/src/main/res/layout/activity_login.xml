@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context=".Activity.LoginActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@android:color/holo_purple">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="40dp"
@@ -103,7 +113,7 @@
         android:backgroundTint="@color/purple_500"
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textAlignment="center"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -142,5 +152,9 @@
             tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
 
     </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

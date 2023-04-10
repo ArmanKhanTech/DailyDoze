@@ -25,7 +25,6 @@
             android:textSize="30dp"
             android:textStyle="bold" />
 
-
         <Button
             android:id="@+id/delete"
             android:layout_width="match_parent"
@@ -35,7 +34,7 @@
             android:backgroundTint="@color/blue"
             android:fontFamily="sans-serif-condensed-medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textAlignment="center"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"

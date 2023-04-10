@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -56,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     int width = LinearLayout.LayoutParams.WRAP_CONTENT;
                     int height = LinearLayout.LayoutParams.WRAP_CONTENT;
                     final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+                    drawerLayout.close();
                     popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
                     dimBehind(popupWindow);
-                    drawerLayout.close();
                     break;
 
                 case R.id.menu3:

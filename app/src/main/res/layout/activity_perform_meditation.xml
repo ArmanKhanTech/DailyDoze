@@ -7,6 +7,12 @@
     tools:context=".Activity.PerformMeditationActivity">
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#340004EA"
+        android:elevation="3dp"/>
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,7 +22,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:elevation="3dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,7 +36,7 @@
                 android:layout_height="40dp"
                 android:layout_margin="15dp"
                 android:background="@color/transparent"
-                android:onClick="mediPerFinish"
+                android:id="@+id/close"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/close_icon"
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -48,7 +55,7 @@
                 android:layout_height="40dp"
                 android:layout_margin="15dp"
                 android:clickable="true"
-                android:onClick="mediSettingd"
+                android:onClick="mediSettings"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="10dp"
                 app:srcCompat="@drawable/settings_icon" />
@@ -58,23 +65,41 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="45:50"
+        android:text="Meditation for 15 mins"
         android:textColor="@color/white"
+        android:elevation="3dp"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck"/>
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Press Play"
+        android:textColor="@color/white"
+        android:elevation="3dp"
         android:textSize="50dp"
         android:layout_gravity="center"
         tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck"/>
 
-    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:indeterminate="true"
-        android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/white"
+        android:background="@drawable/circle_shape"
+        android:indeterminate="false"
+        android:elevation="3dp"
         android:layout_gravity="center"
-        app:mpb_progressStyle="circular" />
+        android:progressDrawable="@drawable/progress_bar"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,26 +110,27 @@
         android:layout_marginBottom="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:elevation="3dp"
         android:layout_gravity="bottom">
 
         <ImageView
             android:id="@+id/pause"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/pause_icon"/>
 
         <ImageView
             android:id="@+id/play"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/play_icon"/>
 
         <ImageView
             android:id="@+id/stop"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/stop_icon"/>
 

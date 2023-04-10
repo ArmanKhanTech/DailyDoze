@@ -16,11 +16,15 @@ import com.android.dailydoze.R;
 
 public class MeditationActivity extends AppCompatActivity {
     String time;
+    long millis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medi);
+
+        time = "Meditation for 15 minutes";
+        millis = 900000;
 
         RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup);
 
@@ -29,26 +33,30 @@ public class MeditationActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch(checkedId){
                     case R.id.fifmins:
-                        time = "15 minutes";
+                        time = "Meditation for 15 minutes";
+                        millis = 900000;
                         break;
                     case R.id.thimins:
-                        time = "30 minutes";
+                        time = "Meditation for 30 minutes";
+                        millis = 1800000;
                         break;
                     case R.id.foumins:
-                        time = "45 minutes";
+                        time = "Meditation for 45 minutes";
+                        millis = 2700000;
                         break;
                     case R.id.other:
-                        time = "1 hours";
+                        time = "Meditation for 1 hour";
+                        millis = 3600000;
                         break;
                 }
             }
         });
-
     }
 
     public void openPerformMeditation(View v){
         Intent intent = new Intent(this, PerformMeditationActivity.class);
-        intent.putExtra("time", time);
+        intent.putExtra("text", time);
+        intent.putExtra("time",millis);
         startActivity(intent);
     }
 

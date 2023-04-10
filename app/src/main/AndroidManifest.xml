@@ -15,9 +15,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:targetApi="31">
+        <activity
+            android:name=".MeditationStats"
+            android:exported="false" />
 
         <receiver
-            android:name="com.android.dailydoze.Receiver.AlarmReceiver"
+            android:name=".Receiver.AlarmReceiver"
             android:enabled="true"
             android:exported="true"
             android:process=":remote">
@@ -29,7 +32,7 @@
         <activity
             android:name=".Activity.PerformMeditationActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.PerformMeditation"/>
+            android:theme="@style/Theme.DailyDoze.PerformMeditation" />
         <activity
             android:name=".Activity.NotificationActivity"
             android:exported="false"

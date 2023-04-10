@@ -27,7 +27,7 @@
         android:gravity="center"
         android:text="7:00 pm"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

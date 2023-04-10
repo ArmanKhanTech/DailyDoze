@@ -42,7 +42,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="21 Tweaks"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="30dp" />
 
         </LinearLayout>
 
@@ -60,7 +60,7 @@
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="0"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="30dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="/37"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="30dp" />
 
                 <ImageView
                     android:layout_width="30dp"
@@ -87,11 +87,12 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout_tweaks"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             app:tabIndicatorHeight="0dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="15dp"
             app:tabTextAppearance="@style/MyCustomTabAppearance"
             android:background="@color/transparent"
             app:tabBackground="@drawable/tab_selector_theme"
@@ -147,7 +148,7 @@
         android:layout_marginTop="10dp"
         android:text="Please Wait"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="20dp" />
 
     </LinearLayout>
 

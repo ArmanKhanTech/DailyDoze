@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context=".Activity.SignupActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@android:color/holo_purple">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <ImageButton
         android:id="@+id/imageButton"
         android:onClick="signupBack"
@@ -214,5 +224,9 @@
             tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
 
     </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -33,7 +33,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Daily Servings History"
             android:textColor="@color/black"
-            android:textSize="30sp" />
+            android:textSize="30dp" />
 
     </LinearLayout>
 
@@ -64,7 +64,7 @@
             android:text="April 2023"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textSize="20dp"/>
 
         <ImageButton
             android:id="@+id/graph_next"
