@@ -33,6 +33,7 @@
                 android:fontFamily="sans-serif-condensed-medium">
 
             <FrameLayout
+                android:id="@+id/frameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
@@ -44,12 +45,24 @@
                 <ImageButton
                     android:visibility="gone"
                     android:id="@+id/jump_back"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:elevation="5dp"
+                    android:background="@color/transparent"
                     android:layout_gravity="start|center"
                     android:layout_marginLeft="20dp"
-                    android:background="@color/transparent"
-                    android:src="@drawable/jump_back_icon"/>
+                    android:src="@drawable/jump_back_icon"
+                    android:scaleType="centerInside"/>
+
+                <ImageButton
+                    android:id="@+id/date_prev"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="start|center"
+                    android:background="@color/white"
+                    app:srcCompat="@drawable/prev_icon"/>
 
                 <TextView
                     android:id="@+id/date"
@@ -61,6 +74,16 @@
                     android:textColor="@color/black"
                     android:textSize="25dp"
                     android:fontFamily="sans-serif-condensed-medium"/>
+
+                <ImageButton
+                    android:id="@+id/date_next"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="end|center"
+                    android:background="@color/white"
+                    app:srcCompat="@drawable/next_icon"/>
 
             </FrameLayout>
 
@@ -101,14 +124,14 @@
 
                         <ImageView
                             android:onClick="beansInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:onClick="beansCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
@@ -122,26 +145,29 @@
 
                         <CheckBox
                             android:id="@+id/beans_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:background="@drawable/black_checkbox"
+                            android:button="@null"/>
 
                         <CheckBox
                             android:id="@+id/beans_cb2"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox" />
+                            android:background="@drawable/black_checkbox"
+                            android:button="@null" />
 
                         <CheckBox
                             android:id="@+id/beans_cb3"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox" />
+                            android:background="@drawable/black_checkbox"
+                            android:button="@null" />
 
                     </LinearLayout>
 
@@ -162,6 +188,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/berries"
+                        android:layout_marginTop="20dp"
                         android:scaleType="centerInside"
                         android:layout_marginRight="60dp"
                         android:layout_marginLeft="60dp"/>
@@ -184,14 +211,14 @@
 
                         <ImageView
                             android:onClick="berriesInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:onClick="berriesCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -205,8 +232,8 @@
 
                         <CheckBox
                             android:id="@+id/berries_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/WhiteCheckbox"
                             android:button="@drawable/white_checkbox"/>
 
@@ -254,14 +281,14 @@
 
                             <ImageView
                                 android:onClick="greensInfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:src="@drawable/info_icon_white"/>
 
                             <ImageView
                                 android:onClick="greensCal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:src="@drawable/calender_icon_white"/>
 
                         </LinearLayout>
@@ -275,15 +302,15 @@
 
                             <CheckBox
                                 android:id="@+id/greens_cb1"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:theme="@style/WhiteCheckbox"
                                 android:button="@drawable/white_checkbox"/>
 
                             <CheckBox
                                 android:id="@+id/greens_cb2"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:layout_marginLeft="5dp"
                                 android:theme="@style/WhiteCheckbox"
                                 android:button="@drawable/white_checkbox"/>
@@ -348,14 +375,14 @@
 
                             <ImageView
                                 android:onClick="othervegeInfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:src="@drawable/info_icon_white"/>
 
                             <ImageView
                                 android:onClick="othervegeCal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:src="@drawable/calender_icon_white"/>
 
                         </LinearLayout>
@@ -369,15 +396,15 @@
 
                             <CheckBox
                                 android:id="@+id/othervege_cb1"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:theme="@style/WhiteCheckbox"
                                 android:button="@drawable/white_checkbox"/>
 
                             <CheckBox
                                 android:id="@+id/othervege_cb2"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:layout_marginLeft="5dp"
                                 android:theme="@style/WhiteCheckbox"
                                 android:button="@drawable/white_checkbox"/>
@@ -402,6 +429,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
                         android:src="@drawable/fruits"
                         android:layout_marginRight="60dp"
                         android:layout_marginLeft="60dp"
@@ -443,14 +471,14 @@
 
                         <ImageView
                             android:onClick="fruitsInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:onClick="fruitsCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
@@ -464,23 +492,23 @@
 
                         <CheckBox
                             android:id="@+id/of_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/of_cb2"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/of_cb3"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
@@ -505,6 +533,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/cruciferous"
                         android:layout_marginRight="60dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="60dp"
                         android:scaleType="centerInside"/>
 
@@ -544,14 +573,14 @@
 
                         <ImageView
                             android:onClick="crucivegeInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:onClick="crucivegeCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -565,8 +594,8 @@
 
                         <CheckBox
                             android:id="@+id/cv_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/WhiteCheckbox"
                             android:button="@drawable/white_checkbox"/>
 
@@ -589,6 +618,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/flexseeds"
+                        android:layout_marginTop="30dp"
                         android:scaleType="centerInside"
                         android:layout_marginRight="60dp"
                         android:layout_marginLeft="60dp"/>
@@ -611,14 +641,14 @@
 
                         <ImageView
                             android:onClick="flexseedsInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:onClick="flexseedsCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
@@ -631,9 +661,9 @@
                         android:layout_gravity="center_horizontal">
 
                         <CheckBox
-                            android:id="@+id/flexseeds_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:id="@+id/flaxseeds_cb1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
@@ -652,18 +682,12 @@
                     android:layout_marginRight="15dp"
                     android:background="@drawable/herbs_theme">
 
-                    <androidx.cardview.widget.CardView
+                    <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/herbs"
-                            android:scaleType="centerCrop"/>
-
-                    </androidx.cardview.widget.CardView>
+                        android:layout_height="match_parent"
+                        android:src="@drawable/herbs"
+                        android:layout_marginTop="25dp"
+                        android:scaleType="centerInside"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -703,14 +727,14 @@
 
                         <ImageView
                             android:onClick="herbsInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:onClick="herbsCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -725,8 +749,8 @@
 
                         <CheckBox
                             android:id="@+id/herbs_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/WhiteCheckbox"
                             android:button="@drawable/white_checkbox"/>
 
@@ -751,18 +775,12 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/nuts_theme">
 
-                        <androidx.cardview.widget.CardView
+                        <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardCornerRadius="30dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/nuts"
-                                android:scaleType="centerCrop"/>
-
-                        </androidx.cardview.widget.CardView>
+                            android:layout_height="match_parent"
+                            android:src="@drawable/nuts"
+                            android:layout_margin="20dp"
+                            android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -776,7 +794,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:text="@string/nuts_and"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
@@ -785,7 +803,7 @@
                                 android:layout_height="wrap_content"
                                 android:textAlignment="center"
                                 android:text="Seeds"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
@@ -800,15 +818,15 @@
 
                             <ImageView
                                 android:onClick="nutsInfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/info_icon_white"/>
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/info_icon_black"/>
 
                             <ImageView
                                 android:onClick="nutsCal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/calender_icon_white"/>
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/calender_icon_black"/>
 
                         </LinearLayout>
 
@@ -822,10 +840,10 @@
 
                             <CheckBox
                                 android:id="@+id/nuts_cb1"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:theme="@style/WhiteCheckbox"
-                                android:button="@drawable/white_checkbox"/>
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:theme="@style/BlackCheckbox"
+                                android:button="@drawable/black_checkbox"/>
 
                         </LinearLayout>
 
@@ -882,14 +900,14 @@
 
                             <ImageView
                                 android:onClick="grainsInfo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:src="@drawable/info_icon_black"/>
 
                             <ImageView
                                 android:onClick="grainsCal"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:src="@drawable/calender_icon_black"/>
 
                         </LinearLayout>
@@ -903,26 +921,29 @@
 
                             <CheckBox
                                 android:id="@+id/grains_cb1"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:theme="@style/BlackCheckbox"
-                                android:button="@drawable/black_checkbox"/>
+                                android:background="@drawable/black_checkbox"
+                                android:button="@null"/>
 
                             <CheckBox
                                 android:id="@+id/grains_cb2"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:layout_marginLeft="5dp"
                                 android:theme="@style/BlackCheckbox"
-                                android:button="@drawable/black_checkbox"/>
+                                android:background="@drawable/black_checkbox"
+                                android:button="@null"/>
 
                             <CheckBox
                                 android:id="@+id/grains_cb3"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:layout_marginLeft="5dp"
                                 android:theme="@style/BlackCheckbox"
-                                android:button="@drawable/black_checkbox"/>
+                                android:background="@drawable/black_checkbox"
+                                android:button="@null"/>
 
                         </LinearLayout>
 
@@ -967,14 +988,14 @@
 
                         <ImageView
                             android:onClick="beveragesInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:onClick="beveragesCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
@@ -988,39 +1009,39 @@
 
                         <CheckBox
                             android:id="@+id/beverages_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb2"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb3"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb5"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
@@ -1066,14 +1087,14 @@
 
                         <ImageView
                             android:onClick="exerciseInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:onClick="exerciseCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -1087,8 +1108,8 @@
 
                         <CheckBox
                             android:id="@+id/exercise_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 

@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Log In"
+        android:text="Login"
         android:textColor="@color/black"
         android:textSize="35dp"
         tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
@@ -91,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            android:inputType="numberPassword"
             android:hint="Password" />
 
         <ImageView
@@ -133,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Not a member?"
+            android:text="Haven't registered yet?"
             android:textColor="@color/black"
             android:textSize="20dp"
             tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
@@ -146,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Signup"
+            android:text="Register"
             android:textColor="@color/purple_500"
             android:textSize="20dp"
             tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />

@@ -37,6 +37,17 @@
     <string name="exercise_timing_text">The Daily Dozen’s recommendation for optimum exercise duration for longevity is ninety minutes of moderately intense activity a day, which is also the optimum exercise duration for weight loss. Anytime is good, and the more, the better, but there may be an advantage to exercising in a fasted state, at least six hours after your last meal. Typically, this would mean before breakfast, but if you timed it right, you could exercise midday before a late lunch or, if lunch is eaten early enough, before dinner. This is the timing for nondiabetics. Diabetics and prediabetics should instead start exercising thirty minutes after the start of a meal and ideally go for at least an hour to completely straddle the blood sugar peak. If you had to choose a single meal to exercise after, it would be dinner, due to the circadian rhythm of blood sugar control that wanes throughout the day. Ideally, though, breakfast would be the largest meal of the day, and you’d exercise after that—or, even better, after every meal.</string>
     <string name="weigh_twice_text">Regular self-weighing is considered crucial for long-term weight control, but there is insufficient evidence to support a specific frequency of weighing. My recommendation is based on the one study that found that twice daily—upon waking and right before bed—appeared superior to once a day (about six versus two pounds of weight loss over twelve weeks).</string>
     <string name="complete_intentions_text">Every two months, create three new implementation intentions—“if X, then Y” plans to perform a particular behavior in a specific context—and check each one of them off as you complete them every day.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Type</item>
+        <item>Urban</item>
+        <item>Semi-Urban</item>
+        <item>Rural</item>
+    </string-array>
 </resources>

@@ -15,9 +15,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:targetApi="31">
-        <activity
-            android:name=".MeditationStats"
-            android:exported="false" />
 
         <receiver
             android:name=".Receiver.AlarmReceiver"
@@ -29,6 +26,9 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name=".Activity.MeditationStats"
+            android:exported="false" />
         <activity
             android:name=".Activity.PerformMeditationActivity"
             android:exported="false"
@@ -44,7 +44,7 @@
         <activity
             android:name=".Activity.FastActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze" />
+            android:theme="@style/Theme.DailyDoze.Fastwatch" />
         <activity
             android:name=".Activity.GraphActivity"
             android:exported="false"

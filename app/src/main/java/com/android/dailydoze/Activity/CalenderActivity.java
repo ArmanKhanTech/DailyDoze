@@ -27,7 +27,7 @@ public class CalenderActivity extends AppCompatActivity {
 
         pb = findViewById(R.id.loading);
         name = findViewById(R.id.calName);
-        calendarView = (CalendarView) findViewById(R.id.calendarView);
+        calendarView = findViewById(R.id.calendarView);
 
         calendarView.setVisibility(View.GONE);
 

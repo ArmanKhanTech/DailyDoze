@@ -2,10 +2,6 @@ package com.android.dailydoze.Activity;
 
 import static android.app.PendingIntent.FLAG_IMMUTABLE;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -24,9 +20,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -35,11 +29,15 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.android.dailydoze.Database.NotificationDatabase;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Receiver.AlarmReceiver;
-import com.android.dailydoze.Utility.ListAdapter;
 import com.android.dailydoze.Utility.DataList;
+import com.android.dailydoze.Utility.ListAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -113,44 +111,41 @@ public class NotificationActivity extends AppCompatActivity {
                     PackageManager.DONT_KILL_APP);
         }
 
-        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
-                    editor.putBoolean("State", true);
-                    editor.apply();
+        sw.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
+                editor.putBoolean("State", true);
+                editor.apply();
 
-                    setTime.setVisibility(View.VISIBLE);
-                    list.setVisibility(View.VISIBLE);
+                setTime.setVisibility(View.VISIBLE);
+                list.setVisibility(View.VISIBLE);
 
-                    if(!db1.isDbEmpty()){
-                        status.setText("No Notifications");
-                    }
-                    else{
-                        status.setVisibility(View.GONE);
-                    }
-
-                    packageManager.setComponentEnabledSetting(
-                            componentName,
-                            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                            PackageManager.DONT_KILL_APP);
-                }else{
-                    SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
-                    editor.putBoolean("State", false);
-                    editor.apply();
-
-                    setTime.setVisibility(View.INVISIBLE);
-                    list.setVisibility(View.INVISIBLE);
-
-                    status.setVisibility(View.VISIBLE);
-                    status.setText("Notifications Disabled");
-
-                    packageManager.setComponentEnabledSetting(
-                            componentName,
-                            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                            PackageManager.DONT_KILL_APP);
+                if(!db1.isDbEmpty()){
+                    status.setText("No Notifications");
                 }
+                else{
+                    status.setVisibility(View.GONE);
+                }
+
+                packageManager.setComponentEnabledSetting(
+                        componentName,
+                        PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                        PackageManager.DONT_KILL_APP);
+            }else{
+                SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
+                editor.putBoolean("State", false);
+                editor.apply();
+
+                setTime.setVisibility(View.INVISIBLE);
+                list.setVisibility(View.INVISIBLE);
+
+                status.setVisibility(View.VISIBLE);
+                status.setText("Notifications Disabled");
+
+                packageManager.setComponentEnabledSetting(
+                        componentName,
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                        PackageManager.DONT_KILL_APP);
             }
         });
 
@@ -160,35 +155,27 @@ public class NotificationActivity extends AppCompatActivity {
             }
         }
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                DataList notiList = adapter.getItem(position);
-                String t = notiList.getText();
-                LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
-                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
-                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-                Button bb = popupView.findViewById(R.id.delete);
-                bb.setOnClickListener(view1 -> {
-                    int idOf = db1.readID(t);
-                    cancelNotification(idOf);
-                    db1.deleteNotification(t);
-                    popupWindow.dismiss();
-                    updateList();
-                });
-                dimBehind(popupWindow);
-            }
+        list.setOnItemClickListener((parent, view, position, id) -> {
+            DataList notiList = adapter.getItem(position);
+            String t = notiList.getText();
+            LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+            int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+            popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+            Button bb = popupView.findViewById(R.id.delete);
+            bb.setOnClickListener(view1 -> {
+                int idOf = db1.readID(t);
+                cancelNotification(idOf);
+                db1.deleteNotification(t);
+                popupWindow.dismiss();
+                updateList();
+            });
+            dimBehind(popupWindow);
         });
 
-        setTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectTime();
-            }
-        });
+        setTime.setOnClickListener(v -> selectTime());
     }
 
     private void selectTime() {

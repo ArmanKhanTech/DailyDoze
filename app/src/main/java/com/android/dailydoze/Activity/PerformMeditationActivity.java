@@ -1,7 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +7,6 @@ import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +18,9 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.R;
 
@@ -35,6 +35,8 @@ public class PerformMeditationActivity extends AppCompatActivity {
     long l;
     CountDownTimer stopWatch;
     ImageButton close;
+    boolean b = false;
+    String mediTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         textView = findViewById(R.id.text);
         close = findViewById(R.id.close);
 
-        music = MediaPlayer.create(this, R.raw.rainfall);
+        music = MediaPlayer.create(this, R.raw.epic_flute);
         music.setLooping(true);
         pause.setVisibility(View.GONE);
 
@@ -64,39 +66,36 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
         pB.setMax((int)l);
 
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startTimer(l);
-                play.setVisibility(View.GONE);
-                pause.setVisibility(View.VISIBLE);
-            }
+        play.setOnClickListener(v -> {
+            startTimer(l);
+            play.setVisibility(View.GONE);
+            pause.setVisibility(View.VISIBLE);
         });
 
-        pause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                timer.setText("Paused");
-                music.pause();
-                stopWatch.cancel();
-                pause.setVisibility(View.GONE);
-                play.setVisibility(View.VISIBLE);
-            }
+        pause.setOnClickListener(v -> {
+            timer.setText("Paused");
+            music.pause();
+            stopWatch.cancel();
+            pause.setVisibility(View.GONE);
+            play.setVisibility(View.VISIBLE);
         });
 
-        stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showWarning();
-            }
-        });
+        stop.setOnClickListener(v -> showWarning());
 
-        close.setOnClickListener(new View.OnClickListener() {
+        close.setOnClickListener(v -> showWarning());
+
+        OnBackPressedCallback onBackPressedCallback = new OnBackPressedCallback(true) {
             @Override
-            public void onClick(View v) {
-                showWarning();
+            public void handleOnBackPressed() {
+                if (b) {
+                    showWarning();
+                } else {
+                    finish();
+                }
             }
-        });
+        };
+
+        getOnBackPressedDispatcher().addCallback(this, onBackPressedCallback);
     }
 
     public void showWarning(){
@@ -110,19 +109,9 @@ public class PerformMeditationActivity extends AppCompatActivity {
         Button b1 = popupView.findViewById(R.id.cancel);
         Button b2 = popupView.findViewById(R.id.confirm);
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popupWindow.dismiss();
-            }
-        });
+        b1.setOnClickListener(v -> popupWindow.dismiss());
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //
-            }
-        });
+        b2.setOnClickListener(v -> finish());
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
         dimBehind(popupWindow);
@@ -139,38 +128,48 @@ public class PerformMeditationActivity extends AppCompatActivity {
                 timer.setText(f.format(hour) + ":" + f.format(min) + ":" + f.format(sec));
                 pB.setProgress((int)millisUntilFinished);
                 l = millisUntilFinished;
+                mediTime = f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
             }
             public void onFinish() {
                 timer.setText("00:00:00");
             }
         }.start();
+        b = true;
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        music.stop();
+        if(b){
+            music.stop();
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        music.pause();
-        stopWatch.cancel();
+        if(b){
+            music.pause();
+            stopWatch.cancel();
+        }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        music.pause();
-        stopWatch.cancel();
+        if(b){
+            music.pause();
+            stopWatch.cancel();
+        }
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        music.start();
-        startTimer(l);
+        if(b){
+            music.start();
+            startTimer(l);
+        }
     }
 
     public void selectBg1(){
@@ -206,6 +205,13 @@ public class PerformMeditationActivity extends AppCompatActivity {
         ImageView iv3 = popupView.findViewById(R.id.mediwall3);
         ImageView iv4 = popupView.findViewById(R.id.mediwall4);
         ImageView iv5 = popupView.findViewById(R.id.mediwall5);
+
+        ImageView m1 = popupView.findViewById(R.id.m1);
+        ImageView m2 = popupView.findViewById(R.id.m2);
+        ImageView m3 = popupView.findViewById(R.id.m3);
+        ImageView m4 = popupView.findViewById(R.id.m4);
+        ImageView m5 = popupView.findViewById(R.id.m5);
+        ImageView m6 = popupView.findViewById(R.id.m6);
 
         ImageButton ib = popupView.findViewById(R.id.close);
 
@@ -251,8 +257,57 @@ public class PerformMeditationActivity extends AppCompatActivity {
             }
         });
 
+        m1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectMusic("rainfall");
+            }
+        });
+
+        m2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectMusic("epic_flute");
+            }
+        });
+
+        m3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectMusic("mindfulness_relaxation");
+            }
+        });
+
+        m4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectMusic("healing");
+            }
+        });
+
+        m5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectMusic("peaceful_garden");
+            }
+        });
+
+        m6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectMusic("portal");
+            }
+        });
+
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
         dimBehind(popupWindow);
+    }
+
+    public void selectMusic(String file){
+        music.reset();
+        music = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(file.toLowerCase(),"raw",getPackageName()));
+        music.setLooping(true);
+        music.start();
     }
 
     public static void dimBehind(PopupWindow popupWindow) {

@@ -1,41 +1,57 @@
 package com.android.dailydoze.Utility;
 
-public class Signup {
-    private String email, name, pass, phone;
+import java.io.Serializable;
+
+public class Signup implements Serializable {
+    public String email, name, pass, phone, gender, dob, country, city, state, address, zip, type, blood, medical, other;
 
     public Signup() {
 
     }
 
-    public String getUserMail() {
-        return email;
-    }
-
     public void setUserMail(String email) {
         this.email = email;
     }
-
-    public String getUserName() {
-        return name;
-    }
-
     public void setUserName(String name) {
         this.name = name;
     }
-
-    public String getUserPhone() {
-        return phone;
-    }
-
     public void setUserPhone(String phone) {
         this.phone = phone;
     }
-
-    public String getUserPass() {
-        return pass;
-    }
-
     public void setUserPass(String pass) {
         this.pass = pass;
+    }
+    public void setUserGender(String gender) {
+        this.gender = gender;
+    }
+    public void setUserDOB(String dob) {
+        this.dob = dob;
+    }
+    public void setUserCountry(String country) {
+        this.country = country;
+    }
+    public void setUserState(String state) {
+        this.state = state;
+    }
+    public void setUserCity(String city) {
+        this.city = city;
+    }
+    public void setUserAddress(String address) {
+        this.address = address;
+    }
+    public void setUserZip(String zip) {
+        this.zip = zip;
+    }
+    public void setUserType(String type) {
+        this.type = type;
+    }
+    public void setUserBlood(String blood) {
+        this.blood = blood;
+    }
+    public void setUserMedical(String medical) {
+        this.medical = medical;
+    }
+    public void setUserOther(String other) {
+        this.other = other;
     }
 }

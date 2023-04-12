@@ -51,7 +51,7 @@ public class TweakActivity extends AppCompatActivity {
         Intent i = new Intent(this, GraphActivity.class);
         i.putExtra("tweak",true);
         startActivity(i);
-;    }
+    }
 
     private final class LoadFragment extends AsyncTask<Void, Void, Void>{
 

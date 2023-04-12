@@ -1,24 +1,36 @@
 package com.android.dailydoze.Fragments;
 
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.android.dailydoze.Activity.CalenderActivity;
 import com.android.dailydoze.Activity.InfoActivity;
 import com.android.dailydoze.R;
 
+import org.w3c.dom.Text;
+
 import java.util.Calendar;
 
 public class DayFragment extends Fragment {
-    ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13;
+    ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, weight;
     ImageView c1, c2, c3, c4, c5, c6, c7,c8, c9, c10, c11, c12, c13;
     TextView textView;
 
@@ -65,6 +77,41 @@ public class DayFragment extends Fragment {
         c11 = view.findViewById(R.id.optimizeCal);
         c12 = view.findViewById(R.id.weighCal);
         c13 = view.findViewById(R.id.intenCal);
+
+        weight = view.findViewById(R.id.weight_tweak_day);
+
+        weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater layoutInflater = (LayoutInflater)
+                        getActivity().getSystemService(LAYOUT_INFLATER_SERVICE);
+                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+                TextView tv = popupView.findViewById(R.id.timing);
+                EditText et = popupView.findViewById(R.id.weight);
+                Button b = popupView.findViewById(R.id.save);
+
+                Calendar c = Calendar.getInstance();
+                int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+
+                if(timeOfDay >= 6 && timeOfDay < 12){
+                    tv.setText("Morning");
+                    //
+                }else if(timeOfDay >= 18 && timeOfDay < 24){
+                    tv.setText("Night");
+                    //
+                }else{
+                    tv.setText("You can only enter your weight in morning or night");
+                    et.setVisibility(View.GONE);
+                    b.setVisibility(View.GONE);
+                }
+
+                popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+                dimBehind(popupWindow);
+            }
+        });
 
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -320,6 +367,16 @@ public class DayFragment extends Fragment {
         setCurrentDate();
 
         return view;
+    }
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
     }
 
     public void setCurrentDate(){

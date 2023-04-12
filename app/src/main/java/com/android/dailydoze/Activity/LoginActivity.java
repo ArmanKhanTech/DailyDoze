@@ -45,22 +45,17 @@ public class LoginActivity extends AppCompatActivity {
         LoadDB loadDB = new LoadDB();
         loadDB.execute();
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        submit.setOnClickListener(v -> {
 
-                String userPass = pass.getText().toString();
-                String userEmail = email.getText().toString();
+            String userPass = pass.getText().toString();
+            String userEmail = email.getText().toString();
 
-                if (TextUtils.isEmpty(userEmail) || TextUtils.isEmpty(userPass)) {
-                    Handler h = new Handler();
-                    h.postDelayed(() -> {
-                        submit.setText("Submit");
-                    }, 2000);
-                    submit.setText("Please Enter Correct Inputs");
-                } else {
-                    checkUser(userPass, userEmail);
-                }
+            if (TextUtils.isEmpty(userEmail) || TextUtils.isEmpty(userPass)) {
+                Handler h = new Handler();
+                h.postDelayed(() -> submit.setText("Submit"), 2000);
+                submit.setText("Please Enter Correct Inputs");
+            } else {
+                checkUser(userPass, userEmail);
             }
         });
     }
@@ -69,21 +64,19 @@ public class LoginActivity extends AppCompatActivity {
         user.setUserMail(mail);
         user.setUserPass(pass);
 
-        databaseReference.child("users").orderByChild("userMail").equalTo(mail).addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("users").orderByChild("email").equalTo(mail).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(!snapshot.exists()) {
                     Handler h = new Handler();
-                    h.postDelayed(() -> {
-                        submit.setText("Submit");
-                    }, 2000);
+                    h.postDelayed(() -> submit.setText("Submit"), 2000);
                     submit.setText("Invaild Credentials");
                 }else{
                     Map<String, Object> getData = (HashMap<String, Object>) snapshot.getValue();
                     String key = String.valueOf(getData.keySet());
                     key = key.substring(1, key.length()-1);
                     Map<String, Object> setData = (HashMap<String, Object>) getData.get(key);
-                    String password = (String) setData.get("userPass");
+                    String password = (String) setData.get("pass");
 
                     if(password.equals(pass)) {
                         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);

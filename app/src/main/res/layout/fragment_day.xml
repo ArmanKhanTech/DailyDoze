@@ -46,6 +46,16 @@
                 android:textSize="25dp"
                 android:fontFamily="sans-serif-condensed-medium"/>
 
+            <ImageButton
+                android:id="@+id/weight_tweak_day"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
+                android:background="@color/transparent"
+                android:src="@drawable/weight_icon"/>
+
         </FrameLayout>
 
         <TextView

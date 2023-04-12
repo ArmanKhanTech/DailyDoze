@@ -182,12 +182,11 @@
                             android:textAlignment="center"
                             android:text="Rainfall"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="50dp"
+                            android:layout_marginBottom="60dp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
                             android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold"  />
+                            android:textSize="25dp" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -195,6 +194,7 @@
                             app:cardCornerRadius="30dp">
 
                             <ImageView
+                                android:id="@+id/m1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/mp3"
@@ -215,14 +215,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:text="Rainfall"
+                            android:text="Flute"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="50dp"
+                            android:layout_marginBottom="60dp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
                             android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold"  />
+                            android:textSize="25dp"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -230,6 +229,7 @@
                             app:cardCornerRadius="30dp">
 
                             <ImageView
+                                android:id="@+id/m2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/mp3"
@@ -250,14 +250,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:text="Rainfall"
+                            android:text="Mindfull"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="50dp"
+                            android:layout_marginBottom="60dp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
                             android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold"  />
+                            android:textSize="25dp"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -265,6 +264,7 @@
                             app:cardCornerRadius="30dp">
 
                             <ImageView
+                                android:id="@+id/m3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/mp3"
@@ -285,14 +285,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:text="Rainfall"
+                            android:text="Healing"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="50dp"
+                            android:layout_marginBottom="60dp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
                             android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold"  />
+                            android:textSize="25dp"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -300,6 +299,7 @@
                             app:cardCornerRadius="30dp">
 
                             <ImageView
+                                android:id="@+id/m4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/mp3"
@@ -320,14 +320,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
-                            android:text="Rainfall"
+                            android:text="Garden"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="50dp"
+                            android:layout_marginBottom="60dp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
                             android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold"  />
+                            android:textSize="25dp"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -335,6 +334,42 @@
                             app:cardCornerRadius="30dp">
 
                             <ImageView
+                                android:id="@+id/m5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/mp3"
+                                android:scaleType="centerCrop"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:elevation="3dp"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="Portal"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="60dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:elevation="3dp"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="30dp">
+
+                            <ImageView
+                                android:id="@+id/m6"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:src="@drawable/mp3"

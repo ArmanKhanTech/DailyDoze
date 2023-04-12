@@ -72,32 +72,6 @@ public class NotificationDatabase extends SQLiteOpenHelper {
         return id;
     }
 
-    public String readTime(String time){
-        String duration="";
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor= db.rawQuery("SELECT " + TIME + " FROM " + TABLE_NAME +
-                " WHERE " + TIME + "='" + time + "'", null);
-
-        if (cursor.moveToFirst()) {
-            duration=cursor.getString(cursor.getColumnIndexOrThrow(TIME));
-        }
-        cursor.close();
-        return duration;
-    }
-
-    public long readMillis(String time){
-        long millis = 0;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor= db.rawQuery("SELECT " + MILLIS + " FROM " + TABLE_NAME +
-                " WHERE " + TIME + "='" + time + "'", null);
-
-        if (cursor.moveToFirst()) {
-            millis = cursor.getLong(cursor.getColumnIndexOrThrow(MILLIS));
-        }
-        cursor.close();
-        return millis;
-    }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
