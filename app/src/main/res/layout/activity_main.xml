@@ -64,16 +64,32 @@
                     android:background="@color/white"
                     app:srcCompat="@drawable/prev_icon"/>
 
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12 April 2023"
-                    android:textAlignment="center"
-                    android:padding="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="25dp"
-                    android:fontFamily="sans-serif-condensed-medium"/>
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12 April 2023"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:fontFamily="sans-serif-condensed-medium"/>
+
+                    <ImageButton
+                        android:id="@+id/sleep"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="end|center"
+                        android:background="@color/transparent"
+                        app:srcCompat="@drawable/sleep_icon_black"/>
+
+                </LinearLayout>
 
                 <ImageButton
                     android:id="@+id/date_next"
@@ -188,7 +204,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/berries"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
                         android:scaleType="centerInside"
                         android:layout_marginRight="60dp"
                         android:layout_marginLeft="60dp"/>
@@ -335,15 +352,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/other_vegetables"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp"
                             android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:elevation="10dp"
                             android:layout_gravity="center">
 
                             <TextView
@@ -429,10 +444,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
                         android:src="@drawable/fruits"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginLeft="60dp"
                         android:scaleType="centerInside"/>
 
                     <LinearLayout
@@ -533,7 +547,8 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/cruciferous"
                         android:layout_marginRight="60dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_marginLeft="60dp"
                         android:scaleType="centerInside"/>
 
@@ -618,10 +633,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/flexseeds"
-                        android:layout_marginTop="30dp"
-                        android:scaleType="centerInside"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginLeft="60dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="centerInside"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -664,8 +678,8 @@
                             android:id="@+id/flaxseeds_cb1"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:button="@drawable/black_checkbox"
+                            android:theme="@style/BlackCheckbox" />
 
                     </LinearLayout>
 
@@ -686,8 +700,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/herbs"
-                        android:layout_marginTop="25dp"
-                        android:scaleType="centerInside"/>
+                        android:layout_marginTop="15dp"
+                        android:scaleType="fitCenter"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -864,6 +878,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/grains"
+                            android:layout_margin="10dp"
                             android:scaleType="centerInside"/>
 
                         <LinearLayout
@@ -967,6 +982,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/beverages"
                         android:scaleType="centerInside"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="60dp"
                         android:layout_marginLeft="60dp"/>
 
@@ -976,7 +992,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="25dp"
                         android:text="Beverages"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold"/>
 
@@ -990,13 +1006,13 @@
                             android:onClick="beveragesInfo"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/info_icon_black"/>
+                            android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:onClick="beveragesCal"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_black"/>
+                            android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
 
@@ -1011,40 +1027,40 @@
                             android:id="@+id/beverages_cb1"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb2"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb3"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb4"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                         <CheckBox
                             android:id="@+id/beverages_cb5"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                     </LinearLayout>
 
@@ -1075,7 +1091,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="25dp"
                         android:text="Exercise"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -1089,13 +1105,13 @@
                             android:onClick="exerciseInfo"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/info_icon_white"/>
+                            android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:onClick="exerciseCal"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_white"/>
+                            android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
 

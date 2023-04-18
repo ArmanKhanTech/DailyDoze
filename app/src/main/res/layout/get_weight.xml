@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="@drawable/info_img_theme"
+            android:background="@drawable/popup_theme"
             android:orientation="vertical">
 
             <TextView
@@ -22,6 +22,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:text="Morning"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -39,7 +42,7 @@
                 <EditText
                     android:id="@+id/weight"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="43dp"
                     android:layout_weight="1"
                     android:background="@drawable/info_img_theme"
                     android:gravity="center"

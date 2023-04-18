@@ -26,6 +26,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     private static final String GRAINS="grains";
     private static final String BEVE="beve";
     private static final String EXERCISE="exercise";
+    private static final String SLEEP="sleep";
 
     public DailyDozeDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -46,7 +47,8 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
                 + NUTS + " int, "
                 + GRAINS + " int, "
                 + BEVE + " int, "
-                + EXERCISE + " int) ";
+                + EXERCISE + " int, "
+                + SLEEP + " text) ";
         db.execSQL(query);
     }
 
@@ -66,6 +68,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
         values.put(GRAINS, 0);
         values.put(BEVE, 0);
         values.put(EXERCISE, 0);
+        values.put(SLEEP, "0");
         db.insert(TABLE_NAME, null, values);
     }
 
@@ -130,6 +133,26 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
+    public void setSleep(String sleep, String date){
+        SQLiteDatabase db2 = this.getReadableDatabase();
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + SLEEP + " = " + sleep + " WHERE " + DATE + " = '" + date + "'");
+    }
+
+    @SuppressLint("Range")
+    public int getSleep(String date){
+        int i = 0;
+        SQLiteDatabase db1 = this.getWritableDatabase();
+        Cursor c = db1.rawQuery("SELECT " + SLEEP + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
+
+        if (c.moveToFirst()) {
+            i = c.getInt(c.getColumnIndex(SLEEP));
+        }
+
+        c.close();
+        return  i;
+    }
+
+    @SuppressLint("Range")
     public int getCount(String dateToGet){
         int sum = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
@@ -141,7 +164,6 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
 
             for (String columnName : columnNames) {
                 sum += c.getInt(c.getColumnIndex(columnName));
-                Log.d("i", String.valueOf(sum));
             }
         }
 

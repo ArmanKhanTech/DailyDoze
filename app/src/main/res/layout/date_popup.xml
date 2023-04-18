@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="@drawable/info_img_theme"
+            android:background="@drawable/popup_theme"
             android:orientation="vertical">
 
             <TextView
@@ -29,14 +29,17 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:padding="20dp">
+                android:layout_height="66dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp">
 
                 <EditText
                     android:id="@+id/day"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="43dp"
                     android:layout_weight="1"
                     android:background="@drawable/info_img_theme"
                     android:gravity="center"
@@ -55,7 +58,7 @@
                 <EditText
                     android:id="@+id/month"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="43dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/info_img_theme"
@@ -75,7 +78,7 @@
                 <EditText
                     android:id="@+id/year"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="43dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/info_img_theme"
@@ -92,7 +95,6 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/purple_500"

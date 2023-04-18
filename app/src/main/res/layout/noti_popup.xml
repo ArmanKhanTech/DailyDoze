@@ -12,7 +12,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/info_img_theme"
+        android:background="@drawable/popup_theme"
         android:orientation="vertical">
 
         <TextView

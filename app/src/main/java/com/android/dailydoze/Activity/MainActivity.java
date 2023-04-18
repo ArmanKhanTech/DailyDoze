@@ -12,14 +12,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -29,6 +27,7 @@ import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.R;
 import com.google.android.material.navigation.NavigationView;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -43,13 +42,12 @@ public class MainActivity extends AppCompatActivity {
             beve_cb4, beve_cb5, exercise_cb1;
     TextView currDate, textView2;
     DailyDozeDatabase db;
-    ImageButton jumpBack, date_prev, date_next;
+    ImageButton jumpBack, date_prev, date_next, sleep;
     FrameLayout frameLayout;
     boolean today, jump = false;
-    int inc = 0, dec = 0;
 
-    //TODO:FIX green and othervege, negcal, un_meal,& improve noti icon, delay while switching layout , login black screen
-    @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility"})
+    //TODO:FIX negcal, un_meal,& improve noti icon, delay while switching layout, login black screen
+    @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,300 +105,252 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = findViewById(R.id.frameLayout);
         date_next = findViewById(R.id.date_next);
         date_prev = findViewById(R.id.date_prev);
+        sleep = findViewById(R.id.sleep);
 
         textView2 = findViewById(R.id.textView2);
 
         setDay();
 
-        beans_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @SuppressLint("ClickableViewAccessibility")
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beans");
+        beans_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beans");
+            }else{
+                decValue("beans");
+            }
+        });
+
+        beans_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beans");
+            }else{
+                decValue("beans");
+            }
+        });
+
+        beans_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beans");
+            }else{
+                decValue("beans");
+            }
+        });
+
+        berries_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("berries");
+            }else{
+                decValue("berries");
+            }
+        });
+
+        greens_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("greens");
+            }else{
+                decValue("greens");
+            }
+        });
+
+        greens_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("greens");
+            }else{
+                decValue("greens");
+            }
+        });
+
+        othervege_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("othervege");
+            }else{
+                decValue("othervege");
+            }
+        });
+
+        othervege_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("othervege");
+            }else{
+                decValue("othervege");
+            }
+        });
+
+        of_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("otherfruits");
+            }else{
+                decValue("otherfruits");
+            }
+        });
+
+        of_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("otherfruits");
+            }else{
+                decValue("otherfruits");
+            }
+        });
+
+        of_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("otherfruits");
+            }else{
+                decValue("otherfruits");
+            }
+        });
+
+        cv_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("crucivege");
+            }else{
+                decValue("crucivege");
+            }
+        });
+
+        flaxseeds_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("flaxseeds");
+            }else{
+                decValue("flaxseeds");
+            }
+        });
+
+        herbs_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("herbs");
+            }else{
+                decValue("herbs");
+            }
+        });
+
+        nuts_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("nuts");
+            }else{
+                decValue("nuts");
+            }
+        });
+
+        grains_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("grains");
+            }else{
+                decValue("grains");
+            }
+        });
+
+        grains_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("grains");
+            }else{
+                decValue("grains");
+            }
+        });
+
+        grains_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("grains");
+            }else{
+                decValue("grains");
+            }
+        });
+
+        beve_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beve");
+            }else{
+                decValue("beve");
+            }
+        });
+
+        beve_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beve");
+            }else{
+                decValue("beve");
+            }
+        });
+
+        beve_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beve");
+            }else{
+                decValue("beve");
+            }
+        });
+
+        beve_cb4.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beve");
+            }else{
+                decValue("beve");
+            }
+        });
+
+        beve_cb5.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("beve");
+            }else{
+                decValue("beve");
+            }
+        });
+
+        exercise_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("exercise");
+            }else{
+                decValue("exercise");
+            }
+        });
+
+        jumpBack.setOnClickListener(v -> {
+            String tDate = setCurrentDate();
+            currDate.setText(tDate);
+            jump = false;
+            sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_black));
+            setDay();
+        });
+
+        sleep.setOnClickListener(v -> {
+            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+            int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+
+            EditText hrs = popupView.findViewById(R.id.weight);
+            TextView tv = popupView.findViewById(R.id.timing);
+            Button save = popupView.findViewById(R.id.save);
+
+            final String[] duration = {"0"};
+
+            if(today){
+                tv.setText("How many hours did you sleep today?");
+                hrs.setHint("Enter Duration in Hours");
+            } else{
+                duration[0] = String.valueOf(db.getSleep(getCurrentDate()));
+                hrs.setVisibility(View.GONE);
+                tv.setText("You slept "+ duration[0] +" hours on this day.");
+                save.setText("Okay");
+            }
+
+            save.setOnClickListener(v1 -> {
+                if(today){
+                    duration[0] = hrs.getText().toString();
+                    if(db.getDate(getCurrentDate())){
+                        db.setSleep(duration[0], getCurrentDate());
+                    }else{
+                        db.addDate(getCurrentDate());
+                        db.setSleep(duration[0], getCurrentDate());
+                    }
+                    popupWindow.dismiss();
                 }else{
-                    decValue("beans");
+                    popupWindow.dismiss();
                 }
-            }
-        });
+            });
 
-        beans_cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @SuppressLint("ClickableViewAccessibility")
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beans");
-                }else{
-                    decValue("beans");
-                }
-            }
-        });
-
-        beans_cb3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @SuppressLint("ClickableViewAccessibility")
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beans");
-                }else{
-                    decValue("beans");
-                }
-            }
-        });
-
-        berries_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("berries");
-                }else{
-                    decValue("berries");
-                }
-            }
-        });
-
-        greens_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("greens");
-                }else{
-                    decValue("greens");
-                }
-            }
-        });
-
-        greens_cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("greens");
-                }else{
-                    decValue("greens");
-                }
-            }
-        });
-
-        othervege_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("othervege");
-                }else{
-                    decValue("othervege");
-                }
-            }
-        });
-
-        othervege_cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("othervege");
-                }else{
-                    decValue("othervege");
-                }
-            }
-        });
-
-        of_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("otherfruits");
-                }else{
-                    decValue("otherfruits");
-                }
-            }
-        });
-
-        of_cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("otherfruits");
-                }else{
-                    decValue("otherfruits");
-                }
-            }
-        });
-
-        of_cb3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("otherfruits");
-                }else{
-                    decValue("otherfruits");
-                }
-            }
-        });
-
-        cv_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("crucivege");
-                }else{
-                    decValue("crucivege");
-                }
-            }
-        });
-
-        flaxseeds_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("flaxseeds");
-                }else{
-                    decValue("flaxseeds");
-                }
-            }
-        });
-
-        herbs_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("herbs");
-                }else{
-                    decValue("herbs");
-                }
-            }
-        });
-
-        nuts_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("nuts");
-                }else{
-                    decValue("nuts");
-                }
-            }
-        });
-
-        grains_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("grains");
-                }else{
-                    decValue("grains");
-                }
-            }
-        });
-
-        grains_cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("grains");
-                }else{
-                    decValue("grains");
-                }
-            }
-        });
-
-        grains_cb3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("grains");
-                }else{
-                    decValue("grains");
-                }
-            }
-        });
-
-        beve_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beve");
-                }else{
-                    decValue("beve");
-                }
-            }
-        });
-
-        beve_cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beve");
-                }else{
-                    decValue("beve");
-                }
-            }
-        });
-
-        beve_cb3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beve");
-                }else{
-                    decValue("beve");
-                }
-            }
-        });
-
-        beve_cb4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beve");
-                }else{
-                    decValue("beve");
-                }
-            }
-        });
-
-        beve_cb5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("beve");
-                }else{
-                    decValue("beve");
-                }
-            }
-        });
-
-        exercise_cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    incValue("exercise");
-                }else{
-                    decValue("exercise");
-                }
-            }
-        });
-
-        date_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        date_prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        jumpBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tDate = setCurrentDate();
-                currDate.setText(tDate);
-                jump = false;
-                setDay();
-            }
+            popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+            dimBehind(popupWindow);
         });
 
         navigationMenu.setNavigationItemSelectedListener(item -> {
@@ -423,43 +373,34 @@ public class MainActivity extends AppCompatActivity {
 
                     Button enter = popupView.findViewById(R.id.enter);
 
-                    enter.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            String d = day.getText().toString();
-                            String m = month.getText().toString();
-                            String y = year.getText().toString();
+                    enter.setOnClickListener(v -> {
+                        String d = day.getText().toString();
+                        String m = month.getText().toString();
+                        String y = year.getText().toString();
 
-                            if(d.isEmpty() || m.isEmpty() || y.isEmpty()){
-                                android.os.Handler h = new Handler();
-                                h.postDelayed(() -> {
-                                    enter.setText("Enter");
-                                }, 2000);
-                                enter.setText("Please Enter all Input/s");
-                            } else if(Integer.parseInt(d) > 31 || Integer.parseInt(m) > 12 || Integer.parseInt(y) > 2030){
-                                Handler h = new Handler();
-                                h.postDelayed(() -> {
-                                    enter.setText("Submit");
-                                }, 2000);
-                                enter.setText("Invalid Date");
+                        if(d.isEmpty() || m.isEmpty() || y.isEmpty()){
+                            Handler h = new Handler();
+                            h.postDelayed(() -> enter.setText("Enter"), 2000);
+                            enter.setText("Please Enter all Input/s");
+                        } else if(Integer.parseInt(d) > 31 || Integer.parseInt(m) > 12 || Integer.parseInt(y) > 2030){
+                            Handler h = new Handler();
+                            h.postDelayed(() -> enter.setText("Submit"), 2000);
+                            enter.setText("Invalid Date");
+                        } else{
+                            Calendar calendar = Calendar.getInstance();
+                            calendar.set(Integer.parseInt(y) , Integer.parseInt(m) - 1 , Integer.parseInt(d), 0, 0);
+                            SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+                            String formattedDate = df.format(calendar.getTime());
+
+                            if(db.getDate(formattedDate)){
+                                currDate.setText(formattedDate);
+                                jump = true;
+                                setDay();
+                                popupWindow.dismiss();
                             } else{
-                                Calendar calendar = Calendar.getInstance();
-                                calendar.set(Integer.parseInt(y) , Integer.parseInt(m) - 1 , Integer.parseInt(d), 0, 0);
-                                SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-                                String formattedDate = df.format(calendar.getTime());
-
-                                if(db.getDate(formattedDate)){
-                                    currDate.setText(formattedDate);
-                                    jump = true;
-                                    setDay();
-                                    popupWindow.dismiss();
-                                } else{
-                                    Handler h = new Handler();
-                                    h.postDelayed(() -> {
-                                        enter.setText("Submit");
-                                    }, 2000);
-                                    enter.setText("Record Doesn't Exists");
-                                }
+                                Handler h = new Handler();
+                                h.postDelayed(() -> enter.setText("Submit"), 2000);
+                                enter.setText("Record Doesn't Exists");
                             }
                         }
                     });
@@ -496,32 +437,48 @@ public class MainActivity extends AppCompatActivity {
 
     public void setPrev(){
         Calendar c = Calendar.getInstance();
-        c.setTime(new Date());
-        c.add(Calendar.DATE, -1);
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+        try {
+            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        c.add(Calendar.DATE, -1);
         String formattedDate = df.format(c.getTime());
-        //
 
         if(db.getDate(formattedDate)){
             date_prev.setVisibility(View.VISIBLE);
         } else{
             date_prev.setVisibility(View.GONE);
         }
+
+        date_prev.setOnClickListener(v -> {
+            currDate.setText(formattedDate);
+            setDay();
+        });
     }
 
     public void setNext(){
         Calendar c = Calendar.getInstance();
-        c.setTime(new Date());
-        c.add(Calendar.DATE, +1);
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+        try {
+            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        c.add(Calendar.DATE, +1);
         String formattedDate = df.format(c.getTime());
-        //
 
         if(db.getDate(formattedDate)){
             date_next.setVisibility(View.VISIBLE);
         } else{
             date_next.setVisibility(View.GONE);
         }
+
+        date_next.setOnClickListener(v -> {
+            currDate.setText(formattedDate);
+            setDay();
+        });
     }
 
     public void setCount(){
@@ -552,30 +509,36 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     public void setDay(){
         if(Objects.equals(setCurrentDate(), getCurrentDate())){
-            today = true;
+            // Current Day
             setClickable(true);
+            unCheckAll();
             setChecked();
             setCount();
+            today = true;
             jumpBack.setVisibility(View.GONE);
             frameLayout.setBackground(getResources().getDrawable(R.drawable.info_img_theme));
             currDate.setTextColor(getColor(R.color.black));
             setNext();
             setPrev();
         }else{
-            if(jump){
-                today = false;
-                setClickable(false);
-                setChecked();
-                setCount();
+            // Jump Day
+            today = false;
+            setClickable(false);
+            unCheckAll();
+            setChecked();
+            setCount();
+            setPrev();
+            setNext();
+            if(jump) {
+                sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_white));
                 jumpBack.setVisibility(View.VISIBLE);
                 frameLayout.setBackground(getResources().getDrawable(R.drawable.date_back_theme));
                 currDate.setTextColor(getColor(R.color.white));
                 date_prev.setVisibility(View.GONE);
                 date_next.setVisibility(View.GONE);
-            } else{
-
             }
         }
     }
@@ -616,6 +579,44 @@ public class MainActivity extends AppCompatActivity {
         beve_cb5.setClickable(b);
 
         exercise_cb1.setClickable(b);
+    }
+
+    public void unCheckAll(){
+        beans_cb1.setChecked(false);
+        beans_cb2.setChecked(false);
+        beans_cb3.setChecked(false);
+
+        berries_cb1.setChecked(false);
+
+        greens_cb1.setChecked(false);
+        greens_cb2.setChecked(false);
+
+        othervege_cb1.setChecked(false);
+        othervege_cb2.setChecked(false);
+
+        of_cb1.setChecked(false);
+        of_cb2.setChecked(false);
+        of_cb3.setChecked(false);
+
+        cv_cb1.setChecked(false);
+
+        flaxseeds_cb1.setChecked(false);
+
+        herbs_cb1.setChecked(false);
+
+        nuts_cb1.setChecked(false);
+
+        grains_cb1.setChecked(false);
+        grains_cb2.setChecked(false);
+        grains_cb3.setChecked(false);
+
+        beve_cb1.setChecked(false);
+        beve_cb2.setChecked(false);
+        beve_cb3.setChecked(false);
+        beve_cb4.setChecked(false);
+        beve_cb5.setChecked(false);
+
+        exercise_cb1.setChecked(false);
     }
 
     public void setChecked(){
@@ -738,8 +739,7 @@ public class MainActivity extends AppCompatActivity {
     public String setCurrentDate(){
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-        String formattedDate = df.format(c);
-        return formattedDate;
+        return df.format(c);
     }
 
     public String getCurrentDate(){
