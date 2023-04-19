@@ -40,7 +40,7 @@
                  android:layout_gravity="center"
                  android:elevation="3dp"
                  android:layout_marginLeft="15dp"
-                 android:background="@drawable/flexseeds_theme">
+                 android:background="@drawable/berries_theme">
 
                  <LinearLayout
                      android:layout_width="match_parent"
@@ -465,7 +465,7 @@
                 android:elevation="3dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/greenvege_theme">
+                android:background="@drawable/greens_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -576,7 +576,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:background="@drawable/berries_theme">
+                    android:background="@drawable/exercise_theme">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -816,7 +816,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/greenvege_theme">
+                    android:background="@drawable/greens_theme">
 
                     <LinearLayout
                         android:layout_width="match_parent"

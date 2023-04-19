@@ -41,73 +41,73 @@ public class InfoActivity extends AppCompatActivity {
 
         switch(title){
             case "beans":
-                drawable = getDrawable(R.drawable.beans);
+                drawable = getDrawable(R.drawable.beans_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.beans));
                 name.setText("Beans");
                 break;
             case "berries":
-                drawable = getDrawable(R.drawable.berries);
+                drawable = getDrawable(R.drawable.berries_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.berries));
                 name.setText("Berries");
                 break;
             case "fruits":
-                drawable = getDrawable(R.drawable.fruits);
+                drawable = getDrawable(R.drawable.fruits_pictures);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.fruits));
                 name.setText("Fruits");
                 break;
             case "crucivege":
-                drawable = getDrawable(R.drawable.cruciferous);
+                drawable = getDrawable(R.drawable.cruciferous_vegetables_pictures);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.crucivege));
                 name.setText("Cruciferous Vegetables");
                 break;
             case "greens":
-                drawable = getDrawable(R.drawable.green_vegetables);
+                drawable = getDrawable(R.drawable.greens_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.greenvege));
                 name.setText("Greens");
                 break;
             case "othervege":
-                drawable = getDrawable(R.drawable.other_vegetables);
+                drawable = getDrawable(R.drawable.other_vegetables_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.othervege));
                 name.setText("Other Vegetables");
                 break;
             case "flexseeds":
-                drawable = getDrawable(R.drawable.flexseeds);
+                drawable = getDrawable(R.drawable.flaxseeds_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.flexseeds));
-                name.setText("Flexseeds");
+                name.setText("Flaxseeds");
                 break;
             case "herbs":
-                drawable = getDrawable(R.drawable.herbs);
+                drawable = getDrawable(R.drawable.herbs_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.herbs));
                 name.setText("Herbs & Spices");
                 break;
             case "beverages":
-                drawable = getDrawable(R.drawable.beverages);
+                drawable = getDrawable(R.drawable.beverages_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.beverages));
                 name.setText("Beverages");
                 break;
             case "nuts":
-                drawable = getDrawable(R.drawable.nuts);
+                drawable = getDrawable(R.drawable.nuts_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.nuts));
                 name.setText("Nuts & Seeds");
                 break;
             case "grains":
-                drawable = getDrawable(R.drawable.grains);
+                drawable = getDrawable(R.drawable.grains_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.grains));
                 name.setText("Grains");
                 break;
             case "exercise":
-                drawable = getDrawable(R.drawable.exercise);
+                drawable = getDrawable(R.drawable.exercise_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.exercise));
                 name.setText("Exercise");
