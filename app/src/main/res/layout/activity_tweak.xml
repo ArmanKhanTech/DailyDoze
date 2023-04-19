@@ -116,6 +116,46 @@
 
         </com.google.android.material.tabs.TabLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="2dp"
+            android:background="@drawable/info_img_theme">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/date_tweak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 April 2023"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+
+                <ImageButton
+                    android:id="@+id/weight_tweak"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end|center"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/transparent"
+                    android:src="@drawable/weight_icon"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager_tweaks"
             android:layout_width="match_parent"

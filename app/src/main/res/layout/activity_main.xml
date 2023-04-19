@@ -274,7 +274,6 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/green_vegetables"
                         android:layout_marginTop="15dp"
-                        android:layout_marginBottom="5dp"
                         android:scaleType="centerInside"/>
 
                     <TextView
@@ -441,7 +440,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="5dp"
                         android:src="@drawable/fruits"
                         android:scaleType="centerInside"/>
 
@@ -544,7 +543,7 @@
                         android:src="@drawable/cruciferous"
                         android:layout_marginRight="60dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_marginLeft="60dp"
                         android:scaleType="centerInside"/>
 
@@ -630,7 +629,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/flexseeds"
                         android:layout_marginTop="25dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="5dp"
                         android:scaleType="centerInside"/>
 
                     <TextView

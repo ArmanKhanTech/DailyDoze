@@ -1,36 +1,35 @@
 package com.android.dailydoze.Fragments;
 
-import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+import static com.android.dailydoze.Activity.TweakActivity.getCurrentDate;
+import static com.android.dailydoze.Activity.TweakActivity.setCurrentDate;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.android.dailydoze.Activity.CalenderActivity;
 import com.android.dailydoze.Activity.InfoActivity;
+import com.android.dailydoze.Activity.TweakActivity;
+import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 
-import java.util.Calendar;
+import java.util.Objects;
 
 public class EachMealFragment extends Fragment {
-    ImageView i1, i2, i3, i4, i5, weight;
+    ImageView i1, i2, i3, i4, i5;
     ImageView c1, c2, c3, c4, c5;
-    TextView textView;
+    @SuppressLint("StaticFieldLeak")
+    static CheckBox water_cb1, water_cb2, water_cb3, vinegar_cb1, vinegar_cb2, vinegar_cb3, neg_cb1, neg_cb2, neg_cb3, un_meal_cb1, un_meal_cb2,
+            un_meal_cb3, twe_min_cb1, twe_min_cb2, twe_min_cb3;
+    static TweaksDatabase db;
+
     public EachMealFragment() {
     }
 
@@ -44,8 +43,6 @@ public class EachMealFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_each_meal, container, false);
 
-        textView = (TextView) view.findViewById(R.id.date_tweak_meal);
-
         i1 = view.findViewById(R.id.waterInfo);
         i2 = view.findViewById(R.id.vinegarInfo);
         i3 = view.findViewById(R.id.negInfo);
@@ -58,161 +55,350 @@ public class EachMealFragment extends Fragment {
         c4 = view.findViewById(R.id.un_mealCal);
         c5 = view.findViewById(R.id.tweminCal);
 
-        weight = view.findViewById(R.id.weight_tweak_meal);
+        water_cb1 = view.findViewById(R.id.water_cb1);
+        water_cb2 = view.findViewById(R.id.water_cb2);
+        water_cb3 = view.findViewById(R.id.water_cb3);
+        vinegar_cb1 = view.findViewById(R.id.vinegar_cb1);
+        vinegar_cb2 = view.findViewById(R.id.vinegar_cb2);
+        vinegar_cb3 = view.findViewById(R.id.vinegar_cb3);
+        neg_cb1 = view.findViewById(R.id.neg_cb1);
+        neg_cb2 = view.findViewById(R.id.neg_cb2);
+        neg_cb3 = view.findViewById(R.id.neg_cb3);
+        un_meal_cb1 = view.findViewById(R.id.un_meal_cb1);
+        un_meal_cb2 = view.findViewById(R.id.un_meal_cb2);
+        un_meal_cb3 = view.findViewById(R.id.un_meal_cb3);
+        twe_min_cb1 = view.findViewById(R.id.twe_min_cb1);
+        twe_min_cb2 = view.findViewById(R.id.twe_min_cb2);
+        twe_min_cb3 = view.findViewById(R.id.twe_min_cb3);
 
-        weight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LayoutInflater layoutInflater = (LayoutInflater)
-                        getActivity().getSystemService(LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
-                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
-                TextView tv = popupView.findViewById(R.id.timing);
-                EditText et = popupView.findViewById(R.id.weight);
-                Button b = popupView.findViewById(R.id.save);
+        db = new TweaksDatabase(getActivity());
 
-                Calendar c = Calendar.getInstance();
-                int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+        setDay();
 
-                if(timeOfDay >= 6 && timeOfDay < 12){
-                    tv.setText("Morning");
-                    //
-                }else if(timeOfDay >= 18 && timeOfDay < 24){
-                    tv.setText("Night");
-                    //
-                }else{
-                    tv.setText("You can only enter your weight in morning or night");
-                    et.setVisibility(View.GONE);
-                    b.setVisibility(View.GONE);
-                }
-
-                popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-                dimBehind(popupWindow);
+        water_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("water");
+            }else{
+                decValue("water");
             }
         });
 
-        i1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","water");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        water_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("water");
+            }else{
+                decValue("water");
             }
         });
 
-        i2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","vinegar");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        vinegar_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("vinegar");
+            }else{
+                decValue("vinegar");
             }
         });
 
-        i3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","neg");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        vinegar_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("vinegar");
+            }else{
+                decValue("vinegar");
             }
         });
 
-        i4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","un_meal");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        vinegar_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("vinegar");
+            }else{
+                decValue("vinegar");
             }
         });
 
-        i5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","twemin");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        water_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("water");
+            }else{
+                decValue("water");
             }
         });
 
-        c1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","water");
-                startActivity(intent);
+        neg_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("neg_cal");
+            }else{
+                decValue("neg_cal");
             }
         });
 
-
-        c2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","vinegar");
-                startActivity(intent);
+        neg_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("neg_cal");
+            }else{
+                decValue("neg_cal");
             }
         });
 
-
-        c3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","neg");
-                startActivity(intent);
+        neg_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("neg_cal");
+            }else{
+                decValue("neg_cal");
             }
         });
 
-        c4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","un_meal");
-                startActivity(intent);
+        un_meal_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("un_meal");
+            }else{
+                decValue("un_meal");
             }
         });
 
-        c5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","twemin");
-                startActivity(intent);
+        un_meal_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("un_meal");
+            }else{
+                decValue("un_meal");
             }
         });
 
-        setCurrentDate();
+        un_meal_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("un_meal");
+            }else{
+                decValue("un_meal");
+            }
+        });
+
+        twe_min_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("twe_min");
+            }else{
+                decValue("twe_min");
+            }
+        });
+
+        twe_min_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("twe_min");
+            }else{
+                decValue("twe_min");
+            }
+        });
+
+        twe_min_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("twe_min");
+            }else{
+                decValue("twe_min");
+            }
+        });
+
+        i1.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","water");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
+        });
+
+        i2.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","vinegar");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
+        });
+
+        i3.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","neg");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
+        });
+
+        i4.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","un_meal");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
+        });
+
+        i5.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","twemin");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
+        });
+
+        c1.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","water");
+            startActivity(intent);
+        });
+
+        c2.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","vinegar");
+            startActivity(intent);
+        });
+
+        c3.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","neg");
+            startActivity(intent);
+        });
+
+        c4.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","un_meal");
+            startActivity(intent);
+        });
+
+        c5.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","twemin");
+            startActivity(intent);
+        });
 
         return view;
     }
 
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
+    public static void setDay(){
+        if(Objects.equals(setCurrentDate(), getCurrentDate())){
+            if(TweakActivity.today){
+                setClickable(true);
+                unCheckAll();
+                setChecked();
+            }
+        }
     }
 
-    public void setCurrentDate(){
-        Calendar c = Calendar.getInstance();
-        String[]monthName={"January","February","March", "April", "May", "June", "July",
-                "August", "September", "October", "November",
-                "December"};
-        String month=monthName[c.get(Calendar.MONTH)];
-        int year=c.get(Calendar.YEAR);
-        int date=c.get(Calendar.DATE);
-        textView.setText(date+" "+month+" "+year);
+    public static void setClickable(boolean b){
+        water_cb1.setClickable(b);
+        water_cb2.setClickable(b);
+        water_cb3.setClickable(b);
+
+        vinegar_cb1.setClickable(b);
+        vinegar_cb2.setClickable(b);
+        vinegar_cb3.setClickable(b);
+
+        neg_cb1.setClickable(b);
+        neg_cb2.setClickable(b);
+        neg_cb3.setClickable(b);
+
+        un_meal_cb1.setClickable(b);
+        un_meal_cb2.setClickable(b);
+        un_meal_cb3.setClickable(b);
+
+        twe_min_cb1.setClickable(b);
+        twe_min_cb2.setClickable(b);
+        twe_min_cb3.setClickable(b);
+    }
+
+    public static void unCheckAll(){
+        water_cb1.setChecked(false);
+        water_cb2.setChecked(false);
+        water_cb3.setChecked(false);
+
+        vinegar_cb1.setChecked(false);
+        vinegar_cb2.setChecked(false);
+        vinegar_cb3.setChecked(false);
+
+        neg_cb1.setChecked(false);
+        neg_cb2.setChecked(false);
+        neg_cb3.setChecked(false);
+
+        un_meal_cb1.setChecked(false);
+        un_meal_cb2.setChecked(false);
+        un_meal_cb3.setChecked(false);
+
+        twe_min_cb1.setChecked(false);
+        twe_min_cb2.setChecked(false);
+        twe_min_cb3.setChecked(false);
+    }
+
+    public static void setChecked(){
+        int i = db.getData("water", getCurrentDate());
+        if(i==1) {
+            water_cb1.setChecked(true);
+        } else if (i==2) {
+            water_cb1.setChecked(true);
+            water_cb2.setChecked(true);
+        } else if (i==3) {
+            water_cb1.setChecked(true);
+            water_cb2.setChecked(true);
+            water_cb3.setChecked(true);
+        }
+
+        i = db.getData("vinegar", getCurrentDate());
+        if(i==1) {
+            vinegar_cb1.setChecked(true);
+        } else if (i==2) {
+            vinegar_cb1.setChecked(true);
+            vinegar_cb2.setChecked(true);
+        } else if (i==3) {
+            vinegar_cb1.setChecked(true);
+            vinegar_cb2.setChecked(true);
+            vinegar_cb3.setChecked(true);
+        }
+
+        i = db.getData("neg_cal", getCurrentDate());
+        if(i==1) {
+            neg_cb1.setChecked(true);
+        } else if (i==2) {
+            neg_cb1.setChecked(true);
+            neg_cb2.setChecked(true);
+        } else if (i==3) {
+            neg_cb1.setChecked(true);
+            neg_cb2.setChecked(true);
+            neg_cb3.setChecked(true);
+        }
+
+        i = db.getData("un_meal", getCurrentDate());
+        if(i==1) {
+            un_meal_cb1.setChecked(true);
+        } else if (i==2) {
+            un_meal_cb1.setChecked(true);
+            un_meal_cb2.setChecked(true);
+        } else if (i==3) {
+            un_meal_cb1.setChecked(true);
+            un_meal_cb2.setChecked(true);
+            un_meal_cb3.setChecked(true);
+        }
+
+        i = db.getData("twe_min", getCurrentDate());
+        if(i==1) {
+            twe_min_cb1.setChecked(true);
+        } else if (i==2) {
+            twe_min_cb1.setChecked(true);
+            twe_min_cb2.setChecked(true);
+        } else if (i==3) {
+            twe_min_cb1.setChecked(true);
+            twe_min_cb2.setChecked(true);
+            twe_min_cb3.setChecked(true);
+        }
+    }
+
+    public void incValue(String value){
+        if(TweakActivity.today){
+            if(db.getDate(getCurrentDate())){
+                db.incData(value, getCurrentDate());
+            }else{
+                db.addDate(getCurrentDate());
+                db.incData(value, getCurrentDate());
+            }
+            TweakActivity.setCount(getCurrentDate());
+        }
+    }
+
+    public void decValue(String value){
+        if(TweakActivity.today){
+            if(db.getDate(getCurrentDate())){
+                db.decData(value, getCurrentDate());
+            }else{
+                db.addDate(getCurrentDate());
+            }
+            TweakActivity.setCount(getCurrentDate());
+        }
     }
 }

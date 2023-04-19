@@ -1,40 +1,36 @@
 package com.android.dailydoze.Fragments;
 
-import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+import static com.android.dailydoze.Activity.TweakActivity.getCurrentDate;
+import static com.android.dailydoze.Activity.TweakActivity.setCurrentDate;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.android.dailydoze.Activity.CalenderActivity;
 import com.android.dailydoze.Activity.InfoActivity;
+import com.android.dailydoze.Activity.TweakActivity;
+import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 
-import java.util.Calendar;
+import java.util.Objects;
 
 
 public class NightFragment extends Fragment {
 
-    ImageView i1, i2, i3, weight;
+    ImageView i1, i2, i3;
     ImageView c1, c2, c3;
-    TextView textView;
+    @SuppressLint("StaticFieldLeak")
+    static CheckBox fast_cb1, sleep_cb1, exp_cb1;
+    static TweaksDatabase db;
+
     public NightFragment() {
     }
 
@@ -48,8 +44,6 @@ public class NightFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_night, container, false);
 
-        textView = (TextView) view.findViewById(R.id.date_tweak_night);
-
         i1 = view.findViewById(R.id.fastInfo);
         i2 = view.findViewById(R.id.sleepInfo);
         i3 = view.findViewById(R.id.expInfo);
@@ -58,123 +52,139 @@ public class NightFragment extends Fragment {
         c2 = view.findViewById(R.id.sleepCal);
         c3 = view.findViewById(R.id.expCal);
 
-        weight = view.findViewById(R.id.weight_tweak_night);
+        fast_cb1 = view.findViewById(R.id.fast_cb1);
+        sleep_cb1 = view.findViewById(R.id.sleep_cb1);
+        exp_cb1 = view.findViewById(R.id.exp_cb1);
 
-        weight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LayoutInflater layoutInflater = (LayoutInflater)
-                        getActivity().getSystemService(LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
-                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
-                TextView tv = popupView.findViewById(R.id.timing);
-                EditText et = popupView.findViewById(R.id.weight);
-                Button b = popupView.findViewById(R.id.save);
+        db = new TweaksDatabase(getActivity());
 
-                Calendar c = Calendar.getInstance();
-                int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+        setDay();
 
-                if(timeOfDay >= 6 && timeOfDay < 12){
-                    tv.setText("Morning");
-                    //
-                }else if(timeOfDay >= 18 && timeOfDay < 24){
-                    tv.setText("Night");
-                    //
-                }else{
-                    tv.setText("You can only enter your weight in morning or night");
-                    et.setVisibility(View.GONE);
-                    b.setVisibility(View.GONE);
-                }
-
-                popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-                dimBehind(popupWindow);
+        fast_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("fast");
+            }else{
+                decValue("fast");
             }
         });
 
-        i1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","fast");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        sleep_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("sleep");
+            }else{
+                decValue("sleep");
             }
         });
 
-        i2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","sleep");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
+        exp_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(isChecked){
+                incValue("exp");
+            }else{
+                decValue("exp");
             }
         });
 
-        i3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InfoActivity.class);
-                intent.putExtra("title","exp");
-                intent.putExtra("tweak",true);
-                startActivity(intent);
-            }
+        i1.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","fast");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
         });
 
-        c1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","fast");
-                startActivity(intent);
-            }
+        i2.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","sleep");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
         });
 
-
-        c2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","sleep");
-                startActivity(intent);
-            }
+        i3.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), InfoActivity.class);
+            intent.putExtra("title","exp");
+            intent.putExtra("tweak",true);
+            startActivity(intent);
         });
 
-
-        c3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CalenderActivity.class);
-                intent.putExtra("title","exp");
-                startActivity(intent);
-            }
+        c1.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","fast");
+            startActivity(intent);
         });
 
-        setCurrentDate();
+        c2.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","sleep");
+            startActivity(intent);
+        });
+
+        c3.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CalenderActivity.class);
+            intent.putExtra("title","exp");
+            startActivity(intent);
+        });
 
         return view;
     }
 
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
+    public static void setDay(){
+        if(Objects.equals(setCurrentDate(), getCurrentDate())){
+            if(TweakActivity.today){
+                setClickable(true);
+                unCheckAll();
+                setChecked();
+            }
+        }
     }
 
-    public void setCurrentDate(){
-        Calendar c = Calendar.getInstance();
-        String[]monthName={"January","February","March", "April", "May", "June", "July",
-                "August", "September", "October", "November",
-                "December"};
-        String month=monthName[c.get(Calendar.MONTH)];
-        int year=c.get(Calendar.YEAR);
-        int date=c.get(Calendar.DATE);
-        textView.setText(date+" "+month+" "+year);
+    public static void setClickable(boolean b){
+        fast_cb1.setClickable(b);
+        sleep_cb1.setClickable(b);
+        exp_cb1.setClickable(b);
+    }
+
+    public static void unCheckAll(){
+        fast_cb1.setChecked(false);
+        sleep_cb1.setChecked(false);
+        exp_cb1.setChecked(false);
+    }
+
+    public static void setChecked(){
+        int i = db.getData("fast", getCurrentDate());
+        if(i==1) {
+            fast_cb1.setChecked(true);
+        }
+
+        i = db.getData("sleep", getCurrentDate());
+        if(i==1) {
+            sleep_cb1.setChecked(true);
+        }
+
+        i = db.getData("exp", getCurrentDate());
+        if(i==1) {
+            exp_cb1.setChecked(true);
+        }
+    }
+
+    public void incValue(String value){
+        if(TweakActivity.today){
+            if(db.getDate(getCurrentDate())){
+                db.incData(value, getCurrentDate());
+            }else{
+                db.addDate(getCurrentDate());
+                db.incData(value, getCurrentDate());
+            }
+            TweakActivity.setCount(getCurrentDate());
+        }
+    }
+
+    public void decValue(String value){
+        if(TweakActivity.today){
+            if(db.getDate(getCurrentDate())){
+                db.decData(value, getCurrentDate());
+            }else{
+                db.addDate(getCurrentDate());
+            }
+            TweakActivity.setCount(getCurrentDate());
+        }
     }
 }

@@ -17,52 +17,10 @@
             android:orientation="vertical"
             android:fontFamily="sans-serif-condensed-medium">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:elevation="2dp"
-            android:background="@drawable/info_img_theme">
-
-            <ImageButton
-                android:visibility="gone"
-                android:id="@+id/jump_back_tweak_day"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="start|center"
-                android:layout_marginLeft="20dp"
-                android:background="@color/transparent"
-                android:src="@drawable/jump_back_icon"/>
-
-            <TextView
-                android:id="@+id/date_tweak_day"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="12 April 2023"
-                android:textAlignment="center"
-                android:padding="10dp"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:fontFamily="sans-serif-condensed-medium"/>
-
-            <ImageButton
-                android:id="@+id/weight_tweak_day"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="end|center"
-                android:layout_marginRight="20dp"
-                android:scaleType="centerCrop"
-                android:background="@color/transparent"
-                android:src="@drawable/weight_icon"/>
-
-        </FrameLayout>
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Take Your Daily Doses : "
-            android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
@@ -387,6 +345,12 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/othervege_theme">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/yeast"
+                    android:scaleType="centerCrop"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -451,19 +415,6 @@
                         android:button="@drawable/white_checkbox"/>
 
                 </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/yeast"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
 
             </FrameLayout>
 
@@ -696,7 +647,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:background="@drawable/berries_theme">
+                    android:background="@drawable/beans_theme">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -710,7 +661,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="Stay"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
@@ -719,7 +670,7 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:text="Hydrated"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
@@ -736,13 +687,13 @@
                             android:id="@+id/hydInfo"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/info_icon_black"/>
+                            android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:id="@+id/hydCal"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_black"/>
+                            android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
 
@@ -758,8 +709,8 @@
                             android:id="@+id/hyd_cb1"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                     </LinearLayout>
 
@@ -879,7 +830,13 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/beverages_theme">
+                android:background="@drawable/beans_theme">
+
+             <ImageView
+                 android:layout_width="200dp"
+                 android:layout_height="match_parent"
+                 android:src="@drawable/frontload"
+                 android:scaleType="centerInside"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -893,7 +850,7 @@
                         android:layout_height="wrap_content"
                         android:text="Front-Load"
                         android:layout_gravity="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -902,7 +859,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="Your Calories"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -919,13 +876,13 @@
                         android:id="@+id/frontInfo"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/info_icon_black"/>
+                        android:src="@drawable/info_icon_white"/>
 
                     <ImageView
                         android:id="@+id/frontCal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_black"/>
+                        android:src="@drawable/calender_icon_white"/>
 
                 </LinearLayout>
 
@@ -941,23 +898,10 @@
                         android:id="@+id/front_cb1"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
 
                 </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/frontload"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
 
             </FrameLayout>
 
@@ -1312,14 +1256,14 @@
 
                     <ImageView
                         android:id="@+id/intenInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/info_icon_white"/>
 
                     <ImageView
                         android:id="@+id/intenCal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/calender_icon_white"/>
 
                 </LinearLayout>
@@ -1334,23 +1278,23 @@
 
                     <CheckBox
                         android:id="@+id/inten_cb1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:theme="@style/WhiteCheckbox"
                         android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/inten_cb2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
                         android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/inten_cb3"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
                         android:button="@drawable/white_checkbox"/>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.NightFragment">
 
     <ScrollView
@@ -16,51 +17,9 @@
         android:orientation="vertical"
         android:fontFamily="sans-serif-condensed-medium">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:elevation="2dp"
-            android:background="@drawable/info_img_theme">
-
-            <ImageButton
-                android:visibility="gone"
-                android:id="@+id/jump_back_tweak_night"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="start|center"
-                android:layout_marginLeft="20dp"
-                android:background="@color/transparent"
-                android:src="@drawable/jump_back_icon"/>
-
-            <TextView
-                android:id="@+id/date_tweak_night"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="12 April 2023"
-                android:textAlignment="center"
-                android:padding="10dp"
-                android:textColor="@color/black"
-                android:textSize="25dp"
-                android:fontFamily="sans-serif-condensed-medium"/>
-
-            <ImageButton
-                android:id="@+id/weight_tweak_night"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="end|center"
-                android:layout_marginRight="20dp"
-                android:scaleType="centerCrop"
-                android:background="@color/transparent"
-                android:src="@drawable/weight_icon"/>
-
-        </FrameLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <FrameLayout
@@ -115,14 +74,14 @@
 
                 <ImageView
                     android:id="@+id/fastInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@drawable/info_icon_white"/>
 
                 <ImageView
                     android:id="@+id/fastCal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@drawable/calender_icon_white"/>
 
             </LinearLayout>
@@ -136,8 +95,8 @@
 
                 <CheckBox
                     android:id="@+id/fast_cb1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:theme="@style/BlackCheckbox"
                     android:button="@drawable/white_checkbox"/>
 
@@ -196,14 +155,14 @@
 
                 <ImageView
                     android:id="@+id/sleepInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@drawable/info_icon_white"/>
 
                 <ImageView
                     android:id="@+id/sleepCal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@drawable/calender_icon_white"/>
 
             </LinearLayout>
@@ -217,10 +176,10 @@
 
                 <CheckBox
                     android:id="@+id/sleep_cb1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:button="@drawable/white_checkbox"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:button="@drawable/white_checkbox"
+                    android:theme="@style/WhiteCheckbox" />
 
             </LinearLayout>
 
@@ -278,14 +237,14 @@
 
                 <ImageView
                     android:id="@+id/expInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@drawable/info_icon_black"/>
 
                 <ImageView
                     android:id="@+id/expCal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@drawable/calender_icon_black"/>
 
             </LinearLayout>
@@ -299,8 +258,8 @@
 
                 <CheckBox
                     android:id="@+id/exp_cb1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:theme="@style/BlackCheckbox"
                     android:button="@drawable/black_checkbox"/>
 
