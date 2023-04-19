@@ -3,7 +3,7 @@ package com.android.dailydoze.Utility;
 import java.io.Serializable;
 
 public class Signup implements Serializable {
-    public String email, name, pass, phone, gender, dob, country, city, state, address, zip, type, blood, medical, other;
+    public String email, name, pass, phone, gender, dob, country, city, state, address, zip, type, blood, medical, other, height, weight, bp;
 
     public Signup() {
 
@@ -53,5 +53,14 @@ public class Signup implements Serializable {
     }
     public void setUserOther(String other) {
         this.other = other;
+    }
+    public void setUserHeight(String height) {
+        this.height = height;
+    }
+    public void setUserWeight(String weight) {
+        this.weight = weight;
+    }
+    public void setUserBp(String bp) {
+        this.bp = bp;
     }
 }

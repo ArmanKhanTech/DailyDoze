@@ -11,29 +11,19 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/holo_purple">
+        android:scrollbarThumbVertical="@android:color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="40dp"
-        android:onClick="loginBack"
-        android:layout_height="40dp"
-        android:layout_margin="15dp"
-        android:background="@color/white"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/back_button_black"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/login"
+        android:layout_marginTop="100dp"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -126,7 +116,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
         android:textAlignment="center">
 
         <TextView

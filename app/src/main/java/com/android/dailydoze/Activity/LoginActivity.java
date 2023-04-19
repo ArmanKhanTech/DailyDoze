@@ -103,12 +103,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    public void loginBack(View v){
-        finish();
-    }
+
     public void openSignup(View v){
         Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @SuppressLint("StaticFieldLeak")

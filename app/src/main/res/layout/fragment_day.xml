@@ -69,609 +69,617 @@
             android:textSize="25dp"
             android:fontFamily="sans-serif-condensed-medium"/>
 
-         <HorizontalScrollView
+         <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="200dp"
-             android:layout_marginBottom="10dp"
-             android:scrollbars="none">
+             android:layout_marginRight="15dp"
+             android:orientation="horizontal">
 
-             <LinearLayout
-                 android:layout_width="match_parent"
+             <FrameLayout
+                 android:layout_width="0dp"
                  android:layout_height="match_parent"
-                 android:orientation="horizontal">
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:elevation="3dp"
+                 android:layout_marginLeft="15dp"
+                 android:background="@drawable/othervege_theme">
 
-                 <FrameLayout
-                     android:layout_width="100dp"
-                     android:layout_height="match_parent"
-                     android:layout_gravity="center"
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
                      android:elevation="3dp"
-                     android:layout_marginLeft="15dp"
-                     android:background="@drawable/othervege_theme">
+                     android:layout_gravity="center">
 
-                     <LinearLayout
+                     <TextView
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         android:elevation="3dp"
-                         android:layout_gravity="center">
+                         android:textAlignment="center"
+                         android:text="Black"
+                         android:textColor="@color/white"
+                         android:textSize="25dp"
+                         android:textStyle="bold"  />
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Black"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold"  />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Cumin"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="(¼ tsp)"
-                             android:textColor="@color/white"
-                             android:textSize="15dp"
-                             android:textStyle="bold" />
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:layout_marginBottom="10dp"
-                         android:layout_gravity="bottom|center">
-
-                         <ImageView
-                             android:id="@+id/cuminInfo"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/info_icon_white"/>
-
-                         <ImageView
-                             android:id="@+id/cuminCal"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/calender_icon_white"/>
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:orientation="horizontal"
-                         android:layout_marginTop="10dp"
-                         android:layout_gravity="center_horizontal">
-
-                         <CheckBox
-                             android:id="@+id/cumin_cb1"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                     </LinearLayout>
-
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
-
-                         <ImageView
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/black_cumin"
-                             android:scaleType="centerCrop"/>
-
-                     </androidx.cardview.widget.CardView>
-
-                 </FrameLayout>
-
-                 <FrameLayout
-                     android:layout_width="100dp"
-                     android:layout_height="match_parent"
-                     android:layout_gravity="center"
-                     android:elevation="3dp"
-                     android:layout_marginLeft="20dp"
-                     android:background="@drawable/othervege_theme">
-
-                     <LinearLayout
+                     <TextView
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         android:elevation="3dp"
-                         android:layout_gravity="center">
+                         android:textAlignment="center"
+                         android:text="Cumin"
+                         android:textColor="@color/white"
+                         android:textSize="25dp"
+                         android:textStyle="bold" />
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Gralic"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold"  />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Powder"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="(¼ tsp)"
-                             android:textColor="@color/white"
-                             android:textSize="15dp"
-                             android:textStyle="bold" />
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:layout_marginBottom="10dp"
-                         android:layout_gravity="bottom|center">
-
-                         <ImageView
-                             android:id="@+id/garlicInfo"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/info_icon_white"/>
-
-                         <ImageView
-                             android:id="@+id/garlicCal"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/calender_icon_white"/>
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:orientation="horizontal"
-                         android:layout_marginTop="10dp"
-                         android:layout_gravity="center_horizontal">
-
-                         <CheckBox
-                             android:id="@+id/garlic_cb1"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                     </LinearLayout>
-
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
-
-                         <ImageView
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/garlic"
-                             android:scaleType="centerCrop"/>
-
-                     </androidx.cardview.widget.CardView>
-
-                 </FrameLayout>
-
-                 <FrameLayout
-                     android:layout_width="100dp"
-                     android:layout_height="match_parent"
-                     android:layout_gravity="center"
-                     android:elevation="3dp"
-                     android:layout_marginLeft="20dp"
-                     android:background="@drawable/othervege_theme">
-
-                     <LinearLayout
+                     <TextView
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         android:elevation="3dp"
-                         android:layout_gravity="center">
+                         android:textAlignment="center"
+                         android:text="(¼ tsp)"
+                         android:textColor="@color/white"
+                         android:textSize="20dp"
+                         android:textStyle="bold" />
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Ground"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold"  />
+                 </LinearLayout>
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Ginger"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="(1 tsp)"
-                             android:textColor="@color/white"
-                             android:textSize="15dp"
-                             android:textStyle="bold" />
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:layout_marginBottom="10dp"
-                         android:layout_gravity="bottom|center">
-
-                         <ImageView
-                             android:id="@+id/gingerInfo"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/info_icon_white"/>
-
-                         <ImageView
-                             android:id="@+id/gingerCal"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/calender_icon_white"/>
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:orientation="horizontal"
-                         android:layout_marginTop="10dp"
-                         android:layout_gravity="center_horizontal">
-
-                         <CheckBox
-                             android:id="@+id/ginger_cb1"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                     </LinearLayout>
-
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
-
-                         <ImageView
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/ginger"
-                             android:scaleType="centerCrop"/>
-
-                     </androidx.cardview.widget.CardView>
-
-                 </FrameLayout>
-
-                 <FrameLayout
-                     android:layout_width="100dp"
-                     android:layout_height="match_parent"
-                     android:layout_gravity="center"
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
                      android:elevation="3dp"
-                     android:layout_marginLeft="20dp"
-                     android:background="@drawable/othervege_theme">
+                     android:layout_marginBottom="10dp"
+                     android:layout_gravity="bottom|center">
 
-                     <LinearLayout
+                     <ImageView
+                         android:id="@+id/cuminInfo"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:src="@drawable/info_icon_white"/>
+
+                     <ImageView
+                         android:id="@+id/cuminCal"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:src="@drawable/calender_icon_white"/>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:elevation="3dp"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="10dp"
+                     android:layout_gravity="center_horizontal">
+
+                     <CheckBox
+                         android:id="@+id/cumin_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:button="@drawable/white_checkbox"/>
+
+                 </LinearLayout>
+
+                 <androidx.cardview.widget.CardView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:cardCornerRadius="30dp">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/black_cumin"
+                         android:scaleType="centerCrop"/>
+
+                 </androidx.cardview.widget.CardView>
+
+             </FrameLayout>
+
+             <FrameLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:elevation="3dp"
+                 android:layout_marginLeft="20dp"
+                 android:background="@drawable/othervege_theme">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:elevation="3dp"
+                     android:layout_gravity="center">
+
+                     <TextView
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         android:elevation="3dp"
-                         android:layout_gravity="center">
+                         android:textAlignment="center"
+                         android:text="Gralic"
+                         android:textColor="@color/white"
+                         android:textSize="25dp"
+                         android:textStyle="bold"  />
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Yeast"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="(2 tsp)"
-                             android:textColor="@color/white"
-                             android:textSize="15dp"
-                             android:textStyle="bold" />
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:layout_marginBottom="10dp"
-                         android:layout_gravity="bottom|center">
-
-                         <ImageView
-                             android:id="@+id/yeastInfo"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/info_icon_white"/>
-
-                         <ImageView
-                             android:id="@+id/yeastCal"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/calender_icon_white"/>
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:orientation="horizontal"
-                         android:layout_marginTop="10dp"
-                         android:layout_gravity="center_horizontal">
-
-                         <CheckBox
-                             android:id="@+id/yeast_cb1"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                     </LinearLayout>
-
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
-
-                         <ImageView
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/yeast"
-                             android:scaleType="centerCrop"/>
-
-                     </androidx.cardview.widget.CardView>
-
-                 </FrameLayout>
-
-                 <FrameLayout
-                     android:layout_width="100dp"
-                     android:layout_height="match_parent"
-                     android:layout_gravity="center"
-                     android:elevation="3dp"
-                     android:layout_marginLeft="20dp"
-                     android:background="@drawable/othervege_theme">
-
-                     <LinearLayout
+                     <TextView
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         android:elevation="3dp"
-                         android:layout_gravity="center">
+                         android:textAlignment="center"
+                         android:text="Powder"
+                         android:textColor="@color/white"
+                         android:textSize="25dp"
+                         android:textStyle="bold" />
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Cumin"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
-
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="(½ tsp)"
-                             android:textColor="@color/white"
-                             android:textSize="15dp"
-                             android:textStyle="bold" />
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:layout_marginBottom="10dp"
-                         android:layout_gravity="bottom|center">
-
-                         <ImageView
-                             android:id="@+id/cumin2Info"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/info_icon_white"/>
-
-                         <ImageView
-                             android:id="@+id/cumin2Cal"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/calender_icon_white"/>
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:orientation="horizontal"
-                         android:layout_marginTop="10dp"
-                         android:layout_gravity="center_horizontal">
-
-                         <CheckBox
-                             android:id="@+id/cumin2_cb1"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                         <CheckBox
-                             android:id="@+id/cumin2_cb2"
-                             android:layout_marginLeft="5dp"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                     </LinearLayout>
-
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
-
-                         <ImageView
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/cumin"
-                             android:scaleType="centerCrop"/>
-
-                     </androidx.cardview.widget.CardView>
-
-                 </FrameLayout>
-
-                 <FrameLayout
-                     android:layout_width="100dp"
-                     android:layout_height="match_parent"
-                     android:layout_gravity="center"
-                     android:elevation="3dp"
-                     android:layout_marginLeft="20dp"
-                     android:layout_marginRight="20dp"
-                     android:background="@drawable/othervege_theme">
-
-                     <LinearLayout
+                     <TextView
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:orientation="vertical"
-                         android:elevation="3dp"
-                         android:layout_gravity="center">
+                         android:textAlignment="center"
+                         android:text="(¼ tsp)"
+                         android:textColor="@color/white"
+                         android:textSize="20dp"
+                         android:textStyle="bold" />
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Green"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
+                 </LinearLayout>
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="Tea"
-                             android:textColor="@color/white"
-                             android:textSize="25dp"
-                             android:textStyle="bold" />
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:elevation="3dp"
+                     android:layout_marginBottom="10dp"
+                     android:layout_gravity="bottom|center">
 
-                         <TextView
-                             android:layout_width="match_parent"
-                             android:layout_height="wrap_content"
-                             android:textAlignment="center"
-                             android:text="(3 cups)"
-                             android:textColor="@color/white"
-                             android:textSize="15dp"
-                             android:textStyle="bold" />
+                     <ImageView
+                         android:id="@+id/garlicInfo"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:src="@drawable/info_icon_white"/>
 
-                     </LinearLayout>
+                     <ImageView
+                         android:id="@+id/garlicCal"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:src="@drawable/calender_icon_white"/>
 
-                     <LinearLayout
-                         android:layout_width="wrap_content"
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:elevation="3dp"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="10dp"
+                     android:layout_gravity="center_horizontal">
+
+                     <CheckBox
+                         android:id="@+id/garlic_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:button="@drawable/white_checkbox"/>
+
+                 </LinearLayout>
+
+                 <androidx.cardview.widget.CardView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:cardCornerRadius="30dp">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/garlic"
+                         android:scaleType="centerCrop"/>
+
+                 </androidx.cardview.widget.CardView>
+
+             </FrameLayout>
+
+             <FrameLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:layout_gravity="center"
+                 android:elevation="3dp"
+                 android:layout_marginLeft="20dp"
+                 android:background="@drawable/othervege_theme">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:elevation="3dp"
+                     android:layout_gravity="center">
+
+                     <TextView
+                         android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:layout_marginBottom="10dp"
-                         android:layout_gravity="bottom|center">
+                         android:textAlignment="center"
+                         android:text="Ground"
+                         android:textColor="@color/white"
+                         android:textSize="25dp"
+                         android:textStyle="bold"  />
 
-                         <ImageView
-                             android:id="@+id/greenInfo"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/info_icon_white"/>
-
-                         <ImageView
-                             android:id="@+id/greenCal"
-                             android:layout_width="wrap_content"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/calender_icon_white"/>
-
-                     </LinearLayout>
-
-                     <LinearLayout
-                         android:layout_width="wrap_content"
+                     <TextView
+                         android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         android:elevation="3dp"
-                         android:orientation="horizontal"
-                         android:layout_marginTop="10dp"
-                         android:layout_gravity="center_horizontal">
+                         android:textAlignment="center"
+                         android:text="Ginger"
+                         android:textColor="@color/white"
+                         android:textSize="25dp"
+                         android:textStyle="bold" />
 
-                         <CheckBox
-                             android:id="@+id/green_cb1"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                         <CheckBox
-                             android:id="@+id/green_cb2"
-                             android:layout_marginLeft="5dp"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                         <CheckBox
-                             android:id="@+id/green_cb3"
-                             android:layout_marginLeft="5dp"
-                             android:layout_width="20dp"
-                             android:layout_height="20dp"
-                             android:theme="@style/WhiteCheckbox"
-                             android:button="@drawable/white_checkbox"/>
-
-                     </LinearLayout>
-
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
+                     <TextView
+                         android:layout_width="match_parent"
                          android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
+                         android:textAlignment="center"
+                         android:text="(1 tsp)"
+                         android:textColor="@color/white"
+                         android:textSize="20dp"
+                         android:textStyle="bold" />
 
-                         <ImageView
-                             android:layout_width="match_parent"
-                             android:layout_height="match_parent"
-                             android:src="@drawable/green_tea"
-                             android:scaleType="centerCrop"/>
+                 </LinearLayout>
 
-                     </androidx.cardview.widget.CardView>
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:elevation="3dp"
+                     android:layout_marginBottom="10dp"
+                     android:layout_gravity="bottom|center">
 
-                 </FrameLayout>
+                     <ImageView
+                         android:id="@+id/gingerInfo"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:src="@drawable/info_icon_white"/>
 
-             </LinearLayout>
+                     <ImageView
+                         android:id="@+id/gingerCal"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:src="@drawable/calender_icon_white"/>
 
-         </HorizontalScrollView>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:elevation="3dp"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="10dp"
+                     android:layout_gravity="center_horizontal">
+
+                     <CheckBox
+                         android:id="@+id/ginger_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:button="@drawable/white_checkbox"/>
+
+                 </LinearLayout>
+
+                 <androidx.cardview.widget.CardView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:cardCornerRadius="30dp">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/ginger"
+                         android:scaleType="centerCrop"/>
+
+                 </androidx.cardview.widget.CardView>
+
+             </FrameLayout>
+
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:elevation="3dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/othervege_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Yeast"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="(2 tsp)"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/yeastInfo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/info_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/yeastCal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/calender_icon_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/yeast_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/yeast"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:elevation="3dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/othervege_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Cumin"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="(½ tsp)"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/cumin2Info"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/info_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/cumin2Cal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/calender_icon_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cumin2_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                    <CheckBox
+                        android:id="@+id/cumin2_cb2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cumin"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:elevation="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/othervege_theme">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="3dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Green"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Tea"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="(3 cups)"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="bottom|center">
+
+                    <ImageView
+                        android:id="@+id/greenInfo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/info_icon_white"/>
+
+                    <ImageView
+                        android:id="@+id/greenCal"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/calender_icon_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/green_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                    <CheckBox
+                        android:id="@+id/green_cb2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                    <CheckBox
+                        android:id="@+id/green_cb3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/green_tea"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+        </LinearLayout>
 
          <LinearLayout
                 android:layout_width="match_parent"
@@ -726,14 +734,14 @@
 
                         <ImageView
                             android:id="@+id/hydInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:id="@+id/hydCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
@@ -748,8 +756,8 @@
 
                         <CheckBox
                             android:id="@+id/hyd_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
@@ -817,14 +825,14 @@
 
                         <ImageView
                             android:id="@+id/deflourInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:id="@+id/deflourCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -839,8 +847,8 @@
 
                         <CheckBox
                             android:id="@+id/deflour_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/WhiteCheckbox"
                             android:button="@drawable/white_checkbox"/>
 
@@ -909,14 +917,14 @@
 
                     <ImageView
                         android:id="@+id/frontInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/info_icon_black"/>
 
                     <ImageView
                         android:id="@+id/frontCal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/calender_icon_black"/>
 
                 </LinearLayout>
@@ -931,8 +939,8 @@
 
                     <CheckBox
                         android:id="@+id/front_cb1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:theme="@style/BlackCheckbox"
                         android:button="@drawable/black_checkbox"/>
 
@@ -1005,14 +1013,14 @@
 
                         <ImageView
                             android:id="@+id/restrictInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:id="@+id/restrictCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -1027,8 +1035,8 @@
 
                         <CheckBox
                             android:id="@+id/restrict_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/WhiteCheckbox"
                             android:button="@drawable/white_checkbox"/>
 
@@ -1095,14 +1103,14 @@
 
                         <ImageView
                             android:id="@+id/optimizeInfo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/info_icon_black"/>
 
                         <ImageView
                             android:id="@+id/optimizeCal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/calender_icon_black"/>
 
                     </LinearLayout>
@@ -1117,8 +1125,8 @@
 
                         <CheckBox
                             android:id="@+id/optimize_cb1"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:theme="@style/BlackCheckbox"
                             android:button="@drawable/black_checkbox"/>
 
@@ -1195,14 +1203,14 @@
 
                     <ImageView
                         android:id="@+id/weighInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/info_icon_black"/>
 
                     <ImageView
                         android:id="@+id/weighCal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/calender_icon_black"/>
 
                 </LinearLayout>
@@ -1217,15 +1225,15 @@
 
                     <CheckBox
                         android:id="@+id/weigh_cb1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:theme="@style/BlackCheckbox"
                         android:button="@drawable/black_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/weigh_cb2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_marginLeft="5dp"
                         android:theme="@style/BlackCheckbox"
                         android:button="@drawable/black_checkbox"/>
