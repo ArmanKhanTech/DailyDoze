@@ -115,19 +115,6 @@
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/water"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
             </FrameLayout>
 
             <FrameLayout
@@ -139,7 +126,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/othervege_theme">
+                android:background="@drawable/fruits_theme">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -221,19 +208,6 @@
                         android:button="@drawable/white_checkbox"/>
 
                 </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/vinegar"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
 
             </FrameLayout>
 
@@ -331,19 +305,6 @@
 
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/negative_calories"
-                    android:scaleType="centerCrop"/>
-
-            </androidx.cardview.widget.CardView>
-
         </FrameLayout>
 
         <LinearLayout
@@ -362,7 +323,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/berries_theme">
+                android:background="@drawable/herbs_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -445,19 +406,6 @@
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/undistracted_meal"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
             </FrameLayout>
 
             <FrameLayout
@@ -483,7 +431,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Follow 20"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -492,7 +440,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="Minutes Rule"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -509,13 +457,13 @@
                         android:id="@+id/tweminInfo"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/info_icon_black"/>
+                        android:src="@drawable/info_icon_white"/>
 
                     <ImageView
                         android:id="@+id/tweminCal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_black"/>
+                        android:src="@drawable/calender_icon_white"/>
 
                 </LinearLayout>
 
@@ -532,7 +480,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/twe_min_cb2"
@@ -540,7 +488,7 @@
                         android:layout_height="25dp"
                         android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/twe_min_cb3"
@@ -548,22 +496,9 @@
                         android:layout_height="25dp"
                         android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:button="@drawable/white_checkbox"/>
 
                 </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/twenty_minutes"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
 
             </FrameLayout>
 

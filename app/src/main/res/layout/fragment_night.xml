@@ -34,12 +34,6 @@
             android:layout_marginRight="15dp"
             android:background="@drawable/berries_theme">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/fast"
-                android:scaleType="centerInside"/>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,12 +108,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/othervege_theme">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/sleep"
-                android:scaleType="centerInside"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -214,7 +202,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:text="Experiment Mild"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -223,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:text="Trendelenburg"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -239,13 +227,13 @@
                     android:id="@+id/expInfo"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/info_icon_black"/>
+                    android:src="@drawable/info_icon_white"/>
 
                 <ImageView
                     android:id="@+id/expCal"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/calender_icon_black"/>
+                    android:src="@drawable/calender_icon_white"/>
 
             </LinearLayout>
 
@@ -260,8 +248,8 @@
                     android:id="@+id/exp_cb1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:theme="@style/BlackCheckbox"
-                    android:button="@drawable/black_checkbox"/>
+                    android:theme="@style/WhiteCheckbox"
+                    android:button="@drawable/white_checkbox"/>
 
             </LinearLayout>
 

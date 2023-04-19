@@ -40,7 +40,7 @@
                  android:layout_gravity="center"
                  android:elevation="3dp"
                  android:layout_marginLeft="15dp"
-                 android:background="@drawable/othervege_theme">
+                 android:background="@drawable/flexseeds_theme">
 
                  <LinearLayout
                      android:layout_width="match_parent"
@@ -116,19 +116,6 @@
 
                  </LinearLayout>
 
-                 <androidx.cardview.widget.CardView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     app:cardCornerRadius="30dp">
-
-                     <ImageView
-                         android:layout_width="match_parent"
-                         android:layout_height="match_parent"
-                         android:src="@drawable/black_cumin"
-                         android:scaleType="centerCrop"/>
-
-                 </androidx.cardview.widget.CardView>
-
              </FrameLayout>
 
              <FrameLayout
@@ -138,7 +125,7 @@
                  android:layout_gravity="center"
                  android:elevation="3dp"
                  android:layout_marginLeft="20dp"
-                 android:background="@drawable/othervege_theme">
+                 android:background="@drawable/beans_theme">
 
                  <LinearLayout
                      android:layout_width="match_parent"
@@ -214,19 +201,6 @@
 
                  </LinearLayout>
 
-                 <androidx.cardview.widget.CardView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     app:cardCornerRadius="30dp">
-
-                     <ImageView
-                         android:layout_width="match_parent"
-                         android:layout_height="match_parent"
-                         android:src="@drawable/garlic"
-                         android:scaleType="centerCrop"/>
-
-                 </androidx.cardview.widget.CardView>
-
              </FrameLayout>
 
              <FrameLayout
@@ -236,7 +210,7 @@
                  android:layout_gravity="center"
                  android:elevation="3dp"
                  android:layout_marginLeft="20dp"
-                 android:background="@drawable/othervege_theme">
+                 android:background="@drawable/nuts_theme">
 
                  <LinearLayout
                      android:layout_width="match_parent"
@@ -312,19 +286,6 @@
 
                  </LinearLayout>
 
-                 <androidx.cardview.widget.CardView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     app:cardCornerRadius="30dp">
-
-                     <ImageView
-                         android:layout_width="match_parent"
-                         android:layout_height="match_parent"
-                         android:src="@drawable/ginger"
-                         android:scaleType="centerCrop"/>
-
-                 </androidx.cardview.widget.CardView>
-
              </FrameLayout>
 
          </LinearLayout>
@@ -343,13 +304,7 @@
                 android:layout_gravity="center"
                 android:elevation="3dp"
                 android:layout_marginLeft="15dp"
-                android:background="@drawable/othervege_theme">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/yeast"
-                    android:scaleType="centerCrop"/>
+                android:background="@drawable/herbs_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -425,7 +380,7 @@
                 android:layout_gravity="center"
                 android:elevation="3dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/othervege_theme">
+                android:background="@drawable/grains_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -500,19 +455,6 @@
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/cumin"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
             </FrameLayout>
 
             <FrameLayout
@@ -523,7 +465,7 @@
                 android:elevation="3dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/othervege_theme">
+                android:background="@drawable/greenvege_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -615,19 +557,6 @@
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/green_tea"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
             </FrameLayout>
 
         </LinearLayout>
@@ -647,7 +576,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:background="@drawable/beans_theme">
+                    android:background="@drawable/berries_theme">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -713,19 +642,6 @@
                             android:button="@drawable/white_checkbox"/>
 
                     </LinearLayout>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/water"
-                            android:scaleType="centerCrop"/>
-
-                    </androidx.cardview.widget.CardView>
 
                 </FrameLayout>
 
@@ -805,38 +721,19 @@
 
                     </LinearLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/deflour"
-                            android:scaleType="centerCrop"/>
-
-                    </androidx.cardview.widget.CardView>
-
                 </FrameLayout>
 
             </LinearLayout>
 
          <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="150dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/beans_theme">
-
-             <ImageView
-                 android:layout_width="200dp"
-                 android:layout_height="match_parent"
-                 android:src="@drawable/frontload"
-                 android:scaleType="centerInside"/>
+                android:background="@drawable/fruits_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -919,7 +816,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/beverages_theme">
+                    android:background="@drawable/greenvege_theme">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -986,19 +883,6 @@
 
                     </LinearLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/restrict"
-                            android:scaleType="centerCrop"/>
-
-                    </androidx.cardview.widget.CardView>
-
                 </FrameLayout>
 
                 <FrameLayout
@@ -1009,7 +893,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/beverages_theme">
+                    android:background="@drawable/cruciferous_theme">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1023,7 +907,7 @@
                             android:layout_height="wrap_content"
                             android:text="Optimize Your"
                             android:layout_gravity="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
@@ -1032,7 +916,7 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="center"
                             android:text="Exercise"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
@@ -1049,13 +933,13 @@
                             android:id="@+id/optimizeInfo"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/info_icon_black"/>
+                            android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:id="@+id/optimizeCal"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_black"/>
+                            android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
 
@@ -1071,23 +955,10 @@
                             android:id="@+id/optimize_cb1"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:theme="@style/BlackCheckbox"
-                            android:button="@drawable/black_checkbox"/>
+                            android:theme="@style/WhiteCheckbox"
+                            android:button="@drawable/white_checkbox"/>
 
                     </LinearLayout>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="30dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/optimize"
-                            android:scaleType="centerCrop"/>
-
-                    </androidx.cardview.widget.CardView>
 
                 </FrameLayout>
 
@@ -1109,7 +980,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:background="@drawable/beverages_theme">
+                android:background="@drawable/flexseeds_theme">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1123,7 +994,7 @@
                         android:layout_height="wrap_content"
                         android:text="Weigh Yourself"
                         android:layout_gravity="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -1132,7 +1003,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:text="Twice a Day"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="25dp"
                         android:textStyle="bold" />
 
@@ -1149,13 +1020,13 @@
                         android:id="@+id/weighInfo"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/info_icon_black"/>
+                        android:src="@drawable/info_icon_white"/>
 
                     <ImageView
                         android:id="@+id/weighCal"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_black"/>
+                        android:src="@drawable/calender_icon_white"/>
 
                 </LinearLayout>
 
@@ -1171,31 +1042,18 @@
                         android:id="@+id/weigh_cb1"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
 
                     <CheckBox
                         android:id="@+id/weigh_cb2"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginLeft="5dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/black_checkbox"/>
+                        android:theme="@style/WhiteCheckbox"
+                        android:button="@drawable/white_checkbox"/>
 
                 </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/weigh"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
 
             </FrameLayout>
 

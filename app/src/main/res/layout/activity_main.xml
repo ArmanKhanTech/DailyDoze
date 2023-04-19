@@ -105,7 +105,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
@@ -118,9 +118,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/beans"
-                        android:scaleType="centerInside"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginLeft="60dp"/>
+                        android:scaleType="centerInside"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -139,9 +137,9 @@
                         android:layout_gravity="right|center_vertical">
 
                         <ImageView
-                            android:onClick="beansInfo"
                             android:layout_width="25dp"
                             android:layout_height="25dp"
+                            android:onClick="beansInfo"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
@@ -153,8 +151,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_horizontal">
@@ -191,7 +190,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
@@ -204,11 +203,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/berries"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="10dp"
-                        android:scaleType="centerInside"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginLeft="60dp"/>
+                        android:layout_marginTop="25dp"
+                        android:scaleType="centerInside"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -260,7 +256,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
@@ -272,8 +268,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
                         android:src="@drawable/green_vegetables"
-                        android:layout_marginTop="15dp"
                         android:scaleType="centerInside"/>
 
                     <TextView
@@ -334,7 +330,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:elevation="3dp"
                     android:layout_marginBottom="10dp"
@@ -346,8 +342,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
                         android:src="@drawable/other_vegetables"
-                        android:layout_marginTop="10dp"
                         android:scaleType="centerInside"/>
 
                     <LinearLayout
@@ -427,7 +423,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
@@ -439,9 +435,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="5dp"
                         android:src="@drawable/fruits"
+                        android:layout_marginTop="28dp"
                         android:scaleType="centerInside"/>
 
                     <LinearLayout
@@ -480,14 +475,14 @@
 
                         <ImageView
                             android:onClick="fruitsInfo"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:src="@drawable/info_icon_white"/>
 
                         <ImageView
                             android:onClick="fruitsCal"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:src="@drawable/calender_icon_white"/>
 
                     </LinearLayout>
@@ -528,7 +523,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
@@ -540,11 +535,8 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
                         android:src="@drawable/cruciferous"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="60dp"
                         android:scaleType="centerInside"/>
 
                     <LinearLayout
@@ -615,7 +607,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
@@ -628,8 +620,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/flexseeds"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginBottom="10dp"
                         android:scaleType="centerInside"/>
 
                     <TextView
@@ -682,7 +674,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:elevation="3dp"
@@ -695,7 +687,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/herbs"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="25dp"
                         android:scaleType="fitCenter"/>
 
                     <LinearLayout
@@ -769,7 +761,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:elevation="3dp"
                     android:layout_marginBottom="10dp"
@@ -782,7 +774,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/nuts"
-                        android:layout_margin="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="5dp"
                         android:scaleType="centerInside"/>
 
                     <LinearLayout
@@ -855,7 +848,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:elevation="3dp"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
@@ -867,8 +860,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/grains"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="28dp"
                         android:scaleType="centerInside"/>
 
                     <LinearLayout
@@ -957,7 +949,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:elevation="3dp"
                     android:layout_marginBottom="10dp"
@@ -970,10 +962,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/beverages"
-                        android:scaleType="centerInside"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginLeft="60dp"/>
+                        android:layout_marginTop="20dp"
+                        android:scaleType="centerInside"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1057,7 +1047,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:elevation="3dp"
@@ -1070,9 +1060,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/exercise"
-                        android:scaleType="centerInside"
-                        android:layout_marginRight="60dp"
-                        android:layout_marginLeft="60dp"/>
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerInside"/>
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -90,35 +90,32 @@ public class TweakActivity extends AppCompatActivity {
                     tv.setText("Enter your evening weight");
                 }
                 b.setText("Save");
-            } else{
-                String morning = String.valueOf(db.getWeightMorning(getCurrentDate()));
-                String evening = String.valueOf(db.getWeightEvening(getCurrentDate()));
-                et.setVisibility(View.GONE);
-                tv.setText("You weighed " + morning + " kg in the morning and " + evening + " in the evening on this day.");
-                b.setText("Okay");
             }
 
             b.setOnClickListener(v1 -> {
-                if(today){
+                if(today) {
                     kg[0] = et.getText().toString();
-                    if(timeOfDay >= 6 && timeOfDay < 12) {
-                        if (db.getDate(getCurrentDate())) {
-                            db.setWeight("weight_morning", getCurrentDate(), kg[0]);
-                        } else {
-                            db.addDate(getCurrentDate());
-                            db.setWeight("weight_morning", getCurrentDate(), kg[0]);
+                    if(!kg[0].isEmpty()){
+                        if (timeOfDay >= 6 && timeOfDay < 12) {
+                            if (db.getDate(getCurrentDate())) {
+                                db.setWeight("weight_morning", getCurrentDate(), kg[0]);
+                            } else {
+                                db.addDate(getCurrentDate());
+                                db.setWeight("weight_morning", getCurrentDate(), kg[0]);
+                            }
+                        } else if (timeOfDay >= 18) {
+                            if (db.getDate(getCurrentDate())) {
+                                db.setWeight("weight_evening", getCurrentDate(), kg[0]);
+                            } else {
+                                db.addDate(getCurrentDate());
+                                db.setWeight("weight_evening", getCurrentDate(), kg[0]);
+                            }
                         }
-                    } else if (timeOfDay >= 18) {
-                        if (db.getDate(getCurrentDate())) {
-                            db.setWeight("weight_evening", getCurrentDate(), kg[0]);
-                        } else {
-                            db.addDate(getCurrentDate());
-                            db.setWeight("weight_evening", getCurrentDate(), kg[0]);
-                        }
+                        db.incData("weigh", getCurrentDate());
+                        popupWindow.dismiss();
+                    }else{
+                        popupWindow.dismiss();
                     }
-                    popupWindow.dismiss();
-                }else{
-                    popupWindow.dismiss();
                 }
             });
 

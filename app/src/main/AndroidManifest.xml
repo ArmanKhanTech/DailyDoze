@@ -17,6 +17,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:targetApi="31">
+        <activity
+            android:name=".TweaksHistory"
+            android:exported="false" />
 
         <service android:name=".Service.GetAddressIntentService" />
 
