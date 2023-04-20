@@ -89,6 +89,7 @@
         <activity
             android:name=".Activity.MainActivity"
             android:exported="false"
+            android:hardwareAccelerated="true"
             android:theme="@style/Theme.DailyDoze" />
     </application>
 

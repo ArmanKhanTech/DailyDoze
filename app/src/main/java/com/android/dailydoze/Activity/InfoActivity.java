@@ -104,7 +104,7 @@ public class InfoActivity extends AppCompatActivity {
                 drawable = getDrawable(R.drawable.grains_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.grains));
-                name.setText("Grains");
+                name.setText("Whole Grains");
                 break;
             case "exercise":
                 drawable = getDrawable(R.drawable.exercise_picture);

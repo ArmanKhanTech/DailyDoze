@@ -125,11 +125,31 @@
             android:elevation="2dp"
             android:background="@drawable/info_img_theme">
 
+            <ImageButton
+                android:id="@+id/date_prev_tweak"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="start|center"
+                android:background="@color/white"
+                app:srcCompat="@drawable/prev_icon"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center">
+
+                <ImageButton
+                    android:id="@+id/jump_back_nav_tweak"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/jump_back_icon_black"
+                    android:scaleType="centerInside"/>
 
                 <TextView
                     android:id="@+id/date_tweak"
@@ -137,7 +157,10 @@
                     android:layout_height="wrap_content"
                     android:text="12 April 2023"
                     android:textAlignment="center"
-                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="2dp"
                     android:textColor="@color/black"
                     android:textSize="25dp"
                     android:fontFamily="sans-serif-condensed-medium"/>
@@ -153,6 +176,16 @@
                     android:src="@drawable/weight_icon"/>
 
             </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/date_next_tweak"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="end|center"
+                android:background="@color/white"
+                app:srcCompat="@drawable/next_icon"/>
 
         </FrameLayout>
 

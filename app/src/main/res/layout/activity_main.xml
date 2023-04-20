@@ -45,13 +45,13 @@
                 <ImageButton
                     android:visibility="gone"
                     android:id="@+id/jump_back"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:elevation="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@color/transparent"
-                    android:layout_gravity="start|center"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/jump_back_icon"
+                    android:src="@drawable/jump_back_icon_white"
                     android:scaleType="centerInside"/>
 
                 <ImageButton
@@ -70,12 +70,25 @@
                     android:orientation="horizontal"
                     android:layout_gravity="center">
 
+                    <ImageButton
+                        android:id="@+id/jump_back_nav"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/transparent"
+                        android:src="@drawable/jump_back_icon_black"
+                        android:scaleType="centerInside"/>
+
                     <TextView
                         android:id="@+id/date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="12 April 2023"
-                        android:padding="10dp"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
                         android:textColor="@color/black"
                         android:textSize="25dp"
                         android:fontFamily="sans-serif-condensed-medium"/>

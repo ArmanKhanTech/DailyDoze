@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
             beve_cb4, beve_cb5, exercise_cb1;
     TextView currDate, textView2;
     DailyDozeDatabase db;
-    ImageButton jumpBack, date_prev, date_next, sleep;
+    ImageButton jumpBack, date_prev, date_next, sleep, jump_back_nav;
     FrameLayout frameLayout;
     boolean today, jump = false;
 
-    //TODO:FIX negcal, un_meal,& improve noti icon, delay while switching layout, login black screen
+    //TODO:FIX improve noti icon, login black screen, drawer animation
     @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawerLayout);
         b = findViewById(R.id.nav_button);
-        b.setOnClickListener(view -> drawerLayout.openDrawer(GravityCompat.START));
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
         currDate = findViewById(R.id.date);
         currDate.setText(setCurrentDate());
@@ -106,10 +111,20 @@ public class MainActivity extends AppCompatActivity {
         date_next = findViewById(R.id.date_next);
         date_prev = findViewById(R.id.date_prev);
         sleep = findViewById(R.id.sleep);
+        jump_back_nav = findViewById(R.id.jump_back_nav);
 
         textView2 = findViewById(R.id.textView2);
 
         setDay();
+
+        jump_back_nav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String tDate = setCurrentDate();
+                currDate.setText(tDate);
+                setDay();
+            }
+        });
 
         beans_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
@@ -521,6 +536,7 @@ public class MainActivity extends AppCompatActivity {
             jumpBack.setVisibility(View.GONE);
             frameLayout.setBackground(getResources().getDrawable(R.drawable.info_img_theme));
             currDate.setTextColor(getColor(R.color.black));
+            jump_back_nav.setVisibility(View.GONE);
             setNext();
             setPrev();
         }else{
@@ -532,6 +548,7 @@ public class MainActivity extends AppCompatActivity {
             setCount();
             setPrev();
             setNext();
+            jump_back_nav.setVisibility(View.VISIBLE);
             if(jump) {
                 sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_white));
                 jumpBack.setVisibility(View.VISIBLE);
@@ -539,6 +556,7 @@ public class MainActivity extends AppCompatActivity {
                 currDate.setTextColor(getColor(R.color.white));
                 date_prev.setVisibility(View.GONE);
                 date_next.setVisibility(View.GONE);
+                jump_back_nav.setVisibility(View.GONE);
             }
         }
     }

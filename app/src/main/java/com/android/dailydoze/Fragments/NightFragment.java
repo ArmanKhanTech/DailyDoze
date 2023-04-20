@@ -127,13 +127,9 @@ public class NightFragment extends Fragment {
     }
 
     public static void setDay(){
-        if(Objects.equals(setCurrentDate(), getCurrentDate())){
-            if(TweakActivity.today){
-                setClickable(true);
-                unCheckAll();
-                setChecked();
-            }
-        }
+        setClickable(Objects.equals(setCurrentDate(), getCurrentDate()));
+        unCheckAll();
+        setChecked();
     }
 
     public static void setClickable(boolean b){

@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.Fragments.DayFragment;
@@ -34,6 +36,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.logging.LogRecord;
 
 public class TweakActivity extends AppCompatActivity {
     TabLayout tabLayout;
@@ -48,7 +51,7 @@ public class TweakActivity extends AppCompatActivity {
     static TextView textView10;
     static TweaksDatabase db;
     public static boolean today = true;
-    ImageButton weight;
+    ImageButton weight, date_prev, date_next, jump_back_tweak;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -59,12 +62,22 @@ public class TweakActivity extends AppCompatActivity {
         textView10 = findViewById(R.id.textView10);
         currDate = findViewById(R.id.date_tweak);
         weight = findViewById(R.id.weight_tweak);
+        date_prev = findViewById(R.id.date_prev_tweak);
+        date_next = findViewById(R.id.date_next_tweak);
+        jump_back_tweak = findViewById(R.id.jump_back_nav_tweak);
 
         currDate.setText(setCurrentDate());
 
         db = new TweaksDatabase(this);
 
-        setCount(getCurrentDate());
+        jump_back_tweak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String tDate = setCurrentDate();
+                currDate.setText(tDate);
+                setDay(true);
+            }
+        });
 
         weight.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -84,12 +97,18 @@ public class TweakActivity extends AppCompatActivity {
             if(today){
                 tv.setVisibility(View.VISIBLE);
                 et.setVisibility(View.VISIBLE);
-                if(timeOfDay >= 6 && timeOfDay < 12) {
+                if(timeOfDay >= 6 && timeOfDay <= 12) {
                     tv.setText("Enter your morning weight");
                 } else if (timeOfDay >= 18) {
                     tv.setText("Enter your evening weight");
                 }
                 b.setText("Save");
+            } else {
+                String morning = String.valueOf(db.getWeightMorning(getCurrentDate()));
+                String evening = String.valueOf(db.getWeightEvening(getCurrentDate()));
+                tv.setText("You weighed " + morning + " kg in morning and " + evening + " kg in evening on this day.");
+                et.setVisibility(View.GONE);
+                b.setText("Okay");
             }
 
             b.setOnClickListener(v1 -> {
@@ -112,16 +131,18 @@ public class TweakActivity extends AppCompatActivity {
                             }
                         }
                         db.incData("weigh", getCurrentDate());
-                        popupWindow.dismiss();
-                    }else{
+                    } else{
                         popupWindow.dismiss();
                     }
                 }
+                popupWindow.dismiss();
             });
 
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
             dimBehind(popupWindow);
         });
+
+        setDay(false);
 
         LoadFragment loadFragment = new LoadFragment();
         loadFragment.execute();
@@ -134,7 +155,7 @@ public class TweakActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(new DayFragment(),"Day");
         viewPagerAdapter.addFragment(new EachMealFragment(),"Meals");
         viewPagerAdapter.addFragment(new NightFragment(),"Night");
-        viewPager.setOffscreenPageLimit(0);
+        viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -172,6 +193,94 @@ public class TweakActivity extends AppCompatActivity {
             tvv.setVisibility(View.GONE);
         }
     }
+
+    public void setDay(boolean b){
+        if(Objects.equals(setCurrentDate(), getCurrentDate())){
+            // Current Day
+            setCount(getCurrentDate());
+            if(b){
+                DayFragment.setDay();
+                NightFragment.setDay();
+                EachMealFragment.setDay();
+            }
+            jump_back_tweak.setVisibility(View.GONE);
+            today = true;
+            setWeightVisibility();
+            setNext();
+            setPrev();
+        }else{
+            // Jump Day
+            today = false;
+            jump_back_tweak.setVisibility(View.VISIBLE);
+            weight.setVisibility(View.VISIBLE);
+            setCount(getCurrentDate());
+            DayFragment.setDay();
+            NightFragment.setDay();
+            EachMealFragment.setDay();
+            setPrev();
+            setNext();
+        }
+    }
+
+    public void setPrev(){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+        try {
+            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        c.add(Calendar.DATE, -1);
+        String formattedDate = df.format(c.getTime());
+
+        if(db.getDate(formattedDate)){
+            date_prev.setVisibility(View.VISIBLE);
+        } else{
+            date_prev.setVisibility(View.GONE);
+        }
+
+        date_prev.setOnClickListener(v -> {
+            currDate.setText(formattedDate);
+            setDay(true);
+        });
+    }
+
+    public void setWeightVisibility(){
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+
+        if(timeOfDay >= 6 && timeOfDay <= 12) {
+            weight.setVisibility(View.VISIBLE);
+        } else if (timeOfDay >= 18) {
+            weight.setVisibility(View.VISIBLE);
+        } else{
+            weight.setVisibility(View.GONE);
+        }
+    }
+
+    public void setNext(){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+        try {
+            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        c.add(Calendar.DATE, +1);
+        String formattedDate = df.format(c.getTime());
+
+        if(db.getDate(formattedDate)){
+            date_next.setVisibility(View.VISIBLE);
+        } else{
+            date_next.setVisibility(View.GONE);
+        }
+
+        date_next.setOnClickListener(v -> {
+            currDate.setText(formattedDate);
+            setDay(true);
+        });
+    }
+
 
     public static String setCurrentDate(){
         Date c = Calendar.getInstance().getTime();

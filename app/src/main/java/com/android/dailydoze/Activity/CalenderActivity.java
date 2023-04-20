@@ -78,7 +78,7 @@ public class CalenderActivity extends AppCompatActivity {
                 name.setText("Other Vegetables");
                 break;
             case "flexseeds":
-                name.setText("Flexseeds");
+                name.setText("Flaxseeds");
                 break;
             case "herbs":
                 name.setText("Herbs & Spices");
@@ -90,7 +90,7 @@ public class CalenderActivity extends AppCompatActivity {
                 name.setText("Nuts & Seeds");
                 break;
             case "grains":
-                name.setText("Grains");
+                name.setText("Whole Grains");
                 break;
             case "exercise":
                 name.setText("Exercise");
