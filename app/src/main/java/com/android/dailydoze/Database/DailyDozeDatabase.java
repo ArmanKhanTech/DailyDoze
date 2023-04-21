@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DailyDozeDatabase extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "db2";
@@ -116,6 +119,22 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
 
         c.close();
         return b;
+    }
+
+    @SuppressLint("Range")
+    public ArrayList<String> getAllDate(){
+        ArrayList<String> dates = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT " + DATE + " FROM " + TABLE_NAME, null);
+
+        if (c.moveToFirst()) {
+            do {
+                dates.add(c.getString(c.getColumnIndex(DATE)));
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        return dates;
     }
 
     @SuppressLint("Range")

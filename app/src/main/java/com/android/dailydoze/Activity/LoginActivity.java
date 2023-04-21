@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,10 +79,16 @@ public class LoginActivity extends AppCompatActivity {
                     Map<String, Object> setData = (HashMap<String, Object>) getData.get(key);
                     String password = (String) setData.get("pass");
 
+                    assert password != null;
                     if(password.equals(pass)) {
+                        String name = (String) setData.get("name");
+                        String userMail = (String) setData.get("email");
+
                         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
                         SharedPreferences.Editor myEdit = sharedPreferences.edit();
                         myEdit.putBoolean("user", true);
+                        myEdit.putString("name", name);
+                        myEdit.putString("email", userMail);
                         myEdit.apply();
 
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);

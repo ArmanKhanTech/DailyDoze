@@ -102,7 +102,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         LayoutInflater layoutInflater = (LayoutInflater)
                 this.getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.medi_finish, null);
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 

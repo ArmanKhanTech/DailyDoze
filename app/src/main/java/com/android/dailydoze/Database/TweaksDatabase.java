@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class TweaksDatabase extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "db3";
@@ -179,6 +181,22 @@ public class TweaksDatabase extends SQLiteOpenHelper {
 
         c.close();
         return sum;
+    }
+
+    @SuppressLint("Range")
+    public ArrayList<String> getAllDate(){
+        ArrayList<String> dates = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT " + DATE + " FROM " + TABLE_NAME, null);
+
+        if (c.moveToFirst()) {
+            do {
+                dates.add(c.getString(c.getColumnIndex(DATE)));
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        return dates;
     }
 
     public void setWeight(String time, String date, String weight){

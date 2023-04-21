@@ -97,6 +97,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/purple_500"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Enter"

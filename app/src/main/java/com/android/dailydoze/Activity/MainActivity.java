@@ -20,12 +20,9 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.R;
-import com.google.android.material.navigation.NavigationView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -36,39 +33,28 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     Button b;
-    DrawerLayout drawerLayout;
     CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
             cv_cb1, flaxseeds_cb1, herbs_cb1, nuts_cb1, grains_cb1, grains_cb2, grains_cb3, beve_cb1, beve_cb2, beve_cb3,
             beve_cb4, beve_cb5, exercise_cb1;
     TextView currDate, textView2;
     DailyDozeDatabase db;
-    ImageButton jumpBack, date_prev, date_next, sleep, jump_back_nav;
+    ImageButton jumpBack, date_prev, date_next, sleep;
     FrameLayout frameLayout;
     boolean today, jump = false;
 
-    //TODO:FIX improve noti icon, login black screen, drawer animation
+    //TODO:FIX improve noti icon, login black screen, bar chart scroll
     @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NavigationView navigationMenu = findViewById(R.id.nav_menu);
-        navigationMenu.setItemIconTintList(null);
+        db = new DailyDozeDatabase(this);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
         b = findViewById(R.id.nav_button);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
 
         currDate = findViewById(R.id.date);
         currDate.setText(setCurrentDate());
-
-        db = new DailyDozeDatabase(this);
 
         beans_cb1 = findViewById(R.id.beans_cb1);
         beans_cb2 = findViewById(R.id.beans_cb2);
@@ -111,19 +97,75 @@ public class MainActivity extends AppCompatActivity {
         date_next = findViewById(R.id.date_next);
         date_prev = findViewById(R.id.date_prev);
         sleep = findViewById(R.id.sleep);
-        jump_back_nav = findViewById(R.id.jump_back_nav);
 
         textView2 = findViewById(R.id.textView2);
 
         setDay();
 
-        jump_back_nav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String tDate = setCurrentDate();
-                currDate.setText(tDate);
-                setDay();
-            }
+        b.setOnClickListener(v -> {
+            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.main_menu, null);
+            int width = LinearLayout.LayoutParams.MATCH_PARENT;
+            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+
+            TextView name, email;
+            name = popupView.findViewById(R.id.name);
+            email = popupView.findViewById(R.id.email);
+
+            SharedPreferences userData = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+            name.setText(userData.getString("name", "Hi"));
+            email.setText(userData.getString("email", "Email"));
+
+
+            LinearLayout l1, l2, l3 , l4, l5, l6;
+            l1 = popupView.findViewById(R.id.twe_tweaks);
+            l2 = popupView.findViewById(R.id.jump_to_date);
+            l3 = popupView.findViewById(R.id.notifications);
+            l4 = popupView.findViewById(R.id.meditation);
+            l5 = popupView.findViewById(R.id.fastwatch);
+            l6 = popupView.findViewById(R.id.logout);
+
+            ImageButton ib1 = popupView.findViewById(R.id.closeMenu);
+            ib1.setOnClickListener(v12 -> popupWindow.dismiss());
+
+            l1.setOnClickListener(v13 -> {
+                startActivity(new Intent(MainActivity.this, TweakActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l2.setOnClickListener(v14 -> {
+               openJumpDate();
+               popupWindow.dismiss();
+            });
+
+            l3.setOnClickListener(v18 -> {
+                startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l4.setOnClickListener(v15 -> {
+                startActivity(new Intent(MainActivity.this, MeditationActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l5.setOnClickListener(v16 -> {
+                startActivity(new Intent(MainActivity.this, FastActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l6.setOnClickListener(v17 -> {
+                SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                myEdit.putBoolean("user", false);
+                myEdit.apply();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                popupWindow.dismiss();
+                finish();
+            });
+
+            popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+            dimBehind(popupWindow);
         });
 
         beans_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -322,7 +364,6 @@ public class MainActivity extends AppCompatActivity {
             String tDate = setCurrentDate();
             currDate.setText(tDate);
             jump = false;
-            sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_black));
             setDay();
         });
 
@@ -367,87 +408,55 @@ public class MainActivity extends AppCompatActivity {
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
             dimBehind(popupWindow);
         });
+    }
 
-        navigationMenu.setNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.menu1:
-                    startActivity(new Intent(this, TweakActivity.class));
-                    break;
+    public void openJumpDate(){
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.date_popup, null);
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
-                case R.id.menu2:
-                    LayoutInflater layoutInflater = (LayoutInflater)
-                            this.getSystemService(LAYOUT_INFLATER_SERVICE);
-                    @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.date_popup, null);
-                    int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-                    int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-                    final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+        EditText day = popupView.findViewById(R.id.day);
+        EditText month = popupView.findViewById(R.id.month);
+        EditText year = popupView.findViewById(R.id.year);
 
-                    EditText day = popupView.findViewById(R.id.day);
-                    EditText month = popupView.findViewById(R.id.month);
-                    EditText year = popupView.findViewById(R.id.year);
+        Button enter = popupView.findViewById(R.id.enter);
 
-                    Button enter = popupView.findViewById(R.id.enter);
+        enter.setOnClickListener(v -> {
+            String d = day.getText().toString();
+            String m = month.getText().toString();
+            String y = year.getText().toString();
 
-                    enter.setOnClickListener(v -> {
-                        String d = day.getText().toString();
-                        String m = month.getText().toString();
-                        String y = year.getText().toString();
+            if(d.isEmpty() || m.isEmpty() || y.isEmpty()){
+                Handler h = new Handler();
+                h.postDelayed(() -> enter.setText("Enter"), 2000);
+                enter.setText("Please Enter all Input/s");
+            } else if(Integer.parseInt(d) > 31 || Integer.parseInt(m) > 12 || Integer.parseInt(y) > 2030){
+                Handler h = new Handler();
+                h.postDelayed(() -> enter.setText("Submit"), 2000);
+                enter.setText("Invalid Date");
+            } else{
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(Integer.parseInt(y) , Integer.parseInt(m) - 1 , Integer.parseInt(d), 0, 0);
+                SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+                String formattedDate = df.format(calendar.getTime());
 
-                        if(d.isEmpty() || m.isEmpty() || y.isEmpty()){
-                            Handler h = new Handler();
-                            h.postDelayed(() -> enter.setText("Enter"), 2000);
-                            enter.setText("Please Enter all Input/s");
-                        } else if(Integer.parseInt(d) > 31 || Integer.parseInt(m) > 12 || Integer.parseInt(y) > 2030){
-                            Handler h = new Handler();
-                            h.postDelayed(() -> enter.setText("Submit"), 2000);
-                            enter.setText("Invalid Date");
-                        } else{
-                            Calendar calendar = Calendar.getInstance();
-                            calendar.set(Integer.parseInt(y) , Integer.parseInt(m) - 1 , Integer.parseInt(d), 0, 0);
-                            SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-                            String formattedDate = df.format(calendar.getTime());
-
-                            if(db.getDate(formattedDate)){
-                                currDate.setText(formattedDate);
-                                jump = true;
-                                setDay();
-                                popupWindow.dismiss();
-                            } else{
-                                Handler h = new Handler();
-                                h.postDelayed(() -> enter.setText("Submit"), 2000);
-                                enter.setText("Record Doesn't Exists");
-                            }
-                        }
-                    });
-
-                    drawerLayout.close();
-                    popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-                    dimBehind(popupWindow);
-                    break;
-
-                case R.id.menu3:
-                    startActivity(new Intent(this, NotificationActivity.class));
-                    break;
-
-                case R.id.menu4:
-                    startActivity(new Intent(this, FastActivity.class));
-                    break;
-
-                case R.id.menu5:
-                    startActivity(new Intent(this, MeditationActivity.class));
-                    break;
-
-                case R.id.menu6:
-                    SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-                    SharedPreferences.Editor myEdit = sharedPreferences.edit();
-                    myEdit.putBoolean("user", false);
-                    myEdit.apply();
-                    startActivity(new Intent(this, LoginActivity.class));
-                    finish();
-                    break;
+                if(db.getDate(formattedDate)){
+                    currDate.setText(formattedDate);
+                    jump = true;
+                    setDay();
+                    popupWindow.dismiss();
+                } else{
+                    Handler h = new Handler();
+                    h.postDelayed(() -> enter.setText("Submit"), 2000);
+                    enter.setText("Record Doesn't Exists");
+                }
             }
-            return false;
         });
+
+        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+        dimBehind(popupWindow);
     }
 
     public void setPrev(){
@@ -536,7 +545,6 @@ public class MainActivity extends AppCompatActivity {
             jumpBack.setVisibility(View.GONE);
             frameLayout.setBackground(getResources().getDrawable(R.drawable.info_img_theme));
             currDate.setTextColor(getColor(R.color.black));
-            jump_back_nav.setVisibility(View.GONE);
             setNext();
             setPrev();
         }else{
@@ -548,7 +556,7 @@ public class MainActivity extends AppCompatActivity {
             setCount();
             setPrev();
             setNext();
-            jump_back_nav.setVisibility(View.VISIBLE);
+            jumpBack.setVisibility(View.VISIBLE);
             if(jump) {
                 sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_white));
                 jumpBack.setVisibility(View.VISIBLE);
@@ -556,7 +564,6 @@ public class MainActivity extends AppCompatActivity {
                 currDate.setTextColor(getColor(R.color.white));
                 date_prev.setVisibility(View.GONE);
                 date_next.setVisibility(View.GONE);
-                jump_back_nav.setVisibility(View.GONE);
             }
         }
     }

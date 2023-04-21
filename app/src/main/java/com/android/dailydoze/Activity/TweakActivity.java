@@ -64,7 +64,7 @@ public class TweakActivity extends AppCompatActivity {
         weight = findViewById(R.id.weight_tweak);
         date_prev = findViewById(R.id.date_prev_tweak);
         date_next = findViewById(R.id.date_next_tweak);
-        jump_back_tweak = findViewById(R.id.jump_back_nav_tweak);
+        jump_back_tweak = findViewById(R.id.jump_back_tweak);
 
         currDate.setText(setCurrentDate());
 
