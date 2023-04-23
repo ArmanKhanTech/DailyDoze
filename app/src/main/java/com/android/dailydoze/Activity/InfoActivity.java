@@ -113,49 +113,49 @@ public class InfoActivity extends AppCompatActivity {
                 name.setText("Exercise");
                 break;
             case "fast":
-                drawable = getDrawable(R.drawable.fast);
+                drawable = getDrawable(R.drawable.fast_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.fast));
                 name.setText("Fast After 7:00 pm");
                 break;
             case "sleep":
-                drawable = getDrawable(R.drawable.sleep);
+                drawable = getDrawable(R.drawable.sleep_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.sleep));
                 name.setText("Sufficient Sleep");
                 break;
             case "exp":
-                drawable = getDrawable(R.drawable.intentions_picture);
+                drawable = getDrawable(R.drawable.sleep_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.trendelenburg));
                 name.setText("Experiment Mild Trendelenburg");
                 break;
             case "water":
-                drawable = getDrawable(R.drawable.hydrated_picture);
+                drawable = getDrawable(R.drawable.water_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.water));
                 name.setText("Preload with Water");
                 break;
             case "vinegar":
-                drawable = getDrawable(R.drawable.vinegar);
+                drawable = getDrawable(R.drawable.vinegar_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.vinegar));
                 name.setText("Incorporate Vinegar");
                 break;
             case "neg":
-                drawable = getDrawable(R.drawable.negative_calories);
+                drawable = getDrawable(R.drawable.negcal_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.neg));
                 name.setText("Preload with 'Negative Calories' Food");
                 break;
             case "un_meal":
-                drawable = getDrawable(R.drawable.undistracted_meal);
+                drawable = getDrawable(R.drawable.un_meal_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.un_meal));
                 name.setText("Enjoy Meal Undistracted");
                 break;
             case "twemin":
-                drawable = getDrawable(R.drawable.twenty_minutes);
+                drawable = getDrawable(R.drawable.twe_min_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.twemin));
                 name.setText("Follow 20 Minutes Rule");
@@ -227,7 +227,7 @@ public class InfoActivity extends AppCompatActivity {
                 name.setText("Optimize Your Exercise");
                 break;
             case "weigh":
-                drawable = getDrawable(R.drawable.weigh);
+                drawable = getDrawable(R.drawable.weigh_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.weigh_twice_text));
                 name.setText("Weigh Yourself Twice a Day");

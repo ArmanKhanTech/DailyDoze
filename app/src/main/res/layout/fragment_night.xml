@@ -9,27 +9,21 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/black">
+        android:scrollbarThumbVertical="@color/blue">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal">
-
         <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:elevation="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/berries_theme">
@@ -37,219 +31,249 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
 
-                <TextView
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fast"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="Fast After"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:text="7:00 pm"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Fast After 7 pm"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/fastInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/fastCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="bottom|center">
-
-                <ImageView
-                    android:id="@+id/fastInfo"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/info_icon_white"/>
-
-                <ImageView
-                    android:id="@+id/fastCal"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/calender_icon_white"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal">
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
 
                 <CheckBox
                     android:id="@+id/fast_cb1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:theme="@style/BlackCheckbox"
-                    android:button="@drawable/white_checkbox"/>
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
             </LinearLayout>
 
         </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:elevation="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/othervege_theme">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="Sufficient"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:text="Sleep"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="bottom|center">
-
-                <ImageView
-                    android:id="@+id/sleepInfo"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/info_icon_white"/>
-
-                <ImageView
-                    android:id="@+id/sleepCal"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/calender_icon_white"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal">
-
-                <CheckBox
-                    android:id="@+id/sleep_cb1"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:button="@drawable/white_checkbox"
-                    android:theme="@style/WhiteCheckbox" />
-
-            </LinearLayout>
-
-        </FrameLayout>
-
-    </LinearLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="75dp"
             android:elevation="3dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:background="@drawable/beans_theme">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"/>
+            android:background="@drawable/beverages_theme">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
 
-                <TextView
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sleep"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="Experiment Mild"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:text="Trendelenburg"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Sufficient Sleep"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/sleepInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/sleepCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="bottom|center">
-
-                <ImageView
-                    android:id="@+id/expInfo"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/info_icon_white"/>
-
-                <ImageView
-                    android:id="@+id/expCal"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/calender_icon_white"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal">
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
+
+                <CheckBox
+                    android:id="@+id/sleep_cb1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/exercise_theme">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:paddingRight="5dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/trendelenburg"
+                    android:scaleType="centerInside"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Mild Trendelenburg"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/expInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/expCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
 
                 <CheckBox
                     android:id="@+id/exp_cb1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:theme="@style/WhiteCheckbox"
-                    android:button="@drawable/white_checkbox"/>
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
             </LinearLayout>
 

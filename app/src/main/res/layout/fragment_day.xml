@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/black">
+        android:scrollbarThumbVertical="@color/blue">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,10 +23,10 @@
              android:orientation="vertical"
              android:paddingTop="10dp"
              android:paddingBottom="10dp"
-             android:layout_marginLeft="15dp"
-             android:layout_marginRight="15dp"
              android:layout_marginTop="10dp"
-             android:background="@drawable/noti_list_theme">
+             android:layout_marginRight="15dp"
+             android:layout_marginLeft="15dp"
+             android:background="@drawable/daily_dose_theme">
 
              <TextView
                  android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                  android:text="Take Your Daily Doses : "
                  android:paddingBottom="10dp"
                  android:layout_marginLeft="15dp"
-                 android:textColor="@color/black"
+                 android:textColor="@color/blue"
                  android:textSize="25dp"
                  android:fontFamily="sans-serif-condensed-medium"/>
 

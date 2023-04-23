@@ -153,7 +153,7 @@ public class TweakActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager_tweaks);
         viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new DayFragment(),"Day");
-        viewPagerAdapter.addFragment(new EachMealFragment(),"Meals");
+        viewPagerAdapter.addFragment(new EachMealFragment(),"Meal");
         viewPagerAdapter.addFragment(new NightFragment(),"Night");
         viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(viewPagerAdapter);

@@ -9,500 +9,529 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/black">
+        android:scrollbarThumbVertical="@color/blue">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="horizontal">
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:elevation="3dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/berries_theme">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="Preload with"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Water"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/waterInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/waterCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/water_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/water_cb2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/water_cb3"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:elevation="3dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/fruits_theme">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="Incorporate"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Vinegar"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/vinegarInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/vinegarCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/vinegar_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/vinegar_cb2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/vinegar_cb3"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="75dp"
             android:elevation="3dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/othervege_theme">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/water"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Preload With Water"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/waterInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/waterCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
+
+                <CheckBox
+                    android:id="@+id/water_cb1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+                <CheckBox
+                    android:id="@+id/water_cb2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+                <CheckBox
+                    android:id="@+id/water_cb3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/fruits_theme">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/vinegar"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Incorporate Vinegar"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/vinegarInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/vinegarCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
+
+                <CheckBox
+                    android:id="@+id/vinegar_cb1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+                <CheckBox
+                    android:id="@+id/vinegar_cb2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+                <CheckBox
+                    android:id="@+id/vinegar_cb3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/beverages_theme">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:elevation="3dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/preload"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/negative_calories"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Preload with"
-                    android:layout_gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:text="'Negative Calories' Food"
-                    android:textColor="@color/white"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="'Neg Calories' Food"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/negInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/negCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:elevation="3dp"
-                android:layout_gravity="bottom|center">
-
-                <ImageView
-                    android:id="@+id/negInfo"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/info_icon_white"/>
-
-                <ImageView
-                    android:id="@+id/negCal"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/calender_icon_white"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:elevation="3dp"
-                android:layout_gravity="center_horizontal">
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
 
                 <CheckBox
                     android:id="@+id/neg_cb1"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:theme="@style/WhiteCheckbox"
-                    android:button="@drawable/white_checkbox"/>
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
                 <CheckBox
                     android:id="@+id/neg_cb2"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="5dp"
                     android:theme="@style/WhiteCheckbox"
-                    android:button="@drawable/white_checkbox"/>
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
                 <CheckBox
                     android:id="@+id/neg_cb3"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="5dp"
                     android:theme="@style/WhiteCheckbox"
-                    android:button="@drawable/white_checkbox"/>
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
             </LinearLayout>
 
         </FrameLayout>
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_height="75dp"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/cruciferous_theme">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:elevation="3dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/herbs_theme">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/un_meal"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Enjoy Meal"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Undistracted"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Meal Undistracted"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/un_mealInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
+
+                        <ImageView
+                            android:id="@+id/un_mealCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
+
+                <CheckBox
+                    android:id="@+id/un_meal_cb1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+                <CheckBox
+                    android:id="@+id/un_meal_cb2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+                <CheckBox
+                    android:id="@+id/un_meal_cb3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/exercise_theme">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/twenty_mins"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/un_mealInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/un_mealCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/un_meal_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/un_meal_cb2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/un_meal_cb3"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/BlackCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:elevation="3dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/othervege_theme">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Follow 20"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Minutes Rule"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="20 Minutes Rule"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
 
-                </LinearLayout>
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="bottom|center">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/tweminInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
+                        <ImageView
+                            android:id="@+id/tweminInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/info_icon_white"/>
 
-                    <ImageView
-                        android:id="@+id/tweminCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
+                        <ImageView
+                            android:id="@+id/tweminCal"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/calender_icon_white"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal">
+            </LinearLayout>
 
-                    <CheckBox
-                        android:id="@+id/twe_min_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center|end">
 
-                    <CheckBox
-                        android:id="@+id/twe_min_cb2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                <CheckBox
+                    android:id="@+id/twe_min_cb1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
-                    <CheckBox
-                        android:id="@+id/twe_min_cb3"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                <CheckBox
+                    android:id="@+id/twe_min_cb2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
-                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/twe_min_cb3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:theme="@style/WhiteCheckbox"
+                    android:background="@drawable/white_checkbox"
+                    android:button="@null"/>
 
-            </FrameLayout>
+            </LinearLayout>
 
-        </LinearLayout>
+        </FrameLayout>
 
     </LinearLayout>
 

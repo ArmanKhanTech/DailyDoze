@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Servings"
+                android:text="About Serving"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
 
@@ -70,11 +70,11 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             android:elevation="2dp"
-            android:scaleType="centerInside"
+            android:scaleType="fitXY"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/beans" />
+            app:srcCompat="@drawable/beans_picture" />
 
         </androidx.cardview.widget.CardView>
 

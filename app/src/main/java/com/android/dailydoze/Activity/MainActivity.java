@@ -22,9 +22,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.Database.DailyDozeDatabase;
-import com.android.dailydoze.Database.MeditationDatabase;
-import com.android.dailydoze.Database.NotificationDatabase;
-import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 
 import java.text.ParseException;
@@ -33,6 +30,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
+
+//TODO : Calender Activity, Fast Activity, MP3
 
 public class MainActivity extends AppCompatActivity {
     Button b;
@@ -395,11 +394,13 @@ public class MainActivity extends AppCompatActivity {
             save.setOnClickListener(v1 -> {
                 if(today){
                     duration[0] = hrs.getText().toString();
-                    if(db.getDate(getCurrentDate())){
-                        db.setSleep(duration[0], getCurrentDate());
-                    }else{
-                        db.addDate(getCurrentDate());
-                        db.setSleep(duration[0], getCurrentDate());
+                    if(!duration[0].isEmpty()) {
+                        if (db.getDate(getCurrentDate())) {
+                            db.setSleep(duration[0], getCurrentDate());
+                        } else {
+                            db.addDate(getCurrentDate());
+                            db.setSleep(duration[0], getCurrentDate());
+                        }
                     }
                     popupWindow.dismiss();
                 }else{

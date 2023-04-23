@@ -132,6 +132,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:elevation="2dp"
             android:background="@drawable/info_img_theme">
 
