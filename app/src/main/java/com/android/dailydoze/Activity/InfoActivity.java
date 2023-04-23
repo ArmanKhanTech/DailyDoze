@@ -125,13 +125,13 @@ public class InfoActivity extends AppCompatActivity {
                 name.setText("Sufficient Sleep");
                 break;
             case "exp":
-                drawable = getDrawable(R.drawable.sleep2);
+                drawable = getDrawable(R.drawable.intentions_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.trendelenburg));
                 name.setText("Experiment Mild Trendelenburg");
                 break;
             case "water":
-                drawable = getDrawable(R.drawable.water);
+                drawable = getDrawable(R.drawable.hydrated_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.water));
                 name.setText("Preload with Water");
@@ -161,67 +161,67 @@ public class InfoActivity extends AppCompatActivity {
                 name.setText("Follow 20 Minutes Rule");
                 break;
             case "garlic":
-                drawable = getDrawable(R.drawable.garlic);
+                drawable = getDrawable(R.drawable.garlic_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_garlic_text));
                 name.setText("Garlic Powder");
                 break;
             case "cumin":
-                drawable = getDrawable(R.drawable.black_cumin);
+                drawable = getDrawable(R.drawable.black_cumin_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_blackcumin_text));
                 name.setText("Black Cumin");
                 break;
             case "ginger":
-                drawable = getDrawable(R.drawable.ginger);
+                drawable = getDrawable(R.drawable.ginger_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_ginger_text));
                 name.setText("Ground Ginger");
                 break;
             case "yeast":
-                drawable = getDrawable(R.drawable.yeast);
+                drawable = getDrawable(R.drawable.yeast_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_nutriyeast_text));
                 name.setText("Yeast");
                 break;
             case "cumin2":
-                drawable = getDrawable(R.drawable.cumin);
+                drawable = getDrawable(R.drawable.cumin_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_cumin_text));
                 name.setText("Cumin");
                 break;
             case "green":
-                drawable = getDrawable(R.drawable.green_tea);
+                drawable = getDrawable(R.drawable.green_tea_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_greentea_text));
                 name.setText("Green Tea");
                 break;
             case "hyd":
-                drawable = getDrawable(R.drawable.water);
+                drawable = getDrawable(R.drawable.hydrated_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_hydrate_text));
                 name.setText("Stay Hydrated");
                 break;
             case "deflour":
-                drawable = getDrawable(R.drawable.deflour);
+                drawable = getDrawable(R.drawable.deflour_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_deflourdiet_text));
                 name.setText("Deflour Your Diet");
                 break;
             case "front":
-                drawable = getDrawable(R.drawable.frontload);
+                drawable = getDrawable(R.drawable.front_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_frontload_text));
                 name.setText("Front Your Diet");
                 break;
             case "restrict":
-                drawable = getDrawable(R.drawable.restrict);
+                drawable = getDrawable(R.drawable.restrict_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.daily_timerestrict_text));
                 name.setText("Time-Restrict Your Eatings");
                 break;
             case "optimize":
-                drawable = getDrawable(R.drawable.optimize);
+                drawable = getDrawable(R.drawable.optimize_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.exercise_timing_text));
                 name.setText("Optimize Your Exercise");
@@ -233,7 +233,7 @@ public class InfoActivity extends AppCompatActivity {
                 name.setText("Weigh Yourself Twice a Day");
                 break;
             case "inten":
-                drawable = getDrawable(R.drawable.sleep2);
+                drawable = getDrawable(R.drawable.intentions_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.complete_intentions_text));
                 name.setText("Complete Your Implementation Intentions");

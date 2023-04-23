@@ -93,6 +93,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
+                    android:padding="2dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/tweaks_icon"
                     android:scaleType="centerInside"/>
@@ -102,9 +103,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="21 Tweaks"
-                    android:textColor="@color/black"
+                    android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="25dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 
@@ -118,6 +119,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
+                    android:padding="2dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/jump_icon"/>
 
@@ -126,9 +128,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Jump to Date"
-                    android:textColor="@color/black"
+                    android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="25dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 
@@ -142,6 +144,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
+                    android:padding="2dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/noti_icon"/>
 
@@ -150,9 +153,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Notifications"
-                    android:textColor="@color/black"
+                    android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="25dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 
@@ -166,6 +169,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
+                    android:padding="3dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/medi_icon"/>
 
@@ -174,9 +178,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Meditation"
-                    android:textColor="@color/black"
+                    android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="25dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 
@@ -190,6 +194,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
+                    android:padding="3dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/fastwatch_icon"/>
 
@@ -198,9 +203,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Fast Watch"
-                    android:textColor="@color/black"
+                    android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="25dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 
@@ -214,6 +219,7 @@
 
                 <ImageView
                     android:layout_width="50dp"
+                    android:padding="3dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/logout_icon"/>
 
@@ -222,9 +228,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Logout"
-                    android:textColor="@color/black"
+                    android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="25dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 

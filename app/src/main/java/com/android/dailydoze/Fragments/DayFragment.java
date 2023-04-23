@@ -207,22 +207,6 @@ public class DayFragment extends Fragment {
             }
         });
 
-        weigh_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
-                incValue("weigh");
-            }else{
-                decValue("weigh");
-            }
-        });
-
-        weigh_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
-                incValue("weigh");
-            }else{
-                decValue("weigh");
-            }
-        });
-
         inten_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 incValue("intentions");

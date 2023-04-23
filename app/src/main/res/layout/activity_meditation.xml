@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".Activity.MeditationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp"
+                android:background="@color/transparent"
+                android:onClick="mediFinish"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/back_button_white"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Meditation"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarThumbVertical="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="Start Meditating..."
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:elevation="3dp"
+            android:textColor="@color/white"
+            android:background="@drawable/medi_heading_theme"
+            android:textSize="25dp"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <ImageView
+            android:onClick="openPerformMeditation"
+            android:id="@+id/mediStart"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/play_button_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/fifmins"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/custom_radio"
+                android:text="15 mins"
+                android:checked="true"
+                android:textAlignment="center"
+                android:layout_marginRight="5dp"
+                android:textColor="@drawable/custom_radio_text"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/thimins"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/custom_radio"
+                android:text="30 mins"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="center"
+                android:textColor="@drawable/custom_radio_text"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/foumins"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/custom_radio"
+                android:text="45 mins"
+                android:textAlignment="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@drawable/custom_radio_text"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:padding="5dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/custom_radio"
+                android:text="Other"
+                android:textAlignment="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@drawable/custom_radio_text"
+                android:textSize="20dp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/medi_history_theme"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="History"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <ListView
+                android:id="@+id/mediList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/history"
+                android:divider="@color/transparent"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:dividerHeight="10dp"
+                android:scrollbars="none"/>
+
+            <TextView
+                android:id="@+id/mediHisStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Nothing to show"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

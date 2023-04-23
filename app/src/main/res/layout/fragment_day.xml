@@ -17,272 +17,622 @@
             android:orientation="vertical"
             android:fontFamily="sans-serif-condensed-medium">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Take Your Daily Doses : "
-            android:paddingBottom="10dp"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            android:fontFamily="sans-serif-condensed-medium"/>
-
          <LinearLayout
              android:layout_width="match_parent"
-             android:layout_height="200dp"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:paddingTop="10dp"
+             android:paddingBottom="10dp"
+             android:layout_marginLeft="15dp"
              android:layout_marginRight="15dp"
-             android:orientation="horizontal">
+             android:layout_marginTop="10dp"
+             android:background="@drawable/noti_list_theme">
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Take Your Daily Doses : "
+                 android:paddingBottom="10dp"
+                 android:layout_marginLeft="15dp"
+                 android:textColor="@color/black"
+                 android:textSize="25dp"
+                 android:fontFamily="sans-serif-condensed-medium"/>
 
              <FrameLayout
-                 android:layout_width="0dp"
-                 android:layout_height="match_parent"
-                 android:layout_weight="1"
-                 android:layout_gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="75dp"
                  android:elevation="3dp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
                  android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
                  android:background="@drawable/berries_theme">
 
                  <LinearLayout
-                     android:layout_width="match_parent"
+                     android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:orientation="vertical"
-                     android:elevation="3dp"
-                     android:layout_gravity="center">
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
 
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="Black"
-                         android:textColor="@color/white"
-                         android:textSize="25dp"
-                         android:textStyle="bold"  />
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/black_cumin"
+                         android:scaleType="centerInside"/>
 
-                     <TextView
-                         android:layout_width="match_parent"
+                     <LinearLayout
+                         android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="Cumin"
-                         android:textColor="@color/white"
-                         android:textSize="25dp"
-                         android:textStyle="bold" />
+                         android:orientation="vertical">
 
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="(¼ tsp)"
-                         android:textColor="@color/white"
-                         android:textSize="20dp"
-                         android:textStyle="bold" />
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Black Cumin"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text=" (¼ tsp)"
+                                 android:textColor="@color/white"
+                                 android:textSize="20dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/cuminInfo"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/cuminCal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
 
                  </LinearLayout>
 
                  <LinearLayout
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:elevation="3dp"
-                     android:layout_marginBottom="10dp"
-                     android:layout_gravity="bottom|center">
-
-                     <ImageView
-                         android:id="@+id/cuminInfo"
-                         android:layout_width="25dp"
-                         android:layout_height="25dp"
-                         android:src="@drawable/info_icon_white"/>
-
-                     <ImageView
-                         android:id="@+id/cuminCal"
-                         android:layout_width="25dp"
-                         android:layout_height="25dp"
-                         android:src="@drawable/calender_icon_white"/>
-
-                 </LinearLayout>
-
-                 <LinearLayout
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:elevation="3dp"
+                     android:gravity="center"
                      android:orientation="horizontal"
-                     android:layout_marginTop="10dp"
-                     android:layout_gravity="center_horizontal">
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
 
                      <CheckBox
                          android:id="@+id/cumin_cb1"
                          android:layout_width="25dp"
                          android:layout_height="25dp"
                          android:theme="@style/WhiteCheckbox"
-                         android:button="@drawable/white_checkbox"/>
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
 
                  </LinearLayout>
 
              </FrameLayout>
 
              <FrameLayout
-                 android:layout_width="0dp"
-                 android:layout_height="match_parent"
-                 android:layout_weight="1"
-                 android:layout_gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="75dp"
                  android:elevation="3dp"
-                 android:layout_marginLeft="20dp"
-                 android:background="@drawable/beans_theme">
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:background="@drawable/othervege_theme">
 
                  <LinearLayout
-                     android:layout_width="match_parent"
+                     android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:orientation="vertical"
-                     android:elevation="3dp"
-                     android:layout_gravity="center">
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
 
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="Gralic"
-                         android:textColor="@color/white"
-                         android:textSize="25dp"
-                         android:textStyle="bold"  />
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/garlic"
+                         android:scaleType="centerInside"/>
 
-                     <TextView
-                         android:layout_width="match_parent"
+                     <LinearLayout
+                         android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="Powder"
-                         android:textColor="@color/white"
-                         android:textSize="25dp"
-                         android:textStyle="bold" />
+                         android:orientation="vertical">
 
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="(¼ tsp)"
-                         android:textColor="@color/white"
-                         android:textSize="20dp"
-                         android:textStyle="bold" />
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Garlic Powder"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:layout_marginLeft="5dp"
+                                 android:text="(¼ tsp)"
+                                 android:textColor="@color/white"
+                                 android:textSize="20dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/garlicInfo"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/garlicCal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
 
                  </LinearLayout>
 
                  <LinearLayout
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:elevation="3dp"
-                     android:layout_marginBottom="10dp"
-                     android:layout_gravity="bottom|center">
-
-                     <ImageView
-                         android:id="@+id/garlicInfo"
-                         android:layout_width="25dp"
-                         android:layout_height="25dp"
-                         android:src="@drawable/info_icon_white"/>
-
-                     <ImageView
-                         android:id="@+id/garlicCal"
-                         android:layout_width="25dp"
-                         android:layout_height="25dp"
-                         android:src="@drawable/calender_icon_white"/>
-
-                 </LinearLayout>
-
-                 <LinearLayout
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:elevation="3dp"
+                     android:gravity="center"
                      android:orientation="horizontal"
-                     android:layout_marginTop="10dp"
-                     android:layout_gravity="center_horizontal">
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
 
                      <CheckBox
                          android:id="@+id/garlic_cb1"
                          android:layout_width="25dp"
                          android:layout_height="25dp"
                          android:theme="@style/WhiteCheckbox"
-                         android:button="@drawable/white_checkbox"/>
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
 
                  </LinearLayout>
 
              </FrameLayout>
 
              <FrameLayout
-                 android:layout_width="0dp"
-                 android:layout_height="match_parent"
-                 android:layout_weight="1"
-                 android:layout_gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="75dp"
                  android:elevation="3dp"
-                 android:layout_marginLeft="20dp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
                  android:background="@drawable/nuts_theme">
 
                  <LinearLayout
-                     android:layout_width="match_parent"
+                     android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:orientation="vertical"
-                     android:elevation="3dp"
-                     android:layout_gravity="center">
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
 
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="Ground"
-                         android:textColor="@color/white"
-                         android:textSize="25dp"
-                         android:textStyle="bold"  />
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/ginger"
+                         android:scaleType="centerInside"/>
 
-                     <TextView
-                         android:layout_width="match_parent"
+                     <LinearLayout
+                         android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="Ginger"
-                         android:textColor="@color/white"
-                         android:textSize="25dp"
-                         android:textStyle="bold" />
+                         android:orientation="vertical">
 
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:textAlignment="center"
-                         android:text="(1 tsp)"
-                         android:textColor="@color/white"
-                         android:textSize="20dp"
-                         android:textStyle="bold" />
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Ground Ginger"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:layout_marginLeft="5dp"
+                                 android:text="(1 tsp)"
+                                 android:textColor="@color/white"
+                                 android:textSize="20dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/gingerInfo"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/gingerCal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
 
                  </LinearLayout>
 
                  <LinearLayout
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
-                     android:elevation="3dp"
-                     android:layout_marginBottom="10dp"
-                     android:layout_gravity="bottom|center">
-
-                     <ImageView
-                         android:id="@+id/gingerInfo"
-                         android:layout_width="25dp"
-                         android:layout_height="25dp"
-                         android:src="@drawable/info_icon_white"/>
-
-                     <ImageView
-                         android:id="@+id/gingerCal"
-                         android:layout_width="25dp"
-                         android:layout_height="25dp"
-                         android:src="@drawable/calender_icon_white"/>
-
-                 </LinearLayout>
-
-                 <LinearLayout
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:elevation="3dp"
+                     android:gravity="center"
                      android:orientation="horizontal"
-                     android:layout_marginTop="10dp"
-                     android:layout_gravity="center_horizontal">
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
 
                      <CheckBox
                          android:id="@+id/ginger_cb1"
                          android:layout_width="25dp"
                          android:layout_height="25dp"
                          android:theme="@style/WhiteCheckbox"
-                         android:button="@drawable/white_checkbox"/>
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                 </LinearLayout>
+
+             </FrameLayout>
+
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="75dp"
+                 android:elevation="3dp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:background="@drawable/grains_theme">
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/yeast"
+                         android:scaleType="centerInside"/>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Yeast"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:layout_marginLeft="5dp"
+                                 android:text="(2 tsp)"
+                                 android:textColor="@color/white"
+                                 android:textSize="20dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/yeastInfo"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/yeastCal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:orientation="horizontal"
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
+
+                     <CheckBox
+                         android:id="@+id/yeast_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                 </LinearLayout>
+
+             </FrameLayout>
+
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="75dp"
+                 android:elevation="3dp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:background="@drawable/herbs_theme">
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/yeast"
+                         android:scaleType="centerInside"/>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Cumin"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:layout_marginLeft="5dp"
+                                 android:text="(½ tsp)"
+                                 android:textColor="@color/white"
+                                 android:textSize="20dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/cumin2Info"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/cumin2Cal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:orientation="horizontal"
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
+
+                     <CheckBox
+                         android:id="@+id/cumin2_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                     <CheckBox
+                         android:id="@+id/cumin2_cb2"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                 </LinearLayout>
+
+             </FrameLayout>
+
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="75dp"
+                 android:elevation="3dp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="10dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:background="@drawable/greens_theme">
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/green_tea"
+                         android:padding="5dp"
+                         android:scaleType="fitCenter"/>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Green Tea"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:layout_marginLeft="5dp"
+                                 android:text="(3 cps)"
+                                 android:textColor="@color/white"
+                                 android:textSize="20dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/greenInfo"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/greenCal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:orientation="horizontal"
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
+
+                     <CheckBox
+                         android:id="@+id/green_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                     <CheckBox
+                         android:id="@+id/green_cb2"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                     <CheckBox
+                         android:id="@+id/green_cb3"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
 
                  </LinearLayout>
 
@@ -290,890 +640,645 @@
 
          </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
+             <FrameLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="85dp"
+                 android:elevation="3dp"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginBottom="10dp"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                 android:background="@drawable/fruits_theme">
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center|start"
+                     android:layout_marginLeft="20dp"
+                     android:orientation="horizontal">
+
+                     <ImageView
+                         android:layout_width="50dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/hydrated"
+                         android:padding="5dp"
+                         android:scaleType="fitCenter"/>
+
+                     <LinearLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:orientation="horizontal">
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_gravity="top"
+                                 android:text="Stay Hydrated"
+                                 android:textColor="@color/white"
+                                 android:textSize="25dp"
+                                 android:textStyle="bold" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <ImageView
+                                 android:id="@+id/hydInfo"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/info_icon_white"/>
+
+                             <ImageView
+                                 android:id="@+id/hydCal"
+                                 android:layout_width="20dp"
+                                 android:layout_height="20dp"
+                                 android:src="@drawable/calender_icon_white"/>
+
+                         </LinearLayout>
+
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:orientation="horizontal"
+                     android:layout_marginRight="20dp"
+                     android:layout_gravity="center|end">
+
+                     <CheckBox
+                         android:id="@+id/hyd_cb1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:theme="@style/WhiteCheckbox"
+                         android:background="@drawable/white_checkbox"
+                         android:button="@null"/>
+
+                 </LinearLayout>
+
+             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:elevation="3dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/herbs_theme">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Yeast"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="(2 tsp)"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/yeastInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/yeastCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/yeast_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:elevation="3dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/grains_theme">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Cumin"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="(½ tsp)"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/cumin2Info"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/cumin2Cal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/cumin2_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/cumin2_cb2"
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:elevation="3dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/greens_theme">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Green"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Tea"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="(3 cups)"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/greenInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/greenCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="3dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center_horizontal">
-
-                    <CheckBox
-                        android:id="@+id/green_cb1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/green_cb2"
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                    <CheckBox
-                        android:id="@+id/green_cb3"
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal">
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/exercise_theme">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:elevation="3dp"
-                        android:layout_gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Stay"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Hydrated"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="3dp"
-                        android:layout_gravity="bottom|center">
-
-                        <ImageView
-                            android:id="@+id/hydInfo"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/info_icon_white"/>
-
-                        <ImageView
-                            android:id="@+id/hydCal"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_white"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:elevation="3dp"
-                        android:layout_gravity="center_horizontal">
-
-                        <CheckBox
-                            android:id="@+id/hyd_cb1"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:theme="@style/WhiteCheckbox"
-                            android:button="@drawable/white_checkbox"/>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:elevation="3dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/othervege_theme">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:elevation="3dp"
-                        android:layout_gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Deflour"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Your Diet"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="3dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_gravity="bottom|center">
-
-                        <ImageView
-                            android:id="@+id/deflourInfo"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/info_icon_white"/>
-
-                        <ImageView
-                            android:id="@+id/deflourCal"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_white"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:elevation="3dp"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center_horizontal">
-
-                        <CheckBox
-                            android:id="@+id/deflour_cb1"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:theme="@style/WhiteCheckbox"
-                            android:button="@drawable/white_checkbox"/>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-         <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="85dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/fruits_theme">
+                android:background="@drawable/cruciferous_theme">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/deflour"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Front-Load"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Your Calories"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="Deflour Your Diet"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/deflourInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:id="@+id/deflourCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/frontInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/frontCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|end">
+
+                    <CheckBox
+                        android:id="@+id/deflour_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/beverages_theme">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/frontload"
+                        android:padding="3dp"
+                        android:scaleType="fitCenter"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="Frontload Your Calories"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/frontInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:id="@+id/frontCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|end">
 
                     <CheckBox
                         android:id="@+id/front_cb1"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
                 </LinearLayout>
 
             </FrameLayout>
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="horizontal">
+                android:layout_height="85dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/exercise_theme">
 
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:elevation="3dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/greens_theme">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/restrict"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"/>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:elevation="3dp"
-                        android:layout_gravity="center">
+                        android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Time-Restrict"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Your Eatings"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="Time Restrict Eatings"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
 
-                    </LinearLayout>
+                        </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="3dp"
-                        android:layout_gravity="bottom|center">
-
-                        <ImageView
-                            android:id="@+id/restrictInfo"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/info_icon_white"/>
-
-                        <ImageView
-                            android:id="@+id/restrictCal"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_white"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:elevation="3dp"
-                        android:layout_gravity="center_horizontal">
-
-                        <CheckBox
-                            android:id="@+id/restrict_cb1"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:theme="@style/WhiteCheckbox"
-                            android:button="@drawable/white_checkbox"/>
-
-                    </LinearLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:elevation="3dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/cruciferous_theme">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:elevation="3dp"
-                        android:layout_gravity="center">
-
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Optimize Your"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Exercise"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            <ImageView
+                                android:id="@+id/restrictInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
 
-                    </LinearLayout>
+                            <ImageView
+                                android:id="@+id/restrictCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:elevation="3dp"
-                        android:layout_gravity="bottom|center">
-
-                        <ImageView
-                            android:id="@+id/optimizeInfo"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/info_icon_white"/>
-
-                        <ImageView
-                            android:id="@+id/optimizeCal"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/calender_icon_white"/>
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:elevation="3dp"
-                        android:layout_gravity="center_horizontal">
+                </LinearLayout>
 
-                        <CheckBox
-                            android:id="@+id/optimize_cb1"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:theme="@style/WhiteCheckbox"
-                            android:button="@drawable/white_checkbox"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|end">
 
-                    </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/restrict_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
-                </FrameLayout>
+                </LinearLayout>
 
-
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="horizontal">
+            </FrameLayout>
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
                 android:elevation="3dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:background="@drawable/flexseeds_theme">
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/othervege_theme">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/optimize"
+                        android:padding="2dp"
+                        android:scaleType="fitCenter"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Weigh Yourself"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Twice a Day"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="Optimize Brain Exercise"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/optimizeInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:id="@+id/optimizeCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
-
-                    <ImageView
-                        android:id="@+id/weighInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
-
-                    <ImageView
-                        android:id="@+id/weighCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|end">
+
+                    <CheckBox
+                        android:id="@+id/optimize_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:theme="@style/WhiteCheckbox"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/berries_theme">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/weigh"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="Weigh Twice a Day"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/weighInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:id="@+id/weighCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|end">
 
                     <CheckBox
                         android:id="@+id/weigh_cb1"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
                     <CheckBox
                         android:id="@+id/weigh_cb2"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
                 </LinearLayout>
 
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/beverages_theme">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:elevation="3dp"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
 
-                    <TextView
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/intention"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Complete Your"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Implementation"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Intentions"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="Intentions"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
 
-                </LinearLayout>
+                        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="bottom|center">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/intenInfo"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/info_icon_white"/>
+                            <ImageView
+                                android:id="@+id/intenInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
 
-                    <ImageView
-                        android:id="@+id/intenCal"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/calender_icon_white"/>
+                            <ImageView
+                                android:id="@+id/intenCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|end">
 
                     <CheckBox
                         android:id="@+id/inten_cb1"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
                     <CheckBox
                         android:id="@+id/inten_cb2"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
                     <CheckBox
                         android:id="@+id/inten_cb3"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
                         android:theme="@style/WhiteCheckbox"
-                        android:button="@drawable/white_checkbox"/>
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"/>
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
             </FrameLayout>
-
-        </LinearLayout>
 
         </LinearLayout>
 

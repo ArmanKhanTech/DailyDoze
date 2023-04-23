@@ -11,6 +11,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.android.dailydoze.Database.DailyDozeDatabase;
+import com.android.dailydoze.Database.MeditationDatabase;
+import com.android.dailydoze.Database.NotificationDatabase;
+import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 
 @SuppressLint("CustomSplashScreen")
@@ -40,4 +44,5 @@ public class SplashScreenActivity extends AppCompatActivity {
             finish();
         }, 2000);
     }
+
 }

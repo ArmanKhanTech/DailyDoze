@@ -160,7 +160,7 @@ public class NotificationActivity extends AppCompatActivity {
             String t = notiList.getText();
             LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
-            int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+            int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);

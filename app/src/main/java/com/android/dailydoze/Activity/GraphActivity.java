@@ -125,6 +125,7 @@ public class GraphActivity extends AppCompatActivity {
         combinedChart.getXAxis().setAxisMinimum(-combinedData.getBarData().getBarWidth()/2);
         combinedChart.getXAxis().setAxisMaximum(dates.size()-combinedData.getBarData().getBarWidth()/2);
         combinedChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
+        combinedChart.getXAxis().setLabelCount(dates.size());
         combinedChart.setData(combinedData);
         combinedChart.setScaleEnabled(false);
         combinedChart.centerViewTo(combinedChart.getXChartMax(), 0, YAxis.AxisDependency.RIGHT);

@@ -22,6 +22,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.Database.DailyDozeDatabase;
+import com.android.dailydoze.Database.MeditationDatabase;
+import com.android.dailydoze.Database.NotificationDatabase;
+import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 
 import java.text.ParseException;
@@ -42,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout frameLayout;
     boolean today, jump = false;
 
-    //TODO:FIX improve noti icon, login black screen, bar chart scroll
     @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -370,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
         sleep.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
-            int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+            int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
@@ -413,7 +415,7 @@ public class MainActivity extends AppCompatActivity {
     public void openJumpDate(){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.date_popup, null);
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
