@@ -28,4 +28,7 @@ i. Sign Up and Log In
 Make sure to upload your google-service.json file in /app directory of your project(the one you will download from firebase console). 
 <br>
 Simply run:
+<br>
+```javascript
 git clone 
+```
