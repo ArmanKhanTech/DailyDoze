@@ -30,5 +30,5 @@ Make sure to upload your google-service.json file in /app directory of your proj
 Simply run:
 <br>
 ```javascript
-git clone 
+git clone https://github.com/ArmanKhanTech/DailyDoze.git
 ```
