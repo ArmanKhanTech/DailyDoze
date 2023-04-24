@@ -221,7 +221,7 @@ public class InfoActivity extends AppCompatActivity {
                 name.setText("Time-Restrict Your Eatings");
                 break;
             case "optimize":
-                drawable = getDrawable(R.drawable.optimize_picture);
+                drawable = getDrawable(R.drawable.optimize);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.exercise_timing_text));
                 name.setText("Optimize Your Exercise");

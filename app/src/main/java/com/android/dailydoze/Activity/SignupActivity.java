@@ -235,6 +235,8 @@ public class SignupActivity extends AppCompatActivity {
                     SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
                     SharedPreferences.Editor myEdit = sharedPreferences.edit();
                     myEdit.putBoolean("user", true);
+                    myEdit.putString("name", name);
+                    myEdit.putString("email", mail);
                     myEdit.apply();
 
                     Intent intent = new Intent(SignupActivity.this, MainActivity.class);

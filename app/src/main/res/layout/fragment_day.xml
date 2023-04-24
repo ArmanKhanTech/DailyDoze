@@ -45,6 +45,7 @@
                  android:layout_gravity="center"
                  android:layout_marginBottom="20dp"
                  android:layout_marginLeft="15dp"
+                 android:paddingBottom="5dp"
                  android:layout_marginRight="15dp"
                  android:background="@drawable/berries_theme">
 
@@ -86,7 +87,7 @@
                                  android:layout_gravity="top"
                                  android:text=" (¼ tsp)"
                                  android:textColor="@color/white"
-                                 android:textSize="20dp"
+                                 android:textSize="15dp"
                                  android:textStyle="bold" />
 
                          </LinearLayout>
@@ -139,6 +140,7 @@
                  android:elevation="3dp"
                  android:layout_gravity="center"
                  android:layout_marginBottom="20dp"
+                 android:paddingBottom="5dp"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
                  android:background="@drawable/othervege_theme">
@@ -182,7 +184,7 @@
                                  android:layout_marginLeft="5dp"
                                  android:text="(¼ tsp)"
                                  android:textColor="@color/white"
-                                 android:textSize="20dp"
+                                 android:textSize="15dp"
                                  android:textStyle="bold" />
 
                          </LinearLayout>
@@ -236,6 +238,7 @@
                  android:layout_gravity="center"
                  android:layout_marginBottom="20dp"
                  android:layout_marginLeft="15dp"
+                 android:paddingBottom="5dp"
                  android:layout_marginRight="15dp"
                  android:background="@drawable/nuts_theme">
 
@@ -278,7 +281,7 @@
                                  android:layout_marginLeft="5dp"
                                  android:text="(1 tsp)"
                                  android:textColor="@color/white"
-                                 android:textSize="20dp"
+                                 android:textSize="15dp"
                                  android:textStyle="bold" />
 
                          </LinearLayout>
@@ -330,6 +333,7 @@
                  android:layout_height="75dp"
                  android:elevation="3dp"
                  android:layout_gravity="center"
+                 android:paddingBottom="5dp"
                  android:layout_marginBottom="20dp"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
@@ -374,7 +378,7 @@
                                  android:layout_marginLeft="5dp"
                                  android:text="(2 tsp)"
                                  android:textColor="@color/white"
-                                 android:textSize="20dp"
+                                 android:textSize="15dp"
                                  android:textStyle="bold" />
 
                          </LinearLayout>
@@ -429,6 +433,7 @@
                  android:layout_marginBottom="20dp"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
+                 android:paddingBottom="5dp"
                  android:background="@drawable/herbs_theme">
 
                  <LinearLayout
@@ -470,7 +475,7 @@
                                  android:layout_marginLeft="5dp"
                                  android:text="(½ tsp)"
                                  android:textColor="@color/white"
-                                 android:textSize="20dp"
+                                 android:textSize="15dp"
                                  android:textStyle="bold" />
 
                          </LinearLayout>
@@ -532,6 +537,7 @@
                  android:layout_gravity="center"
                  android:layout_marginBottom="10dp"
                  android:layout_marginLeft="15dp"
+                 android:paddingBottom="5dp"
                  android:layout_marginRight="15dp"
                  android:background="@drawable/greens_theme">
 
@@ -575,7 +581,7 @@
                                  android:layout_marginLeft="5dp"
                                  android:text="(3 cps)"
                                  android:textColor="@color/white"
-                                 android:textSize="20dp"
+                                 android:textSize="15dp"
                                  android:textStyle="bold" />
 
                          </LinearLayout>
@@ -649,6 +655,7 @@
                  android:layout_marginBottom="10dp"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
+                 android:paddingBottom="5dp"
                  android:background="@drawable/fruits_theme">
 
                  <LinearLayout
@@ -738,6 +745,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
+                android:paddingBottom="5dp"
                 android:background="@drawable/cruciferous_theme">
 
                 <LinearLayout
@@ -820,10 +828,11 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="110dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
@@ -858,21 +867,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
-                                android:text="Front-Load Your"
+                                android:maxLines="2"
+                                android:text="Front-Load Your \nCalories"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Calories"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -918,13 +919,14 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="110dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
+                android:paddingBottom="5dp"
                 android:background="@drawable/exercise_theme">
 
                 <LinearLayout
@@ -956,21 +958,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
-                                android:text="Time Restrict Your"
+                                android:maxLines="2"
+                                android:text="Time Restrict Your \nEatings"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Eatings"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -1016,13 +1010,14 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="110dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
+                android:paddingBottom="5dp"
                 android:background="@drawable/othervege_theme">
 
                 <LinearLayout
@@ -1054,21 +1049,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
-                                android:text="Optimize Your"
+                                android:maxLines="2"
+                                android:text="Optimize Your \nBrain Exercise"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Brain Exercise"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -1114,12 +1101,13 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="110dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="15dp"
+                android:paddingBottom="5dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/berries_theme">
 
@@ -1152,21 +1140,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
-                                android:text="Weigh Yourself"
+                                android:maxLines="2"
+                                android:text="Weigh Yourself \nTwice a Day"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Twice a Day"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -1220,10 +1200,11 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="140dp"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
@@ -1258,30 +1239,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
-                                android:text="Complete Your"
+                                android:maxLines="3"
+                                android:text="Complete Your \nImplmentation \nIntentions"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
                         </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Implmentation"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Intentions"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"

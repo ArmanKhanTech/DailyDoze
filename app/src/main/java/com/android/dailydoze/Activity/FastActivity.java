@@ -46,7 +46,7 @@ public class FastActivity extends AppCompatActivity {
     String time;
     long millis = 10800000, millisDone = 0;
     Button fast;
-    TextView start, end, fastStatus, timer;
+    TextView start, end, fastStatus, timer, text;
     ListView list;
     Drawable icon;
     ArrayList<DataList> data = new ArrayList<>();
@@ -68,7 +68,11 @@ public class FastActivity extends AppCompatActivity {
         start.setText(getCurrentTime());
         end.setText(addTime(3));
 
+        text = findViewById(R.id.text);
+
         pB = findViewById(R.id.progressFast);
+        pB.setMax((int)millis);
+        pB.setProgress((int)millisDone);
 
         fastStatus = findViewById(R.id.fastHisStatus);
 
@@ -180,6 +184,7 @@ public class FastActivity extends AppCompatActivity {
         fast.setText("Start");
         rg.setVisibility(View.VISIBLE);
         llll.setVisibility(View.VISIBLE);
+        text.setVisibility(View.GONE);
         pB.setProgress(0);
     }
 
@@ -257,6 +262,7 @@ public class FastActivity extends AppCompatActivity {
                 fast.setText("Stop");
                 rg.setVisibility(View.GONE);
                 llll.setVisibility(View.GONE);
+                text.setVisibility(View.VISIBLE);
                 pB.setProgress((int)millisDone);
             }
         }

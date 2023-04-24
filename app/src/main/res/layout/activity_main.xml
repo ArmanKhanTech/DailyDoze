@@ -97,6 +97,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/beans_theme">
 
                     <LinearLayout
@@ -195,6 +196,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/berries_theme">
 
                     <LinearLayout
@@ -277,6 +279,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/greens_theme">
 
                     <LinearLayout
@@ -360,13 +363,14 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="85dp"
+                    android:layout_height="110dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/othervege_theme">
 
                     <LinearLayout
@@ -392,7 +396,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
-                                android:text="Other Vegetables"
+                                android:text="Other \nVegetables"
+                                android:singleLine="false"
+                                android:lines="2"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -457,6 +463,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/fruits_theme">
 
                     <LinearLayout
@@ -548,13 +555,14 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="85dp"
+                    android:layout_height="110dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/cruciferous_theme">
 
                     <LinearLayout
@@ -580,7 +588,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
-                                android:text="Cruciferous Veggies"
+                                android:maxLines="2"
+                                android:text="Cruciferous \nVegetables"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -637,6 +646,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/flexseeds_theme">
 
                     <LinearLayout
@@ -719,6 +729,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/herbs_theme">
 
                     <LinearLayout
@@ -801,6 +812,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:paddingBottom="5dp"
                     android:background="@drawable/nuts_theme">
 
                     <LinearLayout
@@ -882,6 +894,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
+                    android:paddingBottom="5dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/grains_theme">
 
@@ -979,6 +992,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/beverages_theme">
@@ -1094,6 +1108,7 @@
                     android:layout_marginBottom="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
+                    android:paddingBottom="5dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/exercise_theme">
 

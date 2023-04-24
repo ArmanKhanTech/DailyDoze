@@ -20,11 +20,12 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="110dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
+            android:paddingBottom="5dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/othervege_theme">
 
@@ -57,21 +58,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Preload With"
+                            android:text="Preload With \nWater"
+                            android:maxLines="2"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:text="Water"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -133,12 +126,13 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="110dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:paddingBottom="5dp"
             android:background="@drawable/fruits_theme">
 
             <LinearLayout
@@ -170,21 +164,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Incorporate"
+                            android:text="Incorporate \nVinegar"
+                            android:maxLines="2"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:text="Vinegar"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -246,12 +232,13 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="140dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:paddingBottom="5dp"
             android:background="@drawable/beverages_theme">
 
             <LinearLayout
@@ -283,21 +270,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Preload with 'Negative"
+                            android:maxLines="3"
+                            android:text="Preload with \n'Negative Calories' \nFood"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:text="Calories' Food"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
 
 
                     <LinearLayout
@@ -360,12 +339,13 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="110dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:paddingBottom="5dp"
             android:background="@drawable/cruciferous_theme">
 
             <LinearLayout
@@ -397,22 +377,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Enjoy Your Meal"
+                            android:maxLines="2"
+                            android:text="Enjoy Your Meal \nUndistracted"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:text="Undistracted"
-                        android:textColor="@color/white"
-                        android:textSize="25dp"
-                        android:textStyle="bold" />
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -479,6 +450,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:paddingBottom="5dp"
             android:background="@drawable/exercise_theme">
 
             <LinearLayout

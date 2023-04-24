@@ -260,7 +260,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:hint="Country (or click on the icon)" />
+                    android:hint="Country (or click icon)" />
 
                 <ImageView
                     android:id="@+id/select_location"

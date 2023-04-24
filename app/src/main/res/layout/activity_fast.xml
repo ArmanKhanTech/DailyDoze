@@ -93,6 +93,19 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"/>
 
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="(Double-Click to Stop)"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck"/>
+
             <LinearLayout
                 android:id="@+id/llll"
                 android:layout_width="match_parent"
