@@ -7,14 +7,14 @@ b. XML<br>
 c. Groovy<br>
 d. Firebase(Database)
 
-Developed on Android Studio
+# Developed on Android Studio
 <br>
 <br>
 
 ## Features :
 a. Daily Doze<br>
 b. 21 Tweaks<br>
-c. Cart/Wishlist<br>
+c. Calender & Info<br>
 d. Fast Watch<br>
 e. Sleep and Weight Tracker<br>
 f. Meditation<br>
