@@ -37,5 +37,5 @@ git clone https://github.com/ArmanKhanTech/DailyDoze.git
 <h3>1. Home : </h3>
 <p align="left">
   <img src="https://user-images.githubusercontent.com/92728787/234006113-6d7f8c5b-8c54-44e0-8406-423e35bd3475.jpg" width="300"/>
-  <img src="https://user-images.githubusercontent.com/92728787/234008430-ef5d935f-804c-4aed-a282-34298f825c67.jpg" width="300" style="margin-left=20px"/>
+  <img src="https://user-images.githubusercontent.com/92728787/234008430-ef5d935f-804c-4aed-a282-34298f825c67.jpg" width="300" style="margin-left:20px"/>
 </p>
