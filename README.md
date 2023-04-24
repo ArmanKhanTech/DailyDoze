@@ -34,5 +34,5 @@ git clone https://github.com/ArmanKhanTech/DailyDoze.git
 ```
 
 ## Images :
-![Screenshot_20230424_183050_Daily Doze](https://user-images.githubusercontent.com/92728787/234006094-20cac45f-fc1c-4b0d-aa4d-12de4a052329.jpg){:height="100px" width="100px"}
-![Screenshot_20230424_183034_Daily Doze](https://user-images.githubusercontent.com/92728787/234006113-6d7f8c5b-8c54-44e0-8406-423e35bd3475.jpg)
+<img src="https://user-images.githubusercontent.com/92728787/234006094-20cac45f-fc1c-4b0d-aa4d-12de4a052329.jpg" width="400"/> <img src="ss/w2.png" width="400"/>
+<img src="https://user-images.githubusercontent.com/92728787/234006113-6d7f8c5b-8c54-44e0-8406-423e35bd3475.jpg" width="400"/> <img src="ss/w2.png" width="400"/>
