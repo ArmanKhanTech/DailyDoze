@@ -52,11 +52,11 @@
                 android:layout_marginTop="20dp">
 
                 <TextView
-                    android:id="@+id/timer"
+                    android:id="@+id/timerFast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="06:00:00"
+                    android:text="03:00:00"
                     android:textColor="@color/blue"
                     android:elevation="3dp"
                     android:textSize="50dp"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:text="Start Fasting"
+                android:text="Start"
                 android:backgroundTint="@color/blue"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/white"
@@ -94,6 +94,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
+                android:id="@+id/llll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -163,12 +164,28 @@
             </LinearLayout>
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/radioGroup2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/thehrs"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="5dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/custom_radio_two"
+                    android:text="3 hrs"
+                    android:checked="true"
+                    android:textAlignment="center"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@drawable/custom_radio_text_two"
+                    android:textSize="20dp" />
 
                 <RadioButton
                     android:id="@+id/sixhrs"
@@ -180,9 +197,25 @@
                     android:button="@android:color/transparent"
                     android:background="@drawable/custom_radio_two"
                     android:text="6 hrs"
-                    android:checked="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/custom_radio_text_two"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/ninhrs"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="5dp"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/custom_radio_two"
+                    android:text="9 hrs"
                     android:textAlignment="center"
                     android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
                     android:textColor="@drawable/custom_radio_text_two"
                     android:textSize="20dp" />
 
@@ -196,38 +229,6 @@
                     android:button="@android:color/transparent"
                     android:background="@drawable/custom_radio_two"
                     android:text="12 hrs"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textAlignment="center"
-                    android:textColor="@drawable/custom_radio_text_two"
-                    android:textSize="20dp" />
-
-                <RadioButton
-                    android:id="@+id/eighrs"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="5dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/custom_radio_two"
-                    android:text="18 hrs"
-                    android:textAlignment="center"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@drawable/custom_radio_text_two"
-                    android:textSize="20dp" />
-
-                <RadioButton
-                    android:id="@+id/custom"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="5dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/custom_radio_two"
-                    android:text="Custom"
                     android:textAlignment="center"
                     android:layout_marginRight="5dp"
                     android:layout_marginLeft="5dp"
@@ -251,7 +252,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/history"
+                    android:id="@+id/fastHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
@@ -262,17 +263,18 @@
                     android:textSize="30dp" />
 
                 <ListView
-                    android:id="@+id/mediList"
+                    android:id="@+id/fastList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/history"
+                    android:layout_below="@+id/fastHistory"
                     android:divider="@color/transparent"
                     android:layout_marginTop="5dp"
+                    android:padding="5dp"
                     android:dividerHeight="10dp"
                     android:scrollbars="none"/>
 
                 <TextView
-                    android:id="@+id/mediHisStatus"
+                    android:id="@+id/fastHisStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
