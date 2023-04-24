@@ -20,7 +20,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="120dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
@@ -45,6 +45,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -56,12 +57,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Preload With Water"
+                            android:text="Preload With"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Water"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -123,7 +133,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="120dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
@@ -148,6 +158,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -159,12 +170,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Incorporate Vinegar"
+                            android:text="Incorporate"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Vinegar"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -226,7 +246,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="120dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
@@ -251,6 +271,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -262,12 +283,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="'Neg Calories' Food"
+                            android:text="Preload with 'Negative"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Calories' Food"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -329,7 +360,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="120dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
@@ -354,6 +385,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -365,12 +397,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Meal Undistracted"
+                            android:text="Enjoy Your Meal"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Undistracted"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -435,7 +476,7 @@
             android:layout_height="85dp"
             android:elevation="3dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/exercise_theme">
@@ -456,6 +497,7 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 

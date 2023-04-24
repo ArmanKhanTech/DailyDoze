@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -54,6 +55,7 @@ public class FastActivity extends AppCompatActivity {
     FastDatabase db;
     LinearLayout llll;
     RadioGroup rg;
+    ProgressBar pB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,10 +68,13 @@ public class FastActivity extends AppCompatActivity {
         start.setText(getCurrentTime());
         end.setText(addTime(3));
 
+        pB = findViewById(R.id.progressFast);
+
         fastStatus = findViewById(R.id.fastHisStatus);
 
         fast = findViewById(R.id.fast_start_btn);
         fast.setOnClickListener(v -> {
+            pB.setMax((int)millis);
             if(fast.getText().equals("Start")){
                 handleStartTimer(v);
             } else if(fast.getText().equals("Stop")){
@@ -175,6 +180,7 @@ public class FastActivity extends AppCompatActivity {
         fast.setText("Start");
         rg.setVisibility(View.VISIBLE);
         llll.setVisibility(View.VISIBLE);
+        pB.setProgress(0);
     }
 
     public void updateList(){
@@ -251,6 +257,7 @@ public class FastActivity extends AppCompatActivity {
                 fast.setText("Stop");
                 rg.setVisibility(View.GONE);
                 llll.setVisibility(View.GONE);
+                pB.setProgress((int)millisDone);
             }
         }
     }

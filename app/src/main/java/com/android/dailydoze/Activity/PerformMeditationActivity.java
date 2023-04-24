@@ -254,13 +254,13 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
         m2.setOnClickListener(v16 -> selectMusic("epic_flute"));
 
-        m3.setOnClickListener(v18 -> selectMusic("mindfulness_relaxation"));
+        m3.setOnClickListener(v18 -> selectMusic("relaxation"));
 
-        m4.setOnClickListener(v19 -> selectMusic("healing"));
+        m4.setOnClickListener(v19 -> selectMusic("birds"));
 
-        m5.setOnClickListener(v110 -> selectMusic("peaceful_garden"));
+        m5.setOnClickListener(v110 -> selectMusic("forest"));
 
-        m6.setOnClickListener(v112 -> selectMusic("portal"));
+        m6.setOnClickListener(v112 -> selectMusic("celestial"));
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
         dimBehind(popupWindow);

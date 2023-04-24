@@ -40,11 +40,12 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/fast"
                     android:padding="5dp"
-                    android:scaleType="centerInside"/>
+                    android:scaleType="fitXY"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -132,6 +133,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -194,7 +196,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="120dp"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
@@ -219,6 +221,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -230,12 +233,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:text="Mild Trendelenburg"
+                            android:text="Experiment"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Mild Trendelenburg"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
