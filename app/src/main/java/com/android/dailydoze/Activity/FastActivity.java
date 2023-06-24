@@ -12,10 +12,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -40,7 +38,6 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Locale;
@@ -49,7 +46,7 @@ public class FastActivity extends AppCompatActivity {
     String time;
     long millis = 10800000, millisDone = 0;
     Button fast;
-    TextView start, end, fastStatus, timer, text;
+    TextView start, end, fastStatus, timer;
     ListView list;
     Drawable icon;
     ArrayList<DataList> data = new ArrayList<>();
@@ -99,12 +96,9 @@ public class FastActivity extends AppCompatActivity {
         rG = findViewById(R.id.radioGroup2);
         list = findViewById(R.id.fastList);
 
-        list.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.getParent().requestDisallowInterceptTouchEvent(true);
-                return false;
-            }
+        list.setOnTouchListener((v, event) -> {
+            v.getParent().requestDisallowInterceptTouchEvent(true);
+            return false;
         });
 
         db = new FastDatabase(this);
@@ -166,27 +160,22 @@ public class FastActivity extends AppCompatActivity {
             }
         }
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                DataList fastList = adapter.getItem(position);
-                String t = fastList.getText();
-                String d = db.getDuration(t);
-                LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
-                int width = LinearLayout.LayoutParams.MATCH_PARENT;
-                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
-                popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-                Button bb = popupView.findViewById(R.id.delete);
-                TextView tv = popupView.findViewById(R.id.notiPopText);
-                tv.setText("You fasted for " + d + " on " + t);
-                bb.setText("Okay");
-                bb.setOnClickListener(view1 -> {
-                    popupWindow.dismiss();
-                });
-                dimBehind(popupWindow);
-            }
+        list.setOnItemClickListener((parent, view, position, id) -> {
+            DataList fastList = adapter.getItem(position);
+            String t = fastList.getText();
+            String d = db.getDuration(t);
+            LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+            int width = LinearLayout.LayoutParams.MATCH_PARENT;
+            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+            popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+            Button bb = popupView.findViewById(R.id.delete);
+            TextView tv = popupView.findViewById(R.id.notiPopText);
+            tv.setText("You fasted for " + d + " on " + t);
+            bb.setText("Okay");
+            bb.setOnClickListener(view1 -> popupWindow.dismiss());
+            dimBehind(popupWindow);
         });
     }
 
