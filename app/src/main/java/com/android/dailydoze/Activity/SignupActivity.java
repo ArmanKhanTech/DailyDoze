@@ -13,12 +13,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.ResultReceiver;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -50,6 +48,7 @@ import java.util.List;
 
 public class SignupActivity extends AppCompatActivity {
 
+    //Declare Objects
     private EditText name, email, pass, phone, country, city, state, zip, address, blood, medical, other, height, weight, bp;
     RelativeLayout dob;
     Spinner gender, type;
@@ -100,28 +99,23 @@ public class SignupActivity extends AppCompatActivity {
         addressResultReceiver = new LocationAddressResultReceiver(new Handler());
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                locationCallback = new LocationCallback() {
-                    @Override
-                    public void onLocationResult(LocationResult locationResult) {
-                        currentLocation = locationResult.getLocations().get(0);
-                        getAddress();
-                    }
-                };
-                startLocationUpdates();
-            }
+        img.setOnClickListener(v -> {
+            locationCallback = new LocationCallback() {
+                @Override
+                public void onLocationResult(@NonNull LocationResult locationResult) {
+                    currentLocation = locationResult.getLocations().get(0);
+                    getAddress();
+                }
+            };
+            startLocationUpdates();
         });
 
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.gender,
-                android.R.layout.simple_spinner_item);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.gender, R.layout.spinner_item);
+        adapter1.setDropDownViewResource(R.layout.spinner_item);
         gender.setAdapter(adapter1);
 
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.type,
-                android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.type, R.layout.spinner_item);
+        adapter2.setDropDownViewResource(R.layout.spinner_item);
         type.setAdapter(adapter2);
 
         gender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -144,7 +138,7 @@ public class SignupActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                //
             }
         });
 
@@ -153,9 +147,7 @@ public class SignupActivity extends AppCompatActivity {
 
         user = new Signup();
 
-        // adding on click listener for our button.
         submit.setOnClickListener(v -> {
-
             String userName = name.getText().toString();
             String userPhone = phone.getText().toString();
             String userPass = pass.getText().toString();
@@ -176,11 +168,11 @@ public class SignupActivity extends AppCompatActivity {
             String userBp = bp.getText().toString();
 
             if (userMedical.isEmpty()) {
-                userMedical = "No";
+                userMedical = "None";
             }
 
             if (userOther.isEmpty()) {
-                userOther = "No";
+                userOther = "None";
             }
 
             if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(userPhone) || TextUtils.isEmpty(userEmail) || TextUtils.isEmpty(userPass)
@@ -230,6 +222,7 @@ public class SignupActivity extends AppCompatActivity {
                     submit.setText("User Already Exists");
                 } else {
                     String key = databaseReference.push().getKey();
+                    assert key != null;
                     databaseReference.child("users").child(key).setValue(user);
 
                     SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
@@ -247,19 +240,15 @@ public class SignupActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                //
             }
         });
     }
 
     public void openDatePickerDialog(View v) {
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year;
-                dob_text.setText(selectedDate);
-
-            }
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, (view, year, month, dayOfMonth) -> {
+            selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year;
+            dob_text.setText(selectedDate);
         }, 1990, 1, 1);
 
         datePickerDialog.show();
@@ -324,8 +313,10 @@ public class SignupActivity extends AppCompatActivity {
         if (!Geocoder.isPresent()) {
             Toast.makeText(SignupActivity.this, "Can't find the current address. ",
                     Toast.LENGTH_SHORT).show();
+
             return;
         }
+
         Intent intent = new Intent(this, GetAddressIntentService.class);
         intent.putExtra("add_receiver", addressResultReceiver);
         intent.putExtra("add_location", currentLocation);
@@ -335,6 +326,7 @@ public class SignupActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull
     int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startLocationUpdates();
@@ -344,11 +336,19 @@ public class SignupActivity extends AppCompatActivity {
         }
     }
 
-    private void showResults(String currentAdd) {
-        String str = currentAdd;
-        List<String> addressList = Arrays.asList(str.split(","));
-        Log.d("Add", String.valueOf(addressList));
-        country.setText("");
+    @SuppressLint("SetTextI18n")
+    private void showResults(String currentAddress) {
+        List<String> addressList = Arrays.asList(currentAddress.split(","));
+        address.setText(addressList.get(0) + ", " + addressList.get(1) + "," + addressList.get(2));
+        String tempCity = addressList.get(3);
+        city.setText(tempCity.replaceAll(" ", ""));
+        String temp = addressList.get(4);
+        String[] splited = temp.split("\\s+");
+        String tempState = splited[1];
+        state.setText(tempState.replaceAll(" ", ""));
+        zip.setText(splited[2]);
+        String tempCountry = addressList.get(5);
+        country.setText(tempCountry.replaceAll(" ", ""));
     }
 
     public void openLogin(View v){

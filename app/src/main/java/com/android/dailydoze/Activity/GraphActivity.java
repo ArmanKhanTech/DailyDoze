@@ -15,6 +15,7 @@ import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 import com.github.mikephil.charting.charts.CombinedChart;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -126,10 +127,11 @@ public class GraphActivity extends AppCompatActivity {
         combinedChart.getXAxis().setAxisMaximum(dates.size()-combinedData.getBarData().getBarWidth()/2);
         combinedChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
         combinedChart.getXAxis().setLabelCount(dates.size());
+        combinedChart.getXAxis().setGranularity(1f);
         combinedChart.setData(combinedData);
         combinedChart.setScaleEnabled(false);
-        combinedChart.centerViewTo(combinedChart.getXChartMax(), 0, YAxis.AxisDependency.RIGHT);
-        combinedChart.setVisibleXRangeMaximum(3);
+        combinedChart.centerViewTo(combinedChart.getXChartMax(), 0, YAxis.AxisDependency.LEFT);
+        combinedChart.setVisibleXRangeMaximum(4);
         combinedChart.animateXY(2000, 2000);
         combinedChart.invalidate();
 

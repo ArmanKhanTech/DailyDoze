@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -39,6 +40,8 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Locale;
 
@@ -53,10 +56,11 @@ public class FastActivity extends AppCompatActivity {
     ListAdapter adapter;
     Boolean b = false;
     FastDatabase db;
-    LinearLayout llll;
-    RadioGroup rg;
+    LinearLayout linearLayout;
+    RadioGroup rG;
     ProgressBar pB;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,30 +72,40 @@ public class FastActivity extends AppCompatActivity {
         start.setText(getCurrentTime());
         end.setText(addTime(3));
 
-        text = findViewById(R.id.text);
-
         pB = findViewById(R.id.progressFast);
         pB.setMax((int)millis);
-        pB.setProgress((int)millisDone);
+        pB.setProgress((int)millis);
 
         fastStatus = findViewById(R.id.fastHisStatus);
 
         fast = findViewById(R.id.fast_start_btn);
+
         fast.setOnClickListener(v -> {
-            pB.setMax((int)millis);
             if(fast.getText().equals("Start")){
-                handleStartTimer(v);
+                pB.setMax((int)millis);
+                pB.setProgress((int)millis);
+
+                Intent intent = new Intent(this, TimerService.class);
+                intent.putExtra("millis", millis);
+                startService(intent);
             } else if(fast.getText().equals("Stop")){
-                handleCancelTimer(v);
                 cancelTimer();
             }
         });
 
         timer = findViewById(R.id.timerFast);
 
-        llll = findViewById(R.id.llll);
-        rg = findViewById(R.id.radioGroup2);
+        linearLayout = findViewById(R.id.llll);
+        rG = findViewById(R.id.radioGroup2);
         list = findViewById(R.id.fastList);
+
+        list.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
 
         db = new FastDatabase(this);
 
@@ -103,6 +117,8 @@ public class FastActivity extends AppCompatActivity {
             data.add(new DataList(temp, icon));
         }
 
+        Collections.reverse(data);
+
         adapter = new ListAdapter(this,data);
         list.setAdapter(adapter);
 
@@ -112,7 +128,7 @@ public class FastActivity extends AppCompatActivity {
             fastStatus.setVisibility(View.GONE);
         }
 
-        rg.setOnCheckedChangeListener((group, checkedId) -> {
+        rG.setOnCheckedChangeListener((group, checkedId) -> {
             switch(checkedId){
                 case R.id.thehrs:
                     millis = 10800000;
@@ -120,18 +136,21 @@ public class FastActivity extends AppCompatActivity {
                     end.setText(addTime(3));
                     timer.setText("03:00:00");
                     break;
+
                 case R.id.sixhrs:
                     millis = 21600000;
                     start.setText(getCurrentTime());
                     end.setText(addTime(6));
                     timer.setText("06:00:00");
                     break;
+
                 case R.id.ninhrs:
-                    millis = 2700000;
+                    millis = 32400000;
                     start.setText(getCurrentTime());
                     end.setText(addTime(9));
                     timer.setText("09:00:00");
                     break;
+
                 case R.id.twehrs:
                     millis = 43200000;
                     start.setText(getCurrentTime());
@@ -161,7 +180,7 @@ public class FastActivity extends AppCompatActivity {
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
                 Button bb = popupView.findViewById(R.id.delete);
                 TextView tv = popupView.findViewById(R.id.notiPopText);
-                tv.setText("You Fasted for " + d + " on " + t);
+                tv.setText("You fasted for " + d + " on " + t);
                 bb.setText("Okay");
                 bb.setOnClickListener(view1 -> {
                     popupWindow.dismiss();
@@ -179,13 +198,18 @@ public class FastActivity extends AppCompatActivity {
             db.changeDuration(millisToTime(millisDone), getCurrentDate());
         }
 
+        rG.check(R.id.thehrs);
         timer.setText("03:00:00");
-        updateList();
         fast.setText("Start");
-        rg.setVisibility(View.VISIBLE);
-        llll.setVisibility(View.VISIBLE);
-        text.setVisibility(View.GONE);
-        pB.setProgress(0);
+        rG.setVisibility(View.VISIBLE);
+        linearLayout.setVisibility(View.VISIBLE);
+        pB.setMax((int)millis);
+        pB.setProgress((int)millis);
+
+        Intent intent = new Intent(this, TimerService.class);
+        stopService(intent);
+
+        updateList();
     }
 
     public void updateList(){
@@ -196,6 +220,8 @@ public class FastActivity extends AppCompatActivity {
             String temp = time.get(i);
             data.add(new DataList(temp, icon));
         }
+
+        Collections.reverse(data);
 
         adapter = new ListAdapter(this,data);
         adapter.notifyDataSetChanged();
@@ -208,17 +234,6 @@ public class FastActivity extends AppCompatActivity {
         else{
             fastStatus.setVisibility(View.GONE);
         }
-    }
-
-    public void handleStartTimer(View view) {
-        Intent intent = new Intent(this, TimerService.class);
-        intent.putExtra("timer", millis);
-        startService(intent);
-    }
-
-    public void handleCancelTimer (View view) {
-        Intent intent = new Intent(this, TimerService.class);
-        stopService(intent);
     }
 
     /* CountDown */
@@ -256,14 +271,14 @@ public class FastActivity extends AppCompatActivity {
         if (intent.getExtras() != null) {
             time = intent.getStringExtra("timer");
             b = intent.getBooleanExtra("status", false);
-            millisDone = intent.getLongExtra("millisUntilFinished", 10800000);
+            millisDone = intent.getLongExtra("millisUntilFinished", 0);
+
             if(b){
                 timer.setText(time);
                 fast.setText("Stop");
-                rg.setVisibility(View.GONE);
-                llll.setVisibility(View.GONE);
-                text.setVisibility(View.VISIBLE);
-                pB.setProgress((int)millisDone);
+                rG.setVisibility(View.GONE);
+                linearLayout.setVisibility(View.GONE);
+                pB.setProgress((int) ((int)millis - millisDone));
             }
         }
     }
@@ -282,9 +297,9 @@ public class FastActivity extends AppCompatActivity {
         Context context = popupWindow.getContentView().getContext();
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
+            p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+            p.dimAmount = 0.5f;
+            wm.updateViewLayout(container, p);
     }
 
     public static String getCurrentTime() {
