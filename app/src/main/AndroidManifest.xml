@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,7 @@
         tools:targetApi="31">
 
         <service android:name=".Service.GetAddressIntentService" />
-        <service android:name=".Service.TimerService"/>
+        <service android:name=".Service.TimerService" />
 
         <receiver
             android:name=".Receiver.AlarmReceiver"
@@ -33,9 +33,13 @@
         </receiver>
 
         <activity
+            android:name=".Activity.AboutActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DailyDoze" />
+        <activity
             android:name=".Activity.MeditationStats"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze"/>
+            android:theme="@style/Theme.DailyDoze" />
         <activity
             android:name=".Activity.PerformMeditationActivity"
             android:exported="false"

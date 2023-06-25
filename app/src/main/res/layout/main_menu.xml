@@ -107,7 +107,7 @@
                     android:text="21 Tweaks"
                     android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
-                    android:textSize="24dp"/>
+                    android:textSize="22dp"/>
 
             </LinearLayout>
 
@@ -122,13 +122,14 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
+                    android:padding="2dp"
                     android:src="@drawable/jump_icon"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Jump to Date"
+                    android:text="Jump to a Date"
                     android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
                     android:textSize="22dp"/>
@@ -203,6 +204,56 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Fast Watch"
+                    android:textColor="#FF80AB"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="22dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/openSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@drawable/menu_theme">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:padding="1dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/github_icon"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Open Source"
+                    android:textColor="#FF80AB"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="22dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@drawable/menu_theme">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:padding="2dp"
+                    android:src="@drawable/about_icon"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="About"
                     android:textColor="#FF80AB"
                     android:layout_marginLeft="5dp"
                     android:textSize="22dp"/>

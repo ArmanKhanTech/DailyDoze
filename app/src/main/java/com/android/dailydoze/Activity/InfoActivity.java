@@ -253,7 +253,7 @@ public class InfoActivity extends AppCompatActivity {
                 break;
 
             case "optimize":
-                drawable = getDrawable(R.drawable.optimize);
+                drawable = getDrawable(R.drawable.optimize_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.exercise_timing_text));
                 name.setText("Optimize Your Exercise");

@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,13 +25,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.dailydoze.CustomDatePicker.DatePicker;
+import com.android.dailydoze.CustomDatePicker.DatePickerPopup;
 import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
@@ -132,13 +133,15 @@ public class MainActivity extends AppCompatActivity {
             email.setText(userData.getString("email", "Email"));
 
 
-            LinearLayout l1, l2, l3 , l4, l5, l6;
+            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8;
             l1 = popupView.findViewById(R.id.twe_tweaks);
             l2 = popupView.findViewById(R.id.jump_to_date);
             l3 = popupView.findViewById(R.id.notifications);
             l4 = popupView.findViewById(R.id.meditation);
             l5 = popupView.findViewById(R.id.fastwatch);
             l6 = popupView.findViewById(R.id.logout);
+            l7 = popupView.findViewById(R.id.about);
+            l8 = popupView.findViewById(R.id.openSource);
 
             ImageButton ib1 = popupView.findViewById(R.id.closeMenu);
             ib1.setOnClickListener(v12 -> popupWindow.dismiss());
@@ -178,6 +181,18 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             });
 
+            l7.setOnClickListener(v16 -> {
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l8.setOnClickListener(v16 -> {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ArmanKhanTech/DailyDoze"));
+                startActivity(browserIntent);
+                popupWindow.dismiss();
+            });
+
+            popupWindow.setAnimationStyle(R.style.PopupWindowAnimation);
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
             dimBehind(popupWindow);
         });
@@ -402,7 +417,7 @@ public class MainActivity extends AppCompatActivity {
             } else{
                 duration[0] = String.valueOf(db.getSleep(getCurrentDate()));
                 hrs.setVisibility(View.GONE);
-                tv.setText("You slept "+ duration[0] +" hours on this day.");
+                tv.setText("You slept for "+ duration[0] +" hours on this day.");
                 save.setText("Okay");
             }
 
@@ -429,52 +444,55 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openJumpDate(){
-        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.date_popup, null);
-        int width = LinearLayout.LayoutParams.MATCH_PARENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+        final String[] formattedDate = new String[1];
 
-        EditText day = popupView.findViewById(R.id.day);
-        EditText month = popupView.findViewById(R.id.month);
-        EditText year = popupView.findViewById(R.id.year);
+        DatePickerPopup datePickerPopup = new DatePickerPopup.Builder()
+                .from(this)
+                .textSize(24)
+                .endDate(System.currentTimeMillis())
+                .currentDate(System.currentTimeMillis())
+                .startDate(946665000000L)
+                .pickerMode(DatePicker.DAY_ON_FIRST)
+                .offset(5)
+                .listener(new DatePickerPopup.OnDateSelectListener() {
+                    @Override
+                    public void onDateSelected(DatePicker dp, long date, int day, int month, int year) {
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(year, month, day, 0, 0);
+                        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+                        formattedDate[0] = df.format(calendar.getTime());
 
-        Button enter = popupView.findViewById(R.id.enter);
+                        if(db.getDate(formattedDate[0])){
+                            currDate.setText(formattedDate[0]);
+                            jump = true;
+                            setDay();
+                        } else{
+                            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+                            int width = LinearLayout.LayoutParams.MATCH_PARENT;
+                            int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                            final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
-        enter.setOnClickListener(v -> {
-            String d = day.getText().toString();
-            String m = month.getText().toString();
-            String y = year.getText().toString();
+                            EditText hrs = popupView.findViewById(R.id.weight);
+                            TextView tv = popupView.findViewById(R.id.timing);
+                            Button okay = popupView.findViewById(R.id.save);
 
-            if(d.isEmpty() || m.isEmpty() || y.isEmpty()){
-                Handler h = new Handler();
-                h.postDelayed(() -> enter.setText("Enter"), 2000);
-                enter.setText("Please Enter all Input/s");
-            } else if(Integer.parseInt(d) > 31 || Integer.parseInt(m) > 12 || Integer.parseInt(y) > 2030){
-                Handler h = new Handler();
-                h.postDelayed(() -> enter.setText("Submit"), 2000);
-                enter.setText("Invalid Date");
-            } else{
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Integer.parseInt(y) , Integer.parseInt(m) - 1 , Integer.parseInt(d), 0, 0);
-                SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-                String formattedDate = df.format(calendar.getTime());
+                            hrs.setVisibility(View.GONE);
+                            okay.setText("Okay");
+                            tv.setText("Record dosen't exists.");
 
-                if(db.getDate(formattedDate)){
-                    currDate.setText(formattedDate);
-                    jump = true;
-                    setDay();
-                    popupWindow.dismiss();
-                } else{
-                    Handler h = new Handler();
-                    h.postDelayed(() -> enter.setText("Submit"), 2000);
-                    enter.setText("Record Doesn't Exists");
-                }
-            }
-        });
+                            okay.setOnClickListener(v1 -> {
+                                popupWindow.dismiss();
+                            });
 
-        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-        dimBehind(popupWindow);
+                            popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+                            dimBehind(popupWindow);
+                        }
+                    }
+                })
+                .build();
+
+        datePickerPopup.show();
     }
 
     public void setPrev(){

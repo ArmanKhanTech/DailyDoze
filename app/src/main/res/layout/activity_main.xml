@@ -105,6 +105,7 @@
                         android:layout_marginLeft="10dp"
                         android:text="Back to Today"
                         android:textColor="@color/white"
+                        android:fontFamily="sans-serif-condensed-medium"
                         android:textSize="20dp" />
 
 
