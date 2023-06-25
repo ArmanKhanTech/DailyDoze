@@ -42,7 +42,6 @@ public class PerformMeditationActivity extends AppCompatActivity {
     ImageButton close;
     boolean b = false;
     MeditationDatabase db;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

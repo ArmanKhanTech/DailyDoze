@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,11 +33,12 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     Login user = new Login();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         submit = findViewById(R.id.login_btn);
 
@@ -70,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(!snapshot.exists()) {
                     Handler h = new Handler();
-                    h.postDelayed(() -> submit.setText("Submit"), 2000);
+                    h.postDelayed(() -> submit.setText("Submit"), 3000);
                     submit.setText("Invaild Credentials");
                 }else{
                     Map<String, Object> getData = (HashMap<String, Object>) snapshot.getValue();

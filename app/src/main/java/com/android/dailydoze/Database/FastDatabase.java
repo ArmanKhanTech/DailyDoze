@@ -10,13 +10,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 
 public class FastDatabase extends SQLiteOpenHelper {
-
     private static final String DB_NAME = "db5";
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "fast";
     private static final String DATE = "date";
     private static final String DURATION = "duration";
-
     public FastDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -27,7 +25,6 @@ public class FastDatabase extends SQLiteOpenHelper {
                 + DATE + " TEXT, "
                 + DURATION + " text) ";
         db.execSQL(query);
-
     }
 
     public void addData(String date) {

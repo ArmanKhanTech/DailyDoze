@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -43,7 +46,7 @@ public class TweakActivity extends AppCompatActivity {
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
     ProgressBar pb;
-    LinearLayout lll;
+    LinearLayout lll, jump_back_tweak;
     TextView tvv;
     @SuppressLint("StaticFieldLeak")
     static TextView currDate;
@@ -51,7 +54,7 @@ public class TweakActivity extends AppCompatActivity {
     static TextView textView10;
     static TweaksDatabase db;
     public static boolean today = true;
-    ImageButton weight, date_prev, date_next, jump_back_tweak;
+    ImageButton weight, date_prev, date_next;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -59,11 +62,14 @@ public class TweakActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tweak);
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         textView10 = findViewById(R.id.textView10);
         currDate = findViewById(R.id.date_tweak);
         weight = findViewById(R.id.weight_tweak);
         date_prev = findViewById(R.id.date_prev_tweak);
         date_next = findViewById(R.id.date_next_tweak);
+
         jump_back_tweak = findViewById(R.id.jump_back_tweak);
 
         currDate.setText(setCurrentDate());
@@ -167,7 +173,6 @@ public class TweakActivity extends AppCompatActivity {
     }
 
     private final class LoadFragment extends AsyncTask<Void, Void, Void>{
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -198,21 +203,33 @@ public class TweakActivity extends AppCompatActivity {
         if(Objects.equals(setCurrentDate(), getCurrentDate())){
             // Current Day
             setCount(getCurrentDate());
+
             if(b){
                 DayFragment.setDay();
                 NightFragment.setDay();
                 EachMealFragment.setDay();
             }
+
             jump_back_tweak.setVisibility(View.GONE);
+
             today = true;
+
             setWeightVisibility();
             setNext();
             setPrev();
         }else{
             // Jump Day
-            today = false;
+            if(today){
+                final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide_down);
+                jump_back_tweak.startAnimation(slide_down);
+            }
             jump_back_tweak.setVisibility(View.VISIBLE);
+
+            today = false;
+
             weight.setVisibility(View.VISIBLE);
+
             setCount(getCurrentDate());
             DayFragment.setDay();
             NightFragment.setDay();
@@ -245,19 +262,6 @@ public class TweakActivity extends AppCompatActivity {
         });
     }
 
-    public void setWeightVisibility(){
-        Calendar c = Calendar.getInstance();
-        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
-
-        if(timeOfDay >= 6 && timeOfDay <= 12) {
-            weight.setVisibility(View.VISIBLE);
-        } else if (timeOfDay >= 18) {
-            weight.setVisibility(View.VISIBLE);
-        } else{
-            weight.setVisibility(View.GONE);
-        }
-    }
-
     public void setNext(){
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
@@ -281,6 +285,18 @@ public class TweakActivity extends AppCompatActivity {
         });
     }
 
+    public void setWeightVisibility(){
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+
+        if(timeOfDay >= 6 && timeOfDay <= 12) {
+            weight.setVisibility(View.VISIBLE);
+        } else if (timeOfDay >= 18) {
+            weight.setVisibility(View.VISIBLE);
+        } else{
+            weight.setVisibility(View.GONE);
+        }
+    }
 
     public static String setCurrentDate(){
         Date c = Calendar.getInstance().getTime();

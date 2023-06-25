@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-condensed-medium">
 
         <FrameLayout
@@ -58,6 +58,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
+                            android:id="@+id/fastInfo"
                             android:text="Fast After 7 pm"
                             android:textColor="@color/white"
                             android:textSize="25dp"
@@ -147,6 +148,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
+                            android:id="@+id/sleepInfo"
                             android:text="Sufficient Sleep"
                             android:textColor="@color/white"
                             android:textSize="25dp"
@@ -201,7 +203,7 @@
             android:layout_height="110dp"
             android:elevation="3dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:layout_marginLeft="15dp"
             android:paddingBottom="5dp"
             android:layout_marginRight="15dp"
@@ -236,6 +238,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
+                            android:id="@+id/expInfo"
                             android:text="Experiment \nMild Trendelenburg"
                             android:maxLines="2"
                             android:textColor="@color/white"

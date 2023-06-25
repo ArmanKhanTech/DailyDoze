@@ -3,6 +3,7 @@ package com.android.dailydoze.Activity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -38,11 +39,12 @@ public class MeditationActivity extends AppCompatActivity {
     MeditationDatabase db1;
     Drawable icon;
     TextView hisStatus;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditation);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         time = "Meditation for 15 minutes";
         millis = 900000;

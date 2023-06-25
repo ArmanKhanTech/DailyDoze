@@ -57,7 +57,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="12 April 2023"
-                        android:paddingLeft="2dp"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:paddingRight="10dp"
@@ -87,6 +86,29 @@
                     app:srcCompat="@drawable/next_icon"/>
 
             </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/jump_back"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/back_to_today_theme"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:id="@+id/back_to_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Back to Today"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -124,6 +146,7 @@
                             android:layout_gravity="top"
                             android:layout_marginLeft="10dp"
                             android:text="Beans"
+                            android:onClick="beansInfo"
                             android:textColor="@color/white"
                             android:textSize="25dp"
                             android:textStyle="bold" />
@@ -222,6 +245,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
+                                android:onClick="berriesInfo"
                                 android:text="Berries"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
@@ -306,6 +330,7 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:text="Greens"
+                                android:onClick="greensInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -363,7 +388,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="85dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
@@ -396,10 +421,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
-                                android:text="Other \nVegetables"
-                                android:singleLine="false"
-                                android:lines="2"
+                                android:text="Other Veggies"
                                 android:textColor="@color/white"
+                                android:onClick="othervegeInfo"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
@@ -490,6 +514,7 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:text="Other Fruits"
+                                android:onClick="fruitsInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -555,7 +580,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="85dp"
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
@@ -589,7 +614,8 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:maxLines="2"
-                                android:text="Cruciferous \nVegetables"
+                                android:text="Cruciferaes"
+                                android:onClick="crucivegeInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -673,6 +699,7 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:text="Flaxseeds"
+                                android:onClick="flexseedsInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -757,6 +784,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:text="Herbs and Spices"
                                 android:textColor="@color/white"
+                                android:onClick="herbsInfo"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
 
@@ -838,6 +866,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
+                                android:onClick="nutsInfo"
                                 android:text="Nuts and Seeds"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
@@ -922,6 +951,7 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:text="Whole Grains"
+                                android:onClick="grainsInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -1021,6 +1051,7 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:text="Beverages"
+                                android:onClick="beveragesInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />
@@ -1136,6 +1167,7 @@
                                 android:layout_gravity="top"
                                 android:layout_marginLeft="10dp"
                                 android:text="Exercise"
+                                android:onClick="exerciseInfo"
                                 android:textColor="@color/white"
                                 android:textSize="25dp"
                                 android:textStyle="bold" />

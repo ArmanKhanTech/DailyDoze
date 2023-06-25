@@ -1,6 +1,7 @@
 package com.android.dailydoze.Activity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,7 +35,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class GraphActivity extends AppCompatActivity {
-
     BarData barData;
     LineData lineData;
     CombinedChart combinedChart;
@@ -55,6 +55,8 @@ public class GraphActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         tv = findViewById(R.id.graphTitle);
         horiScroll = findViewById(R.id.horiScroll);
@@ -179,8 +181,6 @@ public class GraphActivity extends AppCompatActivity {
         });
     }
 
-
-
     private void getBarEntriesDailyDoze() {
         barEntriesArrayList = new ArrayList<>();
         lineEntriesArrayList = new ArrayList<>();
@@ -188,6 +188,7 @@ public class GraphActivity extends AppCompatActivity {
         dates = db2.getAllDate();
         float f = 0.00F;
         labels = new String[dates.size()];
+
         for(int i = 0; i < dates.size(); i++){
             barEntriesArrayList.add(new BarEntry(f, db2.getCount(dates.get(i))));
             lineEntriesArrayList.add(new Entry(f, db2.getSleep(dates.get(i))));
@@ -206,6 +207,7 @@ public class GraphActivity extends AppCompatActivity {
         float f = 0.00F;
         int weight;
         labels = new String[dates.size()];
+
         for(int i = 0; i < dates.size(); i++){
             barEntriesArrayList.add(new BarEntry(f, db1.getCount(dates.get(i))));
             weight = (db1.getWeightEvening(dates.get(i))+db1.getWeightMorning(dates.get(i)))/2;

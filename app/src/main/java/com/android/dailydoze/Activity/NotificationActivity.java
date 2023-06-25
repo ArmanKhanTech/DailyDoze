@@ -12,6 +12,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -45,7 +46,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class NotificationActivity extends AppCompatActivity {
-    int time;
     ImageView setTime;
     TextView status;
     ListView list;
@@ -54,12 +54,13 @@ public class NotificationActivity extends AppCompatActivity {
     ListAdapter adapter;
     NotificationDatabase db1;
     Drawable icon;
-
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         setTime = findViewById(R.id.setTime);
         sw = findViewById(R.id.sw_noti);

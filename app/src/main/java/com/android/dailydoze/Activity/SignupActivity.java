@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.location.Geocoder;
 import android.location.Location;
@@ -69,6 +70,8 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         name = findViewById(R.id.signup_name);
         pass = findViewById(R.id.signup_password);
@@ -180,7 +183,7 @@ public class SignupActivity extends AppCompatActivity {
                     TextUtils.isEmpty(userAddress) || TextUtils.isEmpty(userZip) || TextUtils.isEmpty(userBlood) || TextUtils.isEmpty(userHeight)
                     || TextUtils.isEmpty(userWeight)) {
                 Handler h = new Handler();
-                h.postDelayed(() -> submit.setText("Submit"), 2000);
+                h.postDelayed(() -> submit.setText("Submit"), 3000);
                 submit.setText("Please Enter Correct Inputs");
             } else {
                 addUser(userName, userPhone, userPass, userEmail, userGender, userDOB, userCountry,

@@ -53,16 +53,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true">
 
-                <ImageButton
-                    android:id="@+id/jump_back_tweak"
-                    android:layout_gravity="center"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/jump_back_btn_theme"
-                    android:layout_marginEnd="10dp"
-                    android:src="@drawable/jump_back_icon"
-                    android:scaleType="centerInside"/>
-
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
@@ -131,7 +121,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:elevation="2dp"
             android:background="@drawable/info_img_theme">
@@ -189,6 +178,28 @@
                 app:srcCompat="@drawable/next_icon"/>
 
         </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/jump_back_tweak"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/back_to_today_theme"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/back_to_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Back to Today"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </LinearLayout>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager_tweaks"

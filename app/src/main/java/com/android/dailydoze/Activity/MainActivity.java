@@ -4,12 +4,16 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -27,6 +31,7 @@ import com.android.dailydoze.R;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
@@ -38,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
     CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
             cv_cb1, flaxseeds_cb1, herbs_cb1, nuts_cb1, grains_cb1, grains_cb2, grains_cb3, beve_cb1, beve_cb2, beve_cb3,
             beve_cb4, beve_cb5, exercise_cb1;
-    TextView currDate, textView2;
+    TextView currDate, textView2, back_to_today;
     DailyDozeDatabase db;
-    ImageButton jumpBack, date_prev, date_next, sleep;
+    ImageButton date_prev, date_next, sleep;
     FrameLayout frameLayout;
+    LinearLayout jumpBack;
     boolean today, jump = false;
 
     @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
@@ -49,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         db = new DailyDozeDatabase(this);
 
@@ -100,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         sleep = findViewById(R.id.sleep);
 
         textView2 = findViewById(R.id.textView2);
+        back_to_today = findViewById(R.id.back_to_today);
 
         setDay();
 
@@ -364,7 +373,9 @@ public class MainActivity extends AppCompatActivity {
         jumpBack.setOnClickListener(v -> {
             String tDate = setCurrentDate();
             currDate.setText(tDate);
-            jump = false;
+            jumpBack.setBackground(getDrawable(R.drawable.back_to_today_theme));
+            back_to_today.setTextColor(Color.WHITE);
+            sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_black));
             setDay();
         });
 
@@ -544,25 +555,44 @@ public class MainActivity extends AppCompatActivity {
             unCheckAll();
             setChecked();
             setCount();
+
             today = true;
-            jumpBack.setVisibility(View.GONE);
+            jump = false;
+
             frameLayout.setBackground(getResources().getDrawable(R.drawable.info_img_theme));
             currDate.setTextColor(getColor(R.color.black));
+            jumpBack.setVisibility(View.GONE);
+
             setNext();
             setPrev();
         }else{
             // Jump Day
+            if(today){
+                final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide_down);
+                jumpBack.startAnimation(slide_down);
+            }
+            jumpBack.setVisibility(View.VISIBLE);
+
             today = false;
+
             setClickable(false);
             unCheckAll();
             setChecked();
             setCount();
             setPrev();
             setNext();
-            jumpBack.setVisibility(View.VISIBLE);
+
             if(jump) {
                 sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_white));
+
+                final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide_down);
+                jumpBack.startAnimation(slide_down);
+                jumpBack.setBackground(getDrawable(R.drawable.back_to_today_jump_theme));
+                back_to_today.setTextColor(Color.BLACK);
                 jumpBack.setVisibility(View.VISIBLE);
+
                 frameLayout.setBackground(getResources().getDrawable(R.drawable.date_back_theme));
                 currDate.setTextColor(getColor(R.color.white));
                 date_prev.setVisibility(View.GONE);
