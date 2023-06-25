@@ -44,12 +44,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class SignupActivity extends AppCompatActivity {
-
-    //Declare Objects
     private EditText name, email, pass, phone, country, city, state, zip, address, blood, medical, other, height, weight, bp;
     RelativeLayout dob;
     Spinner gender, type;
@@ -65,7 +60,6 @@ public class SignupActivity extends AppCompatActivity {
     private Location currentLocation;
     private LocationCallback locationCallback;
     ImageView img;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -306,8 +300,12 @@ public class SignupActivity extends AppCompatActivity {
             if (resultCode == 1) {
                 Toast.makeText(SignupActivity.this, "Address not found., ", Toast.LENGTH_SHORT).show();
             }
-            String currentAdd = resultData.getString("address_result");
-            showResults(currentAdd);
+            String country = resultData.getString("country");
+            String state = resultData.getString("state");
+            String pin = resultData.getString("pin");
+            String city = resultData.getString("city");
+            String permises = resultData.getString("permises");
+            showResults(country, state, pin, city, permises);
         }
     }
 
@@ -340,18 +338,12 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    private void showResults(String currentAddress) {
-        List<String> addressList = Arrays.asList(currentAddress.split(","));
-        address.setText(addressList.get(0) + ", " + addressList.get(1) + "," + addressList.get(2));
-        String tempCity = addressList.get(3);
-        city.setText(tempCity.replaceAll(" ", ""));
-        String temp = addressList.get(4);
-        String[] splited = temp.split("\\s+");
-        String tempState = splited[1];
-        state.setText(tempState.replaceAll(" ", ""));
-        zip.setText(splited[2]);
-        String tempCountry = addressList.get(5);
-        country.setText(tempCountry.replaceAll(" ", ""));
+    private void showResults(String country, String state, String pin, String city, String permises) {
+        this.country.setText(country);
+        this.state.setText(state);
+        this.zip.setText(pin);
+        this.city.setText(city);
+        this.address.setText(permises);
     }
 
     public void openLogin(View v){

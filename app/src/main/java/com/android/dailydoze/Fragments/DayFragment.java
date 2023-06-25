@@ -67,6 +67,10 @@ public class DayFragment extends Fragment {
 
         setDay();
 
+        if(!db.getDate(getCurrentDate())){
+            db.addDate(getCurrentDate());
+        }
+
         i1 = view.findViewById(R.id.cuminInfo);
         i2 = view.findViewById(R.id.garlicInfo);
         i3 = view.findViewById(R.id.gingerInfo);

@@ -52,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            android:singleLine="true"
             android:hint="Email" />
 
         <ImageView
@@ -82,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:inputType="numberPassword"
+            android:singleLine="true"
             android:hint="Password" />
 
         <ImageView

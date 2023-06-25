@@ -41,7 +41,6 @@
 
     <string-array name="type">
         <item>Urban</item>
-        <item>Semi-Urban</item>
         <item>Rural</item>
     </string-array>
 

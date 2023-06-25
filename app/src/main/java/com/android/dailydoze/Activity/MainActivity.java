@@ -36,7 +36,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
-//TODO : Calender Activity, Fast Activity, MP3
+//TODO : Calender Activity, MP3
 
 public class MainActivity extends AppCompatActivity {
     Button b;
@@ -111,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
         back_to_today = findViewById(R.id.back_to_today);
 
         setDay();
+
+        if(!db.getDate(getCurrentDate())){
+            db.addDate(getCurrentDate());
+        }
 
         b.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
