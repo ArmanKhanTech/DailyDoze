@@ -11,6 +11,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:scrollbarThumbVertical="@android:color/black">
 
         <LinearLayout
@@ -82,10 +83,11 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:padding="20dp"
-            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:elevation="3dp"
             android:background="@drawable/info_text_theme"
             android:text="@string/beans"

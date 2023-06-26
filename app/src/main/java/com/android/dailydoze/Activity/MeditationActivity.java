@@ -29,6 +29,7 @@ import com.android.dailydoze.Utility.ListAdapter;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MeditationActivity extends AppCompatActivity {
     String time;
@@ -39,6 +40,7 @@ public class MeditationActivity extends AppCompatActivity {
     MeditationDatabase db1;
     Drawable icon;
     TextView hisStatus;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,11 @@ public class MeditationActivity extends AppCompatActivity {
         RadioGroup rg = findViewById(R.id.radioGroup);
         list = findViewById(R.id.mediList);
 
+        list.setOnTouchListener((v, event) -> {
+            v.getParent().requestDisallowInterceptTouchEvent(true);
+            return false;
+        });
+
         db1 = new MeditationDatabase(this);
         ArrayList<String> dates = db1.getAllDate();
 
@@ -62,7 +69,9 @@ public class MeditationActivity extends AppCompatActivity {
             data.add(new DataList(temp, icon));
         }
 
-        adapter = new ListAdapter(this,data);
+        Collections.reverse(data);
+
+        adapter = new ListAdapter(this, data);
         list.setAdapter(adapter);
 
         hisStatus = findViewById(R.id.mediHisStatus);
@@ -88,7 +97,7 @@ public class MeditationActivity extends AppCompatActivity {
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
                 Button bb = popupView.findViewById(R.id.delete);
                 TextView tv = popupView.findViewById(R.id.notiPopText);
-                tv.setText("You Meditated for " + d + " on " + t);
+                tv.setText("You meditated for " + d + " on " + t);
                 bb.setText("Okay");
                 bb.setOnClickListener(view1 -> {
                     popupWindow.dismiss();

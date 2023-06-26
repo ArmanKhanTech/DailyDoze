@@ -37,8 +37,8 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
-//TODO : Calender Activity, MP3
-
+//TODO : Calender Activity
+@SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     Button b;
     CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             email.setText(userData.getString("email", "Email"));
 
 
-            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8;
+            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9;
             l1 = popupView.findViewById(R.id.twe_tweaks);
             l2 = popupView.findViewById(R.id.jump_to_date);
             l3 = popupView.findViewById(R.id.notifications);
@@ -142,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
             l6 = popupView.findViewById(R.id.logout);
             l7 = popupView.findViewById(R.id.about);
             l8 = popupView.findViewById(R.id.openSource);
+            l9 = popupView.findViewById(R.id.backup);
 
             ImageButton ib1 = popupView.findViewById(R.id.closeMenu);
             ib1.setOnClickListener(v12 -> popupWindow.dismiss());
@@ -189,6 +190,11 @@ public class MainActivity extends AppCompatActivity {
             l8.setOnClickListener(v16 -> {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ArmanKhanTech/DailyDoze"));
                 startActivity(browserIntent);
+                popupWindow.dismiss();
+            });
+
+            l9.setOnClickListener(v16 -> {
+                startActivity(new Intent(MainActivity.this, BackupActivity.class));
                 popupWindow.dismiss();
             });
 

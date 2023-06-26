@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:padding="10dp"
-            android:text="Start Meditating..."
+            android:text="Click to Start"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:elevation="3dp"
@@ -156,7 +156,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="320dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
@@ -184,7 +184,6 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/history"
                 android:divider="@color/transparent"
-                android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:dividerHeight="10dp"
                 android:scrollbars="none"/>

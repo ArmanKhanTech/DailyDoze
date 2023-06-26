@@ -32,6 +32,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+@SuppressWarnings("ALL")
 public class PerformMeditationActivity extends AppCompatActivity {
     MediaPlayer music;
     ImageView imageView, play, pause, stop;
@@ -89,7 +90,18 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
         stop.setOnClickListener(v -> showWarning());
 
-        close.setOnClickListener(v -> showWarning());
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(pB.getProgress() != 0){
+                    showWarning();
+                } else{
+                    Intent intent1 = new Intent(PerformMeditationActivity.this, MeditationActivity.class);
+                    startActivity(intent1);
+                    finish();
+                }
+            }
+        });
 
         OnBackPressedCallback onBackPressedCallback = new OnBackPressedCallback(true) {
             @Override
@@ -162,6 +174,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         if(b){
             music.stop();
         }
@@ -170,6 +183,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+
         if(b){
             music.pause();
             stopWatch.cancel();
@@ -179,6 +193,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+
         if(b){
             music.pause();
             stopWatch.cancel();
@@ -188,7 +203,10 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+
         if(b){
+            play.setVisibility(View.GONE);
+            pause.setVisibility(View.VISIBLE);
             music.start();
             startTimer(l);
         }

@@ -67,10 +67,8 @@ public class MeditationDatabase extends SQLiteOpenHelper {
 
         if (c.moveToFirst()) {
             do {
-                if(i < 7){
-                    dates.add(c.getString(c.getColumnIndex(DATE)));
-                    i++;
-                }
+                dates.add(c.getString(c.getColumnIndex(DATE)));
+                i++;
             } while (c.moveToNext());
         }
 

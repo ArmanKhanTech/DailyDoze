@@ -8,11 +8,18 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.R;
+import com.android.dailydoze.Utility.DataList;
+import com.android.dailydoze.Utility.ListAdapter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class InfoActivity extends AppCompatActivity {
     ImageView img;
@@ -253,7 +260,7 @@ public class InfoActivity extends AppCompatActivity {
                 break;
 
             case "optimize":
-                drawable = getDrawable(R.drawable.optimize_picture);
+                drawable = getDrawable(R.drawable.exercise_picture);
                 img.setImageDrawable(drawable);
                 txt.setText(getResources().getString(R.string.exercise_timing_text));
                 name.setText("Optimize Your Exercise");
