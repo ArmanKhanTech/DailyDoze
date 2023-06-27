@@ -72,7 +72,7 @@ Also featuring the Twenty-One Tweaks to accelerate weight-loss, based on the res
 
 Wanna meditate or wanna keep track of your daily fasting this app lets you do it all.
 
-**Supports Android 10+ only**
+**Supports Android 10+ only.**
 
 ### Built With
 
