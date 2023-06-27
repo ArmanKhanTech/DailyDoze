@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.RenderMode;
 import com.android.dailydoze.R;
 
 @SuppressWarnings("ALL")
@@ -34,6 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         lottieAnimationView = findViewById(R.id.animation_view);
+        lottieAnimationView.setRenderMode(RenderMode.HARDWARE);
         lottieAnimationView.playAnimation();
 
         Handler h2 = new Handler();

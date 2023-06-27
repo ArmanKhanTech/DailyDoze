@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
+@SuppressWarnings("All")
 public class LoginActivity extends AppCompatActivity {
     private Button submit;
     private EditText email, pass;
