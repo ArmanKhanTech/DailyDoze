@@ -103,13 +103,13 @@ Follow the below instructions to get started.
 
 ### Installation
 
-1. Clone this repo
+1. Clone this repo : 
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-2. Paste your firebase credentails file in _/app_. Its the one you will download from your firebase console named _google-services.json_.
+2. Paste your firebase credentails file in /app. Its the one you will download from your firebase console called _google-services.json_.
 
-or simply download the _.apk_ from https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link to check it out.
+or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link to check it out.
 
 
 
@@ -146,7 +146,9 @@ Contributions are what make the open source community such an amazing place to l
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
-Don't forget to give the project a star! Thanks again!
+Don't forget to give the project a star! 
+
+Thanks again!
 
 
 
