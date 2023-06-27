@@ -95,11 +95,11 @@ If you are a developer then you need Android Studio IDE installed on your comput
 
 ### Installation
 
-1. Clone the repo
+1. Clone this repo
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-2. Paste your firebase credentails file in /app. Its the one you will download from you firebase console & is named _google-services.json.
+2. Paste your firebase credentails file in _/app_. Its the one you will download from you firebase console & is named _google-services.json_.
 
 
 
