@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ArmanKhanTech/DailyDoze/blob/master/app/src/main/res/drawable/app_icon_black.png">
+  <a href="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ef6eb422-34a9-4b28-9f1c-da776771bb95">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
