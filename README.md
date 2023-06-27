@@ -17,7 +17,7 @@
   <h3 align="center">DailyDoze</h3>
 
   <p align="center">
-    An android app that lets you co-relate your daily diet with sleep and weight & helps you improve it.
+    An android app that lets you co-relate your daily diet with sleep & weight & helps you improve it.
     <br />
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,36 +85,21 @@ Wanna meditate or wanna keep track of your daily fasting this app lets you do it
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Follow the below instructions to get started.
 
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+If you are a developer then you need Android Studio IDE installed on your computer along with Gradle v7.2+ and also a firebase account.
 
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Paste your firebase credentails file in /app. Its the one you will download from you firebase console & is named _google-services.json.
 
 
 
@@ -127,7 +112,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 <!-- ROADMAP -->
 ## Roadmap
-
+...
 - [x] Add Meditation
 - [x] Add Fast-Watch
 - [x] Add Animations
