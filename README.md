@@ -116,7 +116,6 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 
 
