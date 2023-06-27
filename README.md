@@ -10,8 +10,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ef6eb422-34a9-4b28-9f1c-da776771bb95">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/ArmanKhanTech/DailyDoze/">
+    <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c6ee876a-0625-4699-afc1-2ac150b7f908" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">DailyDoze</h3>
@@ -76,9 +76,6 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 Use the `BLANK_README.md` to get started.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
@@ -96,6 +93,7 @@ Use the `BLANK_README.md` to get started.
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -103,6 +101,7 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+
 
 ### Installation
 
@@ -183,7 +182,6 @@ Use this space to list resources you find helpful and would like to give credit 
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
-
 
 
 
