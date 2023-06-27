@@ -1,6 +1,6 @@
-[![Contributors][contributors-shield]][contributors-url]
+[![Followers][followers-shield]][[https://github.com/ArmanKhanTech/DailyDoze]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+[![Stargazers][stars-shield]][[https://github.com/ArmanKhanTech/DailyDoze]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
