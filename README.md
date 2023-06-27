@@ -99,9 +99,9 @@ If you are a developer then you need Android Studio IDE installed on your comput
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-2. Paste your firebase credentails file in _/app_. Its the one you will download from you firebase console & is named _google-services.json_.
+2. Paste your firebase credentails file in _/app_. Its the one you will download from your firebase console named _google-services.json_.
 
-
+or simply download the _.apk_ from https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link to check it out.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -129,6 +129,7 @@ See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a f
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
 Don't forget to give the project a star! Thanks again!
 
 
