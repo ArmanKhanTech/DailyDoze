@@ -82,18 +82,11 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [![Android][Android]][Android-url]
 * [![Java][Java]][Java-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* [![Gradle][Gradle]][Gradle-url]
+* [![Firebase][Firebase]][Firebase-url]
+* [![Sqlite][Sqlite]][Sqlite-url]
 
 
 
@@ -141,7 +134,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Meditaion
+- [x] Add Meditation
 - [x] Add Fast-Watch
 - [x] Add Animations
 - [x] Add Import & Export Database for Backup
@@ -195,15 +188,15 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [contributors-url]: https://github.com/ArmanKhanTech/DailyDoze/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [forks-url]: https://github.com/ArmanKhanTech/DailyDoze/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [stars-url]: https://github.com/ArmanKhanTech/DailyDoze/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [issues-url]: https://github.com/ArmanKhanTech/DailyDoze/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [license-url]: https://github.com/ArmanKhanTech/DailyDoze/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/arman-khan-25b624205/
