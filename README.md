@@ -103,6 +103,8 @@ If you are a developer then you need Android Studio IDE installed on your comput
 
 or simply download the _.apk_ from https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link to check it out.
 
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -112,7 +114,13 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 <!-- ROADMAP -->
 ## Roadmap
-...
+
+- [x] Add Login & Signup
+- [x] Add Daily Doze
+- [x] Add Info
+- [x] Add Menu
+- [x] Add 21 Tweaks
+- [x] Add Notifications
 - [x] Add Meditation
 - [x] Add Fast-Watch
 - [x] Add Animations
@@ -146,23 +154,19 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Arman Khan - ak2341776@gmail.com
 
-Project Link: [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/ArmanKhanTech/DailyDoze)
+Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/ArmanKhanTech/DailyDoze)
 
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+* [Dr Greger's Daily Dozen](https://github.com/nutritionfactsorg/daily-dozen-android)
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+**3rd Party Libraries**
+* [Phil Jay's MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+* [Lottie Animations](https://github.com/airbnb/lottie-android)
+* [Daniel Martinus's Konfetti](https://github.com/DanielMartinus/Konfetti)
 
 
 
