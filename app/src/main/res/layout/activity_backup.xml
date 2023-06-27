@@ -96,7 +96,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="1. Place all your backup(.db) files you exported at Internal Storage/Daily Doze."
+                    android:text="1. Place all your backup(.db) files you exported at Internal Storage/Documents/Daily Doze."
                     android:textColor="#FF8080"
                     android:textSize="20dp" />
 
@@ -164,7 +164,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="1. All the backup(.db) files will be exported to Internal Storage/Daily Doze."
+                    android:text="1. All the backup(.db) files will be exported to Internal Storage/Documents/Daily Doze."
                     android:textColor="#FF8080"
                     android:textSize="20dp" />
 

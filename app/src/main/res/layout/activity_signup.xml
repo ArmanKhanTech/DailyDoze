@@ -265,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:singleLine="true"
-                    android:hint="Country (or click icon)" />
+                    android:hint="Country (turn on GPS &amp; click the icon)" />
 
                 <ImageView
                     android:id="@+id/select_location"

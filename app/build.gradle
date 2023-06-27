@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.android.dailydoze"
-        minSdk 26
+        minSdk 30
         targetSdk 33
         versionCode 1
         versionName "1.0"

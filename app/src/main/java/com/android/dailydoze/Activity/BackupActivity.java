@@ -3,6 +3,7 @@ package com.android.dailydoze.Activity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,8 +21,13 @@ import android.widget.PopupWindow;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.app.ActivityOptionsCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.RenderMode;
@@ -45,14 +51,6 @@ public class BackupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_backup);
-
-        if (Build.VERSION.SDK_INT >= 30){
-            if (!Environment.isExternalStorageManager()){
-                Intent getPermission = new Intent();
-                getPermission.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                startActivity(getPermission);
-            }
-        }
 
         lottieAnimationView = findViewById(R.id.backup_anim);
         lottieAnimationView.setRenderMode(RenderMode.HARDWARE);
@@ -134,7 +132,8 @@ public class BackupActivity extends AppCompatActivity {
         File sd = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases");
 
         if (sd.canWrite()) {
-            final File[] databases = new File(Environment.getExternalStorageDirectory() + "/Daily Doze").listFiles();
+            File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+            File[] databases = new File(path + "/" + "Daily Doze").listFiles();
             assert databases != null;
 
             if(databases.length == 0){
@@ -182,12 +181,11 @@ public class BackupActivity extends AppCompatActivity {
 
     //exporting database
     private void exportDB() {
-        File sd = new File(Environment.getExternalStorageDirectory() + "/Daily Doze");
+        File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+        File sd = new File(path + "/" + "Daily Doze");
 
         if(!sd.exists()){
-            if(sd.mkdir()){
-                //
-            }
+            sd.mkdir();
         }
 
         if (sd.canWrite()) {
@@ -260,7 +258,6 @@ public class BackupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 popupWindow.dismiss();
-                finish();
             }
         });
 
