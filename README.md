@@ -17,7 +17,7 @@
   <h3 align="center">DailyDoze</h3>
 
   <p align="center">
-    An android app that co-relates your diet with sleep and weight & helps you improve it.
+    An android app that lets you co-relate your daily diet with sleep and weight & helps you improve it.
     <br />
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
@@ -65,17 +65,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Daily Doze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Also featuring the Twenty-One Tweaks to accelerate weight-loss, based on the research from How Not to Diet. Whether you’re trying to get healthy, stay healthy, or lose weight in a sustainable way.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
+Wanna meditate or wanna keep track of your daily fasting this app lets you do it all.
 
 ### Built With
 
