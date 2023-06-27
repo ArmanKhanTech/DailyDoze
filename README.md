@@ -63,7 +63,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="260" height="540">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/4f248b2e-95d4-42d5-844a-bd9381309379" alt="Logo" width="260" height="540">
 
 Daily Doze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
@@ -192,7 +193,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/ArmanKhanTech/DailyDoze/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/arman-khan-25b624205/
-[product-screenshot]: images/screenshot.png
 [Android]: https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white
 [Android-url]: https://developer.android.com/
 [Java]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
