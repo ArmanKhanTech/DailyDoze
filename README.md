@@ -90,7 +90,15 @@ Follow the below instructions to get started.
 
 ### Prerequisites
 
-If you are a developer then you need Android Studio IDE installed on your computer along with Gradle v7.2+ and also a firebase account.
+<ol>
+  <li>
+    <p>Android Studio IDE</a>
+  </li>
+  <li>
+    <p>Firebase Account</a>
+  </li>
+</ol>
+
 
 
 ### Installation
