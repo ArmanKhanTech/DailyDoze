@@ -14,10 +14,10 @@
     <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c6ee876a-0625-4699-afc1-2ac150b7f908" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">DailyDoze</h3>
+  <h3 align="center">Daily Doze</h3>
 
   <p align="center">
-    An android app that lets you co-relate your daily diet with sleep & weight & helps you improve it.
+    A checklist to help you live a healthy life & much more.
     <br />
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
@@ -264,7 +264,7 @@ Allow installation from unknown sources if prompted.
 <h3>5. Meditation :</h3>
 <ul>
   <li>
-    <p>This feature allows assists you in your meditation & helps you keep track of it.</p>
+    <p>This feature assists you in your daily meditation & helps you keep track of it.</p>
   </li>
   <li>
     <p>Simply click on play icon to start meditating.</p>
@@ -273,10 +273,35 @@ Allow installation from unknown sources if prompted.
     <p>You can to choose to meditate for 15 mins to 1 hour.</p>
   </li>
   <li>
-    <p>You can also view your meditation history by clicking on any day in the history section. The list is sorted in descending order by default.</p>
+    <p>You can also view your daily meditation history by clicking on any day in the history section. The list is sorted in descending order by default.</p>
   </li>
     <li>
     <p>You can also customize your meditation screen by changing its background image & you can also change the background music according to your likings by clicking on settings icon on top.</p>
+  </li>
+</ul>
+<br>
+
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e15118e7-d52b-4f86-870c-69104b9e5329" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a1e99253-725d-4859-a14d-c1bf5e887a15" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c017b209-caf2-4539-af3c-374313cbb492" alt="Logo" width="275" height="550">
+</div>
+<h3>6. Fast-Watch :</h3>
+<ul>
+  <li>
+    <p>This feature allows you to keep track of your daily fasting.</p>
+  </li>
+  <li>
+    <p>Simply click on start button to start fast-watch.</p>
+  </li>
+  <li>
+    <p>You can to choose to fast for 3 hours to 12 hours.</p>
+  </li>
+  <li>
+    <p>You can also view your daily fasting history by clicking on any day in the history section. The list is sorted in descending order by default.</p>
+  </li>
+    <li>
+    <p>This feature also requires notification permission so allow it if prompted.</p>
   </li>
 </ul>
 <br>
