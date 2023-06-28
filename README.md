@@ -126,12 +126,12 @@ Allow installation from unknown sources if prompted.
 <h3>1. Home :</h3>
 <ul>
   <li>
-    <p>The home activity contains the checklist of all the healthy food you should include in your daily diet.</p>
+    <p>Daily Doze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
   </li>
   <li>
-    <p>It also inputs your daily sleep schedule allowing you to keep track of it. Click on the moon icon.</p>
+    <p>It also inputs your daily sleep duration allowing you to keep track of it. Click on the moon icon to do so.</p>
   </li>
-    <li>
+  <li>
     <p>By clicking on previous button you can goto the previous day from the current day to check out your stats for that day.</p>
   </li>
     <li>
@@ -147,13 +147,13 @@ Allow installation from unknown sources if prompted.
     <p>Total serving counter is maintained at the top & you can goto the graph by clicking the button next to it.</p>
   </li>
   <li>
-    <p>The graph allows you to co-relate your sleep schedule with your daily servings.</p>
+    <p>The graph allows you to co-relate your sleep schedule with your total daily servings.</p>
   </li>
 </ul>
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/57c5db48-ba1a-44a2-b84d-2ab6adc1fc05" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ed5ff090-1646-43d3-85a4-5abcefc201f3" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f8ef9f3d-82a9-4941-beab-2285a989c264" alt="Logo" width="275" height="550">
 </div>
 <h3>2. Menu :</h3>
@@ -162,7 +162,7 @@ Allow installation from unknown sources if prompted.
     <p>21 Tweaks : Goto 21 Tweaks challenge activity.</p>
   </li>
   <li>
-    <p>Jump to a Date : Directly jump to any day you want in-order to check your stats for that day.</p>
+    <p>Jump to a Date : Directly jump to any day you want inorder to check your daily servings stats for that day.</p>
   </li>
   <li>
     <p>Notifications : Goto Notifications activity.</p>
@@ -189,14 +189,57 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/304b8afb-e47d-4dc5-89f7-a9ed46270ba5" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/d940d413-5e52-4ec7-a635-fc91e54e8fc7" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e5fdc922-8b8a-42fc-b43e-6df2be773d91" alt="Logo" width="275" height="550">
+</div>
+<h3>3. 21 Tweaks :</h3>
+<ul>
+  <li>
+    <p>Dr. Greger extracted the most important information from his extensive study and put together a mini list of tips and tricks you should perform every day in order to lose weight.</p>
+  </li>
+  <li>
+    <p>21 Tweaks is 21 day challenge one should strictly follow to lose weight.</p>
+  </li>
+  <li>
+    <p>It is divide into three sections Each Day, Each Meals & Each Night.</p>
+  </li>
+  <li>
+    <p>These three sections contain information about the diet you should follow & certain activities you should perform at specific time.</p>
+  </li>
+    <li>
+    <p>You also have to input your weight twice a day by clicking on weight icon. This icon is visible only in morning & night.</p>
+  </li>
+ <li>
+    <p>By clicking on previous button you can goto the previous day from the current day to check out your stats for that day.</p>
+  </li>
+  <li>
+    <p>Similarly, you can goto the next day from the current day to check out your stats for that day.</p>
+  </li>
+  <li>
+    <p>You can jump back to ongoing day by clicking on Back to Today button.</p>
+  </li>
+  <li>
+    <p>Once the day has passed you cannot alter your checklist.</p>
+  </li>
+  <li>
+    <p>Total serving counter is maintained at the top & you can goto the graph by clicking the button next to it.</p>
+  </li>
+  <li>
+    <p>The graph allows you to co-relate your daily average weight with your total daily tweakss.</p>
+  </li>
+</ul>
+<br>
+
+<div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/55afb48b-6811-4c6a-9f75-a5ddf02bbe5f" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/6ed707cd-c09d-40e9-8727-0326951fe3bf" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7216817d-59b3-4de3-b18e-3f00ebe91905" alt="Logo" width="275" height="550">
 </div>
-<h3>3. Notifications :</h3>
+<h3>4. Notifications :</h3>
 <ul>
   <li>
-    <p>This feature allows the app to notify you to update your servings at appropriate time set by you.</p>
+    <p>This feature allows the app to notify you to update your daily servings at appropriate time set by you.</p>
   </li>
   <li>
     <p>This feature requires notification permission so allow it when prompted.</p>
@@ -205,7 +248,7 @@ Allow installation from unknown sources if prompted.
     <p>Turn on the notifications by clicking on the switch & add new notification by click on Add Notification icon at the top.</p>
   </li>
   <li>
-    <p>You can delete a notification by clicking on it inside the listview.</p>
+    <p>You can delete a notification by simply clicking on it.</p>
   </li>
     <li>
     <p>You can also disable the notifications by clicking on the switch again.</p>
@@ -218,7 +261,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="275" height="550">
 </div>
-<h3>4. Meditation :</h3>
+<h3>5. Meditation :</h3>
 <ul>
   <li>
     <p>This feature allows assists you in your meditation & helps you keep track of it.</p>
