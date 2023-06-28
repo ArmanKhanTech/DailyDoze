@@ -148,7 +148,7 @@ Allow installation from unknown sources if prompted.
     <p>Total serving counter is maintained at the top & you can goto the graph by clicking the button next to it.</p>
   </li>
   <li>
-    <p>The graph allows you to co-relate your sleep schedule with your total daily servings.</p>
+    <p>The graph allows you to co-relate your daily sleep duration with your total daily servings.</p>
   </li>
 </ul>
 <br>
