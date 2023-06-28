@@ -257,7 +257,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e320007b-c511-463c-aad1-fcafbe29f697" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ed5fe6d6-2688-4743-9a14-63fdb867e70d" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="275" height="550">
 </div>
