@@ -99,7 +99,7 @@ public class BackupActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
             if(what.equals("import")){
                 importDB();
-            } else{
+            } else if(what.equals("export")){
                 exportDB();
             }
 
@@ -128,7 +128,7 @@ public class BackupActivity extends AppCompatActivity {
             assert databases != null;
 
             if(databases.length == 0){
-                what = "No files found.";
+                what = "No files were found.";
             }
 
             for (File databaseFile: databases) {
@@ -212,7 +212,7 @@ public class BackupActivity extends AppCompatActivity {
                         }
                     }
 
-                    what = "Done Imported";
+                    what = "Done Exported";
                 }
             }
         } else {

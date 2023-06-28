@@ -69,9 +69,13 @@
         <ImageView
             android:onClick="openPerformMeditation"
             android:id="@+id/mediStart"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:padding="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_gravity="center"
+            android:background="@drawable/medi_heading_theme"
             app:srcCompat="@drawable/play_button_icon"/>
 
         <LinearLayout

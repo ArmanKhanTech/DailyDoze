@@ -30,6 +30,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/transparent"
                     android:id="@+id/closeMenu"
+                    android:layout_marginLeft="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/close_icon_black" />
 
