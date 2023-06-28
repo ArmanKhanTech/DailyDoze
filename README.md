@@ -63,8 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="260" height="540">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/4f248b2e-95d4-42d5-844a-bd9381309379" alt="Logo" width="260" height="540">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="275" height="550">
 
 Daily Doze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
@@ -118,6 +117,75 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/33e58fe1-8775-42d8-9db4-6c257cd03e1c" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3b4c94b8-b192-4b77-b08d-f163c781bfcf" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/47925f05-ac16-4724-b44c-8b753b243172" alt="Logo" width="275" height="550">
+</div>
+<h3>1. Home :</h3>
+<ul>
+  <li>
+    <p>The home activity contains the checklist of all the healthy food you should include in your daily diet.</p>
+  </li>
+  <li>
+    <p>It also inputs your daily sleep schedule allowing you to keep track of it. Click on the moon icon.</p>
+  </li>
+    <li>
+    <p>By clicking on previous button you can goto the previous day from the current day to check out your stats for that day.</p>
+  </li>
+    <li>
+    <p>Similarly, you can goto the next day from the current day to check out your stats for that day.</p>
+  </li>
+  <li>
+    <p>You can jump back to ongoing day by clicking on Back to Today button.</p>
+  </li>
+  <li>
+    <p>Once the day has passed you cannot alter your checklist.</p>
+  </li>
+  <li>
+    <p>Total serving counter is maintained at the top & you can goto the graph by clicking the button next to it.</p>
+  </li>
+  <li>
+    <p>The graph allows you to co-relate your sleep schedule with your daily servings.</p>
+  </li>
+</ul>
+<br>
+
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/57c5db48-ba1a-44a2-b84d-2ab6adc1fc05" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f8ef9f3d-82a9-4941-beab-2285a989c264" alt="Logo" width="275" height="550">
+</div>
+<h3>2. Menu :</h3>
+<ul>
+  <li>
+    <p>21 Tweaks : Goto 21 Tweaks challenge activity.</p>
+  </li>
+  <li>
+    <p>Jump to a Date : Directly jump to any day you want inorder to check your stats for that day.</p>
+  </li>
+  <li>
+    <p>Notifications : Goto Notifications activity.</p>
+  </li>
+  <li>
+    <p>Meditation : Goto Meditation activity.</p>
+  </li>
+    <li>
+    <p>Fast-Watch : Goto Fast-Watch activity.</p>
+  </li>
+  <li>
+    <p>Backup : Goto Backup activity.</a>
+  </li>
+  <li>
+    <p>Open Source : Redirect to this repo.</a>
+  </li>
+  <li>
+    <p>About : Goto About Activity.</a>
+  </li>
+  <li>
+    <p>Logout : Logout.</a>
+  </li>
+</ul>
+<br>
 
 
 
