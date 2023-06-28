@@ -111,6 +111,7 @@ Follow the below instructions to get started.
 2. Paste your firebase credentails file in /app. Its the one you will download from your firebase console called _google-services.json_.
 
 or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link to check it out.
+Allow installation from unknown sources if prompted.
 
 
 
@@ -192,7 +193,7 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/6ed707cd-c09d-40e9-8727-0326951fe3bf" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7216817d-59b3-4de3-b18e-3f00ebe91905" alt="Logo" width="275" height="550">
 </div>
-<h3>Notifications :</h3>
+<h3>3. Notifications :</h3>
 <ul>
   <li>
     <p>This feature allows the app to notify you to update your servings at appropriate time set by you.</p>
@@ -208,6 +209,31 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
   </li>
     <li>
     <p>You can also disable the notifications by clicking on the switch again.</p>
+  </li>
+</ul>
+<br>
+
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f99f3d0f-383e-4118-b204-cb526136e556" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="275" height="550">
+</div>
+<h3>4. Meditation :</h3>
+<ul>
+  <li>
+    <p>This feature allows assists you in your meditation & helps you keep track of it.</p>
+  </li>
+  <li>
+    <p>Simply click on play icon to start meditating.</p>
+  </li>
+  <li>
+    <p>You can to choose to meditate for 15 mins to 1 hour.</p>
+  </li>
+  <li>
+    <p>You can also view your meditation history by clicking on any day in the history section. The list is sorted in descending order by default.</p>
+  </li>
+    <li>
+    <p>You can also customize your meditation screen by changing its background image & you can also change the background music according to your likings by clicking on settings icon on top.</p>
   </li>
 </ul>
 <br>
