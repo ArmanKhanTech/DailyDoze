@@ -318,7 +318,7 @@ Allow installation from unknown sources if prompted.
 <h3>7. Backup :</h3>
 <ul>
   <li>
-    <p>This feature allows you to take backup(export) of your data or import it so you dont have to worry about losing it.</p>
+    <p>This feature allows you to take backup(export) of your data or import it so you don't have to worry about losing it.</p>
   </li>
   <li>
     <p>Simply click on import buttton to import your data.</p>
