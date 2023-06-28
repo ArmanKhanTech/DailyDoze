@@ -329,6 +329,19 @@ Allow installation from unknown sources if prompted.
 </ul>
 <br>
 
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/44ab0182-866f-4b52-92b9-f75b76f1fb25" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/9d401a97-58d8-424d-926f-4525daba4e5f" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/325c0b14-de39-4147-8885-f3a259f1a66a" alt="Logo" width="275" height="550">
+</div>
+<h3>8. Info :</h3>
+<ul>
+  <li>
+    <p>Information about any serving or tweak can viewed by clicking on the info icon of corresponding serving or tweak.</p>
+  </li>
+</ul>
+<br>
+
 
 
 <!-- ROADMAP -->
@@ -343,7 +356,7 @@ Allow installation from unknown sources if prompted.
 - [x] Add Meditation
 - [x] Add Fast-Watch
 - [x] Add Animations
-- [x] Add Import & Export Database for Backup
+- [x] Add Backup
 - [ ] Add Calender
 
 See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a full list of proposed features (and known issues)
