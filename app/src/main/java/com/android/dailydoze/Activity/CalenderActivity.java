@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.android.dailydoze.R;
 
+@SuppressWarnings("ALL")
 public class CalenderActivity extends AppCompatActivity {
     CalendarView calendarView;
     TextView name;

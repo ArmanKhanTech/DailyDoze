@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +30,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
+@SuppressWarnings("ALL")
 public class MeditationActivity extends AppCompatActivity {
     String time;
     long millis;

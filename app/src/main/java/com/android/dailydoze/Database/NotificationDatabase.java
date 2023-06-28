@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class NotificationDatabase extends SQLiteOpenHelper {
-
     private static final String DB_NAME = "db1";
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "notiInfo";

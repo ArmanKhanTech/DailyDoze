@@ -45,6 +45,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+@SuppressWarnings("ALL")
 public class NotificationActivity extends AppCompatActivity {
     ImageView setTime;
     TextView status;

@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class FastDatabase extends SQLiteOpenHelper {
     private static final String DB_NAME = "db5";
     private static final int DB_VERSION = 1;

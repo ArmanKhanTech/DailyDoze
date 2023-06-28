@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     private final ArrayList<Fragment> fragmentArrayList=new ArrayList<>();

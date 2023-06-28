@@ -8,19 +8,13 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.DataList;
-import com.android.dailydoze.Utility.ListAdapter;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+@SuppressWarnings("ALL")
 public class InfoActivity extends AppCompatActivity {
     ImageView img;
     TextView txt, name, infoTitle;

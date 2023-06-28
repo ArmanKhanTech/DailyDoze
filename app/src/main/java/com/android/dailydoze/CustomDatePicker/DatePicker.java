@@ -18,6 +18,7 @@ import com.android.dailydoze.R;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class DatePicker extends LinearLayout implements DateFactoryListener {
 
     private Context context;

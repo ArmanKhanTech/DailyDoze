@@ -1,6 +1,5 @@
 package com.android.dailydoze.Receiver;
 
-import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -9,15 +8,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
 import com.android.dailydoze.Activity.SplashScreenActivity;
 import com.android.dailydoze.R;
 
+@SuppressWarnings("ALL")
 public class AlarmReceiver extends BroadcastReceiver {
-
     @Override
     public void onReceive(Context context, Intent intent) {
 

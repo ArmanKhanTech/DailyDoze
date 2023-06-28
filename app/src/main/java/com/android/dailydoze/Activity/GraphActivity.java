@@ -16,7 +16,6 @@ import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.R;
 import com.github.mikephil.charting.charts.CombinedChart;
-import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -34,6 +33,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class GraphActivity extends AppCompatActivity {
     BarData barData;
     LineData lineData;

@@ -28,6 +28,7 @@ import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
 import nl.dionsegijn.konfetti.core.models.Shape;
 import nl.dionsegijn.konfetti.xml.KonfettiView;
 
+@SuppressWarnings("ALL")
 public class MeditationStats extends AppCompatActivity {
     KonfettiView konfettiView;
     private Shape.DrawableShape drawableShape = null;

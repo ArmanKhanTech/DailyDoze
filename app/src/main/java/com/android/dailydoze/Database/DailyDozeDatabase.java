@@ -6,13 +6,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.List;
 
+@SuppressWarnings("ALL")
 public class DailyDozeDatabase extends SQLiteOpenHelper {
-
     private static final String DB_NAME = "db2";
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "dailyDoze";

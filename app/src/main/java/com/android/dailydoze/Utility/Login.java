@@ -1,5 +1,6 @@
 package com.android.dailydoze.Utility;
 
+@SuppressWarnings("ALL")
 public class Login {
     private String email, pass;
 

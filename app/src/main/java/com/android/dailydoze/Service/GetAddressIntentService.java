@@ -13,9 +13,9 @@ import java.util.Locale;
 import java.util.Objects;
 import androidx.annotation.Nullable;
 
+@SuppressWarnings("ALL")
 public class GetAddressIntentService extends IntentService {
     private static final String IDENTIFIER = "GetAddressIntentService";
-
     private ResultReceiver addressResultReceiver;
     public GetAddressIntentService() {
         super(IDENTIFIER);

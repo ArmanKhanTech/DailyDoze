@@ -2,6 +2,7 @@ package com.android.dailydoze.CustomDatePicker;
 
 import java.util.Calendar;
 
+@SuppressWarnings("ALL")
 public class DateUtils {
     public DateUtils() {
     }

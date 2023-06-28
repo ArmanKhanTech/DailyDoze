@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import com.android.dailydoze.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+@SuppressWarnings("ALL")
 public class PickerPopup extends BottomSheetDialog implements IPopupInterface {
-
     public TextView confirm;
     public TextView cancel;
     private LinearLayout container;

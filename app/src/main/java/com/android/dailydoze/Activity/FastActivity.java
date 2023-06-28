@@ -43,6 +43,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.Locale;
 
+@SuppressWarnings("ALL")
 public class FastActivity extends AppCompatActivity {
     String time;
     long millis = 10800000, millisDone = 0;

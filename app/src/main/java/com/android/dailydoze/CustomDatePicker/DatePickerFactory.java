@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class DatePickerFactory {
     private DateModel maxDate;
     private DateModel minDate;

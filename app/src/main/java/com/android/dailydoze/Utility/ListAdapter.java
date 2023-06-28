@@ -11,7 +11,6 @@ import com.android.dailydoze.R;
 import java.util.ArrayList;
 
 public class ListAdapter extends BaseAdapter {
-
     public LayoutInflater layoutInflater;
     public ArrayList<DataList> listStorage;
     Context mContext;

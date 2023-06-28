@@ -44,6 +44,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+@SuppressWarnings("ALL")
 public class SignupActivity extends AppCompatActivity {
     private EditText name, email, pass, phone, country, city, state, zip, address, blood, medical, other, height, weight, bp;
     RelativeLayout dob;

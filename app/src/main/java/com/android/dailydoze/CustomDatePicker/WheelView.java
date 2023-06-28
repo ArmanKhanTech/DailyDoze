@@ -24,9 +24,9 @@ import com.android.dailydoze.R;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 public class WheelView extends ScrollView {
     public String TAG = WheelView.class.getSimpleName();
-
     private int displayItemCount;
     private int selectedIndex = 1;
     public static final int OFF_SET_DEFAULT = 1;

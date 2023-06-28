@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class TweaksDatabase extends SQLiteOpenHelper {
     private static final String DB_NAME = "db3";
     private static final int DB_VERSION = 1;

@@ -24,7 +24,6 @@ import java.util.Objects;
 
 
 public class NightFragment extends Fragment {
-
     ImageView i1, i2, i3;
     ImageView c1, c2, c3;
     @SuppressLint("StaticFieldLeak")
