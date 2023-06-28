@@ -62,6 +62,7 @@
     <ScrollView
         android:id="@+id/backup_scroll"
         android:visibility="gone"
+        android:scrollbarThumbVertical="@color/peach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 

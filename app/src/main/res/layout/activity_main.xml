@@ -115,10 +115,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:orientation="horizontal">
 
                     <FrameLayout
@@ -126,6 +122,10 @@
                         android:layout_height="wrap_content"
                         android:elevation="3dp"
                         android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:layout_gravity="center"
                         android:background="@drawable/beans_theme">
 
@@ -215,7 +215,9 @@
                         android:layout_height="wrap_content"
                         android:elevation="3dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
                         android:layout_weight="1"
                         android:background="@drawable/berries_theme">
 
@@ -293,7 +295,6 @@
                     android:elevation="3dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:paddingBottom="5dp"
@@ -482,10 +483,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:orientation="horizontal">
 
                     <FrameLayout
@@ -493,6 +490,10 @@
                         android:layout_height="wrap_content"
                         android:elevation="3dp"
                         android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:layout_gravity="center"
                         android:background="@drawable/greens_theme">
 
@@ -575,7 +576,9 @@
                         android:elevation="3dp"
                         android:layout_weight="1"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
                         android:background="@drawable/cruciferous_theme">
 
                         <LinearLayout
@@ -817,10 +820,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:orientation="horizontal">
 
                     <FrameLayout
@@ -828,6 +827,10 @@
                         android:layout_height="wrap_content"
                         android:elevation="3dp"
                         android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:layout_gravity="center"
                         android:background="@drawable/flexseeds_theme">
 
@@ -903,7 +906,9 @@
                         android:elevation="3dp"
                         android:layout_weight="1"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
                         android:background="@drawable/exercise_theme">
 
                         <LinearLayout
