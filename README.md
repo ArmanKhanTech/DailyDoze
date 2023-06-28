@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="200" height="400">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="300" height="600">
 
 Daily Doze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
