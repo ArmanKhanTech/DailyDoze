@@ -342,12 +342,36 @@ Allow installation from unknown sources if prompted.
 </ul>
 <br>
 
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c9940b8f-466e-4336-8cc4-2d6d7fe87de6" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e031b930-9bc0-4303-ad58-aa65797ebc80" alt="Logo" width="275" height="550">
+</div>
+<h3>9. Login & Registration :</h3>
+<ul>
+  <li>
+    <p>Simple login & registration page.</p>
+  </li>
+  <li>
+    <p>The registration page also features the auto-location feature.</p>
+  </li>
+  <li>
+    <p>Registration is mandatory for the access to the app.</p>
+  </li>
+  <li>
+    <p>All your data will be stored in Firebase Realtime DB.</p>
+  </li>
+  <li>
+    <p>Your data will help us improve & implement machine learning models in the app in future.</p>
+  </li>
+</ul>
+<br>
+
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Login & Signup
+- [x] Add Login & Registration
 - [x] Add Daily Doze
 - [x] Add Info
 - [x] Add Menu
@@ -401,6 +425,7 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 * [Phil Jay's MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
 * [Lottie Animations](https://github.com/airbnb/lottie-android)
 * [Daniel Martinus's Konfetti](https://github.com/DanielMartinus/Konfetti)
+* [Ozcan Alsalvar's Datepicker](https://github.com/OzcanAlasalvar/DatePicker)
 
 
 
