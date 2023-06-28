@@ -119,9 +119,9 @@ Allow installation from unknown sources if prompted.
 ## Usage
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/33e58fe1-8775-42d8-9db4-6c257cd03e1c" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/468c1502-2563-4d2a-8397-ba33e330ec21" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3b4c94b8-b192-4b77-b08d-f163c781bfcf" alt="Logo" width="275" height="550">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/719ad1a5-b252-4b89-8036-ca3c47693c19" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7ad9d110-5e23-4f5c-bead-939341e5b390" alt="Logo" width="275" height="550">
 </div>
 <h3>1. Home :</h3>
 <ul>
@@ -189,8 +189,8 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/304b8afb-e47d-4dc5-89f7-a9ed46270ba5" alt="Logo" width="275" height="550">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/d940d413-5e52-4ec7-a635-fc91e54e8fc7" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b1857eb9-4c08-479c-a61d-be846cbb327c" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/aafc05bf-fe20-4af2-a83e-1f2eb054fdbe" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e5fdc922-8b8a-42fc-b43e-6df2be773d91" alt="Logo" width="275" height="550">
 </div>
 <h3>3. 21 Tweaks :</h3>
@@ -257,7 +257,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f99f3d0f-383e-4118-b204-cb526136e556" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e320007b-c511-463c-aad1-fcafbe29f697" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="275" height="550">
 </div>
