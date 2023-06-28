@@ -14,7 +14,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="30dp"
-            android:padding="2dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
             android:background="@drawable/medi_settings_theme">
 
             <RelativeLayout
@@ -26,7 +28,6 @@
                     android:layout_height="35dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="15dp"
                     android:background="@color/transparent"
                     android:id="@+id/closeMenu"
                     android:scaleType="fitCenter"

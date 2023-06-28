@@ -104,7 +104,7 @@ public class TweakActivity extends AppCompatActivity {
             if(today){
                 tv.setVisibility(View.VISIBLE);
                 et.setVisibility(View.VISIBLE);
-                if(timeOfDay >= 6 && timeOfDay <= 12) {
+                if(timeOfDay >= 6 && timeOfDay < 11) {
                     tv.setText("Enter your morning weight");
                 } else if (timeOfDay >= 18) {
                     tv.setText("Enter your evening weight");
@@ -122,7 +122,7 @@ public class TweakActivity extends AppCompatActivity {
                 if(today) {
                     kg[0] = et.getText().toString();
                     if(!kg[0].isEmpty()){
-                        if (timeOfDay >= 6 && timeOfDay < 12) {
+                        if (timeOfDay >= 6 && timeOfDay < 11) {
                             if (db.getDate(getCurrentDate())) {
                                 db.setWeight("weight_morning", getCurrentDate(), kg[0]);
                             } else {
@@ -290,7 +290,7 @@ public class TweakActivity extends AppCompatActivity {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
-        if(timeOfDay >= 6 && timeOfDay <= 12) {
+        if(timeOfDay >= 6 && timeOfDay < 11) {
             weight.setVisibility(View.VISIBLE);
         } else if (timeOfDay >= 18) {
             weight.setVisibility(View.VISIBLE);

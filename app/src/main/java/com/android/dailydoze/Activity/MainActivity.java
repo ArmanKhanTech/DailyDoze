@@ -400,7 +400,6 @@ public class MainActivity extends AppCompatActivity {
             currDate.setText(tDate);
             jumpBack.setBackground(getDrawable(R.drawable.back_to_today_theme));
             back_to_today.setTextColor(Color.WHITE);
-            sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_black));
             setDay();
         });
 
@@ -612,8 +611,6 @@ public class MainActivity extends AppCompatActivity {
             setNext();
 
             if(jump) {
-                sleep.setImageDrawable(getResources().getDrawable(R.drawable.sleep_icon_white));
-
                 final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.slide_down);
                 jumpBack.startAnimation(slide_down);

@@ -60,7 +60,6 @@
                         android:text="12 April 2023"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
-                        android:paddingRight="10dp"
                         android:textColor="@color/black"
                         android:textSize="25dp"
                         android:fontFamily="sans-serif-condensed-medium"/>
@@ -69,10 +68,12 @@
                         android:id="@+id/sleep"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="5dp"
                         android:scaleType="centerInside"
                         android:layout_gravity="end|center"
                         android:background="@color/transparent"
-                        app:srcCompat="@drawable/sleep_icon_black"/>
+                        app:srcCompat="@drawable/sleep_icon"/>
 
                 </LinearLayout>
 
