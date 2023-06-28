@@ -120,7 +120,7 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
 <div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/33e58fe1-8775-42d8-9db4-6c257cd03e1c" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3b4c94b8-b192-4b77-b08d-f163c781bfcf" alt="Logo" width="275" height="550">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/47925f05-ac16-4724-b44c-8b753b243172" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/719ad1a5-b252-4b89-8036-ca3c47693c19" alt="Logo" width="275" height="550">
 </div>
 <h3>1. Home :</h3>
 <ul>
@@ -161,7 +161,7 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
     <p>21 Tweaks : Goto 21 Tweaks challenge activity.</p>
   </li>
   <li>
-    <p>Jump to a Date : Directly jump to any day you want inorder to check your stats for that day.</p>
+    <p>Jump to a Date : Directly jump to any day you want in-order to check your stats for that day.</p>
   </li>
   <li>
     <p>Notifications : Goto Notifications activity.</p>
@@ -183,6 +183,31 @@ or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgF
   </li>
   <li>
     <p>Logout : Logout.</a>
+  </li>
+</ul>
+<br>
+
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/55afb48b-6811-4c6a-9f75-a5ddf02bbe5f" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/6ed707cd-c09d-40e9-8727-0326951fe3bf" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7216817d-59b3-4de3-b18e-3f00ebe91905" alt="Logo" width="275" height="550">
+</div>
+<h3>Notifications :</h3>
+<ul>
+  <li>
+    <p>This feature allows the app to notify you to update your servings at appropriate time set by you.</p>
+  </li>
+  <li>
+    <p>This feature requires notification permission so allow it when prompted.</p>
+  </li>
+  <li>
+    <p>Turn on the notifications by clicking on the switch & add new notification by click on Add Notification icon at the top.</p>
+  </li>
+  <li>
+    <p>You can delete a notification by clicking on it inside the listview.</p>
+  </li>
+    <li>
+    <p>You can also disable the notifications by clicking on the switch again.</p>
   </li>
 </ul>
 <br>
