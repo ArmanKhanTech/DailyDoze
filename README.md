@@ -123,7 +123,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3b4c94b8-b192-4b77-b08d-f163c781bfcf" alt="Logo" width="275" height="550">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7ad9d110-5e23-4f5c-bead-939341e5b390" alt="Logo" width="275" height="550">
 </div>
-<h3>1. Home :</h3>
+<h3>1. Daily Doze :</h3>
 <ul>
   <li>
     <p>Daily Doze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
@@ -302,6 +302,29 @@ Allow installation from unknown sources if prompted.
   </li>
     <li>
     <p>This feature also requires notification permission so allow it if prompted.</p>
+  </li>
+</ul>
+<br>
+
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3af20700-65fb-46fa-8f48-a3545891b3f3" alt="Logo" width="275" height="550">
+</div>
+<h3>7. Backup :</h3>
+<ul>
+  <li>
+    <p>This feature allows you to take backup(export) of your data or import it so you dont have to worry about losing it.</p>
+  </li>
+  <li>
+    <p>Simply click on import buttton to import your data.</p>
+  </li>
+  <li>
+    <p>Or click on export button to export your data.</p>
+  </li>
+  <li>
+    <p>Please read the given instructions carefully to avoid mishaps.</p>
+  </li>
+  <li>
+    <p>All the user data is stored in local sqlite database. Thus, the backup files have .db extension.</p>
   </li>
 </ul>
 <br>
