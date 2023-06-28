@@ -74,7 +74,7 @@ public class NotificationActivity extends AppCompatActivity {
         db1 = new NotificationDatabase(this);
         ArrayList<String> time = db1.readNotification();
 
-        icon = getDrawable(R.drawable.noti_vec_icon);
+        icon = getDrawable(R.drawable.noti_vec_icon_black);
 
         for(int i = 0; i < time.size(); i++){
             String temp = time.get(i);

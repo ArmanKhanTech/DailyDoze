@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
@@ -27,8 +28,10 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intentTo, PendingIntent.FLAG_IMMUTABLE);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "notify_001");
-        mBuilder.setSmallIcon(R.drawable.app_icon_white);
+        mBuilder.setSmallIcon(R.drawable.noti_vec_icon_white);
+        mBuilder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon_black));
         mBuilder.setContentTitle("Daily Doze");
         mBuilder.setContentText("Make Sure to Take & Update Your Servings");
         mBuilder.setAutoCancel(true);
