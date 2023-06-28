@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="200" height="400">
 
 Daily Doze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
@@ -119,9 +119,9 @@ Allow installation from unknown sources if prompted.
 ## Usage
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/468c1502-2563-4d2a-8397-ba33e330ec21" alt="Logo" width="275" height="550">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3b4c94b8-b192-4b77-b08d-f163c781bfcf" alt="Logo" width="275" height="550">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7ad9d110-5e23-4f5c-bead-939341e5b390" alt="Logo" width="275" height="550">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/468c1502-2563-4d2a-8397-ba33e330ec21" alt="Logo" width="200" height="400">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3b4c94b8-b192-4b77-b08d-f163c781bfcf" alt="Logo" width="200" height="400">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7ad9d110-5e23-4f5c-bead-939341e5b390" alt="Logo" width="200" height="400">
 </div>
 <h3>1. Daily Doze :</h3>
 <ul>
