@@ -22,7 +22,7 @@
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link">View Demo</a>
+    <a href="https://drive.google.com/file/d/11OYuDh0v-sa7xG-iX_MbTv8EsL6-jJSN/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/ArmanKhanTech/DailyDoze/issues">Report a Bug</a>
     ·
