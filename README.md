@@ -110,7 +110,7 @@ Follow the below instructions to get started.
    ```
 2. Paste your firebase credentails file in /app. Its the one you will download from your firebase console called _google-services.json_.
 
-or simply download the .apk from https://drive.google.com/file/d/1yd96Hfw2mNotgFIOL7GRmK8Um4RNZlOu/view?usp=drive_link to check it out.
+or simply download the .apk from https://drive.google.com/file/d/11OYuDh0v-sa7xG-iX_MbTv8EsL6-jJSN/view?usp=sharing to check it out.
 Allow installation from unknown sources if prompted.
 
 
