@@ -120,9 +120,9 @@ Allow installation from unknown sources if prompted.
 
 <div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ef5351b9-b06a-407a-b9e1-a60003f681cd" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/07357593-40c2-43a6-9b8f-b0cb7e475b7e" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/64ff1d57-2fc6-4102-93b9-b716e4d4edba" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/07357593-40c2-43a6-9b8f-b0cb7e475b7e" alt="Logo" width="300" height="600">
 </div>
 
 <h3>1. Daily Doze :</h3>
