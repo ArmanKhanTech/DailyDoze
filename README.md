@@ -119,9 +119,9 @@ Allow installation from unknown sources if prompted.
 ## Usage
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/dce6794f-b0ff-4b22-b2fa-a14337f2f012" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ef5351b9-b06a-407a-b9e1-a60003f681cd" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c98548d2-3203-4f9a-a3c4-4daf36810b3f" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/64ff1d57-2fc6-4102-93b9-b716e4d4edba" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/07357593-40c2-43a6-9b8f-b0cb7e475b7e" alt="Logo" width="300" height="600">
 </div>
 
@@ -191,7 +191,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7020d3c5-c984-4d60-8766-243c5a83171b" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b4c894c4-65b8-4629-8f2e-f3570f1dcda1" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/9b357d28-256c-4da5-9b28-e5b10326ae7f" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00e1ff92-e1a0-4e26-8b62-f3e2ba9e6bad" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3a7f2149-b965-4737-b679-9dad5e692679" alt="Logo" width="300" height="600">
@@ -261,7 +261,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/14fc06cb-7bb5-4217-8ae2-1f0a557fdc85" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/bc909fdd-49ac-416d-ab5b-5a0f17203574" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1751a12b-b233-4a31-bbe9-8597afa73241" alt="Logo" width="300" height="600">
@@ -287,7 +287,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3cce92cf-db0b-415b-98c7-fe8fffc4d9e5" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/45eda09b-fe3d-4b9f-8af4-b6fd1fd17081" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/566f85b6-e08f-4f0e-b7ce-ca7436af53a8" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a326e538-c913-4168-9722-42824b1fba3f" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c017b209-caf2-4539-af3c-374313cbb492" alt="Logo" width="300" height="600">
@@ -313,7 +313,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/9d242a0a-45e4-4ded-b6a1-bb9178f4cc94" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/aaa0924c-70d2-4ca3-a8c8-81b3ab96ed1a" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/89e10d40-ddce-4bbc-b0df-8fe0a35dfea3" alt="Logo" width="300" height="600">
 </div>
 <h3>7. Backup :</h3>
