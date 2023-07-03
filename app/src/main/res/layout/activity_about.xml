@@ -10,7 +10,10 @@
     <ImageButton
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_margin="15dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:background="@color/white"
         android:onClick="aboutFinish"
         android:scaleType="fitCenter"

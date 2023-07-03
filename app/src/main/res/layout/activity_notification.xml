@@ -21,7 +21,10 @@
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_margin="15dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
                 android:background="@color/transparent"
                 android:onClick="notiFinish"
                 android:scaleType="fitCenter"
@@ -58,9 +61,9 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@drawable/noti_bg_theme"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp">
 
         <TextView
@@ -91,8 +94,8 @@
         android:id="@+id/lll2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/noti_list_theme"
         android:padding="10dp">

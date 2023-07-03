@@ -16,8 +16,10 @@
             android:id="@+id/imageButton30"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@color/transparent"
             android:onClick="fastBack"
             android:scaleType="fitCenter"
@@ -51,8 +53,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/fast_history_theme"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp">
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
 
                 <TextView
                     android:id="@+id/timerFast"
@@ -91,8 +93,8 @@
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textAlignment="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"/>
 
@@ -101,8 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/fast_history_theme"
                 android:padding="15dp">
@@ -172,8 +174,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
@@ -248,8 +250,8 @@
                 android:layout_height="320dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
                 android:paddingTop="5dp"
                 android:paddingLeft="10dp"

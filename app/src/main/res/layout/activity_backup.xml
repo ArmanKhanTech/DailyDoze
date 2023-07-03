@@ -16,8 +16,10 @@
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@color/transparent"
             android:onClick="backupFinish"
             android:scaleType="fitCenter"
@@ -40,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:background="@drawable/backup_theme"
         android:scaleType="centerInside"
         app:lottie_rawRes="@raw/backup" />
@@ -53,8 +55,8 @@
         android:layout_marginLeft="20dp"
         android:padding="75dp"
         android:visibility="gone"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/backup_theme"
         android:scaleType="centerInside"
         app:lottie_rawRes="@raw/loading" />
@@ -74,8 +76,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/backup_theme"
                 android:orientation="vertical"
                 android:padding="10dp">
@@ -140,9 +142,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/backup_theme"
                 android:orientation="vertical"

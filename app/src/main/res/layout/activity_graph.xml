@@ -17,8 +17,10 @@
             android:id="@+id/imageButton4"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@color/white"
             android:onClick="graphBack"
             android:scaleType="fitCenter"
@@ -47,7 +49,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/bargraph_theme">
 
         <com.github.mikephil.charting.charts.CombinedChart
