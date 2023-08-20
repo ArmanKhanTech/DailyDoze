@@ -8,8 +8,8 @@
     tools:context=".Activity.AboutActivity">
 
     <ImageButton
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"

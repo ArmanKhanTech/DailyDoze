@@ -35,11 +35,13 @@
     <string name="complete_intentions_text">Every two months, create three new implementation intentions—“if X, then Y” plans to perform a particular behavior in a specific context—and check each one of them off as you complete them every day.</string>
 
     <string-array name="gender">
+        <item>Gender</item>
         <item>Male</item>
         <item>Female</item>
     </string-array>
 
     <string-array name="type">
+        <item>Type</item>
         <item>Urban</item>
         <item>Rural</item>
     </string-array>
