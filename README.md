@@ -14,7 +14,7 @@
     <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c6ee876a-0625-4699-afc1-2ac150b7f908" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Daily Doze</h3>
+  <h3 align="center">DailyDoze</h3>
 
   <p align="center">
     A checklist to help you live a healthy life & much more.
@@ -125,7 +125,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/64ff1d57-2fc6-4102-93b9-b716e4d4edba" alt="Logo" width="300" height="600">
 </div>
 
-<h3>1. Daily Doze :</h3>
+<h3>1. DailyDoze :</h3>
 <ul>
   <li>
     <p>Daily Doze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
@@ -161,28 +161,28 @@ Allow installation from unknown sources if prompted.
 <h3>2. Menu :</h3>
 <ul>
   <li>
-    <p>21 Tweaks : Goto 21 Tweaks challenge activity.</p>
+    <p>21 Tweaks : Goto 21 Tweaks challenge.</p>
   </li>
   <li>
     <p>Jump to a Date : Directly jump to any day you want inorder to check your daily servings stats for that day.</p>
   </li>
   <li>
-    <p>Notifications : Goto Notifications activity.</p>
+    <p>Notifications : Goto Notifications.</p>
   </li>
   <li>
-    <p>Meditation : Goto Meditation activity.</p>
+    <p>Meditation : Goto Meditation.</p>
   </li>
     <li>
-    <p>Fast-Watch : Goto Fast-Watch activity.</p>
+    <p>Fast-Watch : Goto Fast-Watch.</p>
   </li>
   <li>
-    <p>Backup : Goto Backup activity.</a>
+    <p>Backup : Goto Backup.</a>
   </li>
   <li>
-    <p>Open Source : Redirect to this repo.</a>
+    <p>Open Source : Redirect to this Repo.</a>
   </li>
   <li>
-    <p>About : Goto About Activity.</a>
+    <p>About : Goto About.</a>
   </li>
   <li>
     <p>Logout : Logout.</a>
