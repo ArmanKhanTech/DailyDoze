@@ -11,7 +11,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/black">
+        android:scrollbarThumbVertical="@android:color/holo_purple">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -126,15 +126,16 @@ public class MainActivity extends AppCompatActivity {
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
             TextView name, email;
+
             name = popupView.findViewById(R.id.name);
             email = popupView.findViewById(R.id.email);
 
             SharedPreferences userData = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-            name.setText(userData.getString("name", "Hi"));
             email.setText(userData.getString("email", "Email"));
+            name.setText("Hi!");
 
+            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9, l10;
 
-            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9;
             l1 = popupView.findViewById(R.id.twe_tweaks);
             l2 = popupView.findViewById(R.id.jump_to_date);
             l3 = popupView.findViewById(R.id.notifications);
@@ -144,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
             l7 = popupView.findViewById(R.id.about);
             l8 = popupView.findViewById(R.id.openSource);
             l9 = popupView.findViewById(R.id.backup);
+            l10 = popupView.findViewById(R.id.survey);
 
             ImageButton ib1 = popupView.findViewById(R.id.closeMenu);
             ib1.setOnClickListener(v12 -> popupWindow.dismiss());
@@ -199,6 +201,11 @@ public class MainActivity extends AppCompatActivity {
 
             l9.setOnClickListener(v16 -> {
                 startActivity(new Intent(MainActivity.this, BackupActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l10.setOnClickListener(v16 -> {
+                startActivity(new Intent(MainActivity.this, DetailsActivity.class));
                 popupWindow.dismiss();
             });
 

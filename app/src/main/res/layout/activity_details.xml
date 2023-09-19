@@ -17,8 +17,8 @@
         <ImageButton
             android:id="@+id/imageButton"
             android:onClick="signupBack"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="7dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
@@ -32,9 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Your Details"
+            android:text="Survey"
             android:textColor="@color/black"
-            android:textSize="35dp"
+            android:textSize="30dp"
             android:layout_gravity="center_vertical"
             tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
 
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="70dp"
-        android:scrollbarThumbVertical="@android:color/black">
+        android:scrollbarThumbVertical="@android:color/holo_blue_dark">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,10 +63,43 @@
                 android:background="@drawable/edittext_signup_theme">
 
                 <EditText
+                    android:id="@+id/signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:singleLine="true"
+                    android:hint="Name" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/name_icon"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/edittext_signup_theme">
+
+                <EditText
                     android:id="@+id/signup_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
+                    android:textSize="20dp"
                     android:layout_marginLeft="40dp"
                     android:singleLine="true"
                     android:hint="Phone" />
@@ -132,7 +165,7 @@
                         android:layout_marginLeft="40dp"
                         android:textAlignment="center"
                         android:text="Date of Birth"
-                        android:textSize="18dp"
+                        android:textSize="20dp"
                         android:gravity="center"/>
 
                     <ImageView
@@ -165,6 +198,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:singleLine="true"
+                    android:textSize="20dp"
                     android:hint="Country (turn on GPS &amp; click the icon)" />
 
                 <ImageView
@@ -201,6 +235,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="8dp"
                         android:singleLine="true"
+                        android:textSize="20dp"
                         android:hint="State" />
 
                     <ImageView
@@ -231,6 +266,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:singleLine="true"
+                        android:textSize="20dp"
                         android:hint="City"/>
 
                     <ImageView
@@ -263,6 +299,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:singleLine="true"
+                    android:textSize="20dp"
                     android:hint="Address" />
 
                 <ImageView
@@ -300,6 +337,7 @@
                         android:layout_marginRight="8dp"
                         android:inputType="number"
                         android:singleLine="true"
+                        android:textSize="20dp"
                         android:hint="Zip Code" />
 
                     <ImageView
@@ -363,6 +401,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:singleLine="true"
+                        android:textSize="20dp"
                         android:hint="Blood Group" />
 
                     <ImageView
@@ -430,6 +469,7 @@
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="8dp"
                         android:inputType="number"
+                        android:textSize="20dp"
                         android:singleLine="true"
                         android:hint="Height (cms)" />
 
@@ -458,6 +498,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="8dp"
+                        android:textSize="20dp"
                         android:inputType="number"
                         android:singleLine="true"
                         android:hint="Weight (kgs)" />
@@ -493,6 +534,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginBottom="5dp"
                     android:singleLine="true"
+                    android:textSize="20dp"
                     android:hint="Any Medical History (if any)" />
 
                 <ImageView
@@ -525,6 +567,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginBottom="5dp"
                     android:singleLine="true"
+                    android:textSize="20dp"
                     android:hint="Any Other Details (optional)" />
 
                 <ImageView
