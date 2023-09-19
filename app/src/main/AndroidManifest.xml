@@ -12,13 +12,16 @@
 
     <application
         android:allowBackup="true"
+        android:appCategory="productivity"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/app_icon_black"
-        android:appCategory="productivity"
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:targetApi="s">
+        <activity
+            android:name=".Activity.DetailsActivity"
+            android:exported="false" />
 
         <service android:name=".Service.GetAddressIntentService" />
         <service android:name=".Service.TimerService" />
@@ -36,7 +39,7 @@
         <activity
             android:name=".Activity.BackupActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.Backup"/>
+            android:theme="@style/Theme.DailyDoze.Backup" />
         <activity
             android:name=".Activity.AboutActivity"
             android:exported="false"
@@ -91,7 +94,6 @@
             android:theme="@style/Theme.DailyDoze.PerformMeditation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

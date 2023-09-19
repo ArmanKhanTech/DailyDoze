@@ -29,6 +29,7 @@ import com.android.dailydoze.CustomDatePicker.DatePicker;
 import com.android.dailydoze.CustomDatePicker.DatePickerPopup;
 import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -177,6 +178,9 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor myEdit = sharedPreferences.edit();
                 myEdit.putBoolean("user", false);
                 myEdit.apply();
+
+                FirebaseAuth.getInstance().signOut();
+
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 popupWindow.dismiss();
                 finish();

@@ -2,24 +2,16 @@ package com.android.dailydoze.Utility;
 
 import java.io.Serializable;
 
-public class Signup implements Serializable {
-    public String email, name, pass, phone, gender, dob, country, city, state, address, zip, type, blood, medical, other, height, weight, bp;
+public class Details implements Serializable {
+    public String name, phone, gender, dob, country, city, state, address, zip, type, blood, medical, other, height, weight, bp;
 
-    public Signup() {
+    public Details() {}
 
-    }
-
-    public void setUserMail(String email) {
-        this.email = email;
-    }
     public void setUserName(String name) {
         this.name = name;
     }
     public void setUserPhone(String phone) {
         this.phone = phone;
-    }
-    public void setUserPass(String pass) {
-        this.pass = pass;
     }
     public void setUserGender(String gender) {
         this.gender = gender;
