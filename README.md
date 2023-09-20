@@ -22,7 +22,7 @@
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/1wX0eI9piyymzHh1JMrDaZx43LhAWhInb/view?usp=sharing">View Demo</a>
+    <a href="https://drive.google.com/file/d/1DeeT82jBcdHh9doR2ZWVNwN-ymoV_efI/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/ArmanKhanTech/DailyDoze/issues">Report a Bug</a>
     ·
@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/eb3fcfbf-e4e4-452f-b014-b8c8ceb1c72e" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a9d401b9-3b0e-49ec-ac48-7f5976af0a55" alt="Logo" width="300" height="600">
 
 DailyDoze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
@@ -155,8 +155,8 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/74d909b3-fb03-4222-9719-f8257ff6bc06" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/16216112-3d4d-4549-b7e9-d58b6ad9b61a" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/98e23b59-a9b5-4a1e-bbd5-8e6ea065475f" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/654c4ff5-6fcf-4695-8cee-16c13c565550" alt="Logo" width="300" height="600">
 </div>
 <h3>2. Menu :</h3>
 <ul>
@@ -197,7 +197,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b4c894c4-65b8-4629-8f2e-f3570f1dcda1" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/9b357d28-256c-4da5-9b28-e5b10326ae7f" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00e1ff92-e1a0-4e26-8b62-f3e2ba9e6bad" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/3a7f2149-b965-4737-b679-9dad5e692679" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/74c1f32d-ac91-43fc-9b95-632eaa664da8" alt="Logo" width="300" height="600">
 </div>
 <h3>3. 21 Tweaks :</h3>
 <ul>
@@ -352,8 +352,7 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c9940b8f-466e-4336-8cc4-2d6d7fe87de6" alt="Logo" width="300" height=600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/22bc9d17-b360-447c-a8e7-3f4436f7aa79" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1dbbc5c3-771c-41d4-a232-b7388a230df3" alt="Logo" width="300" height=600">
 </div>
 <h3>9. Survey :</h3>
 <ul>
@@ -373,8 +372,8 @@ Allow installation from unknown sources if prompted.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c9940b8f-466e-4336-8cc4-2d6d7fe87de6" alt="Logo" width="300" height=600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/22bc9d17-b360-447c-a8e7-3f4436f7aa79" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f473ddae-0e62-48f2-9892-e408b01355f1" alt="Logo" width="300" height=600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b3560a66-b4fb-41b5-a1ce-8712e37ddca9" alt="Logo" width="300" height="600">
 </div>
 <h3>10. Login & Signup :</h3>
 <ul>
@@ -385,7 +384,7 @@ Allow installation from unknown sources if prompted.
     <p>Signing-up is mandatory for the access to the app.</p>
   </li>
   <li>
-    <p>This feature uses Firebase Auth & Google signing.</p>
+    <p>This feature uses multiple options i.e Firebase Auth & Google signing.</p>
   </li>
 </ul>
 <br>
