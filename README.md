@@ -119,16 +119,16 @@ Allow installation from unknown sources if prompted.
 ## Usage
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ef5351b9-b06a-407a-b9e1-a60003f681cd" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/07357593-40c2-43a6-9b8f-b0cb7e475b7e" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f0522e5c-a061-43d3-b705-6ad24d772f0a" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/60f45eca-ddcc-423a-a5f3-a47f6333e123" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/64ff1d57-2fc6-4102-93b9-b716e4d4edba" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/66e981e7-f303-43a3-89e9-0fae37703344" alt="Logo" width="300" height="600">
 </div>
 
 <h3>1. DailyDoze :</h3>
 <ul>
   <li>
-    <p>Daily Doze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
+    <p>DailyDoze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
   </li>
   <li>
     <p>It also inputs your daily sleep duration allowing you to keep track of it. Click on the moon icon to do so.</p>
@@ -180,6 +180,9 @@ Allow installation from unknown sources if prompted.
   </li>
   <li>
     <p>Open Source : Redirect to this Repo.</a>
+  </li>
+  <li>
+    <p>Survey : Goto Survey.</a>
   </li>
   <li>
     <p>About : Goto About.</a>
@@ -352,22 +355,37 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c9940b8f-466e-4336-8cc4-2d6d7fe87de6" alt="Logo" width="300" height=600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/22bc9d17-b360-447c-a8e7-3f4436f7aa79" alt="Logo" width="300" height="600">
 </div>
-<h3>9. Login & Registration :</h3>
+<h3>9. Survey :</h3>
 <ul>
   <li>
-    <p>Simple login & registration page.</p>
+    <p>This app conducts survey for future improvement using the data provided by users.</p>
   </li>
   <li>
-    <p>The registration page also features the auto-location feature.</p>
-  </li>
-  <li>
-    <p>Registration is mandatory for the access to the app.</p>
+    <p>The survey page also features the auto-location feature.</p>
   </li>
   <li>
     <p>All your data will be stored in Firebase Realtime DB.</p>
   </li>
   <li>
     <p>Your data will help us improve & implement machine learning models in the app in future.</p>
+  </li>
+</ul>
+<br>
+
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c9940b8f-466e-4336-8cc4-2d6d7fe87de6" alt="Logo" width="300" height=600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/22bc9d17-b360-447c-a8e7-3f4436f7aa79" alt="Logo" width="300" height="600">
+</div>
+<h3>10. Login & Signup :</h3>
+<ul>
+  <li>
+    <p>Simple login & signup page.</p>
+  </li>
+  <li>
+    <p>Signing-up is mandatory for the access to the app.</p>
+  </li>
+  <li>
+    <p>This feature uses Firebase Auth & Google signing.</p>
   </li>
 </ul>
 <br>
