@@ -63,11 +63,11 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_details);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        name = findViewById(R.id.name);
+        name = findViewById(R.id.signup_name);
         phone = findViewById(R.id.signup_phone);
         gender = findViewById(R.id.signup_gender);
         dob = findViewById(R.id.signup_dob);
@@ -116,6 +116,8 @@ public class DetailsActivity extends AppCompatActivity {
         gender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) parent.getChildAt(0)).setTextSize(16);
+
                 gen = parent.getItemAtPosition(position).toString();
             }
 
@@ -128,6 +130,8 @@ public class DetailsActivity extends AppCompatActivity {
         type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) parent.getChildAt(0)).setTextSize(16);
+
                 ty = parent.getItemAtPosition(position).toString();
             }
 

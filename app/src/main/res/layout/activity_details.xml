@@ -135,6 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="40dp"
+
                         android:textColor="@color/black"/>
 
                     <ImageView
@@ -389,7 +390,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
@@ -399,14 +400,14 @@
                         android:id="@+id/signup_bg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:singleLine="true"
                         android:textSize="20dp"
                         android:hint="Blood Group" />
 
                     <ImageView
                         android:layout_width="30dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
@@ -418,7 +419,7 @@
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
@@ -431,11 +432,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:singleLine="true"
+                        android:textSize="20dp"
                         android:hint="BP" />
 
                     <ImageView
                         android:layout_width="30dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
@@ -582,20 +584,28 @@
 
             </RelativeLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:text="By submitting you consent to\nsharing your information with us."/>
+
             <Button
                 android:id="@+id/signup_btn"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:text="Submit"
                 android:backgroundTint="@color/blue"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textAlignment="center"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="50dp"/>
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
 
