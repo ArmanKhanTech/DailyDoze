@@ -11,7 +11,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/holo_purple">
+        android:scrollbarThumbVertical="@color/purple_500">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 android:id="@+id/login_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:inputType="numberPassword"
                 android:singleLine="true"
                 android:textSize="20dp"

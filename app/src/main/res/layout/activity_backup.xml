@@ -16,10 +16,9 @@
         <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="7dp"
             android:layout_marginLeft="7dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
             android:background="@color/transparent"
             android:onClick="backupFinish"
             android:scaleType="fitCenter"
@@ -42,7 +41,9 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:layout_margin="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/backup_theme"
         android:scaleType="centerInside"
         app:lottie_rawRes="@raw/backup" />

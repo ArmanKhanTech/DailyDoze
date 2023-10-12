@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".Activity.SignupActivity">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,13 +15,12 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:onClick="signupBack"
+            android:onClick="detailsBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="7dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="7dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
             android:background="@color/white"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/back_button_black"
@@ -43,7 +41,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:scrollbarThumbVertical="@android:color/holo_blue_dark">
 
         <LinearLayout
@@ -66,7 +64,6 @@
                     android:id="@+id/signup_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
                     android:textSize="20dp"
                     android:layout_marginLeft="40dp"
                     android:singleLine="true"
@@ -135,7 +132,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="40dp"
-
                         android:textColor="@color/black"/>
 
                     <ImageView

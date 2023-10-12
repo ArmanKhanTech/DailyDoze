@@ -17,6 +17,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -28,10 +29,9 @@
                 <ImageButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="7dp"
                     android:layout_marginLeft="7dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="15dp"
                     android:background="@color/white"
                     android:onClick="tweaksFinish"
                     android:scaleType="fitCenter"
@@ -53,8 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true">
+                android:layout_alignParentEnd="true">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -90,12 +89,12 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout_tweaks"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             app:tabIndicatorHeight="0dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
-            android:paddingBottom="10dp"
             android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
             app:tabTextAppearance="@style/MyCustomTabAppearance"
             android:background="@color/transparent"
             app:tabBackground="@drawable/tab_selector_theme"
@@ -190,16 +189,17 @@
             android:layout_marginRight="40dp"
             android:gravity="center"
             android:layout_gravity="bottom"
-            android:layout_height="35dp">
+            android:layout_height="30dp">
 
             <TextView
                 android:id="@+id/back_to_today"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
                 android:text="Back to Today"
                 android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:textSize="20dp" />
 
         </LinearLayout>

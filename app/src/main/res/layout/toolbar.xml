@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nav_button"
@@ -11,8 +11,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/menu_icon" />
 
     <TextView

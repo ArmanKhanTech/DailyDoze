@@ -52,11 +52,11 @@
         <activity
             android:name=".Activity.PerformMeditationActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.PerformMeditation" />
+            android:theme="@style/Theme.DailyDoze.SplashScreen" />
         <activity
             android:name=".Activity.NotificationActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.Notification" />
+            android:theme="@style/Theme.DailyDoze" />
         <activity
             android:name=".Activity.MeditationActivity"
             android:exported="false"
@@ -64,7 +64,7 @@
         <activity
             android:name=".Activity.FastActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.Fastwatch" />
+            android:theme="@style/Theme.DailyDoze.FastWatch" />
         <activity
             android:name=".Activity.GraphActivity"
             android:exported="false"
@@ -72,7 +72,7 @@
         <activity
             android:name=".Activity.CalenderActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.Calender" />
+            android:theme="@style/Theme.DailyDoze" />
         <activity
             android:name=".Activity.InfoActivity"
             android:exported="false"
@@ -88,11 +88,11 @@
         <activity
             android:name=".Activity.TweakActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.Tweaks" />
+            android:theme="@style/Theme.DailyDoze" />
         <activity
             android:name=".Activity.SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.DailyDoze.PerformMeditation">
+            android:theme="@style/Theme.DailyDoze.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

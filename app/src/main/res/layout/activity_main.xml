@@ -11,15 +11,13 @@
         <include
             android:id="@+id/include"
             layout="@layout/toolbar"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <ScrollView
-            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/black">
+            android:scrollbarThumbVertical="@color/blue">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,6 +58,8 @@
                         android:text="12 April 2023"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:textColor="@color/black"
                         android:textSize="25dp"
                         android:fontFamily="sans-serif-condensed-medium"/>
