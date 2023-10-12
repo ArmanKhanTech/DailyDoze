@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.android.dailydoze'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.android.dailydoze"
-        minSdk 30
-        targetSdk 33
+        minSdk 27
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -23,6 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,7 +37,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.airbnb.android:lottie:6.0.1'
     implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.firebase:firebase-database:20.2.2'
     implementation 'com.google.android.gms:play-services-location:21.0.1'
