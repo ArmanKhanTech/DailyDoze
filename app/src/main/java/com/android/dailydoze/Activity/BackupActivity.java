@@ -48,7 +48,6 @@ public class BackupActivity extends AppCompatActivity {
         lottieAnimationView.playAnimation();
 
         loading = findViewById(R.id.loading_anim);
-
         scrollView = findViewById(R.id.backup_scroll);
 
         Handler h = new Handler();
@@ -117,18 +116,22 @@ public class BackupActivity extends AppCompatActivity {
         }
     }
 
-    //importing database
     private void importDB() {
 
         File sd = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases");
 
         if (sd.canWrite()) {
             File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-            File[] databases = new File(path + "/" + "Daily Doze").listFiles();
-            assert databases != null;
+            File[] databases = new File(path + "/" + "DailyDoze").listFiles();
 
-            if(databases.length == 0){
-                what = "No files were found.";
+            if(databases != null) {
+                if(databases.length == 0) {
+                    what = "No files found.";
+                    return;
+                }
+            } else {
+                what = "No files found.";
+                return;
             }
 
             for (File databaseFile: databases) {
@@ -162,18 +165,18 @@ public class BackupActivity extends AppCompatActivity {
                     }
 
                     what = "Done Imported";
+                    return;
                 }
             }
         } else {
             what = "Error";
+            return;
         }
-
     }
 
-    //exporting database
     private void exportDB() {
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-        File sd = new File(path + "/" + "Daily Doze");
+        File sd = new File(path + "/" + "DailyDoze");
 
         if(!sd.exists()){
             sd.mkdir();
@@ -181,7 +184,6 @@ public class BackupActivity extends AppCompatActivity {
 
         if (sd.canWrite()) {
             final File[] databases = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases").listFiles();
-            assert databases != null;
 
             for (File databaseFile: databases) {
                 final String backupFilename = databaseFile.getName() + ".db";
@@ -213,16 +215,19 @@ public class BackupActivity extends AppCompatActivity {
                     }
 
                     what = "Done Exported";
+                    return;
                 }
             }
         } else {
             what = "Error";
+            return;
         }
     }
 
     public void openDialog(String msg){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+        @SuppressLint("InflateParams")
+        View popupView = layoutInflater.inflate(R.layout.get_weight, null);
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
@@ -234,14 +239,14 @@ public class BackupActivity extends AppCompatActivity {
         hrs.setVisibility(View.GONE);
         okay.setText("Okay");
 
-        if(msg == "Done Imported"){
+        if(msg == "Done Imported") {
             tv.setText("Your data is imported successfully.");
-        } else if(msg == "Done Exported"){
+        } else if(msg == "Done Exported") {
             tv.setText("Your data is exported successfully.");
-        } else if(msg == "Error"){
+        } else if(msg == "Error") {
             tv.setText("An exception occured. Please try again.");
             okay.setText("Try Again");
-        } else if(msg == "No files found."){
+        } else if(msg == "No files found.") {
             tv.setText("No files were found.");
         }
 
