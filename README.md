@@ -252,7 +252,7 @@ Allow installation from unknown sources if prompted.
     <p>This feature requires notification permission so allow it when prompted.</p>
   </li>
   <li>
-    <p>Turn on the notifications by clicking on the switch & add new notification by click on Add Notification icon at the top.</p>
+    <p>Turn on the notifications by clicking on the switch & add new notification by click on Add-Notification icon at the top.</p>
   </li>
   <li>
     <p>You can delete a notification by simply clicking on it.</p>
@@ -275,7 +275,7 @@ Allow installation from unknown sources if prompted.
     <p>This feature assists you in your daily meditation & helps you keep track of it.</p>
   </li>
   <li>
-    <p>Simply click on play icon to start meditating.</p>
+    <p>Simply click on Play icon to start meditating.</p>
   </li>
   <li>
     <p>You can to choose to meditate for 15 mins to 1 hour.</p>
@@ -301,7 +301,7 @@ Allow installation from unknown sources if prompted.
     <p>This feature allows you to keep track of your daily fasting.</p>
   </li>
   <li>
-    <p>Simply click on start button to start fast-watch.</p>
+    <p>Simply click on start button to start Fast-Watch.</p>
   </li>
   <li>
     <p>You can to choose to fast for 3 hours to 12 hours.</p>
@@ -325,16 +325,16 @@ Allow installation from unknown sources if prompted.
     <p>This feature allows you to take backup(export) of your data or import it so you don't have to worry about losing it.</p>
   </li>
   <li>
-    <p>Simply click on import buttton to import your data.</p>
+    <p>Simply click on Import buttton to import your data.</p>
   </li>
   <li>
-    <p>Or click on export button to export your data.</p>
+    <p>Or click on Export button to export your data.</p>
   </li>
   <li>
     <p>Please read the given instructions carefully to avoid mishaps.</p>
   </li>
   <li>
-    <p>All the user data is stored in local sqlite database. Thus, the backup files have .db extension.</p>
+    <p>All the user data is stored in local Sqlite database. Thus, the backup files have .db extension.</p>
   </li>
 </ul>
 <br>
@@ -346,7 +346,7 @@ Allow installation from unknown sources if prompted.
 <h3>8. Info :</h3>
 <ul>
   <li>
-    <p>Information about any serving or tweak can viewed by clicking on the info icon of corresponding serving or tweak.</p>
+    <p>Information about any serving or tweak can viewed by clicking on the Info icon of corresponding serving or tweak.</p>
   </li>
 </ul>
 <br>
@@ -357,16 +357,16 @@ Allow installation from unknown sources if prompted.
 <h3>9. Survey :</h3>
 <ul>
   <li>
-    <p>This app conducts survey for future improvement using the data provided by users.</p>
+    <p>This app conducts survey for future improvement using the data provided by the users.</p>
   </li>
   <li>
-    <p>The survey page also features the auto-location feature.</p>
+    <p>The survey page also features the detect location feature(click on globe icon).</p>
   </li>
   <li>
-    <p>All your data will be stored in Firebase Realtime DB.</p>
+    <p>All the data is stored in Firebase RealtimeDB.</p>
   </li>
   <li>
-    <p>Your data will help us improve & implement machine learning models in the app in future.</p>
+    <p>This data will help us improve & train machine learning models in the app in future.</p>
   </li>
 </ul>
 <br>
@@ -378,13 +378,13 @@ Allow installation from unknown sources if prompted.
 <h3>10. Login & Signup :</h3>
 <ul>
   <li>
-    <p>Simple login & signup page.</p>
+    <p>Simple Login & Signup page.</p>
   </li>
   <li>
     <p>Signing-up is mandatory for the access to the app.</p>
   </li>
   <li>
-    <p>This feature uses multiple options i.e Firebase Auth & Google signing.</p>
+    <p>This feature uses multiple signing options i.e Firebase Auth & Google.</p>
   </li>
 </ul>
 <br>
