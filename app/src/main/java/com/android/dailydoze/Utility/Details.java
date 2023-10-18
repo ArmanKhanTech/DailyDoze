@@ -5,7 +5,9 @@ import java.io.Serializable;
 public class Details implements Serializable {
     public String name, phone, gender, dob, country, city, state, address, zip, type, blood, medical, other, height, weight, bp;
 
-    public Details() {}
+    public Details() {
+        //
+    }
 
     public void setUserName(String name) {
         this.name = name;
