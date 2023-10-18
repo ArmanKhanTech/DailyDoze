@@ -135,7 +135,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         c.close();
     }
 
-    public boolean getDate(String date){
+    public boolean getDate(String date) {
         boolean b = false;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME +
@@ -150,7 +150,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getData(String dataToGet, String dateToGet){
+    public int getData(String dataToGet, String dateToGet) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + dataToGet + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
@@ -164,7 +164,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getCount(String dateToGet){
+    public int getCount(String dateToGet) {
         int sum = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + BLACK_CUMIN + "," + GARLIC + "," + GINGER + "," + YEAST + "," + CUMIN + "," + TEA + "," + HYDRATED + "," + DEFLOUR
@@ -184,7 +184,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public ArrayList<String> getAllDate(){
+    public ArrayList<String> getAllDate() {
         ArrayList<String> dates = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT " + DATE + " FROM " + TABLE_NAME, null);
@@ -199,7 +199,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         return dates;
     }
 
-    public void setWeight(String time, String date, String weight){
+    public void setWeight(String time, String date, String weight) {
         SQLiteDatabase db2 = this.getReadableDatabase();
         db2.execSQL("UPDATE " + TABLE_NAME + " SET " + time + " = " + weight + " WHERE " + DATE + " = '" + date + "'");
     }
@@ -219,7 +219,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getWeightEvening(String date){
+    public int getWeightEvening(String date) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + WEIGHT_EVENING + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);

@@ -21,7 +21,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:fontFamily="sans-serif-condensed-medium">
 
@@ -40,7 +40,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:scaleType="fitXY"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_gravity="start|center"
                     android:background="@color/white"
                     app:srcCompat="@drawable/prev_icon"/>
@@ -89,268 +89,268 @@
 
             </FrameLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:id="@+id/jump_back"
-                    android:layout_marginLeft="40dp"
-                    android:background="@drawable/back_to_today_theme"
-                    android:layout_marginRight="40dp"
-                    android:gravity="center"
-                    android:layout_gravity="bottom"
-                    android:layout_height="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/jump_back"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/back_to_today_theme"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_height="30dp">
 
-                    <TextView
-                        android:id="@+id/back_to_today"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Back to Today"
-                        android:textColor="@color/white"
-                        android:layout_marginBottom="2dp"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textSize="20dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/back_to_today"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center"
+                    android:text="Back to Today"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="20dp" />
 
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:elevation="3dp"
-                        android:layout_weight="1"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/beans_theme">
+            </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top|center"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="15dp"
-                            android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Beans"
-                            android:onClick="beansInfo"
-                            android:layout_gravity="center"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center">
-
-                                <ImageView
-                                    android:onClick="beansInfo"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/info_icon_white"/>
-
-                                <ImageView
-                                    android:onClick="beansCal"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/calender_icon_white"/>
-
-                            </LinearLayout>
-
-                            <ImageView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:src="@drawable/beans"
-                                android:layout_gravity="center"
-                                android:scaleType="centerInside"/>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:layout_gravity="center|bottom">
-
-                                <CheckBox
-                                    android:id="@+id/beans_cb1"
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:theme="@style/WhiteCheckbox"
-                                    android:background="@drawable/white_checkbox"
-                                    android:button="@null"/>
-
-                                <CheckBox
-                                    android:id="@+id/beans_cb2"
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:theme="@style/WhiteCheckbox"
-                                    android:background="@drawable/white_checkbox"
-                                    android:button="@null" />
-
-                                <CheckBox
-                                    android:id="@+id/beans_cb3"
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:theme="@style/WhiteCheckbox"
-                                    android:background="@drawable/white_checkbox"
-                                    android:button="@null" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:elevation="3dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/berries_theme">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top|center"
-                            android:layout_marginBottom="15dp"
-                            android:layout_marginTop="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:onClick="berriesInfo"
-                                android:text="Berries"
-                                android:layout_gravity="center"
-                                android:textColor="@color/white"
-                                android:textSize="25dp"
-                                android:textStyle="bold" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center">
-
-                                <ImageView
-                                    android:onClick="berriesInfo"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/info_icon_white"/>
-
-                                <ImageView
-                                    android:onClick="berriesCal"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/calender_icon_white"/>
-
-                            </LinearLayout>
-
-                            <ImageView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:padding="5dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/berries"
-                                android:scaleType="centerInside"/>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:layout_gravity="center|bottom">
-
-                                <CheckBox
-                                    android:id="@+id/berries_cb1"
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:theme="@style/WhiteCheckbox"
-                                    android:background="@drawable/white_checkbox"
-                                    android:button="@null"/>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </FrameLayout>
-
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="85dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:elevation="3dp"
-                    android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/othervege_theme">
+                    android:layout_gravity="center"
+                    android:background="@drawable/beans_theme">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|start"
-                        android:layout_marginLeft="20dp"
-                        android:orientation="horizontal">
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beans"
+                        android:onClick="beansInfo"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:onClick="beansInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:onClick="beansCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
 
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/other_vege"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/beans"
+                            android:layout_gravity="center"
                             android:scaleType="centerInside"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center|bottom">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="top"
-                                android:layout_marginLeft="10dp"
-                                android:text="Other Veggies"
-                                android:textColor="@color/white"
-                                android:onClick="othervegeInfo"
-                                android:textSize="25dp"
-                                android:textStyle="bold" />
+                            <CheckBox
+                                android:id="@+id/beans_cb1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:theme="@style/WhiteCheckbox"
+                                android:background="@drawable/white_checkbox"
+                                android:button="@null"/>
 
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp">
+                            <CheckBox
+                                android:id="@+id/beans_cb2"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:theme="@style/WhiteCheckbox"
+                                android:background="@drawable/white_checkbox"
+                                android:button="@null" />
 
-                                <ImageView
-                                    android:onClick="othervegeInfo"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/info_icon_white"/>
-
-                                <ImageView
-                                    android:onClick="othervegeCal"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@drawable/calender_icon_white"/>
-
-                            </LinearLayout>
+                            <CheckBox
+                                android:id="@+id/beans_cb3"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:theme="@style/WhiteCheckbox"
+                                android:background="@drawable/white_checkbox"
+                                android:button="@null" />
 
                         </LinearLayout>
 
                     </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/berries_theme">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="berriesInfo"
+                            android:text="Berries"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:onClick="berriesInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:onClick="berriesCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/berries"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center|bottom">
+
+                            <CheckBox
+                                android:id="@+id/berries_cb1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:theme="@style/WhiteCheckbox"
+                                android:background="@drawable/white_checkbox"
+                                android:button="@null"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:elevation="3dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/othervege_theme">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/other_vege"
+                        android:scaleType="centerInside"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="10dp"
+                            android:text="Other Veggies"
+                            android:textColor="@color/white"
+                            android:onClick="othervegeInfo"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:onClick="othervegeInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white"/>
+
+                            <ImageView
+                                android:onClick="othervegeCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1195,7 +1195,7 @@
 
                 </FrameLayout>
 
-                </LinearLayout>
+            </LinearLayout>
 
         </ScrollView>
 

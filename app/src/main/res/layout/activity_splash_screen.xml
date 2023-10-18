@@ -33,7 +33,7 @@
         <ImageView
             android:layout_width="53dp"
             android:layout_height="53dp"
-            app:srcCompat="@drawable/app_icon_white" />
+            app:srcCompat="@drawable/app_icon_white"/>
 
         <View
             android:layout_marginLeft="10dp"

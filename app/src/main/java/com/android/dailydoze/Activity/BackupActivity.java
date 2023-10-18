@@ -271,7 +271,7 @@ public class BackupActivity extends AppCompatActivity {
         wm.updateViewLayout(container, p);
     }
 
-    public void backupFinish(View v){
+    public void backupFinish(View v) {
         finish();
     }
 }

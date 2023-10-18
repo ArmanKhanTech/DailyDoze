@@ -59,7 +59,7 @@ public class MeditationDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public ArrayList<String> getAllDate(){
+    public ArrayList<String> getAllDate() {
         int i = 0;
         ArrayList<String> dates = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -77,7 +77,7 @@ public class MeditationDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public String getDuration(String date){
+    public String getDuration(String date) {
         String dura = "";
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + DURATION + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);

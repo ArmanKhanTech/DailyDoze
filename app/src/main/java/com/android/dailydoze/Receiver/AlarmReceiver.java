@@ -32,7 +32,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "notify_001");
         mBuilder.setSmallIcon(R.drawable.noti_vec_icon_white);
         mBuilder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon_black));
-        mBuilder.setContentTitle("Daily Doze");
+        mBuilder.setContentTitle("DailyDoze");
         mBuilder.setContentText("Make Sure to Take & Update Your Servings");
         mBuilder.setAutoCancel(true);
         mBuilder.setDefaults(Notification.DEFAULT_SOUND);

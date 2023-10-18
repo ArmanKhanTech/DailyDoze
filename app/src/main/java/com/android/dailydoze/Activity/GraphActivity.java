@@ -150,32 +150,32 @@ public class GraphActivity extends AppCompatActivity {
 
             @Override
             public void onChartLongPressed(MotionEvent me) {
-
+                //
             }
 
             @Override
             public void onChartDoubleTapped(MotionEvent me) {
+                //
 
             }
 
             @Override
             public void onChartSingleTapped(MotionEvent me) {
-
+                //
             }
 
             @Override
             public void onChartFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY) {
-
+                //
             }
 
             @Override
             public void onChartScale(MotionEvent me, float scaleX, float scaleY) {
-
+                //
             }
 
             @Override
             public void onChartTranslate(MotionEvent me, float dX, float dY) {
-                Log.i("GESTURE", "onChartTranslate");
                 horiScroll.requestDisallowInterceptTouchEvent(combinedChart.getLowestVisibleX() != combinedChart.getXAxis().getAxisMinimum() && combinedChart.getHighestVisibleX() != combinedChart.getXAxis().getAxisMaximum());
             }
         });

@@ -67,7 +67,7 @@ public class DayFragment extends Fragment {
 
         setDay();
 
-        if(!db.getDate(getCurrentDate())){
+        if(!db.getDate(getCurrentDate())) {
             db.addDate(getCurrentDate());
         }
 
@@ -563,7 +563,7 @@ public class DayFragment extends Fragment {
         }
     }
 
-    public void incValue(String value){
+    public void incValue(String value) {
         if(TweakActivity.today){
             if(db.getDate(getCurrentDate())){
                 db.incData(value, getCurrentDate());
@@ -575,7 +575,7 @@ public class DayFragment extends Fragment {
         }
     }
 
-    public void decValue(String value){
+    public void decValue(String value) {
         if(TweakActivity.today){
             if(db.getDate(getCurrentDate())){
                 db.decData(value, getCurrentDate());

@@ -18,8 +18,8 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="15dp"
             android:background="@color/white"
             android:onClick="graphBack"
             android:scaleType="fitCenter"
@@ -44,22 +44,22 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/bargraph_theme">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bargraph_theme">
 
-        <com.github.mikephil.charting.charts.CombinedChart
-            android:id="@+id/idCombineChart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            <com.github.mikephil.charting.charts.CombinedChart
+                android:id="@+id/idCombineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
-    </LinearLayout>
+        </LinearLayout>
 
     </HorizontalScrollView>
 

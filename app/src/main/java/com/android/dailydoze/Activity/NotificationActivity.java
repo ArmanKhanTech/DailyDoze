@@ -15,7 +15,6 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -87,7 +86,7 @@ public class NotificationActivity extends AppCompatActivity {
         ComponentName componentName = new ComponentName(this, AlarmReceiver.class);
         PackageManager packageManager = this.getPackageManager();
 
-        if(sw.isChecked()){
+        if(sw.isChecked()) {
             setTime.setVisibility(View.VISIBLE);
             list.setVisibility(View.VISIBLE);
 
@@ -102,7 +101,7 @@ public class NotificationActivity extends AppCompatActivity {
                     componentName,
                     PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                     PackageManager.DONT_KILL_APP);
-        }else{
+        } else {
             setTime.setVisibility(View.INVISIBLE);
             list.setVisibility(View.INVISIBLE);
             status.setText("Notifications Disabled");
@@ -133,7 +132,7 @@ public class NotificationActivity extends AppCompatActivity {
                         componentName,
                         PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                         PackageManager.DONT_KILL_APP);
-            }else{
+            } else {
                 SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
                 editor.putBoolean("State", false);
                 editor.apply();
@@ -151,10 +150,8 @@ public class NotificationActivity extends AppCompatActivity {
             }
         });
 
-        if (Build.VERSION.SDK_INT >= 33) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS},101);
-            }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS},101);
         }
 
         list.setOnItemClickListener((parent, view, position, id) -> {
@@ -203,11 +200,11 @@ public class NotificationActivity extends AppCompatActivity {
         wm.updateViewLayout(container, p);
     }
 
-    public void updateList(){
+    public void updateList() {
         ArrayList<String> time = db1.readNotification();
         data.clear();
 
-        for(int i = 0; i < time.size(); i++){
+        for(int i = 0; i < time.size(); i++) {
             String temp = time.get(i);
             data.add(new DataList(temp, icon));
         }
@@ -244,7 +241,7 @@ public class NotificationActivity extends AppCompatActivity {
        updateList();
     }
 
-    public void cancelNotification(int id){
+    public void cancelNotification(int id) {
         AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);

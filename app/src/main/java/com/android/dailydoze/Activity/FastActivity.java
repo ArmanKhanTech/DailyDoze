@@ -229,7 +229,6 @@ public class FastActivity extends AppCompatActivity {
         }
     }
 
-    /* CountDown */
     final private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {

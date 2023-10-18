@@ -38,7 +38,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
-//TODO : Calender Activity
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     Button b;
@@ -132,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
             SharedPreferences userData = getSharedPreferences("MySharedPref", MODE_PRIVATE);
             email.setText(userData.getString("email", "Email"));
-            name.setText("Hi!");
+            name.setText(getGreetings());
 
             LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9, l10;
 
@@ -588,7 +587,6 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("UseCompatLoadingForDrawables")
     public void setDay(){
         if(Objects.equals(setCurrentDate(), getCurrentDate())){
-            // Current Day
             setClickable(true);
             unCheckAll();
             setChecked();
@@ -603,8 +601,7 @@ public class MainActivity extends AppCompatActivity {
 
             setNext();
             setPrev();
-        }else{
-            // Jump Day
+        } else {
             if(today){
                 final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.slide_down);
@@ -713,9 +710,9 @@ public class MainActivity extends AppCompatActivity {
         exercise_cb1.setChecked(false);
     }
 
-    public void setChecked(){
+    public void setChecked() {
         int i = db.getData("beans", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             beans_cb1.setChecked(true);
         } else if (i==2) {
             beans_cb1.setChecked(true);
@@ -727,7 +724,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("berries", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             berries_cb1.setChecked(true);
         }
 
@@ -740,7 +737,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("othervege", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             othervege_cb1.setChecked(true);
         } else if (i==2) {
             othervege_cb1.setChecked(true);
@@ -748,7 +745,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("otherfruits", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             of_cb1.setChecked(true);
         } else if (i==2) {
             of_cb1.setChecked(true);
@@ -760,27 +757,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("crucivege", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             cv_cb1.setChecked(true);
         }
 
         i = db.getData("flaxseeds", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             flaxseeds_cb1.setChecked(true);
         }
 
         i = db.getData("herbs", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             herbs_cb1.setChecked(true);
         }
 
         i = db.getData("nuts", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             nuts_cb1.setChecked(true);
         }
 
         i = db.getData("grains", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             grains_cb1.setChecked(true);
         } else if (i==2) {
             grains_cb1.setChecked(true);
@@ -792,7 +789,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("beve", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             beve_cb1.setChecked(true);
         } else if (i==2) {
             beve_cb1.setChecked(true);
@@ -815,7 +812,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("exercise", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             exercise_cb1.setChecked(true);
         }
     }
@@ -846,7 +843,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // avoid writing boilerplate code
     public void beansInfo(View v){
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","beans");
@@ -989,6 +985,22 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","exercise");
         startActivity(intent);
+    }
+
+    public String getGreetings() {
+        Calendar c = Calendar.getInstance();
+        int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
+
+        if(timeOfDay >= 0 && timeOfDay < 12){
+            return " Good Morning!";
+        }else if(timeOfDay >= 12 && timeOfDay < 16){
+            return " Good Afternoon!";
+        }else if(timeOfDay >= 16 && timeOfDay < 21){
+            return " Good Evening!";
+        }else if(timeOfDay >= 21 && timeOfDay < 24){
+            return " Good Night!";
+        }
+        return "";
     }
 }
 

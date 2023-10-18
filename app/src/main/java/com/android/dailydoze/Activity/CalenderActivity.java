@@ -61,7 +61,7 @@ public class CalenderActivity extends AppCompatActivity {
         }
     }
 
-    public void select(String head){
+    public void select(String head) {
         switch(head) {
             case "beans":
                 name.setText("Beans");
@@ -167,7 +167,7 @@ public class CalenderActivity extends AppCompatActivity {
         }
     }
 
-    public void calBack(View v){
+    public void calBack(View v) {
         finish();
     }
 }

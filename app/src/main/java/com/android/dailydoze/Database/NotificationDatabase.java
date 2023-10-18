@@ -38,8 +38,7 @@ public class NotificationDatabase extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, values);
     }
 
-    public void deleteNotification(String time)
-    {
+    public void deleteNotification(String time) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME+ " WHERE "+TIME+"='"+time+"'");
     }
@@ -59,7 +58,7 @@ public class NotificationDatabase extends SQLiteOpenHelper {
         return packs;
     }
 
-    public int readID(String time){
+    public int readID(String time) {
         int id = 0;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor= db.rawQuery("SELECT " + ID_COL + " FROM " + TABLE_NAME +
@@ -78,7 +77,7 @@ public class NotificationDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean isDbEmpty(){
+    public boolean isDbEmpty() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor mCursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
         boolean rowExists;

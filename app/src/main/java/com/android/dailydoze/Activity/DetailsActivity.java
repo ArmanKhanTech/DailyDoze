@@ -337,7 +337,7 @@ public class DetailsActivity extends AppCompatActivity {
         this.address.setText(permises);
     }
 
-    public void detailsBack(View v){
+    public void detailsBack(View v) {
         finish();
     }
 }

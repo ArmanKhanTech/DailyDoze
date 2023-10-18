@@ -42,7 +42,7 @@ public class FastDatabase extends SQLiteOpenHelper {
         db2.execSQL("UPDATE " + TABLE_NAME + " SET " + DURATION + " = " + "'" + dataToUpdate + "'" + " WHERE " + DATE + " = '" + dateToUpdate + "'");
     }
 
-    public boolean getDate(String date){
+    public boolean getDate(String date) {
         boolean b = false;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME +
@@ -57,7 +57,7 @@ public class FastDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public ArrayList<String> getAllDate(){
+    public ArrayList<String> getAllDate() {
         int i = 0;
         ArrayList<String> dates = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -75,7 +75,7 @@ public class FastDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public String getDuration(String date){
+    public String getDuration(String date) {
         String dura = "";
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + DURATION + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);

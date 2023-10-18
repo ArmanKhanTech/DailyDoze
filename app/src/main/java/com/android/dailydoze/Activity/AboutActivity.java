@@ -14,7 +14,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
     }
 
-    public void aboutFinish(View v){
+    public void aboutFinish(View v) {
         finish();
     }
 }

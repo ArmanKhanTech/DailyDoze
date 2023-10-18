@@ -105,7 +105,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
         c.close();
     }
 
-    public boolean getDate(String date){
+    public boolean getDate(String date) {
         boolean b = false;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME +
@@ -120,7 +120,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public ArrayList<String> getAllDate(){
+    public ArrayList<String> getAllDate() {
         ArrayList<String> dates = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT " + DATE + " FROM " + TABLE_NAME, null);
@@ -136,7 +136,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getData(String dataToGet, String dateToGet){
+    public int getData(String dataToGet, String dateToGet) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + dataToGet + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
@@ -150,13 +150,13 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public void setSleep(String sleep, String date){
+    public void setSleep(String sleep, String date) {
         SQLiteDatabase db2 = this.getReadableDatabase();
         db2.execSQL("UPDATE " + TABLE_NAME + " SET " + SLEEP + " = " + sleep + " WHERE " + DATE + " = '" + date + "'");
     }
 
     @SuppressLint("Range")
-    public int getSleep(String date){
+    public int getSleep(String date) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + SLEEP + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
@@ -170,7 +170,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getCount(String dateToGet){
+    public int getCount(String dateToGet) {
         int sum = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + BEANS + "," + BERRIES + "," + GREENS + "," + OTHERVEGE + "," + OTHERFRUITS + "," + CRUCIVEGE + "," + FLAXSEEDS + "," + HERBS

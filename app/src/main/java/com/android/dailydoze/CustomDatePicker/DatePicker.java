@@ -245,36 +245,18 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         return layout;
     }
 
-    /**
-     * Implement current min date
-     *
-     * @param date
-     */
     public void setMinDate(long date) {
         factory.setMinDate(date);
     }
 
-    /**
-     * Implement current max date
-     *
-     * @param date
-     */
     public void setMaxDate(long date) {
         factory.setMaxDate(date);
     }
 
-    /**
-     * Implement current selected date
-     *
-     * @param date
-     */
     public void setDate(long date) {
         factory.setSelectedDate(date);
     }
 
-    /**
-     * @return date
-     */
     public long getDate() {
         return factory.getSelectedDate().getDate();
     }
@@ -317,9 +299,6 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         setUpCalendar();
     }
 
-    /**
-     * @return
-     */
     public boolean isDarkModeEnabled() {
         return darkModeEnabled;
     }

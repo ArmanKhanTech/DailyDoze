@@ -131,16 +131,15 @@
                         android:id="@+id/signup_gender"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:textColor="@color/black"/>
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
-                        android:layout_gravity="left|center"
+                        android:layout_gravity="start|left"
                         android:src="@drawable/gender_icon"/>
 
                 </RelativeLayout>
@@ -152,14 +151,14 @@
                     android:layout_weight="1"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/edittext_signup_theme">
 
                     <TextView
                         android:id="@+id/signup_dob_text"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:textAlignment="center"
                         android:text="Date of Birth"
                         android:textSize="20dp"
@@ -193,7 +192,7 @@
                     android:id="@+id/signup_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:singleLine="true"
                     android:textSize="20dp"
                     android:hint="Country (turn on GPS &amp; click the icon)" />
@@ -203,7 +202,6 @@
                     android:layout_width="30dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="left|center"
                     android:background="@color/white"
@@ -220,7 +218,7 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:paddingLeft="10dp"
                     android:background="@drawable/edittext_signup_theme">
@@ -229,8 +227,8 @@
                         android:id="@+id/signup_state"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="8dp"
                         android:singleLine="true"
                         android:textSize="20dp"
                         android:hint="State" />
@@ -239,7 +237,6 @@
                         android:layout_width="28dp"
                         android:layout_height="40dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:src="@drawable/state_icon"/>
@@ -261,7 +258,7 @@
                         android:id="@+id/signup_city"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:singleLine="true"
                         android:textSize="20dp"
                         android:hint="City"/>
@@ -270,7 +267,6 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:src="@drawable/city_icon"/>
@@ -294,7 +290,7 @@
                     android:id="@+id/signup_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:singleLine="true"
                     android:textSize="20dp"
                     android:hint="Address" />
@@ -303,7 +299,6 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="left|center"
                     android:background="@color/white"
@@ -317,21 +312,22 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginRight="15dp"
+                android:baselineAligned="false">
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
                     android:background="@drawable/edittext_signup_theme">
 
                     <EditText
                         android:id="@+id/signup_zip"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="8dp"
                         android:inputType="number"
                         android:singleLine="true"
                         android:textSize="20dp"
@@ -341,7 +337,6 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:src="@drawable/zip_icon"/>
@@ -352,22 +347,21 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="15dp"
-                    android:paddingLeft="10dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingStart="10dp"
                     android:background="@drawable/edittext_signup_theme">
 
                     <Spinner
                         android:id="@+id/signup_type"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:hint="City"/>
 
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:src="@drawable/type_icon"/>
@@ -382,7 +376,8 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginRight="15dp"
+                android:baselineAligned="false">
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -405,7 +400,6 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:background="@color/white"
@@ -419,14 +413,14 @@
                     android:layout_weight="1"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/edittext_signup_theme">
 
                     <EditText
                         android:id="@+id/signup_bp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:singleLine="true"
                         android:textSize="20dp"
                         android:hint="BP" />
@@ -435,7 +429,6 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:background="@color/white"
@@ -451,21 +444,22 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginRight="15dp"
+                android:baselineAligned="false">
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
                     android:background="@drawable/edittext_signup_theme">
 
                     <EditText
                         android:id="@+id/signup_height"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="8dp"
                         android:inputType="number"
                         android:textSize="20dp"
                         android:singleLine="true"
@@ -475,7 +469,6 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:src="@drawable/height_icon"/>
@@ -486,16 +479,16 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="15dp"
-                    android:paddingLeft="10dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingStart="10dp"
                     android:background="@drawable/edittext_signup_theme">
 
                     <EditText
                         android:id="@+id/signup_weight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="8dp"
                         android:textSize="20dp"
                         android:inputType="number"
                         android:singleLine="true"
@@ -505,7 +498,6 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="left|center"
                         android:src="@drawable/weight_icon_signup"/>
@@ -529,7 +521,7 @@
                     android:id="@+id/signup_medical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginBottom="5dp"
                     android:singleLine="true"
                     android:textSize="20dp"
@@ -539,7 +531,6 @@
                     android:layout_width="30dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="left|center"
                     android:background="@color/white"
@@ -562,7 +553,7 @@
                     android:id="@+id/signup_other"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginBottom="5dp"
                     android:singleLine="true"
                     android:textSize="20dp"
@@ -572,7 +563,6 @@
                     android:layout_width="30dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="left|center"
                     android:background="@color/white"

@@ -35,7 +35,6 @@ public class TimerService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-
         cdt.cancel();
     }
 
