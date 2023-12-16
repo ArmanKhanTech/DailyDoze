@@ -7,10 +7,9 @@
 
 
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ArmanKhanTech/DailyDoze/">
+  <a href="https://github.com/ArmanKhanTech/DailyDoze">
     <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c6ee876a-0625-4699-afc1-2ac150b7f908" alt="Logo" width="80" height="80">
   </a>
 
@@ -32,7 +31,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -60,7 +58,6 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a9d401b9-3b0e-49ec-ac48-7f5976af0a55" alt="Logo" width="300" height="600">
@@ -83,7 +80,6 @@ Wanna meditate or wanna keep track of your daily fasting this app lets you do it
 
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
 Follow the below instructions to get started.
@@ -93,7 +89,7 @@ Follow the below instructions to get started.
 
 <ol>
   <li>
-    <p>Android Studio IDE</a>
+    <p>Android Studio</a>
   </li>
   <li>
     <p>Firebase Account</a>
@@ -115,7 +111,6 @@ Allow installation from unknown sources if prompted.
 
 
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
 <div>
@@ -412,7 +407,6 @@ See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a f
 
 
 
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -425,14 +419,12 @@ Thanks again!
 
 
 
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
 ## Contact
 
 Arman Khan - ak2341776@gmail.com
@@ -441,7 +433,6 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 
 
 
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * [Dr Greger's Daily Dozen](https://github.com/nutritionfactsorg/daily-dozen-android)
@@ -454,7 +445,6 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [contributors-url]: https://github.com/ArmanKhanTech/DailyDoze/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
