@@ -400,7 +400,7 @@ Allow installation from unknown sources if prompted.
 - [x] Add Animations
 - [x] Add Backup
 - [x] Add Survey
-- [ ] Add Calender
+- [x] Add Calender
 - [ ] Upload on Play Store
 
 See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a full list of proposed features (and known issues)
