@@ -18,7 +18,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:visibility="visible"
-            android:indeterminateTint="@color/blue"
+            android:indeterminateTint="@color/customBlue"
             android:layout_gravity="center"/>
 
         <TextView
@@ -92,7 +92,7 @@
             android:textSize="25dp"
             android:fontFamily="sans-serif-condensed-medium"/>
 
-        <CalendarView
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_marginLeft="15dp"

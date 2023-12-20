@@ -29,7 +29,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="Delete"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/customBlue"
             android:fontFamily="sans-serif-condensed-medium"
             android:textColor="@color/white"
             android:textSize="20dp"

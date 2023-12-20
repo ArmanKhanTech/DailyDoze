@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="7:00 pm"
-        android:textColor="@color/blue"
+        android:textColor="@color/customBlue"
         android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

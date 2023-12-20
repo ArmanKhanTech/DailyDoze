@@ -186,8 +186,8 @@ public class NotificationActivity extends AppCompatActivity {
             adapter.notifyDataSetChanged();
         }, hour, minute, false);
         timePickerDialog.show();
-        timePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE).setTextColor(getColor(R.color.blue));
-        timePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.blue));
+        timePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE).setTextColor(getColor(R.color.customBlue));
+        timePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.customBlue));
     }
 
     public static void dimBehind(PopupWindow popupWindow) {

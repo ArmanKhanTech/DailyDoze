@@ -14,10 +14,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="20dp"
-            android:paddingLeft="2dp"
-            android:paddingBottom="2dp"
-            android:paddingRight="2dp"
-            android:background="@drawable/medi_settings_theme">
+            android:paddingLeft="1dp"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp"
+            android:background="@drawable/menu_border">
 
             <RelativeLayout
                 android:layout_width="match_parent"

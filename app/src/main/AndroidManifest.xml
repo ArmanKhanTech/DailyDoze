@@ -18,9 +18,13 @@
         android:supportsRtl="true">
 
         <service android:name=".Service.GetAddressIntentService" />
-        <service android:name=".Service.TimerService" />
+        <service android:name=".Service.TimerService">
+            <property android:name="android.app.timer"
+                android:value="Timer in the background."/>
+        </service>
 
-        <receiver
+
+    <receiver
             android:name=".Receiver.AlarmReceiver"
             android:enabled="true"
             android:exported="true"

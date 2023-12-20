@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="03:00:00"
-            android:textColor="@color/blue"
+            android:textColor="@color/customBlue"
             android:elevation="3dp"
             android:textSize="30dp"
             android:layout_gravity="center"/>

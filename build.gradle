@@ -1,8 +1,7 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        google()  // Google's Maven repository
-        mavenCentral()  // Maven Central repository
+        google()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.4.0'
@@ -16,8 +15,8 @@ plugins {
 
 allprojects {
     repositories {
-        google()  // Google's Maven repository
-        mavenCentral()  // Maven Central repository
+        google()
+        mavenCentral()
         maven { url "https://jitpack.io" }
     }
 }

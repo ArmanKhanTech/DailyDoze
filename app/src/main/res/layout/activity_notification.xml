@@ -44,14 +44,13 @@
         <ImageView
             android:visibility="gone"
             android:id="@+id/setTime"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginRight="20dp"
             android:background="@color/transparent"
             android:src="@drawable/noti_add_icon" />
-
 
     </RelativeLayout>
 
@@ -116,7 +115,7 @@
             android:layout_gravity="center"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Notifications Disabled"
-            android:textColor="@color/blue"
+            android:textColor="@color/customBlue"
             android:textSize="20dp"/>
 
 

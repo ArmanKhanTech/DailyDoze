@@ -224,7 +224,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:visibility="visible"
-        android:indeterminateTint="@color/blue"
+        android:indeterminateTint="@color/customBlue"
         android:layout_gravity="center"/>
 
     <TextView

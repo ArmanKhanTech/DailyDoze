@@ -31,7 +31,7 @@
             android:layout_gravity="center_vertical"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Fast-Watch"
-            android:textColor="@color/blue"
+            android:textColor="@color/customBlue"
             android:textSize="30dp" />
 
     </LinearLayout>
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:scrollbarThumbVertical="@color/blue">
+        android:scrollbarThumbVertical="@color/customBlue">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="03:00:00"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/customBlue"
                     android:elevation="3dp"
                     android:textSize="50dp"
                     android:layout_gravity="center"
@@ -87,7 +87,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:text="Start"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/customBlue"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/white"
                 android:textSize="20dp"
@@ -120,7 +120,7 @@
                         android:layout_gravity="center_vertical"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Start Time :"
-                        android:textColor="@color/blue"
+                        android:textColor="@color/customBlue"
                         android:textSize="20dp" />
 
                     <TextView
@@ -131,7 +131,7 @@
                         android:gravity="end"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="14:00 pm"
-                        android:textColor="@color/blue"
+                        android:textColor="@color/customBlue"
                         android:textSize="20dp" />
 
                 </LinearLayout>
@@ -149,7 +149,7 @@
                         android:layout_gravity="center_vertical"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="End Time :"
-                        android:textColor="@color/blue"
+                        android:textColor="@color/customBlue"
                         android:textSize="20dp" />
 
                     <TextView
@@ -160,7 +160,7 @@
                         android:gravity="end"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="20:00 pm"
-                        android:textColor="@color/blue"
+                        android:textColor="@color/customBlue"
                         android:textSize="20dp" />
 
                 </LinearLayout>
@@ -267,7 +267,7 @@
                     android:text="History"
                     android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/customBlue"
                     android:textSize="30dp" />
 
                 <ListView
@@ -287,7 +287,7 @@
                     android:layout_centerInParent="true"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nothing to show"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/customBlue"
                     android:textSize="20dp" />
 
             </RelativeLayout>

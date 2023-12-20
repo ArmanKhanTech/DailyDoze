@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
-    <color name="blue">#0091EA</color>
+    <color name="customBlue">#0091EA</color>
     <color name="peach">#FF8080</color>
 </resources>

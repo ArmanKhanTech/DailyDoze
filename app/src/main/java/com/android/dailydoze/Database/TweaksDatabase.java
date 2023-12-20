@@ -163,6 +163,20 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         return i;
     }
 
+    public ArrayList<String> getDates() {
+        ArrayList<String> dates = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT " + DATE + " FROM " + TABLE_NAME, null);
+
+        if (c.moveToFirst()) {
+            do {
+                dates.add(c.getString(c.getColumnIndex(DATE)));
+            } while (c.moveToNext());
+        }
+
+        return dates;
+    }
+
     @SuppressLint("Range")
     public int getCount(String dateToGet) {
         int sum = 0;

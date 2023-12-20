@@ -59,7 +59,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/customBlue"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Save"
                 android:textAlignment="center"

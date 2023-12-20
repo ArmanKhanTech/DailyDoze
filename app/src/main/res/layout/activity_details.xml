@@ -576,7 +576,7 @@
                 android:padding="20dp"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:textColor="@color/blue"
+                android:textColor="@color/customBlue"
                 android:text="By submitting you consent to\nsharing your information with us."/>
 
             <Button
@@ -584,7 +584,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Submit"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/customBlue"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/white"
                 android:textSize="20dp"
