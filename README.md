@@ -21,7 +21,7 @@
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/1DeeT82jBcdHh9doR2ZWVNwN-ymoV_efI/view?usp=sharing">View Demo</a>
+    <a href="https://drive.google.com/file/d/1Cs4Arx08kWZyPR54Ant3C_JIEa3vbQkm/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/ArmanKhanTech/DailyDoze/issues">Report a Bug</a>
     ·
@@ -106,7 +106,7 @@ Follow the below instructions to get started.
    ```
 2. Paste your firebase credentails file in /app. Its the one you will download from your firebase console called _google-services.json_.
 
-or simply download the .apk from <a href="https://drive.google.com/file/d/1DeeT82jBcdHh9doR2ZWVNwN-ymoV_efI/view?usp=sharing">here</a> to check it out.
+or simply download the .apk from <a href="https://drive.google.com/file/d/1Cs4Arx08kWZyPR54Ant3C_JIEa3vbQkm/view?usp=sharing">here</a> to check it out.
 Allow installation from unknown sources if prompted.
 
 
