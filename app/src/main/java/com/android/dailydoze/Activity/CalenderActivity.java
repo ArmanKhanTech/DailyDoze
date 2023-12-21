@@ -105,7 +105,7 @@ public class CalenderActivity extends AppCompatActivity {
                 break;
             case "flexseeds":
                 name.setText("Flaxseeds");
-                highlightDailyDoze("flexseeds");
+                highlightDailyDoze("flaxseeds");
                 break;
             case "herbs":
                 name.setText("Herbs & Spices");

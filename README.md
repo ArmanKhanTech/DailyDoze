@@ -89,10 +89,10 @@ Follow the below instructions to get started.
 
 <ol>
   <li>
-    <p>Android Studio</a>
+    <p>Android Studio</p>
   </li>
   <li>
-    <p>Firebase Account</a>
+    <p>Firebase Account</p>
   </li>
 </ol>
 
@@ -104,7 +104,7 @@ Follow the below instructions to get started.
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-2. Paste your firebase credentails file in /app. Its the one you will download from your firebase console called _google-services.json_.
+2. Paste your firebase credentials file in /app. Its the one you will download from your firebase console called _google-services.json_.
 
 or simply download the .apk from <a href="https://drive.google.com/file/d/1Cs4Arx08kWZyPR54Ant3C_JIEa3vbQkm/view?usp=sharing">here</a> to check it out.
 Allow installation from unknown sources if prompted.
@@ -171,19 +171,19 @@ Allow installation from unknown sources if prompted.
     <p>Fast-Watch : Goto Fast-Watch.</p>
   </li>
   <li>
-    <p>Backup : Goto Backup.</a>
+    <p>Backup : Goto Backup.</p>
   </li>
   <li>
-    <p>Open Source : Redirect to this Repo.</a>
+    <p>Open Source : Redirect to this Repo.</p>
   </li>
   <li>
-    <p>Survey : Goto Survey.</a>
+    <p>Survey : Goto Survey.</p>
   </li>
   <li>
-    <p>About : Goto About.</a>
+    <p>About : Goto About.</p>
   </li>
   <li>
-    <p>Logout : Logout.</a>
+    <p>Logout : Logout.</p>
   </li>
 </ul>
 <br>
@@ -346,10 +346,19 @@ Allow installation from unknown sources if prompted.
 </ul>
 <br>
 
+
+<h3>9. Calender :</h3>
+<ul>
+  <li>
+    <p>The calender simply shows the history of all of your servings.</p>
+  </li>
+</ul>
+<br>
+
 <div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1dbbc5c3-771c-41d4-a232-b7388a230df3" alt="Logo" width="300" height=600">
 </div>
-<h3>9. Survey :</h3>
+<h3>10. Survey :</h3>
 <ul>
   <li>
     <p>This app conducts survey for future improvement using the data provided by the users.</p>
@@ -370,7 +379,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f473ddae-0e62-48f2-9892-e408b01355f1" alt="Logo" width="300" height=600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b3560a66-b4fb-41b5-a1ce-8712e37ddca9" alt="Logo" width="300" height="600">
 </div>
-<h3>10. Login & Signup :</h3>
+<h3>11. Login & Signup :</h3>
 <ul>
   <li>
     <p>Simple Login & Signup page.</p>
