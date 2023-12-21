@@ -68,7 +68,7 @@ Also featuring the Twenty-One Tweaks to accelerate weight-loss, based on the res
 
 Wanna meditate or wanna keep track of your daily fasting this app lets you do it all.
 
-**Supports Android 11 & above only.**
+**Supports Android 10 & above only.**
 
 ### Built With
 
@@ -120,7 +120,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/66e981e7-f303-43a3-89e9-0fae37703344" alt="Logo" width="300" height="600">
 </div>
 
-<h3>1. DailyDoze :</h3>
+<h3>1. DailyDoze</h3>
 <ul>
   <li>
     <p>DailyDoze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
@@ -153,7 +153,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/98e23b59-a9b5-4a1e-bbd5-8e6ea065475f" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/654c4ff5-6fcf-4695-8cee-16c13c565550" alt="Logo" width="300" height="600">
 </div>
-<h3>2. Menu :</h3>
+<h3>2. Menu</h3>
 <ul>
   <li>
     <p>21 Tweaks : Goto 21 Tweaks challenge.</p>
@@ -194,7 +194,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00e1ff92-e1a0-4e26-8b62-f3e2ba9e6bad" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/74c1f32d-ac91-43fc-9b95-632eaa664da8" alt="Logo" width="300" height="600">
 </div>
-<h3>3. 21 Tweaks :</h3>
+<h3>3. 21 Tweaks</h3>
 <ul>
   <li>
     <p>Dr. Greger extracted the most important information from his extensive study and put together a mini list of tips and tricks you should perform every day in order to lose weight.</p>
@@ -238,7 +238,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00f8f9c0-2e1d-4454-97d0-f182a5738a67" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7f92b4fc-9e9e-4376-aae4-79fc70b0a1e9" alt="Logo" width="300" height="600">
 </div>
-<h3>4. Notifications :</h3>
+<h3>4. Notifications</h3>
 <ul>
   <li>
     <p>This feature allows the app to notify you to update your daily servings at appropriate time set by you.</p>
@@ -264,7 +264,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1751a12b-b233-4a31-bbe9-8597afa73241" alt="Logo" width="300" height="600">
 </div>
-<h3>5. Meditation :</h3>
+<h3>5. Meditation</h3>
 <ul>
   <li>
     <p>This feature assists you in your daily meditation & helps you keep track of it.</p>
@@ -290,7 +290,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a326e538-c913-4168-9722-42824b1fba3f" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c017b209-caf2-4539-af3c-374313cbb492" alt="Logo" width="300" height="600">
 </div>
-<h3>6. Fast-Watch :</h3>
+<h3>6. Fast-Watch</h3>
 <ul>
   <li>
     <p>This feature allows you to keep track of your daily fasting.</p>
@@ -314,7 +314,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/aaa0924c-70d2-4ca3-a8c8-81b3ab96ed1a" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/89e10d40-ddce-4bbc-b0df-8fe0a35dfea3" alt="Logo" width="300" height="600">
 </div>
-<h3>7. Backup :</h3>
+<h3>7. Backup</h3>
 <ul>
   <li>
     <p>This feature allows you to take backup(export) of your data or import it so you don't have to worry about losing it.</p>
@@ -338,7 +338,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/fbd15889-6e72-487d-b3d8-9cb111f0324e" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/53296e54-c127-4b0a-8a3c-f9924dfcb21d" alt="Logo" width="300" height="600">
 </div>
-<h3>8. Info :</h3>
+<h3>8. Info</h3>
 <ul>
   <li>
     <p>Information about any serving or tweak can viewed by clicking on the Info icon of corresponding serving or tweak.</p>
@@ -347,7 +347,10 @@ Allow installation from unknown sources if prompted.
 <br>
 
 
-<h3>9. Calender :</h3>
+<div>
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/6e197aff-bede-4480-bc77-fc20b367c9ae" alt="Logo" width="300" height="600">
+</div>
+<h3>9. Calender</h3>
 <ul>
   <li>
     <p>The calender simply shows the history of all of your servings.</p>
@@ -358,7 +361,7 @@ Allow installation from unknown sources if prompted.
 <div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1dbbc5c3-771c-41d4-a232-b7388a230df3" alt="Logo" width="300" height=600">
 </div>
-<h3>10. Survey :</h3>
+<h3>10. Survey</h3>
 <ul>
   <li>
     <p>This app conducts survey for future improvement using the data provided by the users.</p>
@@ -379,7 +382,7 @@ Allow installation from unknown sources if prompted.
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f473ddae-0e62-48f2-9892-e408b01355f1" alt="Logo" width="300" height=600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b3560a66-b4fb-41b5-a1ce-8712e37ddca9" alt="Logo" width="300" height="600">
 </div>
-<h3>11. Login & Signup :</h3>
+<h3>11. Login & Signup</h3>
 <ul>
   <li>
     <p>Simple Login & Signup page.</p>
