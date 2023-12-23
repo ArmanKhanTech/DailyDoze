@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "Daily Doze"
+rootProject.name = "DailyDoze"
 include ':app'

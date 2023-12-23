@@ -55,25 +55,25 @@
                 android:paddingBottom="20dp"
                 android:background="@drawable/user_info_bg">
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Arman Khan"
-                android:gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:textSize="25dp"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Arman Khan"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"/>
 
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="ak2341777@gmail.com"
-                android:textColor="@color/white"
-                android:textSize="20dp"/>
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="ak2341777@gmail.com"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
 
             </LinearLayout>
 

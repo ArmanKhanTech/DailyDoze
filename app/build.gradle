@@ -5,11 +5,12 @@ plugins {
 
 android {
     namespace 'com.android.dailydoze'
+
     compileSdk 34
 
     defaultConfig {
         applicationId "com.android.dailydoze"
-        minSdk 27
+        minSdk 29
         targetSdk 34
         versionCode 1
         versionName "1.05"
@@ -25,8 +26,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
