@@ -1,7 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,14 +9,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.android.dailydoze.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -76,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(userEmail) || TextUtils.isEmpty(userPass)) {
             h.postDelayed(() -> submit.setText("Submit"), 3000);
-            submit.setText("Please Enter Correct Inputs.");
+            submit.setText("Please enter correct inputs.");
 
             return;
         }
@@ -104,10 +99,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void forgotPassword(View v) {
-        String userEmail;
-
-        userEmail = email.getText().toString();
-
+        String userEmail = email.getText().toString();
         Handler h = new Handler();
 
         if (TextUtils.isEmpty(userEmail)) {
@@ -132,18 +124,22 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void loggingWithGoogle(View v) {
-        progress.setVisibility(View.VISIBLE);
+        try {
+            progress.setVisibility(View.VISIBLE);
 
-        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("1052342056649-97eqh56un4d1n74n5ngrns2adtu1ieb1.apps.googleusercontent.com")
-                .requestEmail()
-                .build();
+            GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken("1052342056649-97eqh56un4d1n74n5ngrns2adtu1ieb1.apps.googleusercontent.com")
+                    .requestEmail()
+                    .build();
 
-        googleSignInClient = GoogleSignIn.getClient(LoginActivity.this, googleSignInOptions);
+            googleSignInClient = GoogleSignIn.getClient(LoginActivity.this, googleSignInOptions);
 
-        Intent intent = googleSignInClient.getSignInIntent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        startActivityForResult(intent, 100);
+            Intent intent = googleSignInClient.getSignInIntent();
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            startActivityForResult(intent, 100);
+        } catch (Exception e) {
+            Log.e("Error", e.getMessage());
+        }
     }
 
     @Override
@@ -152,13 +148,8 @@ public class LoginActivity extends AppCompatActivity {
 
         if (requestCode == 100) {
             Task<GoogleSignInAccount> signInAccountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
-            if (signInAccountTask.isSuccessful()) {
-                GoogleSignInAccount googleSignInAccount = null;
-                try {
-                    googleSignInAccount = signInAccountTask.getResult(ApiException.class);
-                } catch (ApiException e) {
-                    throw new RuntimeException(e);
-                }
+            try {
+                GoogleSignInAccount googleSignInAccount = signInAccountTask.getResult(ApiException.class);
                 if (googleSignInAccount != null) {
                     AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
                     mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -167,6 +158,8 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 h.postDelayed(() -> submit.setText("Submit"), 3000);
                                 submit.setText("Successfull.");
+
+                                Log.d("TAG", "signInWithCredential:success");
 
                                 FirebaseUser user = mAuth.getCurrentUser();
 
@@ -187,6 +180,9 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
                 }
+            } catch (ApiException e) {
+                Log.e("Error",e.getStatus().toString());
+                progress.setVisibility(View.GONE);
             }
         }
     }
