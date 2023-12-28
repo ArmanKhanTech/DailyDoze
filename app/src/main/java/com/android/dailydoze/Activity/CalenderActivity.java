@@ -41,7 +41,6 @@ public class CalenderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         pb = findViewById(R.id.loading);
@@ -66,7 +65,6 @@ public class CalenderActivity extends AppCompatActivity {
             Intent intent = getIntent();
             title = intent.getStringExtra("title");
             select(title);
-
             return null;
         }
 
@@ -237,7 +235,6 @@ public class CalenderActivity extends AppCompatActivity {
             }
         }
         calendarView.addDecorator(new EventDecorator(datesToMark));
-
         return;
     }
 
@@ -262,7 +259,6 @@ public class CalenderActivity extends AppCompatActivity {
             }
         }
         calendarView.addDecorator(new EventDecorator(datesToMark));
-
         return;
     }
 

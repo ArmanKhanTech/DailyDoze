@@ -31,6 +31,7 @@ public class EachMealFragment extends Fragment {
     static TweaksDatabase db;
 
     public EachMealFragment() {
+        //
     }
 
     @Override
@@ -39,8 +40,7 @@ public class EachMealFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_each_meal, container, false);
 
         i1 = view.findViewById(R.id.waterInfo);
@@ -263,13 +263,13 @@ public class EachMealFragment extends Fragment {
         return view;
     }
 
-    public static void setDay(){
+    public static void setDay() {
         setClickable(Objects.equals(setCurrentDate(), getCurrentDate()));
         unCheckAll();
         setChecked();
     }
 
-    public static void setClickable(boolean b){
+    public static void setClickable(boolean b) {
         water_cb1.setClickable(b);
         water_cb2.setClickable(b);
         water_cb3.setClickable(b);
@@ -313,7 +313,7 @@ public class EachMealFragment extends Fragment {
         twe_min_cb3.setChecked(false);
     }
 
-    public static void setChecked(){
+    public static void setChecked() {
         int i = db.getData("water", getCurrentDate());
         if(i==1) {
             water_cb1.setChecked(true);
@@ -375,25 +375,27 @@ public class EachMealFragment extends Fragment {
         }
     }
 
-    public void incValue(String value){
+    public void incValue(String value) {
         if(TweakActivity.today){
-            if(db.getDate(getCurrentDate())){
+            if(db.getDate(getCurrentDate())) {
                 db.incData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
                 db.incData(value, getCurrentDate());
             }
+
             TweakActivity.setCount(getCurrentDate());
         }
     }
 
-    public void decValue(String value){
-        if(TweakActivity.today){
+    public void decValue(String value) {
+        if(TweakActivity.today) {
             if(db.getDate(getCurrentDate())){
                 db.decData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
             }
+
             TweakActivity.setCount(getCurrentDate());
         }
     }

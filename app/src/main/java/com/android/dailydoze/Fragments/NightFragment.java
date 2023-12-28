@@ -31,6 +31,7 @@ public class NightFragment extends Fragment {
     static TweaksDatabase db;
 
     public NightFragment() {
+        //
     }
 
     @Override
@@ -39,8 +40,7 @@ public class NightFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_night, container, false);
 
         i1 = view.findViewById(R.id.fastInfo);
@@ -60,9 +60,9 @@ public class NightFragment extends Fragment {
         setDay();
 
         fast_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if(isChecked) {
                 incValue("fast");
-            }else{
+            } else {
                 decValue("fast");
             }
         });
@@ -70,15 +70,15 @@ public class NightFragment extends Fragment {
         sleep_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 incValue("sleep");
-            }else{
+            } else{
                 decValue("sleep");
             }
         });
 
         exp_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if(isChecked) {
                 incValue("exp");
-            }else{
+            } else {
                 decValue("exp");
             }
         });
@@ -125,25 +125,25 @@ public class NightFragment extends Fragment {
         return view;
     }
 
-    public static void setDay(){
+    public static void setDay() {
         setClickable(Objects.equals(setCurrentDate(), getCurrentDate()));
         unCheckAll();
         setChecked();
     }
 
-    public static void setClickable(boolean b){
+    public static void setClickable(boolean b) {
         fast_cb1.setClickable(b);
         sleep_cb1.setClickable(b);
         exp_cb1.setClickable(b);
     }
 
-    public static void unCheckAll(){
+    public static void unCheckAll() {
         fast_cb1.setChecked(false);
         sleep_cb1.setChecked(false);
         exp_cb1.setChecked(false);
     }
 
-    public static void setChecked(){
+    public static void setChecked() {
         int i = db.getData("fast", getCurrentDate());
         if(i==1) {
             fast_cb1.setChecked(true);
@@ -160,25 +160,27 @@ public class NightFragment extends Fragment {
         }
     }
 
-    public void incValue(String value){
+    public void incValue(String value) {
         if(TweakActivity.today){
-            if(db.getDate(getCurrentDate())){
+            if(db.getDate(getCurrentDate())) {
                 db.incData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
                 db.incData(value, getCurrentDate());
             }
+
             TweakActivity.setCount(getCurrentDate());
         }
     }
 
-    public void decValue(String value){
+    public void decValue(String value) {
         if(TweakActivity.today){
             if(db.getDate(getCurrentDate())){
                 db.decData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
             }
+
             TweakActivity.setCount(getCurrentDate());
         }
     }

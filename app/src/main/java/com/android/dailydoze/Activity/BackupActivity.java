@@ -101,7 +101,6 @@ public class BackupActivity extends AppCompatActivity {
             } else if(what.equals("export")){
                 exportDB();
             }
-
             return null;
         }
 
@@ -178,7 +177,7 @@ public class BackupActivity extends AppCompatActivity {
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
         File sd = new File(path + "/" + "DailyDoze");
 
-        if(!sd.exists()){
+        if(!sd.exists()) {
             sd.mkdir();
         }
 

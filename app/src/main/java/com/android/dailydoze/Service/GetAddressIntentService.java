@@ -53,8 +53,7 @@ public class GetAddressIntentService extends IntentService {
         if (addresses == null || addresses.size() == 0) {
             msg = "No address found for the given location.";
             sendResultsToReceiver(1, msg, null, null, null, null);
-        }
-        else {
+        } else {
             Address address = addresses.get(0);
             String country = address.getCountryName();
             String state = address.getAdminArea();

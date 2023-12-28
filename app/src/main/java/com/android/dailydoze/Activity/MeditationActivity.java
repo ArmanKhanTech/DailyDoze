@@ -45,7 +45,6 @@ public class MeditationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditation);
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         time = "Meditation for 15 minutes";
@@ -64,7 +63,7 @@ public class MeditationActivity extends AppCompatActivity {
 
         icon = getDrawable(R.drawable.medi_icon);
 
-        for(int i = 0; i < dates.size(); i++){
+        for(int i = 0; i < dates.size(); i++) {
             String temp = dates.get(i);
             data.add(new DataList(temp, icon));
         }
@@ -76,9 +75,9 @@ public class MeditationActivity extends AppCompatActivity {
 
         hisStatus = findViewById(R.id.mediHisStatus);
 
-        if(data.isEmpty()){
+        if(data.isEmpty()) {
             hisStatus.setText("Nothing to Show");
-        } else{
+        } else {
             hisStatus.setVisibility(View.GONE);
         }
 
@@ -134,7 +133,6 @@ public class MeditationActivity extends AppCompatActivity {
         long hour = (t / 3600000) % 24;
         long min = (t / 60000) % 60;
         long sec = (t / 1000) % 60;
-
         return f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
     }
 

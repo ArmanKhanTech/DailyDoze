@@ -1,7 +1,6 @@
 package com.android.dailydoze.CustomDatePicker;
 
 public interface DateFactoryListener {
-
     void onYearChanged();
 
     void onMonthChanged();
@@ -9,5 +8,4 @@ public interface DateFactoryListener {
     void onDayChanged();
 
     void onConfigsChanged();
-
 }

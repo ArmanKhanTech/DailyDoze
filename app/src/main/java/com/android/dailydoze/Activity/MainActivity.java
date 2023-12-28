@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
         setDay();
 
-        if(!db.getDate(getCurrentDate())){
+        if(!db.getDate(getCurrentDate())) {
             db.addDate(getCurrentDate());
         }
 
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             email.setText(userData.getString("email", "Email"));
             name.setText(getGreetings());
 
-            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9, l10;
+            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9;
 
             l1 = popupView.findViewById(R.id.twe_tweaks);
             l2 = popupView.findViewById(R.id.jump_to_date);
@@ -144,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
             l7 = popupView.findViewById(R.id.about);
             l8 = popupView.findViewById(R.id.openSource);
             l9 = popupView.findViewById(R.id.backup);
-            l10 = popupView.findViewById(R.id.survey);
 
             ImageButton ib1 = popupView.findViewById(R.id.closeMenu);
             ib1.setOnClickListener(v12 -> popupWindow.dismiss());
@@ -200,11 +199,6 @@ public class MainActivity extends AppCompatActivity {
 
             l9.setOnClickListener(v16 -> {
                 startActivity(new Intent(MainActivity.this, BackupActivity.class));
-                popupWindow.dismiss();
-            });
-
-            l10.setOnClickListener(v16 -> {
-                startActivity(new Intent(MainActivity.this, DetailsActivity.class));
                 popupWindow.dismiss();
             });
 
@@ -458,12 +452,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void openJumpDate(){
+    public void openJumpDate() {
         final String[] formattedDate = new String[1];
 
         DatePickerPopup datePickerPopup = new DatePickerPopup.Builder()
                 .from(this)
-                .textSize(24)
+                .textSize(18)
                 .endDate(System.currentTimeMillis())
                 .currentDate(System.currentTimeMillis())
                 .startDate(946665000000L)
@@ -477,7 +471,7 @@ public class MainActivity extends AppCompatActivity {
                         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
                         formattedDate[0] = df.format(calendar.getTime());
 
-                        if(db.getDate(formattedDate[0])){
+                        if(db.getDate(formattedDate[0])) {
                             currDate.setText(formattedDate[0]);
                             jump = true;
                             setDay();
@@ -510,7 +504,7 @@ public class MainActivity extends AppCompatActivity {
         datePickerPopup.show();
     }
 
-    public void setPrev(){
+    public void setPrev() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         try {
@@ -533,7 +527,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void setNext(){
+    public void setNext() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         try {
@@ -556,12 +550,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void setCount(){
+    public void setCount() {
         int i = db.getCount(getCurrentDate());
         textView2.setText(String.valueOf(i));
     }
 
-    public void incValue(String value){
+    public void incValue(String value) {
         if(today){
             if(db.getDate(getCurrentDate())){
                 db.incData(value, getCurrentDate());
@@ -573,7 +567,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void decValue(String value){
+    public void decValue(String value) {
         if(today){
             if(db.getDate(getCurrentDate())){
                 db.decData(value, getCurrentDate());
@@ -634,7 +628,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void setClickable(boolean b){
+    public void setClickable(boolean b) {
         beans_cb1.setClickable(b);
         beans_cb2.setClickable(b);
         beans_cb3.setClickable(b);
@@ -672,7 +666,7 @@ public class MainActivity extends AppCompatActivity {
         exercise_cb1.setClickable(b);
     }
 
-    public void unCheckAll(){
+    public void unCheckAll() {
         beans_cb1.setChecked(false);
         beans_cb2.setChecked(false);
         beans_cb3.setChecked(false);
@@ -827,13 +821,13 @@ public class MainActivity extends AppCompatActivity {
         wm.updateViewLayout(container, p);
     }
 
-    public String setCurrentDate(){
+    public String setCurrentDate() {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         return df.format(c);
     }
 
-    public String getCurrentDate(){
+    public String getCurrentDate() {
         return String.valueOf(currDate.getText());
     }
 
@@ -843,61 +837,61 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void beansInfo(View v){
+    public void beansInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","beans");
         startActivity(intent);
     }
 
-    public void berriesInfo(View v){
+    public void berriesInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","berries");
         startActivity(intent);
     }
 
-    public void fruitsInfo(View v){
+    public void fruitsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","fruits");
         startActivity(intent);
     }
 
-    public void crucivegeInfo(View v){
+    public void crucivegeInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","crucivege");
         startActivity(intent);
     }
 
-    public void greensInfo(View v){
+    public void greensInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","greens");
         startActivity(intent);
     }
 
-    public void othervegeInfo(View v){
+    public void othervegeInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","othervege");
         startActivity(intent);
     }
 
-    public void flexseedsInfo(View v){
+    public void flexseedsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","flexseeds");
         startActivity(intent);
     }
 
-    public void herbsInfo(View v){
+    public void herbsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","herbs");
         startActivity(intent);
     }
 
-    public void beveragesInfo(View v){
+    public void beveragesInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","beverages");
         startActivity(intent);
     }
 
-    public void nutsInfo(View v){
+    public void nutsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","nuts");
         startActivity(intent);
@@ -909,79 +903,79 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void exerciseInfo(View v){
+    public void exerciseInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
         intent.putExtra("title","exercise");
         startActivity(intent);
     }
 
-    public void beansCal(View v){
+    public void beansCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","beans");
         startActivity(intent);
     }
 
-    public void berriesCal(View v){
+    public void berriesCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","berries");
         startActivity(intent);
     }
 
-    public void fruitsCal(View v){
+    public void fruitsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","fruits");
         startActivity(intent);
     }
 
-    public void crucivegeCal(View v){
+    public void crucivegeCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","crucivege");
         startActivity(intent);
     }
 
-    public void greensCal(View v){
+    public void greensCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","greens");
         startActivity(intent);
     }
 
-    public void othervegeCal(View v){
+    public void othervegeCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","othervege");
         startActivity(intent);
     }
 
-    public void flexseedsCal(View v){
+    public void flexseedsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","flexseeds");
         startActivity(intent);
     }
 
-    public void herbsCal(View v){
+    public void herbsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","herbs");
         startActivity(intent);
     }
 
-    public void beveragesCal(View v){
+    public void beveragesCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","beverages");
         startActivity(intent);
     }
 
-    public void nutsCal(View v){
+    public void nutsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","nuts");
         startActivity(intent);
     }
 
-    public void grainsCal(View v){
+    public void grainsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","grains");
         startActivity(intent);
     }
 
-    public void exerciseCal(View v){
+    public void exerciseCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
         intent.putExtra("title","exercise");
         startActivity(intent);
@@ -991,14 +985,14 @@ public class MainActivity extends AppCompatActivity {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
-        if(timeOfDay >= 0 && timeOfDay < 12){
-            return " Good Morning!";
-        }else if(timeOfDay >= 12 && timeOfDay < 16){
-            return " Good Afternoon!";
-        }else if(timeOfDay >= 16 && timeOfDay < 21){
-            return " Good Evening!";
-        }else if(timeOfDay >= 21 && timeOfDay < 24){
-            return " Good Night!";
+        if(timeOfDay >= 0 && timeOfDay < 12) {
+            return " Good Morning";
+        } else if(timeOfDay >= 12 && timeOfDay < 16) {
+            return " Good Afternoon";
+        } else if(timeOfDay >= 16 && timeOfDay < 21) {
+            return " Good Evening";
+        } else if(timeOfDay >= 21 && timeOfDay < 24) {
+            return " Good Night";
         }
         return "";
     }

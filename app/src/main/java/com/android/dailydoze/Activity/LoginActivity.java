@@ -36,9 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email, pass;
     private Button submit;
     private FirebaseAuth mAuth;
-    GoogleSignInClient googleSignInClient;
-    ProgressBar progress;
     Handler h = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -52,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
 
         submit = findViewById(R.id.login_btn);
 
-        progress = findViewById(R.id.progressBar);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -71,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(userEmail) || TextUtils.isEmpty(userPass)) {
             h.postDelayed(() -> submit.setText("Submit"), 3000);
-            submit.setText("Please enter correct inputs.");
+            submit.setText("Invalid Inputs");
 
             return;
         }
@@ -79,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(userEmail, userPass).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 h.postDelayed(() -> submit.setText("Submit"), 3000);
-                submit.setText("Successfull.");
+                submit.setText("Successfull");
 
                 SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
                 SharedPreferences.Editor myEdit = sharedPreferences.edit();
@@ -89,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
 
             else {
@@ -104,8 +103,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(userEmail)) {
             h.postDelayed(() -> submit.setText("Submit"), 3000);
-            submit.setText("Please Enter Valid Email.");
-
+            submit.setText("Invalid E-mail.");
             return;
         }
 
@@ -114,77 +112,13 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     h.postDelayed(() -> submit.setText("Submit"), 3000);
-                    submit.setText("Email Sent.");
+                    submit.setText("E-mail Sent");
                 } else {
                     h.postDelayed(() -> submit.setText("Submit"), 3000);
                     submit.setText(Objects.requireNonNull(task.getException()).getLocalizedMessage());
                 }
             }
         });
-    }
-
-    public void loggingWithGoogle(View v) {
-        try {
-            progress.setVisibility(View.VISIBLE);
-
-            GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                    .requestIdToken("1052342056649-97eqh56un4d1n74n5ngrns2adtu1ieb1.apps.googleusercontent.com")
-                    .requestEmail()
-                    .build();
-
-            googleSignInClient = GoogleSignIn.getClient(LoginActivity.this, googleSignInOptions);
-
-            Intent intent = googleSignInClient.getSignInIntent();
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-            startActivityForResult(intent, 100);
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 100) {
-            Task<GoogleSignInAccount> signInAccountTask = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                GoogleSignInAccount googleSignInAccount = signInAccountTask.getResult(ApiException.class);
-                if (googleSignInAccount != null) {
-                    AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
-                    mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                h.postDelayed(() -> submit.setText("Submit"), 3000);
-                                submit.setText("Successfull.");
-
-                                Log.d("TAG", "signInWithCredential:success");
-
-                                FirebaseUser user = mAuth.getCurrentUser();
-
-                                SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-                                SharedPreferences.Editor myEdit = sharedPreferences.edit();
-                                myEdit.putBoolean("user", true);
-                                myEdit.putString("email", user.getEmail());
-                                myEdit.apply();
-
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                startActivity(intent);
-                            } else {
-                                h.postDelayed(() -> submit.setText("Submit"), 3000);
-                                submit.setText(Objects.requireNonNull(task.getException()).getLocalizedMessage());
-                            }
-
-                            progress.setVisibility(View.GONE);
-                        }
-                    });
-                }
-            } catch (ApiException e) {
-                Log.e("Error",e.getStatus().toString());
-                progress.setVisibility(View.GONE);
-            }
-        }
     }
 
     public void openSignup(View v) {

@@ -2,7 +2,6 @@ package com.android.dailydoze.CustomDatePicker;
 
 @SuppressWarnings("ALL")
 public class DateModel {
-
     private int year;
     private int month;
     private int day;

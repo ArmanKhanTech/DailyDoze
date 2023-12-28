@@ -64,12 +64,12 @@ public class GraphActivity extends AppCompatActivity {
         Intent i = getIntent();
         boolean b = i.getBooleanExtra("tweak",false);
 
-        if(b){
+        if(b) {
             tv.setText("Daily Tweaks History");
             db1 = new TweaksDatabase(this);
             getBarEntriesTweaks();
             title = "Average Weight (in kgs)";
-        } else{
+        } else {
             tv.setText("Daily Servings History");
             db2 = new DailyDozeDatabase(this);
             getBarEntriesDailyDoze();

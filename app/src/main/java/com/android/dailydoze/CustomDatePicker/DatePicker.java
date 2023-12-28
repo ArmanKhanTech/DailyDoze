@@ -20,7 +20,6 @@ import java.util.List;
 
 @SuppressWarnings("ALL")
 public class DatePicker extends LinearLayout implements DateFactoryListener {
-
     private Context context;
     private LinearLayout container;
     private int offset = 3;
@@ -32,10 +31,8 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private WheelView emptyView2;
     private int textSize = 19;
     private int pickerMode = 0;
-
     public static final int MONTH_ON_FIRST = 0;
     public static final int DAY_ON_FIRST = 1;
-
     private final static int MAX_TEXT_SIZE = 50;
     private final static int MAX_OFFSET = 3;
     private boolean darkModeEnabled = true;

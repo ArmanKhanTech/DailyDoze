@@ -40,13 +40,13 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         ViewHolder listViewHolder;
-        if(convertView == null){
+        if(convertView == null) {
             listViewHolder = new ViewHolder();
             convertView = layoutInflater.inflate(R.layout.list, parent, false);
             listViewHolder.textInListView = convertView.findViewById(R.id.list_text);
             listViewHolder.imageInListView = convertView.findViewById(R.id.list_icon);
             convertView.setTag(listViewHolder);
-        }else{
+        } else {
             listViewHolder = (ViewHolder)convertView.getTag();
         }
         listViewHolder.textInListView.setText(listStorage.get(position).getText());

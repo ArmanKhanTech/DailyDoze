@@ -152,7 +152,7 @@ public class TweakActivity extends AppCompatActivity {
         loadFragment.execute();
     }
 
-    private void loadFragment(){
+    private void loadFragment() {
         tabLayout = findViewById(R.id.tablayout_tweaks);
         viewPager = findViewById(R.id.viewPager_tweaks);
         viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
@@ -164,13 +164,13 @@ public class TweakActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    public void gotoGraphTweaks(View v){
+    public void gotoGraphTweaks(View v) {
         Intent i = new Intent(this, GraphActivity.class);
         i.putExtra("tweak",true);
         startActivity(i);
     }
 
-    private final class LoadFragment extends AsyncTask<Void, Void, Void>{
+    private final class LoadFragment extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -197,8 +197,8 @@ public class TweakActivity extends AppCompatActivity {
         }
     }
 
-    public void setDay(boolean b){
-        if(Objects.equals(setCurrentDate(), getCurrentDate())){
+    public void setDay(boolean b) {
+        if(Objects.equals(setCurrentDate(), getCurrentDate())) {
             // Current Day
             setCount(getCurrentDate());
 
@@ -215,8 +215,7 @@ public class TweakActivity extends AppCompatActivity {
             setWeightVisibility();
             setNext();
             setPrev();
-        }else{
-            // Jump Day
+        } else {
             if(today){
                 final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.slide_down);
@@ -237,7 +236,7 @@ public class TweakActivity extends AppCompatActivity {
         }
     }
 
-    public void setPrev(){
+    public void setPrev() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         try {
@@ -248,9 +247,9 @@ public class TweakActivity extends AppCompatActivity {
         c.add(Calendar.DATE, -1);
         String formattedDate = df.format(c.getTime());
 
-        if(db.getDate(formattedDate)){
+        if(db.getDate(formattedDate)) {
             date_prev.setVisibility(View.VISIBLE);
-        } else{
+        } else {
             date_prev.setVisibility(View.GONE);
         }
 
@@ -271,9 +270,9 @@ public class TweakActivity extends AppCompatActivity {
         c.add(Calendar.DATE, +1);
         String formattedDate = df.format(c.getTime());
 
-        if(db.getDate(formattedDate)){
+        if(db.getDate(formattedDate)) {
             date_next.setVisibility(View.VISIBLE);
-        } else{
+        } else {
             date_next.setVisibility(View.GONE);
         }
 
@@ -291,7 +290,7 @@ public class TweakActivity extends AppCompatActivity {
             weight.setVisibility(View.VISIBLE);
         } else if (timeOfDay >= 18) {
             weight.setVisibility(View.VISIBLE);
-        } else{
+        } else {
             weight.setVisibility(View.GONE);
         }
     }
@@ -302,7 +301,7 @@ public class TweakActivity extends AppCompatActivity {
         return df.format(c);
     }
 
-    public static String getCurrentDate(){
+    public static String getCurrentDate() {
         return String.valueOf(currDate.getText());
     }
 
@@ -316,12 +315,12 @@ public class TweakActivity extends AppCompatActivity {
         wm.updateViewLayout(container, p);
     }
 
-    public static void setCount(String date){
+    public static void setCount(String date) {
         int i = db.getCount(date);
         textView10.setText(String.valueOf(i));
     }
 
-    public void tweaksFinish(View v){
+    public void tweaksFinish(View v) {
         finish();
     }
 }

@@ -64,7 +64,6 @@ public class FastActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fast);
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         start = findViewById(R.id.startTime);
@@ -82,14 +81,14 @@ public class FastActivity extends AppCompatActivity {
         fast = findViewById(R.id.fast_start_btn);
 
         fast.setOnClickListener(v -> {
-            if(fast.getText().equals("Start")){
+            if(fast.getText().equals("Start")) {
                 pB.setMax((int)millis);
                 pB.setProgress((int)millis);
 
                 Intent intent = new Intent(this, TimerService.class);
                 intent.putExtra("millis", millis);
                 startService(intent);
-            } else if(fast.getText().equals("Stop")){
+            } else if(fast.getText().equals("Stop")) {
                 cancelTimer();
             }
         });
@@ -120,9 +119,9 @@ public class FastActivity extends AppCompatActivity {
         adapter = new ListAdapter(this,data);
         list.setAdapter(adapter);
 
-        if(data.isEmpty()){
+        if(data.isEmpty()) {
             fastStatus.setText("Nothing to Show");
-        } else{
+        } else {
             fastStatus.setVisibility(View.GONE);
         }
 
@@ -183,10 +182,10 @@ public class FastActivity extends AppCompatActivity {
         });
     }
 
-    public void cancelTimer(){
+    public void cancelTimer() {
         if(db.getDate(getCurrentDate())){
             db.changeDuration(millisToTime(millisDone), getCurrentDate());
-        } else{
+        } else  {
             db.addData(getCurrentDate());
             db.changeDuration(millisToTime(millisDone), getCurrentDate());
         }
@@ -205,11 +204,11 @@ public class FastActivity extends AppCompatActivity {
         updateList();
     }
 
-    public void updateList(){
+    public void updateList() {
         ArrayList<String> time = db.getAllDate();
         data.clear();
 
-        for(int i = 0; i < time.size(); i++){
+        for(int i = 0; i < time.size(); i++) {
             String temp = time.get(i);
             data.add(new DataList(temp, icon));
         }
@@ -220,11 +219,10 @@ public class FastActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         list.setAdapter(adapter);
 
-        if(time.isEmpty()){
+        if(time.isEmpty()) {
             fastStatus.setVisibility(View.VISIBLE);
             fastStatus.setText("Nothing to Show");
-        }
-        else{
+        } else {
             fastStatus.setVisibility(View.GONE);
         }
     }
@@ -265,7 +263,7 @@ public class FastActivity extends AppCompatActivity {
             b = intent.getBooleanExtra("status", false);
             millisDone = intent.getLongExtra("millisUntilFinished", 0);
 
-            if(b){
+            if(b) {
                 timer.setText(time);
                 fast.setText("Stop");
                 rG.setVisibility(View.GONE);
@@ -275,12 +273,11 @@ public class FastActivity extends AppCompatActivity {
         }
     }
 
-    public String millisToTime(long t){
+    public String millisToTime(long t) {
         NumberFormat f = new DecimalFormat("00");
         long hour = (t / 3600000) % 24;
         long min = (t / 60000) % 60;
         long sec = (t / 1000) % 60;
-
         return f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
     }
 
@@ -300,20 +297,18 @@ public class FastActivity extends AppCompatActivity {
         return dateFormat.format(cal.getTime());
     }
 
-    public String addTime(int h){
+    public String addTime(int h) {
         DateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
-
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.HOUR, h);
-
         return dateFormat.format(cal.getTime());
     }
 
-    public void fastBack(View v){
+    public void fastBack(View v) {
         finish();
     }
 
-    public String getCurrentDate(){
+    public String getCurrentDate() {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         return df.format(c);

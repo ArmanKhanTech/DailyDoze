@@ -36,10 +36,6 @@
         </receiver>
 
         <activity
-            android:name=".Activity.DetailsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.DailyDoze" />
-        <activity
             android:name=".Activity.BackupActivity"
             android:exported="false"
             android:theme="@style/Theme.DailyDoze.Backup" />

@@ -31,6 +31,7 @@ public class DayFragment extends Fragment {
     static TweaksDatabase db;
 
     public DayFragment() {
+        //
     }
 
     @Override
@@ -39,8 +40,7 @@ public class DayFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_day, container, false);
 
         cumin_cb1 = view.findViewById(R.id.cumin_cb1);
@@ -407,13 +407,13 @@ public class DayFragment extends Fragment {
         return view;
     }
 
-    public static void setDay(){
+    public static void setDay() {
         setClickable(Objects.equals(setCurrentDate(), getCurrentDate()));
         unCheckAll();
         setChecked();
     }
 
-    public static void setClickable(boolean b){
+    public static void setClickable(boolean b) {
         cumin_cb1.setClickable(b);
 
         garlic_cb1.setClickable(b);
@@ -447,7 +447,7 @@ public class DayFragment extends Fragment {
         inten_cb3.setClickable(b);
     }
 
-    public static void unCheckAll(){
+    public static void unCheckAll() {
         cumin_cb1.setChecked(false);
 
         ginger_cb1.setChecked(false);
@@ -481,29 +481,29 @@ public class DayFragment extends Fragment {
         inten_cb3.setChecked(false);
     }
 
-    public static void setChecked(){
+    public static void setChecked() {
         int i = db.getData("black_cumin", getCurrentDate());
         if(i==1) {
             cumin_cb1.setChecked(true);
         }
 
         i = db.getData("garlic", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             garlic_cb1.setChecked(true);
         }
 
         i = db.getData("ginger", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             ginger_cb1.setChecked(true);
         }
 
         i = db.getData("yeast", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             yeast_cb1.setChecked(true);
         }
 
         i = db.getData("cumin", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             cumin2_cb1.setChecked(true);
         } else if (i==2) {
             cumin2_cb1.setChecked(true);
@@ -511,7 +511,7 @@ public class DayFragment extends Fragment {
         }
 
         i = db.getData("tea", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             green_cb1.setChecked(true);
         } else if (i==2) {
             green_cb1.setChecked(true);
@@ -523,22 +523,22 @@ public class DayFragment extends Fragment {
         }
 
         i = db.getData("hydrated", getCurrentDate());
-        if(i==1){
+        if(i==1) {
            hyd_cb1.setChecked(true);
         }
 
         i = db.getData("deflour", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             deflour_cb1.setChecked(true);
         }
 
         i = db.getData("frontload", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             front_cb1.setChecked(true);
         }
 
         i = db.getData("weigh", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             weigh_cb1.setChecked(true);
         } else if (i==2) {
             weigh_cb1.setChecked(true);
@@ -546,7 +546,7 @@ public class DayFragment extends Fragment {
         }
 
         i = db.getData("intentions", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             inten_cb1.setChecked(true);
         } else if (i==2) {
             inten_cb1.setChecked(true);
@@ -558,30 +558,32 @@ public class DayFragment extends Fragment {
         }
 
         i = db.getData("timerestrict", getCurrentDate());
-        if(i==1){
+        if(i==1) {
             restrict_cb1.setChecked(true);
         }
     }
 
     public void incValue(String value) {
         if(TweakActivity.today){
-            if(db.getDate(getCurrentDate())){
+            if(db.getDate(getCurrentDate())) {
                 db.incData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
                 db.incData(value, getCurrentDate());
             }
+
             TweakActivity.setCount(getCurrentDate());
         }
     }
 
     public void decValue(String value) {
         if(TweakActivity.today){
-            if(db.getDate(getCurrentDate())){
+            if(db.getDate(getCurrentDate())) {
                 db.decData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
             }
+
             TweakActivity.setCount(getCurrentDate());
         }
     }

@@ -93,9 +93,9 @@ public class PerformMeditationActivity extends AppCompatActivity {
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(pB.getProgress() != 0){
+                if(pB.getProgress() != 0) {
                     showWarning();
-                } else{
+                } else {
                     Intent intent1 = new Intent(PerformMeditationActivity.this, MeditationActivity.class);
                     startActivity(intent1);
                     finish();
@@ -118,8 +118,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     }
 
     public void showWarning(){
-        LayoutInflater layoutInflater = (LayoutInflater)
-                this.getSystemService(LAYOUT_INFLATER_SERVICE);
+        LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.medi_finish, null);
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -134,10 +133,10 @@ public class PerformMeditationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String duration = String.valueOf(c - l);
-                if(!db.getDate(getCurrentDate())){
+                if(!db.getDate(getCurrentDate())) {
                     db.addData(getCurrentDate());
                     db.changeDuration(duration, getCurrentDate());
-                } else{
+                } else {
                     db.changeDuration(duration, getCurrentDate());
                 }
 
@@ -152,7 +151,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         dimBehind(popupWindow);
     }
 
-    public void startTimer(long millis){
+    public void startTimer(long millis) {
         music.start();
         stopWatch = new CountDownTimer(millis, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -175,7 +174,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        if(b){
+        if(b) {
             music.stop();
         }
     }
@@ -184,7 +183,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(b){
+        if(b) {
             music.pause();
             stopWatch.cancel();
         }
@@ -194,7 +193,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        if(b){
+        if(b) {
             music.pause();
             stopWatch.cancel();
         }
@@ -204,7 +203,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if(b){
+        if(b) {
             play.setVisibility(View.GONE);
             pause.setVisibility(View.VISIBLE);
             music.start();
@@ -232,9 +231,8 @@ public class PerformMeditationActivity extends AppCompatActivity {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.mediwall5));
     }
 
-    public void mediSettings(View v){
-        LayoutInflater layoutInflater = (LayoutInflater)
-                this.getSystemService(LAYOUT_INFLATER_SERVICE);
+    public void mediSettings(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.meditation_settings, null);
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -283,7 +281,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         dimBehind(popupWindow);
     }
 
-    public void selectMusic(String file){
+    public void selectMusic(String file) {
         music.reset();
         music = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(file.toLowerCase(),"raw",getPackageName()));
         music.setLooping(true);
@@ -307,7 +305,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
     }
 
-    public String getCurrentDate(){
+    public String getCurrentDate() {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         return df.format(c);

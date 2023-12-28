@@ -75,7 +75,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         icon = getDrawable(R.drawable.noti_vec_icon_black);
 
-        for(int i = 0; i < time.size(); i++){
+        for(int i = 0; i < time.size(); i++) {
             String temp = time.get(i);
             data.add(new DataList(temp, icon));
         }
@@ -90,10 +90,9 @@ public class NotificationActivity extends AppCompatActivity {
             setTime.setVisibility(View.VISIBLE);
             list.setVisibility(View.VISIBLE);
 
-            if(!db1.isDbEmpty()){
+            if(!db1.isDbEmpty()) {
                 status.setText("No Notifications");
-            }
-            else{
+            } else {
                 status.setVisibility(View.GONE);
             }
 
@@ -113,7 +112,7 @@ public class NotificationActivity extends AppCompatActivity {
         }
 
         sw.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if(isChecked) {
                 SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
                 editor.putBoolean("State", true);
                 editor.apply();
@@ -121,10 +120,9 @@ public class NotificationActivity extends AppCompatActivity {
                 setTime.setVisibility(View.VISIBLE);
                 list.setVisibility(View.VISIBLE);
 
-                if(!db1.isDbEmpty()){
+                if(!db1.isDbEmpty()) {
                     status.setText("No Notifications");
-                }
-                else{
+                } else {
                     status.setVisibility(View.GONE);
                 }
 
@@ -173,7 +171,6 @@ public class NotificationActivity extends AppCompatActivity {
             });
             dimBehind(popupWindow);
         });
-
         setTime.setOnClickListener(v -> selectTime());
     }
 
@@ -216,8 +213,7 @@ public class NotificationActivity extends AppCompatActivity {
         if(!db1.isDbEmpty()){
             status.setVisibility(View.VISIBLE);
             status.setText("No Notifications");
-        }
-        else{
+        } else {
             status.setVisibility(View.GONE);
         }
     }
