@@ -144,7 +144,7 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/98e23b59-a9b5-4a1e-bbd5-8e6ea065475f" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/69efe562-4ce0-46a0-bfce-fe10cf295d66" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/654c4ff5-6fcf-4695-8cee-16c13c565550" alt="Logo" width="300" height="600">
 </div>
 <h3>2. Menu</h3>
