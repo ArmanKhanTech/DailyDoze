@@ -171,9 +171,6 @@ Follow the below instructions to get started.
     <p>Open Source : Redirect to this Repo.</p>
   </li>
   <li>
-    <p>Survey : Goto Survey.</p>
-  </li>
-  <li>
     <p>About : Goto About.</p>
   </li>
   <li>
@@ -352,31 +349,12 @@ Follow the below instructions to get started.
 </ul>
 <br>
 
-<div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1dbbc5c3-771c-41d4-a232-b7388a230df3" alt="Logo" width="300" height=600">
-</div>
-<h3>10. Survey</h3>
-<ul>
-  <li>
-    <p>This app conducts survey for future improvement using the data provided by the users.</p>
-  </li>
-  <li>
-    <p>The survey page also features the detect location feature(click on globe icon).</p>
-  </li>
-  <li>
-    <p>All the data is stored in Firebase RealtimeDB.</p>
-  </li>
-  <li>
-    <p>This data will help us improve & train machine learning models in the app in future.</p>
-  </li>
-</ul>
-<br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f473ddae-0e62-48f2-9892-e408b01355f1" alt="Logo" width="300" height=600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b3560a66-b4fb-41b5-a1ce-8712e37ddca9" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c785451f-0c33-4ca0-b7b9-31e11a8c6ad6" alt="Logo" width="300" height=600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f3fa8034-38f4-4dae-b5dd-41f60a1c6c1e" alt="Logo" width="300" height="600">
 </div>
-<h3>11. Login & Signup</h3>
+<h3>10 Login & Signup</h3>
 <ul>
   <li>
     <p>Simple Login & Signup page.</p>
@@ -405,7 +383,6 @@ Follow the below instructions to get started.
 - [x] Add Fast-Watch
 - [x] Add Animations
 - [x] Add Backup
-- [x] Add Survey
 - [x] Add Calender
 - [ ] Upload on Play Store
 
