@@ -363,7 +363,7 @@ Follow the below instructions to get started.
     <p>Signing-up is mandatory for the access to the app.</p>
   </li>
   <li>
-    <p>This feature uses multiple signing options i.e Firebase Auth & Google.</p>
+    <p>This feature uses Firebase Authentication.</p>
   </li>
 </ul>
 <br>
