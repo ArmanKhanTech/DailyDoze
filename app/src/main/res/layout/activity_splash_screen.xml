@@ -4,52 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent"
+    android:background="@color/white"
     tools:context=".Activity.SplashScreenActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:lottie_autoPlay="true"
-        android:scaleType="centerCrop"
         app:lottie_rawRes="@raw/splash_screen" />
 
-    <LinearLayout
-        android:id="@+id/linear"
+    <TextView
+        android:id="@+id/app_name_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="40dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            app:srcCompat="@drawable/app_icon_white"/>
-
-        <View
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/white" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="40dp" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

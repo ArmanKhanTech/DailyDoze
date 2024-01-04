@@ -7,7 +7,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +19,8 @@ import com.android.dailydoze.R;
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
     LottieAnimationView lottieAnimationView;
-    LinearLayout linear;
+
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +28,11 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        showCustomUI();
-
-        linear = findViewById(R.id.linear);
+        textView = findViewById(R.id.app_name_splash);
 
         Handler h1 = new Handler();
         h1.postDelayed(() -> {
-            linear.setVisibility(View.VISIBLE);
+            textView.setVisibility(View.VISIBLE);
         }, 1000);
 
         lottieAnimationView = findViewById(R.id.animation_view);
@@ -56,12 +55,4 @@ public class SplashScreenActivity extends AppCompatActivity {
             finish();
         }, 2000);
     }
-
-    private void showCustomUI() {
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-    }
-
 }

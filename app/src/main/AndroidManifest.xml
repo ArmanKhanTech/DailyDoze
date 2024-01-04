@@ -50,7 +50,7 @@
         <activity
             android:name=".Activity.PerformMeditationActivity"
             android:exported="false"
-            android:theme="@style/Theme.DailyDoze.SplashScreen" />
+            android:theme="@style/Theme.DailyDoze.PerformMeditation" />
         <activity
             android:name=".Activity.NotificationActivity"
             android:exported="false"
@@ -90,7 +90,7 @@
         <activity
             android:name=".Activity.SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.DailyDoze.SplashScreen">
+            android:theme="@style/Theme.DailyDoze">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -100,7 +100,7 @@
         <item name="android:colorControlActivated">@color/customBlue</item>
     </style>
 
-    <style name="Theme.DailyDoze.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">-
+    <style name="Theme.DailyDoze.PerformMeditation" parent="Theme.Material3.DayNight.NoActionBar">-
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>-
