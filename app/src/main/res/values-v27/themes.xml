@@ -1,11 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.DailyDoze" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#039BE5</item>
-        <item name="colorPrimaryVariant">#039BE5</item>
-        <item name="colorOnPrimary">#039BE5</item>
-        <item name="colorSecondary">@color/black</item>
-        <item name="colorSecondaryVariant">@color/black</item>
-        <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -38,12 +32,6 @@
     </style>
 
     <style name="Theme.DailyDoze.FastWatch" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor">#BBDEFB</item>
         <item name="android:navigationBarColor">#BBDEFB</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -54,12 +42,6 @@
     </style>
 
     <style name="Theme.DailyDoze.Meditation" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor">@color/black</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:windowLightStatusBar">false</item>
@@ -70,12 +52,6 @@
     </style>
 
     <style name="Theme.DailyDoze.Backup" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>
         <item name="android:statusBarColor">#FFF8E1</item>
         <item name="android:navigationBarColor">#FFF8E1</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -100,21 +76,26 @@
         <item name="android:colorControlActivated">@color/customBlue</item>
     </style>
 
-    <style name="Theme.DailyDoze.PerformMeditation" parent="Theme.Material3.DayNight.NoActionBar">-
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>-
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>-
+    <style name="Theme.DailyDoze.PerformMeditation" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@color/transparent</item>
         <item name="android:navigationBarColor">@color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowActivityTransitions">true</item>
-        <item name="android:windowDisablePreview">true</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">
+            @style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="Theme.DailyDoze.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/customBlue</item>
+        <item name="android:navigationBarColor">@color/customBlue</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAnimationStyle">
             @style/CustomActivityAnimation</item>
     </style>

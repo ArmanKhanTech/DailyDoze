@@ -16,18 +16,14 @@ import com.android.dailydoze.R;
 @SuppressWarnings("ALL")
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
-    TextView textView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        textView = findViewById(R.id.app_name_splash);
-
+        TextView textView = findViewById(R.id.app_name_splash);
         Animation animation = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        animation.setDuration(2000);
         textView.startAnimation(animation);
 
         Handler h2 = new Handler();
@@ -45,5 +41,10 @@ public class SplashScreenActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }, 2000);
+    }
+
+    void customSystemUI() {
+        getWindow().setStatusBarColor(getResources().getColor(R.color.customBlue));
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.customBlue));
     }
 }
