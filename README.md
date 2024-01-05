@@ -58,7 +58,7 @@
 
 ## About The Project
 
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a9d401b9-3b0e-49ec-ac48-7f5976af0a55" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/916e3d39-50f9-4943-b470-25d08c9b9fb2" alt="Logo" width="300" height="600">
 
 DailyDoze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's Daily Dozen.
 
@@ -144,7 +144,7 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/69efe562-4ce0-46a0-bfce-fe10cf295d66" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/54643182-bfce-44da-b695-69f2e031321d" alt="Logo" width="300" height="600">
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/654c4ff5-6fcf-4695-8cee-16c13c565550" alt="Logo" width="300" height="600">
 </div>
 <h3>2. Menu</h3>
@@ -339,7 +339,7 @@ Follow the below instructions to get started.
 
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/6e197aff-bede-4480-bc77-fc20b367c9ae" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/d76dc885-270b-4c43-9698-9c445283cfe5" alt="Logo" width="300" height="600">
 </div>
 <h3>9. Calender</h3>
 <ul>
@@ -352,7 +352,7 @@ Follow the below instructions to get started.
 
 <div>
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c785451f-0c33-4ca0-b7b9-31e11a8c6ad6" alt="Logo" width="300" height=600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f3fa8034-38f4-4dae-b5dd-41f60a1c6c1e" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/44a71cad-caec-4766-adfe-4ae415370eca" alt="Logo" width="300" height="600">
 </div>
 <h3>10 Login & Signup</h3>
 <ul>
