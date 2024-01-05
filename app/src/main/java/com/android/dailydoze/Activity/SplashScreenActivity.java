@@ -6,20 +6,16 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
+import android.view.animation.Animation;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.airbnb.lottie.RenderMode;
 import com.android.dailydoze.R;
 
 @SuppressWarnings("ALL")
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
-    LottieAnimationView lottieAnimationView;
-
     TextView textView;
 
     @Override
@@ -30,14 +26,9 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.app_name_splash);
 
-        Handler h1 = new Handler();
-        h1.postDelayed(() -> {
-            textView.setVisibility(View.VISIBLE);
-        }, 1000);
-
-        lottieAnimationView = findViewById(R.id.animation_view);
-        lottieAnimationView.setRenderMode(RenderMode.HARDWARE);
-        lottieAnimationView.playAnimation();
+        Animation animation = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        animation.setDuration(2000);
+        textView.startAnimation(animation);
 
         Handler h2 = new Handler();
         h2.postDelayed(() -> {
