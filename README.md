@@ -101,7 +101,7 @@ Follow the below instructions to get started.
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-2. Paste your firebase credentials file in /app. Its the one you will download from your firebase console called _google-services.json_.
+2. Paste your firebase credentials file in `/app`. Its the one you will download from your firebase console called _google-services.json_.
 
 
 
