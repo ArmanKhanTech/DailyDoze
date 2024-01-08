@@ -1,11 +1,9 @@
 *.iml
 .gradle
-/local.properties
 .idea
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
-/app/src/google-services.json
+local.propertie
 key.jks
