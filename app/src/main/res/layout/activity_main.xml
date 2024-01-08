@@ -93,12 +93,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:id="@+id/jump_back"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="42dp"
                 android:background="@drawable/back_to_today_theme"
-                android:layout_marginRight="40dp"
+                android:layout_marginRight="42dp"
                 android:gravity="center"
                 android:layout_gravity="bottom"
-                android:layout_height="30dp">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/back_to_today"
@@ -107,9 +107,10 @@
                     android:layout_gravity="center"
                     android:text="Back to Today"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="2dp"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:textSize="20dp" />
+                    android:textSize="22dp" />
 
             </LinearLayout>
 

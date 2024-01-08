@@ -55,6 +55,9 @@
                     android:layout_marginLeft="40dp"
                     android:singleLine="true"
                     android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:inputType="textEmailAddress"
+                    android:textCursorDrawable="@drawable/cursor"
                     android:hint="Email" />
 
                 <ImageView
@@ -87,6 +90,8 @@
                     android:inputType="numberPassword"
                     android:singleLine="true"
                     android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@drawable/cursor"
                     android:hint="Password" />
 
                 <ImageView

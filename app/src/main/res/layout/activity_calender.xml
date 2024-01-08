@@ -100,7 +100,11 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
                 android:elevation="2dp"
-                android:background="@drawable/calender_theme" />
+                android:background="@drawable/calender_theme"
+                app:mcv_selectionColor="@color/white"
+                app:mcv_headerTextAppearance="@style/MCVTitleTextAppearance"
+                app:mcv_dateTextAppearance="@style/MCVDateTextAppearance"
+                app:mcv_weekDayTextAppearance="@style/MCVWeekTextAppearance"/>
 
         </LinearLayout>
 
