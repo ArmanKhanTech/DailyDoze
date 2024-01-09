@@ -339,7 +339,7 @@ Follow the below instructions to get started.
 
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/d76dc885-270b-4c43-9698-9c445283cfe5" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ed9bd03f-5343-48c4-8a38-8d2ab4664c57" alt="Logo" width="300" height="600">
 </div>
 <h3>9. Calender</h3>
 <ul>
