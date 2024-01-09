@@ -79,7 +79,8 @@
                     android:textSize="20dp"
                     android:textColor="@color/black"
                     android:inputType="textEmailAddress"
-                    android:textCursorDrawable="@drawable/cursor"
+                    style="@style/CustomEditText"
+                    android:backgroundTint="@color/black"
                     android:singleLine="true" />
 
                 <ImageView
@@ -112,7 +113,8 @@
                     android:textSize="20dp"
                     android:textColor="@color/black"
                     android:inputType="numberPassword"
-                    android:textCursorDrawable="@drawable/cursor"
+                    style="@style/CustomEditText"
+                    android:backgroundTint="@color/black"
                     android:singleLine="true" />
 
                 <ImageView

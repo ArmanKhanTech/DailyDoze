@@ -5,6 +5,12 @@
         <item name="android:windowExitAnimation">@anim/expand_out</item>
     </style>
 
+    <style name="CustomEditText" parent="Widget.AppCompat.EditText">
+        <item name="colorAccent">#000000</item>
+        <item name="colorControlActivated">#000000</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
     <style name="MCVTitleTextAppearance" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">22dp</item>
         <item name="android:textColor">@color/black</item>

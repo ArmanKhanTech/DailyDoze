@@ -85,7 +85,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:text=" (¼ tsp)"
                                  android:textColor="@color/white"
                                  android:textSize="15dp"
@@ -181,7 +181,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:layout_marginLeft="5dp"
                                  android:text="(¼ tsp)"
                                  android:textColor="@color/white"
@@ -278,7 +278,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:layout_marginLeft="5dp"
                                  android:text="(1 tsp)"
                                  android:textColor="@color/white"
@@ -375,7 +375,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:layout_marginLeft="5dp"
                                  android:text="(2 tsp)"
                                  android:textColor="@color/white"
@@ -463,7 +463,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:text="Cumin"
                                  android:textColor="@color/white"
                                  android:textSize="25dp"
@@ -472,7 +472,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:layout_marginLeft="5dp"
                                  android:text="(½ tsp)"
                                  android:textColor="@color/white"
@@ -578,7 +578,7 @@
                              <TextView
                                  android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:layout_gravity="top"
+                                 android:layout_gravity="center"
                                  android:layout_marginLeft="5dp"
                                  android:text="(3 cps)"
                                  android:textColor="@color/white"

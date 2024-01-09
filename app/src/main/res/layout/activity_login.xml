@@ -14,9 +14,9 @@
         android:scrollbarThumbVertical="@color/purple_500">
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -57,7 +57,8 @@
                     android:textSize="20dp"
                     android:textColor="@color/black"
                     android:inputType="textEmailAddress"
-                    android:textCursorDrawable="@drawable/cursor"
+                    style="@style/CustomEditText"
+                    android:backgroundTint="@color/black"
                     android:hint="Email" />
 
                 <ImageView
@@ -91,7 +92,8 @@
                     android:singleLine="true"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:textCursorDrawable="@drawable/cursor"
+                    style="@style/CustomEditText"
+                    android:backgroundTint="@color/black"
                     android:hint="Password" />
 
                 <ImageView
