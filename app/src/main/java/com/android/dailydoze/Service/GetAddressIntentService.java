@@ -20,7 +20,6 @@ public class GetAddressIntentService extends IntentService {
     public GetAddressIntentService() {
         super(IDENTIFIER);
     }
-
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
         String msg;

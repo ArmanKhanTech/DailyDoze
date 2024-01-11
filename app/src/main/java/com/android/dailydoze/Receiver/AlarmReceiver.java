@@ -17,9 +17,10 @@ import com.android.dailydoze.R;
 
 @SuppressWarnings("ALL")
 public class AlarmReceiver extends BroadcastReceiver {
+    public static final String CHANNEL_ID = "NotifitcationChannel";
+    NotificationChannel serviceChannel;
     @Override
     public void onReceive(Context context, Intent intent) {
-
         Bundle bundle = intent.getExtras();
         int id = bundle.getInt("id");
 
@@ -30,24 +31,26 @@ public class AlarmReceiver extends BroadcastReceiver {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "notify_001");
-        mBuilder.setSmallIcon(R.drawable.noti_vec_icon_white);
-        mBuilder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon_black));
-        mBuilder.setContentTitle("DailyDoze");
-        mBuilder.setContentText("Make Sure to Take & Update Your Servings");
-        mBuilder.setAutoCancel(true);
-        mBuilder.setDefaults(Notification.DEFAULT_SOUND);
-        mBuilder.setOngoing(true);
-        mBuilder.setAutoCancel(true);
-        mBuilder.setPriority(Notification.PRIORITY_HIGH);
-        mBuilder.setOnlyAlertOnce(true);
-        mBuilder.build().flags = Notification.FLAG_NO_CLEAR | Notification.PRIORITY_HIGH;
-        mBuilder.setContentIntent(pendingIntent);
+        mBuilder.setSmallIcon(R.drawable.noti_vec_icon_white)
+                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon_black))
+                .setContentTitle("DailyDoze")
+                .setContentText("Make Sure to Take & Update Your Servings")
+                .setAutoCancel(true)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setOngoing(true)
+                .setAutoCancel(true)
+                .setPriority(Notification.PRIORITY_HIGH)
+                .setOnlyAlertOnce(true)
+                .setContentIntent(pendingIntent)
+                .build().flags = Notification.FLAG_NO_CLEAR | Notification.PRIORITY_HIGH;
 
-        String channelId = "channel_id";
-        NotificationChannel channel = new NotificationChannel(channelId, "channel name", NotificationManager.IMPORTANCE_HIGH);
-        channel.enableVibration(true);
-        notificationManager.createNotificationChannel(channel);
-        mBuilder.setChannelId(channelId);
+        serviceChannel = new NotificationChannel(
+                CHANNEL_ID,
+                "Foreground Service Channel",
+                NotificationManager.IMPORTANCE_DEFAULT
+        );
+        notificationManager.createNotificationChannel(serviceChannel);
+        mBuilder.setChannelId(CHANNEL_ID);
 
         Notification notification = mBuilder.build();
         notificationManager.notify(id, notification);
