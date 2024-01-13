@@ -155,12 +155,16 @@ public class NotificationActivity extends AppCompatActivity {
         list.setOnItemClickListener((parent, view, position, id) -> {
             DataList notiList = adapter.getItem(position);
             String t = notiList.getText();
+
             LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
             Button bb = popupView.findViewById(R.id.delete);
             bb.setOnClickListener(view1 -> {
                 int idOf = db1.readID(t);

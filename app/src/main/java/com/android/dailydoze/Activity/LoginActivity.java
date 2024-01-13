@@ -70,7 +70,6 @@ public class LoginActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(userEmail) || TextUtils.isEmpty(userPass)) {
             h.postDelayed(() -> submit.setText("Submit"), 3000);
             submit.setText("Invalid Inputs");
-
             return;
         }
 

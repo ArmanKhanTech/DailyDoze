@@ -54,7 +54,6 @@ public class CalenderActivity extends AppCompatActivity {
     }
 
     private final class LoadCal extends AsyncTask<Void, Void, Void>{
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -218,17 +217,20 @@ public class CalenderActivity extends AppCompatActivity {
         db2 = new DailyDozeDatabase(this);
         dates = db2.getDates();
         Collection<CalendarDay> datesToMark = new ArrayList<>();
+
         for (int i = 0; i < dates.size(); i++) {
             String date = dates.get(i);
             int servings = db2.getData(name, date);
             if (servings != 0) {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy", Locale.ENGLISH);
                 Date date1 = null;
+
                 try {
                     date1 = sdf.parse(date);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+
                 CalendarDay day = CalendarDay.from(date1);
                 datesToMark.add(day);
                 Log.d("date", date);
@@ -242,17 +244,20 @@ public class CalenderActivity extends AppCompatActivity {
         db1 = new TweaksDatabase(this);
         dates = db1.getDates();
         Collection<CalendarDay> datesToMark = new ArrayList<>();
+
         for (int i = 0; i < dates.size(); i++) {
             String date = dates.get(i);
             int servings = db1.getData(name, date);
             if (servings != 0) {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy", Locale.ENGLISH);
                 Date date1 = null;
+
                 try {
                     date1 = sdf.parse(date);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+
                 CalendarDay day = CalendarDay.from(date1);
                 datesToMark.add(day);
                 Log.d("date", date);

@@ -86,9 +86,12 @@ public class TweakActivity extends AppCompatActivity {
         weight.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+
             TextView tv = popupView.findViewById(R.id.timing);
             EditText et = popupView.findViewById(R.id.weight);
             Button b = popupView.findViewById(R.id.save);
@@ -199,7 +202,6 @@ public class TweakActivity extends AppCompatActivity {
 
     public void setDay(boolean b) {
         if(Objects.equals(setCurrentDate(), getCurrentDate())) {
-            // Current Day
             setCount(getCurrentDate());
 
             if(b){

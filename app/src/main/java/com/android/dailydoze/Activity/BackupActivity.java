@@ -116,7 +116,6 @@ public class BackupActivity extends AppCompatActivity {
     }
 
     private void importDB() {
-
         File sd = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases");
 
         if (sd.canWrite()) {

@@ -85,17 +85,23 @@ public class MeditationActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 DataList mediList = adapter.getItem(position);
+
                 String t = mediList.getText();
                 String d = db1.getDuration(t);
                 d = millisToTime(Long.parseLong(d));
+
                 LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                 @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+
                 int width = LinearLayout.LayoutParams.MATCH_PARENT;
                 int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+
                 final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
                 Button bb = popupView.findViewById(R.id.delete);
                 TextView tv = popupView.findViewById(R.id.notiPopText);
+
                 tv.setText("You meditated for " + d + " on " + t);
                 bb.setText("Okay");
                 bb.setOnClickListener(view1 -> {
@@ -104,7 +110,6 @@ public class MeditationActivity extends AppCompatActivity {
                 dimBehind(popupWindow);
             }
         });
-
 
         rg.setOnCheckedChangeListener((group, checkedId) -> {
             switch(checkedId){

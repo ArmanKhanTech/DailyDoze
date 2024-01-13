@@ -167,15 +167,20 @@ public class FastActivity extends AppCompatActivity {
             DataList fastList = adapter.getItem(position);
             String t = fastList.getText();
             String d = db.getDuration(t);
+
             LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
             Button bb = popupView.findViewById(R.id.delete);
             TextView tv = popupView.findViewById(R.id.notiPopText);
             tv.setText("You fasted for " + d + " on " + t);
+
             bb.setText("Okay");
             bb.setOnClickListener(view1 -> popupWindow.dismiss());
             dimBehind(popupWindow);

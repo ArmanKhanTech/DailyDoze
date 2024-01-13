@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-    <TextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:gravity="left"
-        android:textColor="@color/black"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"/>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18dp"
+    android:gravity="left"
+    android:textColor="@color/black"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"/>

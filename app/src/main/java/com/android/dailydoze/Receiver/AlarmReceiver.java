@@ -30,7 +30,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intentTo, PendingIntent.FLAG_IMMUTABLE);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "notify_001");
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
         mBuilder.setSmallIcon(R.drawable.noti_vec_icon_white)
                 .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.app_icon_black))
                 .setContentTitle("DailyDoze")
@@ -46,7 +46,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         serviceChannel = new NotificationChannel(
                 CHANNEL_ID,
-                "Foreground Service Channel",
+                "Notification Channel",
                 NotificationManager.IMPORTANCE_DEFAULT
         );
         notificationManager.createNotificationChannel(serviceChannel);
