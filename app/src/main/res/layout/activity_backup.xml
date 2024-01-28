@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFF8E1"
     android:layout_height="match_parent"
+    android:background="#FFF8E1"
     android:orientation="vertical"
     tools:context=".Activity.GraphActivity">
 
@@ -17,8 +16,8 @@
         <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="7dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="15dp"
             android:background="@color/transparent"
             android:onClick="backupFinish"
@@ -43,8 +42,8 @@
         android:layout_height="300dp"
         android:layout_gravity="center"
         android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="15dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/backup_theme"
         android:scaleType="centerInside"
         app:lottie_rawRes="@raw/backup" />
@@ -55,20 +54,20 @@
         android:layout_height="300dp"
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
-        android:padding="75dp"
-        android:visibility="gone"
-        android:layout_marginBottom="15dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/backup_theme"
+        android:padding="75dp"
         android:scaleType="centerInside"
+        android:visibility="gone"
         app:lottie_rawRes="@raw/loading" />
 
     <ScrollView
         android:id="@+id/backup_scroll"
-        android:visibility="gone"
-        android:scrollbarThumbVertical="@color/peach"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@color/peach"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -1,9 +1,9 @@
 package com.android.dailydoze.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.R;
 

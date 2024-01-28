@@ -1,5 +1,7 @@
 package com.android.dailydoze.CustomDatePicker;
 
+import com.android.dailydoze.CustomDatePicker.Interface.DateFactoryListener;
+
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,12 +9,12 @@ import java.util.List;
 
 @SuppressWarnings("ALL")
 public class DatePickerFactory {
+    private static final DateFormatSymbols dfs = new DateFormatSymbols();
     private DateModel maxDate;
     private DateModel minDate;
     private DateModel selectedDate;
     private DateFactoryListener listener;
     private int monthMin;
-    private static final DateFormatSymbols dfs = new DateFormatSymbols();
 
     public DatePickerFactory(DateFactoryListener listener) {
         this.listener = listener;
@@ -88,7 +90,7 @@ public class DatePickerFactory {
 
         List<String> days = new ArrayList();
 
-        for(int i = min; i < max; ++i) {
+        for (int i = min; i < max; ++i) {
             days.add("" + (i + 1));
         }
 
@@ -111,7 +113,7 @@ public class DatePickerFactory {
 
         List<String> months = new ArrayList();
 
-        for(int i = this.monthMin; i < max; ++i) {
+        for (int i = this.monthMin; i < max; ++i) {
             months.add(monthsList.get(i));
         }
 
@@ -122,7 +124,7 @@ public class DatePickerFactory {
         int yearCount = Math.abs(this.minDate.getYear() - this.maxDate.getYear()) + 1;
         List<String> years = new ArrayList();
 
-        for(int i = 0; i < yearCount; ++i) {
+        for (int i = 0; i < yearCount; ++i) {
             years.add("" + (this.minDate.getYear() + i));
         }
 

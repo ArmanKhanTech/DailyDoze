@@ -1,12 +1,12 @@
-package com.android.dailydoze.Utility;
+package com.android.dailydoze.Model;
 
 import android.graphics.drawable.Drawable;
 
-public class DataList {
+public class DataListModel {
     private final String text;
     Drawable icon;
 
-    public DataList(String text, Drawable icon) {
+    public DataListModel(String text, Drawable icon) {
         this.text = text;
         this.icon = icon;
     }

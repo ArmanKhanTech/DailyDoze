@@ -14,8 +14,8 @@ public class NotificationDatabase extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "notiInfo";
     private static final String ID_COL = "id";
-    private static final String TIME="time";
-    private static final String MILLIS="millis";
+    private static final String TIME = "time";
+    private static final String MILLIS = "millis";
 
     public NotificationDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -40,7 +40,7 @@ public class NotificationDatabase extends SQLiteOpenHelper {
 
     public void deleteNotification(String time) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_NAME+ " WHERE "+TIME+"='"+time+"'");
+        db.execSQL("DELETE FROM " + TABLE_NAME + " WHERE " + TIME + "='" + time + "'");
     }
 
     public ArrayList<String> readNotification() {
@@ -61,7 +61,7 @@ public class NotificationDatabase extends SQLiteOpenHelper {
     public int readID(String time) {
         int id = 0;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor= db.rawQuery("SELECT " + ID_COL + " FROM " + TABLE_NAME +
+        Cursor cursor = db.rawQuery("SELECT " + ID_COL + " FROM " + TABLE_NAME +
                 " WHERE " + TIME + "='" + time + "'", null);
 
         if (cursor.moveToFirst()) {

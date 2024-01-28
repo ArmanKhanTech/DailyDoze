@@ -9,12 +9,12 @@
     <color name="color_grey2">#dfdfdf</color>
     <color name="color_text">#000000</color>
     <declare-styleable name="Picker">
-        <attr format="integer" name="offset"/>
-        <attr format="boolean" name="darkModeEnabled"/>
-        <attr format="integer" name="textSize"/>
-        <attr format="enum" name="pickerMode">
-            <enum name="monthFirst" value="0"/>
-            <enum name="dayFirst" value="1"/>
+        <attr name="offset" format="integer" />
+        <attr name="darkModeEnabled" format="boolean" />
+        <attr name="textSize" format="integer" />
+        <attr name="pickerMode" format="enum">
+            <enum name="monthFirst" value="0" />
+            <enum name="dayFirst" value="1" />
         </attr>
     </declare-styleable>
 </resources>

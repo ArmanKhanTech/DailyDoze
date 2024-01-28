@@ -15,29 +15,29 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "tweaks";
     private static final String DATE = "date";
-    private static final String BLACK_CUMIN="black_cumin";
-    private static final String GARLIC="garlic";
-    private static final String GINGER="ginger";
-    private static final String YEAST="yeast";
-    private static final String CUMIN="cumin";
-    private static final String TEA="tea";
-    private static final String HYDRATED="hydrated";
-    private static final String DEFLOUR="deflour";
-    private static final String FRONTLOAD="frontload";
-    private static final String TIMERESTRICT="timerestrict";
-    private static final String OPTIMIZE="optimize";
-    private static final String WEIGH="weigh";
-    private static final String INTENTIONS="intentions";
-    private static final String WATER="water";
-    private static final String VINEGAR="vinegar";
-    private static final String NEG_CAL="neg_cal";
-    private static final String UN_MEAL="un_meal";
-    private static final String TWE_MIN="twe_min";
-    private static final String FAST="fast";
-    private static final String SLEEP="sleep";
-    private static final String EXP="exp";
-    private static final String WEIGHT_MORNING="weight_morning";
-    private static final String WEIGHT_EVENING="weight_evening";
+    private static final String BLACK_CUMIN = "black_cumin";
+    private static final String GARLIC = "garlic";
+    private static final String GINGER = "ginger";
+    private static final String YEAST = "yeast";
+    private static final String CUMIN = "cumin";
+    private static final String TEA = "tea";
+    private static final String HYDRATED = "hydrated";
+    private static final String DEFLOUR = "deflour";
+    private static final String FRONTLOAD = "frontload";
+    private static final String TIMERESTRICT = "timerestrict";
+    private static final String OPTIMIZE = "optimize";
+    private static final String WEIGH = "weigh";
+    private static final String INTENTIONS = "intentions";
+    private static final String WATER = "water";
+    private static final String VINEGAR = "vinegar";
+    private static final String NEG_CAL = "neg_cal";
+    private static final String UN_MEAL = "un_meal";
+    private static final String TWE_MIN = "twe_min";
+    private static final String FAST = "fast";
+    private static final String SLEEP = "sleep";
+    private static final String EXP = "exp";
+    private static final String WEIGHT_MORNING = "weight_morning";
+    private static final String WEIGHT_EVENING = "weight_evening";
 
     public TweaksDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -219,7 +219,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public int getWeightMorning(String date){
+    public int getWeightMorning(String date) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
         Cursor c = db1.rawQuery("SELECT " + WEIGHT_MORNING + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
@@ -229,7 +229,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         }
 
         c.close();
-        return  i;
+        return i;
     }
 
     @SuppressLint("Range")
@@ -243,7 +243,7 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         }
 
         c.close();
-        return  i;
+        return i;
     }
 
     @Override

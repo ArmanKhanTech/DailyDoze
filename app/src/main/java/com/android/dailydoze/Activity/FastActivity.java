@@ -27,11 +27,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.android.dailydoze.Adapter.ListAdapter;
 import com.android.dailydoze.Database.FastDatabase;
+import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Service.TimerService;
-import com.android.dailydoze.Utility.DataList;
-import com.android.dailydoze.Utility.ListAdapter;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
@@ -51,13 +51,35 @@ public class FastActivity extends AppCompatActivity {
     TextView start, end, fastStatus, timer;
     ListView list;
     Drawable icon;
-    ArrayList<DataList> data = new ArrayList<>();
+    ArrayList<DataListModel> data = new ArrayList<>();
     ListAdapter adapter;
     Boolean b = false;
     FastDatabase db;
     LinearLayout linearLayout;
     RadioGroup rG;
     ProgressBar pB;
+    final private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateGUI(intent);
+        }
+    };
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
+    public static String getCurrentTime() {
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
+        Calendar cal = Calendar.getInstance();
+        return dateFormat.format(cal.getTime());
+    }
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -73,22 +95,22 @@ public class FastActivity extends AppCompatActivity {
         end.setText(addTime(3));
 
         pB = findViewById(R.id.progressFast);
-        pB.setMax((int)millis);
-        pB.setProgress((int)millis);
+        pB.setMax((int) millis);
+        pB.setProgress((int) millis);
 
         fastStatus = findViewById(R.id.fastHisStatus);
 
         fast = findViewById(R.id.fast_start_btn);
 
         fast.setOnClickListener(v -> {
-            if(fast.getText().equals("Start")) {
-                pB.setMax((int)millis);
-                pB.setProgress((int)millis);
+            if (fast.getText().equals("Start")) {
+                pB.setMax((int) millis);
+                pB.setProgress((int) millis);
 
                 Intent intent = new Intent(this, TimerService.class);
                 intent.putExtra("millis", millis);
                 startService(intent);
-            } else if(fast.getText().equals("Stop")) {
+            } else if (fast.getText().equals("Stop")) {
                 cancelTimer();
             }
         });
@@ -109,24 +131,24 @@ public class FastActivity extends AppCompatActivity {
         ArrayList<String> dates = db.getAllDate();
         icon = getDrawable(R.drawable.fastwatch_icon);
 
-        for(int i = 0; i < dates.size(); i++){
+        for (int i = 0; i < dates.size(); i++) {
             String temp = dates.get(i);
-            data.add(new DataList(temp, icon));
+            data.add(new DataListModel(temp, icon));
         }
 
         Collections.reverse(data);
 
-        adapter = new ListAdapter(this,data);
+        adapter = new ListAdapter(this, data);
         list.setAdapter(adapter);
 
-        if(data.isEmpty()) {
+        if (data.isEmpty()) {
             fastStatus.setText("Nothing to Show");
         } else {
             fastStatus.setVisibility(View.GONE);
         }
 
         rG.setOnCheckedChangeListener((group, checkedId) -> {
-            switch(checkedId){
+            switch (checkedId) {
                 case R.id.thehrs:
                     millis = 10800000;
                     start.setText(getCurrentTime());
@@ -159,16 +181,16 @@ public class FastActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= 33) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS},101);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
             }
         }
 
         list.setOnItemClickListener((parent, view, position, id) -> {
-            DataList fastList = adapter.getItem(position);
+            DataListModel fastList = adapter.getItem(position);
             String t = fastList.getText();
             String d = db.getDuration(t);
 
-            LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -188,9 +210,9 @@ public class FastActivity extends AppCompatActivity {
     }
 
     public void cancelTimer() {
-        if(db.getDate(getCurrentDate())){
+        if (db.getDate(getCurrentDate())) {
             db.changeDuration(millisToTime(millisDone), getCurrentDate());
-        } else  {
+        } else {
             db.addData(getCurrentDate());
             db.changeDuration(millisToTime(millisDone), getCurrentDate());
         }
@@ -200,8 +222,8 @@ public class FastActivity extends AppCompatActivity {
         fast.setText("Start");
         rG.setVisibility(View.VISIBLE);
         linearLayout.setVisibility(View.VISIBLE);
-        pB.setMax((int)millis);
-        pB.setProgress((int)millis);
+        pB.setMax((int) millis);
+        pB.setProgress((int) millis);
 
         Intent intent = new Intent(this, TimerService.class);
         stopService(intent);
@@ -213,31 +235,24 @@ public class FastActivity extends AppCompatActivity {
         ArrayList<String> time = db.getAllDate();
         data.clear();
 
-        for(int i = 0; i < time.size(); i++) {
+        for (int i = 0; i < time.size(); i++) {
             String temp = time.get(i);
-            data.add(new DataList(temp, icon));
+            data.add(new DataListModel(temp, icon));
         }
 
         Collections.reverse(data);
 
-        adapter = new ListAdapter(this,data);
+        adapter = new ListAdapter(this, data);
         adapter.notifyDataSetChanged();
         list.setAdapter(adapter);
 
-        if(time.isEmpty()) {
+        if (time.isEmpty()) {
             fastStatus.setVisibility(View.VISIBLE);
             fastStatus.setText("Nothing to Show");
         } else {
             fastStatus.setVisibility(View.GONE);
         }
     }
-
-    final private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            updateGUI(intent);
-        }
-    };
 
     @Override
     public void onResume() {
@@ -268,12 +283,12 @@ public class FastActivity extends AppCompatActivity {
             b = intent.getBooleanExtra("status", false);
             millisDone = intent.getLongExtra("millisUntilFinished", 0);
 
-            if(b) {
+            if (b) {
                 timer.setText(time);
                 fast.setText("Stop");
                 rG.setVisibility(View.GONE);
                 linearLayout.setVisibility(View.GONE);
-                pB.setProgress((int) ((int)millis - millisDone));
+                pB.setProgress((int) ((int) millis - millisDone));
             }
         }
     }
@@ -284,22 +299,6 @@ public class FastActivity extends AppCompatActivity {
         long min = (t / 60000) % 60;
         long sec = (t / 1000) % 60;
         return f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
-    }
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-            p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-            p.dimAmount = 0.5f;
-            wm.updateViewLayout(container, p);
-    }
-
-    public static String getCurrentTime() {
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
-        Calendar cal = Calendar.getInstance();
-        return dateFormat.format(cal.getTime());
     }
 
     public String addTime(int h) {

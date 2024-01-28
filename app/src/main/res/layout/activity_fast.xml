@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,8 +16,8 @@
             android:id="@+id/imageButton30"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="7dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="7dp"
             android:layout_marginRight="15dp"
             android:background="@color/transparent"
             android:onClick="fastBack"
@@ -51,34 +50,34 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/fast_history_theme"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/fast_history_theme">
 
                 <TextView
                     android:id="@+id/timerFast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="3dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="03:00:00"
                     android:textColor="@color/customBlue"
-                    android:elevation="3dp"
                     android:textSize="50dp"
-                    android:layout_gravity="center"
-                    tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck"/>
+                    tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
 
                 <ProgressBar
                     android:id="@+id/progressFast"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:background="@drawable/circle_shape"
-                    android:indeterminate="false"
-                    android:elevation="3dp"
                     android:layout_gravity="center"
+                    android:background="@drawable/circle_shape"
+                    android:elevation="3dp"
+                    android:indeterminate="false"
                     android:progressDrawable="@drawable/progress_bar_two"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center" />
 
             </FrameLayout>
 
@@ -87,26 +86,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:text="Start"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/customBlue"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/white"
-                android:textSize="20dp"
+                android:text="Start"
                 android:textAlignment="center"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
             <LinearLayout
                 android:id="@+id/llll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/fast_history_theme"
+                android:orientation="vertical"
                 android:padding="15dp">
 
                 <LinearLayout
@@ -116,9 +115,9 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Start Time :"
                         android:textColor="@color/customBlue"
@@ -127,10 +126,10 @@
                     <TextView
                         android:id="@+id/startTime"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="end"
+                        android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="end"
                         android:text="14:00 pm"
                         android:textColor="@color/customBlue"
                         android:textSize="20dp" />
@@ -140,14 +139,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="End Time :"
                         android:textColor="@color/customBlue"
@@ -156,10 +155,10 @@
                     <TextView
                         android:id="@+id/endTime"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="end"
+                        android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="end"
                         android:text="20:00 pm"
                         android:textColor="@color/customBlue"
                         android:textSize="20dp" />
@@ -173,8 +172,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
@@ -182,31 +181,31 @@
                 <RadioButton
                     android:id="@+id/thehrs"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_two"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:padding="5dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/custom_radio_two"
                     android:text="3 hrs"
-                    android:checked="true"
                     android:textAlignment="center"
-                    android:layout_marginRight="5dp"
                     android:textColor="@drawable/custom_radio_text_two"
                     android:textSize="20dp" />
 
                 <RadioButton
                     android:id="@+id/sixhrs"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_two"
+                    android:button="@android:color/transparent"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:padding="5dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/custom_radio_two"
                     android:text="6 hrs"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
                     android:textAlignment="center"
                     android:textColor="@drawable/custom_radio_text_two"
                     android:textSize="20dp" />
@@ -214,32 +213,32 @@
                 <RadioButton
                     android:id="@+id/ninhrs"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_two"
+                    android:button="@android:color/transparent"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:padding="5dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/custom_radio_two"
                     android:text="9 hrs"
                     android:textAlignment="center"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
                     android:textColor="@drawable/custom_radio_text_two"
                     android:textSize="20dp" />
 
                 <RadioButton
                     android:id="@+id/twehrs"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_two"
+                    android:button="@android:color/transparent"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:padding="5dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/custom_radio_two"
                     android:text="12 hrs"
                     android:textAlignment="center"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
                     android:textColor="@drawable/custom_radio_text_two"
                     android:textSize="20dp" />
 
@@ -249,25 +248,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
                 android:layout_gravity="bottom"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
-                android:paddingTop="5dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="10dp"
                 android:background="@drawable/fast_history_theme"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
 
                 <TextView
                     android:id="@+id/fastHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="History"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="10dp"
                     android:textColor="@color/customBlue"
                     android:textSize="30dp" />
 
@@ -277,9 +276,9 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/fastHistory"
                     android:divider="@color/transparent"
-                    android:padding="5dp"
                     android:dividerHeight="10dp"
-                    android:scrollbars="none"/>
+                    android:padding="5dp"
+                    android:scrollbars="none" />
 
                 <TextView
                     android:id="@+id/fastHisStatus"

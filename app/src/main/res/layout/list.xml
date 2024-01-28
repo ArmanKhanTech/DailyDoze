@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="55dp"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
     android:layout_marginTop="150dp"
-    android:background="@drawable/list_theme">
+    android:background="@drawable/list_theme"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
     <ImageView
         android:id="@+id/list_icon"
@@ -28,8 +27,8 @@
         android:gravity="center"
         android:text="7:00 pm"
         android:textColor="@color/customBlue"
-        android:textStyle="bold"
         android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

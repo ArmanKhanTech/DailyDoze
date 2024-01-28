@@ -30,6 +30,10 @@ public class DatePickerPopup extends PickerPopup {
         this.listener = listener;
     }
 
+    public interface OnDateSelectListener {
+        void onDateSelected(DatePicker dp, long date, int day, int month, int year);
+    }
+
     public static final class Builder {
         private Context context;
         private DatePicker datePicker;
@@ -85,9 +89,5 @@ public class DatePickerPopup extends PickerPopup {
             popup.setListener(listener);
             return popup;
         }
-    }
-
-    public interface OnDateSelectListener {
-        void onDateSelected(DatePicker dp, long date, int day, int month, int year);
     }
 }

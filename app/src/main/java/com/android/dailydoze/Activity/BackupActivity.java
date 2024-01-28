@@ -38,6 +38,16 @@ public class BackupActivity extends AppCompatActivity {
     ScrollView scrollView;
     String what;
 
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,39 +92,6 @@ public class BackupActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("StaticFieldLeak")
-    private final class Load extends AsyncTask<Void,Void,Void> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            scrollView.setVisibility(View.GONE);
-            loading.setVisibility(View.VISIBLE);
-
-            loading.playAnimation();
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            if(what.equals("import")){
-                importDB();
-            } else if(what.equals("export")){
-                exportDB();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void results) {
-            super.onPostExecute(results);
-
-            openDialog(what);
-
-            scrollView.setVisibility(View.VISIBLE);
-            loading.setVisibility(View.GONE);
-        }
-    }
-
     private void importDB() {
         File sd = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases");
 
@@ -122,8 +99,8 @@ public class BackupActivity extends AppCompatActivity {
             File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
             File[] databases = new File(path + "/" + "DailyDoze").listFiles();
 
-            if(databases != null) {
-                if(databases.length == 0) {
+            if (databases != null) {
+                if (databases.length == 0) {
                     what = "No files found.";
                     return;
                 }
@@ -132,7 +109,7 @@ public class BackupActivity extends AppCompatActivity {
                 return;
             }
 
-            for (File databaseFile: databases) {
+            for (File databaseFile : databases) {
                 final String backupFilename = databaseFile.getName();
                 File backupFile = new File(sd, backupFilename);
 
@@ -176,14 +153,14 @@ public class BackupActivity extends AppCompatActivity {
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
         File sd = new File(path + "/" + "DailyDoze");
 
-        if(!sd.exists()) {
+        if (!sd.exists()) {
             sd.mkdir();
         }
 
         if (sd.canWrite()) {
             final File[] databases = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases").listFiles();
 
-            for (File databaseFile: databases) {
+            for (File databaseFile : databases) {
                 final String backupFilename = databaseFile.getName() + ".db";
                 File backupFile = new File(sd, backupFilename);
                 FileChannel inputChannel = null;
@@ -222,7 +199,7 @@ public class BackupActivity extends AppCompatActivity {
         }
     }
 
-    public void openDialog(String msg){
+    public void openDialog(String msg) {
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams")
         View popupView = layoutInflater.inflate(R.layout.get_weight, null);
@@ -237,14 +214,14 @@ public class BackupActivity extends AppCompatActivity {
         hrs.setVisibility(View.GONE);
         okay.setText("Okay");
 
-        if(msg == "Done Imported") {
+        if (msg == "Done Imported") {
             tv.setText("Your data is imported successfully.");
-        } else if(msg == "Done Exported") {
+        } else if (msg == "Done Exported") {
             tv.setText("Your data is exported successfully.");
-        } else if(msg == "Error") {
+        } else if (msg == "Error") {
             tv.setText("An exception occured. Please try again.");
             okay.setText("Try Again");
-        } else if(msg == "No files found.") {
+        } else if (msg == "No files found.") {
             tv.setText("No files were found.");
         }
 
@@ -259,17 +236,40 @@ public class BackupActivity extends AppCompatActivity {
         dimBehind(popupWindow);
     }
 
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
-
     public void backupFinish(View v) {
         finish();
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    private final class Load extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            scrollView.setVisibility(View.GONE);
+            loading.setVisibility(View.VISIBLE);
+
+            loading.playAnimation();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            if (what.equals("import")) {
+                importDB();
+            } else if (what.equals("export")) {
+                exportDB();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void results) {
+            super.onPostExecute(results);
+
+            openDialog(what);
+
+            scrollView.setVisibility(View.VISIBLE);
+            loading.setVisibility(View.GONE);
+        }
     }
 }

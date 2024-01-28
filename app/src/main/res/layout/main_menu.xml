@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="20dp"
-            android:background="@drawable/menu_border">
+            android:background="@drawable/menu_border"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageButton
+                    android:id="@+id/closeMenu"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/transparent"
-                    android:id="@+id/closeMenu"
-                    android:layout_marginLeft="15dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/close_icon_black" />
 
@@ -47,277 +46,277 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/user_info_bg"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:paddingTop="15dp"
-                android:gravity="center"
-                android:paddingBottom="20dp"
-                android:background="@drawable/user_info_bg">
+                android:paddingBottom="20dp">
 
                 <TextView
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Arman Khan"
                     android:gravity="center_horizontal"
+                    android:text="Arman Khan"
                     android:textColor="@color/white"
-                    android:textSize="25dp"/>
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
                     android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_horizontal"
                     android:text="ak2341777@gmail.com"
                     android:textColor="@color/white"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/menu_theme"
                 android:orientation="vertical"
                 android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:background="@drawable/menu_theme">
-
-            <LinearLayout
-                android:id="@+id/twe_tweaks"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:padding="2dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/tweaks_icon"
-                    android:scaleType="fitCenter"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="21 Tweaks"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/jump_to_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:background="@drawable/menu_theme">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="2dp"
-                    android:src="@drawable/jump_icon"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Jump to a Date"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/notifications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:background="@drawable/menu_theme">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/noti_icon"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Notifications"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/meditation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:background="@drawable/menu_theme">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:padding="2dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/medi_icon"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Meditation"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fastwatch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:background="@drawable/menu_theme">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:padding="2dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/fastwatch_icon"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Fast-Watch"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
-
-            </LinearLayout>
+                android:paddingBottom="5dp">
 
                 <LinearLayout
-                    android:id="@+id/backup"
+                    android:id="@+id/twe_tweaks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="10dp"
-                    android:background="@drawable/menu_theme">
+                    android:padding="10dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
                         android:padding="2dp"
-                        android:src="@drawable/backup_icon"/>
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tweaks_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:text="Backup"
-                        android:textColor="#FF80AB"
                         android:layout_marginLeft="5dp"
-                        android:textSize="22dp"/>
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="21 Tweaks"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
 
                 </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/openSource"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:background="@drawable/menu_theme">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:padding="1dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/github_icon"/>
-
-                <TextView
+                <LinearLayout
+                    android:id="@+id/jump_to_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Open Source"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/jump_icon" />
 
-            <LinearLayout
-                android:id="@+id/about"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:background="@drawable/menu_theme">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Jump to a Date"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="2dp"
-                    android:src="@drawable/about_icon"/>
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/notifications"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="About"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/noti_icon" />
 
-            <LinearLayout
-                android:id="@+id/logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:background="@drawable/menu_theme">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Notifications"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:padding="3dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/logout_icon"/>
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/meditation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Logout"
-                    android:textColor="#FF80AB"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="22dp"/>
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/medi_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Meditation"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fastwatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/fastwatch_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Fast-Watch"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/backup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/backup_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Backup"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/openSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        android:src="@drawable/github_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Open Source"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/about_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="About"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="3dp"
+                        android:src="@drawable/logout_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Logout"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="v 1.05"
                     android:textColor="#FF80AB"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp" />
 
             </LinearLayout>
 

@@ -1,65 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="15dp"
-            android:background="@drawable/medi_settings_theme">
+            android:background="@drawable/medi_settings_theme"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="15dp"
-                android:background="@color/transparent"
-                android:id="@+id/close"
-                android:scaleType="fitCenter"
-                android:src="@drawable/close_icon_black" />
+                <ImageButton
+                    android:id="@+id/close"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/close_icon_black" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Settings"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Settings"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30dp" />
 
             </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Background"
                 android:textColor="@color/black"
-                android:textSize="30dp"
-                android:layout_marginLeft="10dp"
-                android:layout_gravity="center"/>
+                android:textSize="30dp" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
                 android:scrollbars="none">
@@ -69,79 +68,79 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
 
-                    <ImageView
-                        android:id="@+id/mediwall1"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/mediwall1"
-                        android:scaleType="centerCrop"/>
+                        <ImageView
+                            android:id="@+id/mediwall1"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mediwall1" />
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginLeft="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        app:cardCornerRadius="30dp">
 
-                    <ImageView
-                        android:id="@+id/mediwall2"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/mediwall2"
-                        android:scaleType="centerCrop"/>
+                        <ImageView
+                            android:id="@+id/mediwall2"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mediwall2" />
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginLeft="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        app:cardCornerRadius="30dp">
 
-                    <ImageView
-                        android:id="@+id/mediwall3"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/mediwall3"
-                        android:scaleType="centerCrop"/>
+                        <ImageView
+                            android:id="@+id/mediwall3"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mediwall3" />
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginLeft="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        app:cardCornerRadius="30dp">
 
-                    <ImageView
-                        android:id="@+id/mediwall4"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/mediwall4"
-                        android:scaleType="centerCrop"/>
+                        <ImageView
+                            android:id="@+id/mediwall4"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mediwall4" />
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginLeft="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        app:cardCornerRadius="30dp">
 
-                    <ImageView
-                        android:id="@+id/mediwall5"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/mediwall5"
-                        android:scaleType="centerCrop"/>
+                        <ImageView
+                            android:id="@+id/mediwall5"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mediwall5" />
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -150,18 +149,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Sound"
                 android:textColor="@color/black"
-                android:textSize="30dp"
-                android:layout_marginLeft="10dp"
-                android:layout_gravity="center"/>
+                android:textSize="30dp" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="40dp"
                 android:scrollbars="none">
@@ -180,12 +179,12 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Rainfall"
                             android:layout_gravity="bottom"
                             android:layout_marginBottom="60dp"
-                            android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Rainfall"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="25dp" />
 
@@ -198,8 +197,8 @@
                                 android:id="@+id/m1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mp3"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mp3" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -209,20 +208,20 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:elevation="3dp"
-                        android:layout_marginLeft="20dp">
+                        android:layout_marginLeft="20dp"
+                        android:elevation="3dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Flute"
                             android:layout_gravity="bottom"
                             android:layout_marginBottom="60dp"
-                            android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Flute"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25dp"/>
+                            android:textSize="25dp" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -233,8 +232,8 @@
                                 android:id="@+id/m2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mp3"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mp3" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -244,20 +243,20 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:elevation="3dp"
-                        android:layout_marginLeft="20dp">
+                        android:layout_marginLeft="20dp"
+                        android:elevation="3dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Relax"
                             android:layout_gravity="bottom"
                             android:layout_marginBottom="60dp"
-                            android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Relax"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25dp"/>
+                            android:textSize="25dp" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -268,8 +267,8 @@
                                 android:id="@+id/m3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mp3"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mp3" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -279,20 +278,20 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:elevation="3dp"
-                        android:layout_marginLeft="20dp">
+                        android:layout_marginLeft="20dp"
+                        android:elevation="3dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Birds"
                             android:layout_gravity="bottom"
                             android:layout_marginBottom="60dp"
-                            android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Birds"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25dp"/>
+                            android:textSize="25dp" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -303,8 +302,8 @@
                                 android:id="@+id/m4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mp3"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mp3" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -314,20 +313,20 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:elevation="3dp"
-                        android:layout_marginLeft="20dp">
+                        android:layout_marginLeft="20dp"
+                        android:elevation="3dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Forest"
                             android:layout_gravity="bottom"
                             android:layout_marginBottom="60dp"
-                            android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Forest"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25dp"/>
+                            android:textSize="25dp" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -338,8 +337,8 @@
                                 android:id="@+id/m5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mp3"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mp3" />
 
                         </androidx.cardview.widget.CardView>
 
@@ -349,20 +348,20 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:elevation="3dp"
-                        android:layout_marginLeft="20dp">
+                        android:layout_marginLeft="20dp"
+                        android:elevation="3dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:text="Celestial"
                             android:layout_gravity="bottom"
                             android:layout_marginBottom="60dp"
-                            android:fontFamily="sans-serif-condensed-medium"
                             android:elevation="3dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Celestial"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25dp"/>
+                            android:textSize="25dp" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
@@ -373,8 +372,8 @@
                                 android:id="@+id/m6"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/mp3"
-                                android:scaleType="centerCrop"/>
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mp3" />
 
                         </androidx.cardview.widget.CardView>
 

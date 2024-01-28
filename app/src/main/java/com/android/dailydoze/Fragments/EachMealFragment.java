@@ -23,15 +23,127 @@ import com.android.dailydoze.R;
 import java.util.Objects;
 
 public class EachMealFragment extends Fragment {
-    ImageView i1, i2, i3, i4, i5;
-    ImageView c1, c2, c3, c4, c5;
     @SuppressLint("StaticFieldLeak")
     static CheckBox water_cb1, water_cb2, water_cb3, vinegar_cb1, vinegar_cb2, vinegar_cb3, neg_cb1, neg_cb2, neg_cb3, un_meal_cb1, un_meal_cb2,
             un_meal_cb3, twe_min_cb1, twe_min_cb2, twe_min_cb3;
     static TweaksDatabase db;
+    ImageView i1, i2, i3, i4, i5;
+    ImageView c1, c2, c3, c4, c5;
 
     public EachMealFragment() {
         //
+    }
+
+    public static void setDay() {
+        setClickable(Objects.equals(setCurrentDate(), getCurrentDate()));
+        unCheckAll();
+        setChecked();
+    }
+
+    public static void setClickable(boolean b) {
+        water_cb1.setClickable(b);
+        water_cb2.setClickable(b);
+        water_cb3.setClickable(b);
+
+        vinegar_cb1.setClickable(b);
+        vinegar_cb2.setClickable(b);
+        vinegar_cb3.setClickable(b);
+
+        neg_cb1.setClickable(b);
+        neg_cb2.setClickable(b);
+        neg_cb3.setClickable(b);
+
+        un_meal_cb1.setClickable(b);
+        un_meal_cb2.setClickable(b);
+        un_meal_cb3.setClickable(b);
+
+        twe_min_cb1.setClickable(b);
+        twe_min_cb2.setClickable(b);
+        twe_min_cb3.setClickable(b);
+    }
+
+    public static void unCheckAll() {
+        water_cb1.setChecked(false);
+        water_cb2.setChecked(false);
+        water_cb3.setChecked(false);
+
+        vinegar_cb1.setChecked(false);
+        vinegar_cb2.setChecked(false);
+        vinegar_cb3.setChecked(false);
+
+        neg_cb1.setChecked(false);
+        neg_cb2.setChecked(false);
+        neg_cb3.setChecked(false);
+
+        un_meal_cb1.setChecked(false);
+        un_meal_cb2.setChecked(false);
+        un_meal_cb3.setChecked(false);
+
+        twe_min_cb1.setChecked(false);
+        twe_min_cb2.setChecked(false);
+        twe_min_cb3.setChecked(false);
+    }
+
+    public static void setChecked() {
+        int i = db.getData("water", getCurrentDate());
+        if (i == 1) {
+            water_cb1.setChecked(true);
+        } else if (i == 2) {
+            water_cb1.setChecked(true);
+            water_cb2.setChecked(true);
+        } else if (i == 3) {
+            water_cb1.setChecked(true);
+            water_cb2.setChecked(true);
+            water_cb3.setChecked(true);
+        }
+
+        i = db.getData("vinegar", getCurrentDate());
+        if (i == 1) {
+            vinegar_cb1.setChecked(true);
+        } else if (i == 2) {
+            vinegar_cb1.setChecked(true);
+            vinegar_cb2.setChecked(true);
+        } else if (i == 3) {
+            vinegar_cb1.setChecked(true);
+            vinegar_cb2.setChecked(true);
+            vinegar_cb3.setChecked(true);
+        }
+
+        i = db.getData("neg_cal", getCurrentDate());
+        if (i == 1) {
+            neg_cb1.setChecked(true);
+        } else if (i == 2) {
+            neg_cb1.setChecked(true);
+            neg_cb2.setChecked(true);
+        } else if (i == 3) {
+            neg_cb1.setChecked(true);
+            neg_cb2.setChecked(true);
+            neg_cb3.setChecked(true);
+        }
+
+        i = db.getData("un_meal", getCurrentDate());
+        if (i == 1) {
+            un_meal_cb1.setChecked(true);
+        } else if (i == 2) {
+            un_meal_cb1.setChecked(true);
+            un_meal_cb2.setChecked(true);
+        } else if (i == 3) {
+            un_meal_cb1.setChecked(true);
+            un_meal_cb2.setChecked(true);
+            un_meal_cb3.setChecked(true);
+        }
+
+        i = db.getData("twe_min", getCurrentDate());
+        if (i == 1) {
+            twe_min_cb1.setChecked(true);
+        } else if (i == 2) {
+            twe_min_cb1.setChecked(true);
+            twe_min_cb2.setChecked(true);
+        } else if (i == 3) {
+            twe_min_cb1.setChecked(true);
+            twe_min_cb2.setChecked(true);
+            twe_min_cb3.setChecked(true);
+        }
     }
 
     @Override
@@ -76,308 +188,196 @@ public class EachMealFragment extends Fragment {
         setDay();
 
         water_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("water");
-            }else{
+            } else {
                 decValue("water");
             }
         });
 
         water_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("water");
-            }else{
+            } else {
                 decValue("water");
             }
         });
 
         vinegar_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("vinegar");
-            }else{
+            } else {
                 decValue("vinegar");
             }
         });
 
         vinegar_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("vinegar");
-            }else{
+            } else {
                 decValue("vinegar");
             }
         });
 
         vinegar_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("vinegar");
-            }else{
+            } else {
                 decValue("vinegar");
             }
         });
 
         water_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("water");
-            }else{
+            } else {
                 decValue("water");
             }
         });
 
         neg_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("neg_cal");
-            }else{
+            } else {
                 decValue("neg_cal");
             }
         });
 
         neg_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("neg_cal");
-            }else{
+            } else {
                 decValue("neg_cal");
             }
         });
 
         neg_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("neg_cal");
-            }else{
+            } else {
                 decValue("neg_cal");
             }
         });
 
         un_meal_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("un_meal");
-            }else{
+            } else {
                 decValue("un_meal");
             }
         });
 
         un_meal_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("un_meal");
-            }else{
+            } else {
                 decValue("un_meal");
             }
         });
 
         un_meal_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("un_meal");
-            }else{
+            } else {
                 decValue("un_meal");
             }
         });
 
         twe_min_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("twe_min");
-            }else{
+            } else {
                 decValue("twe_min");
             }
         });
 
         twe_min_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("twe_min");
-            }else{
+            } else {
                 decValue("twe_min");
             }
         });
 
         twe_min_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("twe_min");
-            }else{
+            } else {
                 decValue("twe_min");
             }
         });
 
         i1.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), InfoActivity.class);
-            intent.putExtra("title","water");
-            intent.putExtra("tweak",true);
+            intent.putExtra("title", "water");
+            intent.putExtra("tweak", true);
             startActivity(intent);
         });
 
         i2.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), InfoActivity.class);
-            intent.putExtra("title","vinegar");
-            intent.putExtra("tweak",true);
+            intent.putExtra("title", "vinegar");
+            intent.putExtra("tweak", true);
             startActivity(intent);
         });
 
         i3.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), InfoActivity.class);
-            intent.putExtra("title","neg");
-            intent.putExtra("tweak",true);
+            intent.putExtra("title", "neg");
+            intent.putExtra("tweak", true);
             startActivity(intent);
         });
 
         i4.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), InfoActivity.class);
-            intent.putExtra("title","un_meal");
-            intent.putExtra("tweak",true);
+            intent.putExtra("title", "un_meal");
+            intent.putExtra("tweak", true);
             startActivity(intent);
         });
 
         i5.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), InfoActivity.class);
-            intent.putExtra("title","twemin");
-            intent.putExtra("tweak",true);
+            intent.putExtra("title", "twemin");
+            intent.putExtra("tweak", true);
             startActivity(intent);
         });
 
         c1.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), CalenderActivity.class);
-            intent.putExtra("title","water");
+            intent.putExtra("title", "water");
             startActivity(intent);
         });
 
         c2.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), CalenderActivity.class);
-            intent.putExtra("title","vinegar");
+            intent.putExtra("title", "vinegar");
             startActivity(intent);
         });
 
         c3.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), CalenderActivity.class);
-            intent.putExtra("title","neg");
+            intent.putExtra("title", "neg");
             startActivity(intent);
         });
 
         c4.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), CalenderActivity.class);
-            intent.putExtra("title","un_meal");
+            intent.putExtra("title", "un_meal");
             startActivity(intent);
         });
 
         c5.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), CalenderActivity.class);
-            intent.putExtra("title","twemin");
+            intent.putExtra("title", "twemin");
             startActivity(intent);
         });
 
         return view;
     }
 
-    public static void setDay() {
-        setClickable(Objects.equals(setCurrentDate(), getCurrentDate()));
-        unCheckAll();
-        setChecked();
-    }
-
-    public static void setClickable(boolean b) {
-        water_cb1.setClickable(b);
-        water_cb2.setClickable(b);
-        water_cb3.setClickable(b);
-
-        vinegar_cb1.setClickable(b);
-        vinegar_cb2.setClickable(b);
-        vinegar_cb3.setClickable(b);
-
-        neg_cb1.setClickable(b);
-        neg_cb2.setClickable(b);
-        neg_cb3.setClickable(b);
-
-        un_meal_cb1.setClickable(b);
-        un_meal_cb2.setClickable(b);
-        un_meal_cb3.setClickable(b);
-
-        twe_min_cb1.setClickable(b);
-        twe_min_cb2.setClickable(b);
-        twe_min_cb3.setClickable(b);
-    }
-
-    public static void unCheckAll(){
-        water_cb1.setChecked(false);
-        water_cb2.setChecked(false);
-        water_cb3.setChecked(false);
-
-        vinegar_cb1.setChecked(false);
-        vinegar_cb2.setChecked(false);
-        vinegar_cb3.setChecked(false);
-
-        neg_cb1.setChecked(false);
-        neg_cb2.setChecked(false);
-        neg_cb3.setChecked(false);
-
-        un_meal_cb1.setChecked(false);
-        un_meal_cb2.setChecked(false);
-        un_meal_cb3.setChecked(false);
-
-        twe_min_cb1.setChecked(false);
-        twe_min_cb2.setChecked(false);
-        twe_min_cb3.setChecked(false);
-    }
-
-    public static void setChecked() {
-        int i = db.getData("water", getCurrentDate());
-        if(i==1) {
-            water_cb1.setChecked(true);
-        } else if (i==2) {
-            water_cb1.setChecked(true);
-            water_cb2.setChecked(true);
-        } else if (i==3) {
-            water_cb1.setChecked(true);
-            water_cb2.setChecked(true);
-            water_cb3.setChecked(true);
-        }
-
-        i = db.getData("vinegar", getCurrentDate());
-        if(i==1) {
-            vinegar_cb1.setChecked(true);
-        } else if (i==2) {
-            vinegar_cb1.setChecked(true);
-            vinegar_cb2.setChecked(true);
-        } else if (i==3) {
-            vinegar_cb1.setChecked(true);
-            vinegar_cb2.setChecked(true);
-            vinegar_cb3.setChecked(true);
-        }
-
-        i = db.getData("neg_cal", getCurrentDate());
-        if(i==1) {
-            neg_cb1.setChecked(true);
-        } else if (i==2) {
-            neg_cb1.setChecked(true);
-            neg_cb2.setChecked(true);
-        } else if (i==3) {
-            neg_cb1.setChecked(true);
-            neg_cb2.setChecked(true);
-            neg_cb3.setChecked(true);
-        }
-
-        i = db.getData("un_meal", getCurrentDate());
-        if(i==1) {
-            un_meal_cb1.setChecked(true);
-        } else if (i==2) {
-            un_meal_cb1.setChecked(true);
-            un_meal_cb2.setChecked(true);
-        } else if (i==3) {
-            un_meal_cb1.setChecked(true);
-            un_meal_cb2.setChecked(true);
-            un_meal_cb3.setChecked(true);
-        }
-
-        i = db.getData("twe_min", getCurrentDate());
-        if(i==1) {
-            twe_min_cb1.setChecked(true);
-        } else if (i==2) {
-            twe_min_cb1.setChecked(true);
-            twe_min_cb2.setChecked(true);
-        } else if (i==3) {
-            twe_min_cb1.setChecked(true);
-            twe_min_cb2.setChecked(true);
-            twe_min_cb3.setChecked(true);
-        }
-    }
-
     public void incValue(String value) {
-        if(TweakActivity.today){
-            if(db.getDate(getCurrentDate())) {
+        if (TweakActivity.today) {
+            if (db.getDate(getCurrentDate())) {
                 db.incData(value, getCurrentDate());
             } else {
                 db.addDate(getCurrentDate());
@@ -389,8 +389,8 @@ public class EachMealFragment extends Fragment {
     }
 
     public void decValue(String value) {
-        if(TweakActivity.today) {
-            if(db.getDate(getCurrentDate())){
+        if (TweakActivity.today) {
+            if (db.getDate(getCurrentDate())) {
                 db.decData(value, getCurrentDate());
             } else {
                 db.addDate(getCurrentDate());

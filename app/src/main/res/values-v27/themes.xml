@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <style name="Theme.DailyDoze" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
@@ -6,19 +7,23 @@
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAnimationStyle">
-            @style/CustomActivityAnimation</item>
+            @style/CustomActivityAnimation
+        </item>
     </style>
 
-    <style name="CustomActivityAnimation"
-        parent="@android:style/Animation.Activity">
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">
-            @anim/slide_in_right</item>
+            @anim/slide_in_right
+        </item>
         <item name="android:activityOpenExitAnimation">
-            @anim/slide_out_left</item>
+            @anim/slide_out_left
+        </item>
         <item name="android:activityCloseEnterAnimation">
-            @anim/slide_in_left</item>
+            @anim/slide_in_left
+        </item>
         <item name="android:activityCloseExitAnimation">
-            @anim/slide_out_right</item>
+            @anim/slide_out_right
+        </item>
     </style>
 
     <style name="BlackCheckbox" parent="Theme.AppCompat.Light">
@@ -38,7 +43,8 @@
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAnimationStyle">
-            @style/CustomActivityAnimation</item>
+            @style/CustomActivityAnimation
+        </item>
     </style>
 
     <style name="Theme.DailyDoze.Meditation" parent="Theme.Material3.DayNight.NoActionBar">
@@ -48,7 +54,8 @@
         <item name="android:windowLightNavigationBar">false</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAnimationStyle">
-            @style/CustomActivityAnimation</item>
+            @style/CustomActivityAnimation
+        </item>
     </style>
 
     <style name="Theme.DailyDoze.Backup" parent="Theme.Material3.DayNight.NoActionBar">
@@ -58,7 +65,8 @@
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAnimationStyle">
-            @style/CustomActivityAnimation</item>
+            @style/CustomActivityAnimation
+        </item>
     </style>
 
     <style name="MyCustomTabAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
@@ -85,7 +93,8 @@
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">
-            @style/CustomActivityAnimation</item>
+            @style/CustomActivityAnimation
+        </item>
     </style>
 
     <style name="Theme.DailyDoze.Splash" parent="Theme.Material3.DayNight.NoActionBar">
@@ -97,7 +106,8 @@
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAnimationStyle">
-            @style/CustomActivityAnimation</item>
+            @style/CustomActivityAnimation
+        </item>
     </style>
 
 </resources>

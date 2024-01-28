@@ -29,10 +29,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         Handler h2 = new Handler();
         h2.postDelayed(() -> {
             SharedPreferences mPrefs = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-            boolean b = mPrefs.getBoolean("user",false);
+            boolean b = mPrefs.getBoolean("user", false);
 
             Intent intent;
-            if(b) {
+            if (b) {
                 intent = new Intent(SplashScreenActivity.this, MainActivity.class);
             } else {
                 intent = new Intent(SplashScreenActivity.this, LoginActivity.class);

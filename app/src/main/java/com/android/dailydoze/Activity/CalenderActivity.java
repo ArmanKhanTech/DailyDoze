@@ -1,7 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -11,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.Database.TweaksDatabase;
@@ -53,29 +53,8 @@ public class CalenderActivity extends AppCompatActivity {
         loadCal.execute();
     }
 
-    private final class LoadCal extends AsyncTask<Void, Void, Void>{
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            Intent intent = getIntent();
-            title = intent.getStringExtra("title");
-            select(title);
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void unused) {
-            pb.setVisibility(View.GONE);
-            calendarView.setVisibility(View.VISIBLE);
-        }
-    }
-
     public void select(String head) {
-        switch(head) {
+        switch (head) {
             case "beans":
                 name.setText("Beans");
                 highlightDailyDoze("beans");
@@ -269,5 +248,26 @@ public class CalenderActivity extends AppCompatActivity {
 
     public void calBack(View v) {
         finish();
+    }
+
+    private final class LoadCal extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            Intent intent = getIntent();
+            title = intent.getStringExtra("title");
+            select(title);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void unused) {
+            pb.setVisibility(View.GONE);
+            calendarView.setVisibility(View.VISIBLE);
+        }
     }
 }

@@ -16,6 +16,7 @@ public class FastDatabase extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "fast";
     private static final String DATE = "date";
     private static final String DURATION = "duration";
+
     public FastDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }

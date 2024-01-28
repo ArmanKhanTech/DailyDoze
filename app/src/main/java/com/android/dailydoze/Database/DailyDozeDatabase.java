@@ -15,19 +15,19 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static final String TABLE_NAME = "dailyDoze";
     private static final String DATE = "date";
-    private static final String BEANS="beans";
-    private static final String BERRIES="berries";
-    private static final String GREENS="greens";
-    private static final String OTHERVEGE="othervege";
-    private static final String OTHERFRUITS="otherfruits";
-    private static final String CRUCIVEGE="crucivege";
-    private static final String FLAXSEEDS="flaxseeds";
-    private static final String HERBS="herbs";
-    private static final String NUTS="nuts";
-    private static final String GRAINS="grains";
-    private static final String BEVE="beve";
-    private static final String EXERCISE="exercise";
-    private static final String SLEEP="sleep";
+    private static final String BEANS = "beans";
+    private static final String BERRIES = "berries";
+    private static final String GREENS = "greens";
+    private static final String OTHERVEGE = "othervege";
+    private static final String OTHERFRUITS = "otherfruits";
+    private static final String CRUCIVEGE = "crucivege";
+    private static final String FLAXSEEDS = "flaxseeds";
+    private static final String HERBS = "herbs";
+    private static final String NUTS = "nuts";
+    private static final String GRAINS = "grains";
+    private static final String BEVE = "beve";
+    private static final String EXERCISE = "exercise";
+    private static final String SLEEP = "sleep";
 
     public DailyDozeDatabase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -166,7 +166,7 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
         }
 
         c.close();
-        return  i;
+        return i;
     }
 
     public ArrayList<String> getDates() {

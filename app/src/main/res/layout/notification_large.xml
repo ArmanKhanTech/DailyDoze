@@ -1,8 +1,7 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_marginTop="10dp"
     android:layout_height="fill_parent"
+    android:layout_marginTop="10dp"
     android:background="@drawable/fast_history_theme"
     android:gravity="center"
     android:orientation="horizontal">
@@ -16,24 +15,24 @@
             android:id="@+id/notiTimerLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="3dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="03:00:00"
             android:textColor="@color/customBlue"
-            android:elevation="3dp"
-            android:textSize="30dp"
-            android:layout_gravity="center"/>
+            android:textSize="30dp" />
 
         <ProgressBar
             android:id="@+id/notiTimerProgess"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="@drawable/circle_shape"
-            android:indeterminate="false"
-            android:elevation="3dp"
             android:layout_gravity="center"
+            android:background="@drawable/circle_shape"
+            android:elevation="3dp"
+            android:indeterminate="false"
             android:progressDrawable="@drawable/progress_bar_two"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
     </FrameLayout>
 

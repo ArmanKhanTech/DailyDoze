@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".Activity.GraphActivity">
 
@@ -18,8 +17,8 @@
             android:id="@+id/imageButton4"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="7dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="15dp"
             android:background="@color/white"
             android:onClick="graphBack"
@@ -48,17 +47,17 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
-            android:background="@drawable/bargraph_theme">
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bargraph_theme"
+            android:padding="10dp">
 
             <com.github.mikephil.charting.charts.CombinedChart
                 android:id="@+id/idCombineChart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 

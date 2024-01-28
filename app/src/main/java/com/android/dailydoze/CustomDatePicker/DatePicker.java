@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
+import com.android.dailydoze.CustomDatePicker.Interface.DateFactoryListener;
 import com.android.dailydoze.R;
 
 import java.util.ArrayList;
@@ -20,6 +21,10 @@ import java.util.List;
 
 @SuppressWarnings("ALL")
 public class DatePicker extends LinearLayout implements DateFactoryListener {
+    public static final int MONTH_ON_FIRST = 0;
+    public static final int DAY_ON_FIRST = 1;
+    private final static int MAX_TEXT_SIZE = 50;
+    private final static int MAX_OFFSET = 3;
     private Context context;
     private LinearLayout container;
     private int offset = 3;
@@ -31,13 +36,10 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private WheelView emptyView2;
     private int textSize = 19;
     private int pickerMode = 0;
-    public static final int MONTH_ON_FIRST = 0;
-    public static final int DAY_ON_FIRST = 1;
-    private final static int MAX_TEXT_SIZE = 50;
-    private final static int MAX_OFFSET = 3;
     private boolean darkModeEnabled = true;
 
     private boolean isNightTheme = false;
+    private DataSelectListener dataSelectListener;
 
     public DatePicker(Context context) {
         super(context);
@@ -190,7 +192,6 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         return ly;
     }
 
-
     private LinearLayout createMonthView(Context context) {
         monthView = new WheelView(context);
         LayoutParams lp = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -201,7 +202,6 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         return ly;
     }
 
-
     private LinearLayout createDayView(Context context) {
         dayView = new WheelView(context);
         LayoutParams lp = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -211,7 +211,6 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         ly.addView(dayView);
         return ly;
     }
-
 
     private LinearLayout createEmptyView1(Context context) {
         emptyView1 = createEmptyWheel(context);
@@ -250,12 +249,12 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         factory.setMaxDate(date);
     }
 
-    public void setDate(long date) {
-        factory.setSelectedDate(date);
-    }
-
     public long getDate() {
         return factory.getSelectedDate().getDate();
+    }
+
+    public void setDate(long date) {
+        factory.setSelectedDate(date);
     }
 
     public void setOffset(int offset) {
@@ -300,15 +299,13 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         return darkModeEnabled;
     }
 
-    public interface DataSelectListener {
-        void onDateSelected(long date, int day, int month, int year);
-    }
-
-    private DataSelectListener dataSelectListener;
-
     private void notifyDateSelect() {
         DateModel date = factory.getSelectedDate();
         if (dataSelectListener != null)
             dataSelectListener.onDateSelected(date.getDate(), date.getDay(), date.getMonth(), date.getYear());
+    }
+
+    public interface DataSelectListener {
+        void onDateSelected(long date, int day, int month, int year);
     }
 }

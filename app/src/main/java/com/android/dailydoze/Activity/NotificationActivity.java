@@ -33,11 +33,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.android.dailydoze.Adapter.ListAdapter;
 import com.android.dailydoze.Database.NotificationDatabase;
+import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Receiver.AlarmReceiver;
-import com.android.dailydoze.Utility.DataList;
-import com.android.dailydoze.Utility.ListAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -50,10 +50,21 @@ public class NotificationActivity extends AppCompatActivity {
     TextView status;
     ListView list;
     Switch sw;
-    ArrayList<DataList> data = new ArrayList<>();
+    ArrayList<DataListModel> data = new ArrayList<>();
     ListAdapter adapter;
     NotificationDatabase db1;
     Drawable icon;
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,22 +86,22 @@ public class NotificationActivity extends AppCompatActivity {
 
         icon = getDrawable(R.drawable.noti_vec_icon_black);
 
-        for(int i = 0; i < time.size(); i++) {
+        for (int i = 0; i < time.size(); i++) {
             String temp = time.get(i);
-            data.add(new DataList(temp, icon));
+            data.add(new DataListModel(temp, icon));
         }
 
-        adapter = new ListAdapter(this,data);
+        adapter = new ListAdapter(this, data);
         list.setAdapter(adapter);
 
         ComponentName componentName = new ComponentName(this, AlarmReceiver.class);
         PackageManager packageManager = this.getPackageManager();
 
-        if(sw.isChecked()) {
+        if (sw.isChecked()) {
             setTime.setVisibility(View.VISIBLE);
             list.setVisibility(View.VISIBLE);
 
-            if(!db1.isDbEmpty()) {
+            if (!db1.isDbEmpty()) {
                 status.setText("No Notifications");
             } else {
                 status.setVisibility(View.GONE);
@@ -112,7 +123,7 @@ public class NotificationActivity extends AppCompatActivity {
         }
 
         sw.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked) {
+            if (isChecked) {
                 SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
                 editor.putBoolean("State", true);
                 editor.apply();
@@ -120,7 +131,7 @@ public class NotificationActivity extends AppCompatActivity {
                 setTime.setVisibility(View.VISIBLE);
                 list.setVisibility(View.VISIBLE);
 
-                if(!db1.isDbEmpty()) {
+                if (!db1.isDbEmpty()) {
                     status.setText("No Notifications");
                 } else {
                     status.setVisibility(View.GONE);
@@ -149,14 +160,14 @@ public class NotificationActivity extends AppCompatActivity {
         });
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS},101);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
         }
 
         list.setOnItemClickListener((parent, view, position, id) -> {
-            DataList notiList = adapter.getItem(position);
+            DataListModel notiList = adapter.getItem(position);
             String t = notiList.getText();
 
-            LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -191,30 +202,20 @@ public class NotificationActivity extends AppCompatActivity {
         timePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.customBlue));
     }
 
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
-
     public void updateList() {
         ArrayList<String> time = db1.readNotification();
         data.clear();
 
-        for(int i = 0; i < time.size(); i++) {
+        for (int i = 0; i < time.size(); i++) {
             String temp = time.get(i);
-            data.add(new DataList(temp, icon));
+            data.add(new DataListModel(temp, icon));
         }
 
-        adapter = new ListAdapter(this,data);
+        adapter = new ListAdapter(this, data);
         adapter.notifyDataSetChanged();
         list.setAdapter(adapter);
 
-        if(!db1.isDbEmpty()){
+        if (!db1.isDbEmpty()) {
             status.setVisibility(View.VISIBLE);
             status.setText("No Notifications");
         } else {
@@ -223,22 +224,22 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     private void setAlarm(TimePicker timePicker) {
-       Calendar cal = Calendar.getInstance();
+        Calendar cal = Calendar.getInstance();
 
-       cal.set (Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
-       cal.set (Calendar.MINUTE, timePicker.getCurrentMinute());
+        cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
+        cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
 
-       db1.addNotification(convert(cal.getTimeInMillis()), cal.getTimeInMillis());
-       int id = db1.readID(convert(cal.getTimeInMillis()));
+        db1.addNotification(convert(cal.getTimeInMillis()), cal.getTimeInMillis());
+        int id = db1.readID(convert(cal.getTimeInMillis()));
 
-       AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-       Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
-       intent.putExtra("id", id);
+        AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
+        intent.putExtra("id", id);
 
-       PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, FLAG_IMMUTABLE);
-       am.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, FLAG_IMMUTABLE);
+        am.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
 
-       updateList();
+        updateList();
     }
 
     public void cancelNotification(int id) {
@@ -250,11 +251,11 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
     @SuppressLint("DefaultLocale")
-    public String convert(long millis){
+    public String convert(long millis) {
         return (new SimpleDateFormat("hh:mm aa")).format(new Date(millis));
     }
 
-    public void notiFinish(View v){
+    public void notiFinish(View v) {
         finish();
     }
 }

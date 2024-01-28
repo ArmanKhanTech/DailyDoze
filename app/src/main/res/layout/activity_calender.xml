@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activity.CalenderActivity">
 
     <LinearLayout
@@ -18,17 +17,17 @@
             android:id="@+id/loading"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:visibility="visible"
+            android:layout_gravity="center"
             android:indeterminateTint="@color/customBlue"
-            android:layout_gravity="center"/>
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/tvv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:fontFamily="sans-serif-condensed-medium"
             android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:text="Please Wait"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -41,10 +40,10 @@
         android:scrollbarThumbVertical="@android:color/black">
 
         <LinearLayout
-        android:id="@+id/calLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+            android:id="@+id/calLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -55,8 +54,8 @@
                     android:id="@+id/imageButton3"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="7dp"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="7dp"
                     android:layout_marginRight="15dp"
                     android:background="@color/white"
                     android:onClick="calBack"
@@ -79,19 +78,19 @@
                 android:id="@+id/calName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
+                android:background="@drawable/info_img_theme"
+                android:elevation="3dp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:padding="10dp"
                 android:text="Beans"
-                android:layout_gravity="center"
                 android:textAlignment="center"
-                android:elevation="3dp"
                 android:textColor="@color/black"
-                android:background="@drawable/info_img_theme"
-                android:textSize="25dp"
-                android:fontFamily="sans-serif-condensed-medium"/>
+                android:textSize="25dp" />
 
             <com.prolificinteractive.materialcalendarview.MaterialCalendarView
                 android:id="@+id/calendarView"
@@ -100,12 +99,12 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
-                android:elevation="2dp"
                 android:background="@drawable/calender_theme"
-                app:mcv_selectionColor="@color/white"
-                app:mcv_headerTextAppearance="@style/MCVTitleTextAppearance"
+                android:elevation="2dp"
                 app:mcv_dateTextAppearance="@style/MCVDateTextAppearance"
-                app:mcv_weekDayTextAppearance="@style/MCVWeekTextAppearance"/>
+                app:mcv_headerTextAppearance="@style/MCVTitleTextAppearance"
+                app:mcv_selectionColor="@color/white"
+                app:mcv_weekDayTextAppearance="@style/MCVWeekTextAppearance" />
 
         </LinearLayout>
 

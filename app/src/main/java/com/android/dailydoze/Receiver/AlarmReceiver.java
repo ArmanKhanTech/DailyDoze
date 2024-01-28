@@ -19,6 +19,7 @@ import com.android.dailydoze.R;
 public class AlarmReceiver extends BroadcastReceiver {
     public static final String CHANNEL_ID = "NotifitcationChannel";
     NotificationChannel serviceChannel;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle bundle = intent.getExtras();

@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.android.dailydoze.CustomDatePicker.Interface;
 
 public interface DateFactoryListener {
     void onYearChanged();

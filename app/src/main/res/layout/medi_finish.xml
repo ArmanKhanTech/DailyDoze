@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:fillViewport="true">
 
         <LinearLayout
@@ -22,8 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Are you sure you want to end the meditation?"
                 android:fontFamily="sans-serif-condensed-medium"
+                android:text="Are you sure you want to end the meditation?"
                 android:textAlignment="center"
                 android:textColor="#D50000"
                 android:textSize="30dp" />
@@ -31,36 +30,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-            <Button
-                android:id="@+id/cancel"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Cancel"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/confirm"
+                    android:id="@+id/cancel"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Cancel"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
                     android:backgroundTint="#D50000"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Confirm"

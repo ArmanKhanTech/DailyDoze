@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
     android:fontFamily="sans-serif-condensed-medium"
+    android:orientation="vertical"
     tools:context=".Activity.TweakActivity">
 
     <LinearLayout
@@ -18,8 +17,9 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -30,8 +30,8 @@
                 <ImageButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="7dp"
                     android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
                     android:layout_marginRight="15dp"
                     android:background="@color/white"
                     android:onClick="tweaksFinish"
@@ -53,8 +53,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_alignParentEnd="true">
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -76,11 +76,11 @@
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:clickable="true"
-                    android:onClick="gotoGraphTweaks"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="12dp"
+                    android:clickable="true"
+                    android:onClick="gotoGraphTweaks"
                     app:srcCompat="@drawable/graph_icon" />
 
             </LinearLayout>
@@ -91,16 +91,15 @@
             android:id="@+id/tablayout_tweaks"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            app:tabIndicatorHeight="0dp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="10dp"
-            app:tabTextAppearance="@style/MyCustomTabAppearance"
             android:background="@color/transparent"
             app:tabBackground="@drawable/tab_selector_theme"
-            app:tabTextColor="@color/black"
-            app:tabSelectedTextColor="@color/white">
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/MyCustomTabAppearance"
+            app:tabTextColor="@color/black">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -119,90 +118,99 @@
 
         </com.google.android.material.tabs.TabLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:elevation="2dp"
-            android:background="@drawable/info_img_theme">
-
-            <ImageButton
-                android:id="@+id/date_prev_tweak"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:scaleType="fitXY"
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="start|center"
-                android:background="@color/white"
-                app:srcCompat="@drawable/prev_icon"/>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:id="@+id/date_tweak"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="12 April 2023"
-                    android:textAlignment="center"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="2dp"
-                    android:textColor="@color/black"
-                    android:textSize="25dp"
-                    android:fontFamily="sans-serif-condensed-medium"/>
-
-                <ImageButton
-                    android:id="@+id/weight_tweak"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="end|center"
-                    android:layout_marginRight="20dp"
-                    android:scaleType="centerCrop"
-                    android:background="@color/transparent"
-                    android:src="@drawable/weight_icon"/>
-
-            </LinearLayout>
-
-            <ImageButton
-                android:id="@+id/date_next_tweak"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:scaleType="fitXY"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="end|center"
-                android:background="@color/white"
-                app:srcCompat="@drawable/next_icon"/>
-
-        </FrameLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:id="@+id/jump_back_tweak"
-            android:layout_marginLeft="40dp"
-            android:background="@drawable/back_to_today_theme"
-            android:layout_marginRight="40dp"
-            android:gravity="center"
-            android:layout_gravity="bottom"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/back_to_today"
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:id="@+id/date_tweak_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Back to Today"
-                android:textColor="@color/white"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="2dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textSize="20dp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/info_img_theme"
+                android:elevation="2dp">
+
+                <ImageButton
+                    android:id="@+id/date_prev_tweak"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start|center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/prev_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/date_tweak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="12 April 2023"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                    <ImageButton
+                        android:id="@+id/weight_tweak"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/weight_icon" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/date_next_tweak"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/next_icon" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/jump_back_tweak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/back_to_today_theme"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/back_to_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Back to Today"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -221,24 +229,24 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-    <ProgressBar
-        android:id="@+id/loadingFragment"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:visibility="visible"
-        android:indeterminateTint="@color/customBlue"
-        android:layout_gravity="center"/>
+        <ProgressBar
+            android:id="@+id/loadingFragment"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/customBlue"
+            android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/tvv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:layout_marginTop="10dp"
-        android:text="Please Wait"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/tvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Please Wait"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
     </LinearLayout>
 

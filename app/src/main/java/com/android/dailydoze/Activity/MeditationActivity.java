@@ -20,10 +20,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.dailydoze.Adapter.ListAdapter;
 import com.android.dailydoze.Database.MeditationDatabase;
+import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.DataList;
-import com.android.dailydoze.Utility.ListAdapter;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -35,11 +35,22 @@ public class MeditationActivity extends AppCompatActivity {
     String time;
     long millis;
     ListView list;
-    ArrayList<DataList> data = new ArrayList<>();
+    ArrayList<DataListModel> data = new ArrayList<>();
     ListAdapter adapter;
     MeditationDatabase db1;
     Drawable icon;
     TextView hisStatus;
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +74,9 @@ public class MeditationActivity extends AppCompatActivity {
 
         icon = getDrawable(R.drawable.medi_icon);
 
-        for(int i = 0; i < dates.size(); i++) {
+        for (int i = 0; i < dates.size(); i++) {
             String temp = dates.get(i);
-            data.add(new DataList(temp, icon));
+            data.add(new DataListModel(temp, icon));
         }
 
         Collections.reverse(data);
@@ -75,7 +86,7 @@ public class MeditationActivity extends AppCompatActivity {
 
         hisStatus = findViewById(R.id.mediHisStatus);
 
-        if(data.isEmpty()) {
+        if (data.isEmpty()) {
             hisStatus.setText("Nothing to Show");
         } else {
             hisStatus.setVisibility(View.GONE);
@@ -84,13 +95,13 @@ public class MeditationActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                DataList mediList = adapter.getItem(position);
+                DataListModel mediList = adapter.getItem(position);
 
                 String t = mediList.getText();
                 String d = db1.getDuration(t);
                 d = millisToTime(Long.parseLong(d));
 
-                LayoutInflater layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+                LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                 @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
 
                 int width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -112,7 +123,7 @@ public class MeditationActivity extends AppCompatActivity {
         });
 
         rg.setOnCheckedChangeListener((group, checkedId) -> {
-            switch(checkedId){
+            switch (checkedId) {
                 case R.id.fifmins:
                     time = "Meditation for 15 minutes";
                     millis = 900000;
@@ -133,7 +144,7 @@ public class MeditationActivity extends AppCompatActivity {
         });
     }
 
-    public String millisToTime(long t){
+    public String millisToTime(long t) {
         NumberFormat f = new DecimalFormat("00");
         long hour = (t / 3600000) % 24;
         long min = (t / 60000) % 60;
@@ -141,25 +152,15 @@ public class MeditationActivity extends AppCompatActivity {
         return f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
     }
 
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
-
-    public void openPerformMeditation(View v){
+    public void openPerformMeditation(View v) {
         Intent intent = new Intent(this, PerformMeditationActivity.class);
         intent.putExtra("text", time);
-        intent.putExtra("time",millis);
+        intent.putExtra("time", millis);
         startActivity(intent);
         finish();
     }
 
-    public void mediFinish(View v){
+    public void mediFinish(View v) {
         finish();
     }
 }

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.HorizontalScrollView;
@@ -62,9 +61,9 @@ public class GraphActivity extends AppCompatActivity {
         horiScroll = findViewById(R.id.horiScroll);
 
         Intent i = getIntent();
-        boolean b = i.getBooleanExtra("tweak",false);
+        boolean b = i.getBooleanExtra("tweak", false);
 
-        if(b) {
+        if (b) {
             tv.setText("Daily Tweaks History");
             db1 = new TweaksDatabase(this);
             getBarEntriesTweaks();
@@ -125,8 +124,8 @@ public class GraphActivity extends AppCompatActivity {
         combinedChart.getAxisLeft().setDrawLabels(false);
         combinedChart.getAxisLeft().setAxisMinimum(0f);
         combinedChart.getAxisRight().setAxisMinimum(0f);
-        combinedChart.getXAxis().setAxisMinimum(-combinedData.getBarData().getBarWidth()/2);
-        combinedChart.getXAxis().setAxisMaximum(dates.size()-combinedData.getBarData().getBarWidth()/2);
+        combinedChart.getXAxis().setAxisMinimum(-combinedData.getBarData().getBarWidth() / 2);
+        combinedChart.getXAxis().setAxisMaximum(dates.size() - combinedData.getBarData().getBarWidth() / 2);
         combinedChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
         combinedChart.getXAxis().setLabelCount(dates.size());
         combinedChart.getXAxis().setGranularity(1f);
@@ -189,7 +188,7 @@ public class GraphActivity extends AppCompatActivity {
         float f = 0.00F;
         labels = new String[dates.size()];
 
-        for(int i = 0; i < dates.size(); i++){
+        for (int i = 0; i < dates.size(); i++) {
             barEntriesArrayList.add(new BarEntry(f, db2.getCount(dates.get(i))));
             lineEntriesArrayList.add(new Entry(f, db2.getSleep(dates.get(i))));
             String date = dates.get(i);
@@ -208,9 +207,9 @@ public class GraphActivity extends AppCompatActivity {
         int weight;
         labels = new String[dates.size()];
 
-        for(int i = 0; i < dates.size(); i++){
+        for (int i = 0; i < dates.size(); i++) {
             barEntriesArrayList.add(new BarEntry(f, db1.getCount(dates.get(i))));
-            weight = (db1.getWeightEvening(dates.get(i))+db1.getWeightMorning(dates.get(i)))/2;
+            weight = (db1.getWeightEvening(dates.get(i)) + db1.getWeightMorning(dates.get(i))) / 2;
             lineEntriesArrayList.add(new Entry(f, weight));
             String date = dates.get(i);
             date = date.substring(0, 6);
@@ -219,7 +218,7 @@ public class GraphActivity extends AppCompatActivity {
         }
     }
 
-    public void graphBack(View v){
+    public void graphBack(View v) {
         finish();
     }
 }

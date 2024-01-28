@@ -1,4 +1,4 @@
-package com.android.dailydoze.Utility;
+package com.android.dailydoze.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 @SuppressWarnings("ALL")
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private final ArrayList<Fragment> fragmentArrayList=new ArrayList<>();
-    private final ArrayList<String> fragmentTitle=new ArrayList<>();
+    private final ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
+    private final ArrayList<String> fragmentTitle = new ArrayList<>();
 
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -26,7 +26,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         return fragmentArrayList.get(position);
     }
 
-    public void addFragment(Fragment fragment,String title) {
+    public void addFragment(Fragment fragment, String title) {
         fragmentArrayList.add(fragment);
         fragmentTitle.add(title);
     }

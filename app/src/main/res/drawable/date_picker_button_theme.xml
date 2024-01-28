@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:bottom="0dp"
         android:left="0dp"
         android:right="0dp"
-        android:top="0dp"
-        android:bottom="0dp">
+        android:top="0dp">
         <shape android:shape="rectangle">
-            <solid android:color="#0091EA"/>
+            <solid android:color="#0091EA" />
             <corners
                 android:topLeftRadius="20dp"
-                android:topRightRadius="20dp"/>
+                android:topRightRadius="20dp" />
         </shape>
     </item>
 </layer-list>

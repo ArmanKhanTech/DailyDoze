@@ -23,12 +23,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.android.dailydoze.Adapter.ViewPagerAdapter;
 import com.android.dailydoze.Database.TweaksDatabase;
 import com.android.dailydoze.Fragments.DayFragment;
 import com.android.dailydoze.Fragments.EachMealFragment;
 import com.android.dailydoze.Fragments.NightFragment;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 import java.text.ParseException;
@@ -40,19 +40,44 @@ import java.util.Objects;
 
 @SuppressWarnings("ALL")
 public class TweakActivity extends AppCompatActivity {
+    public static boolean today = true;
+    @SuppressLint("StaticFieldLeak")
+    static TextView currDate;
+    @SuppressLint("StaticFieldLeak")
+    static TextView textView10;
+    static TweaksDatabase db;
     TabLayout tabLayout;
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
     ProgressBar pb;
     LinearLayout lll, jump_back_tweak;
     TextView tvv;
-    @SuppressLint("StaticFieldLeak")
-    static TextView currDate;
-    @SuppressLint("StaticFieldLeak")
-    static TextView textView10;
-    static TweaksDatabase db;
-    public static boolean today = true;
     ImageButton weight, date_prev, date_next;
+
+    public static String setCurrentDate() {
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+        return df.format(c);
+    }
+
+    public static String getCurrentDate() {
+        return String.valueOf(currDate.getText());
+    }
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
+    public static void setCount(String date) {
+        int i = db.getCount(date);
+        textView10.setText(String.valueOf(i));
+    }
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -101,10 +126,10 @@ public class TweakActivity extends AppCompatActivity {
             Calendar c = Calendar.getInstance();
             int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
-            if(today){
+            if (today) {
                 tv.setVisibility(View.VISIBLE);
                 et.setVisibility(View.VISIBLE);
-                if(timeOfDay >= 6 && timeOfDay < 11) {
+                if (timeOfDay >= 6 && timeOfDay < 11) {
                     tv.setText("Enter your morning weight");
                 } else if (timeOfDay >= 18) {
                     tv.setText("Enter your evening weight");
@@ -119,9 +144,9 @@ public class TweakActivity extends AppCompatActivity {
             }
 
             b.setOnClickListener(v1 -> {
-                if(today) {
+                if (today) {
                     kg[0] = et.getText().toString();
-                    if(!kg[0].isEmpty()){
+                    if (!kg[0].isEmpty()) {
                         if (timeOfDay >= 6 && timeOfDay < 11) {
                             if (db.getDate(getCurrentDate())) {
                                 db.setWeight("weight_morning", getCurrentDate(), kg[0]);
@@ -138,7 +163,7 @@ public class TweakActivity extends AppCompatActivity {
                             }
                         }
                         db.incData("weigh", getCurrentDate());
-                    } else{
+                    } else {
                         popupWindow.dismiss();
                     }
                 }
@@ -158,10 +183,10 @@ public class TweakActivity extends AppCompatActivity {
     private void loadFragment() {
         tabLayout = findViewById(R.id.tablayout_tweaks);
         viewPager = findViewById(R.id.viewPager_tweaks);
-        viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new DayFragment(),"Day");
-        viewPagerAdapter.addFragment(new EachMealFragment(),"Meal");
-        viewPagerAdapter.addFragment(new NightFragment(),"Night");
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragment(new DayFragment(), "Day");
+        viewPagerAdapter.addFragment(new EachMealFragment(), "Meal");
+        viewPagerAdapter.addFragment(new NightFragment(), "Night");
         viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -169,42 +194,15 @@ public class TweakActivity extends AppCompatActivity {
 
     public void gotoGraphTweaks(View v) {
         Intent i = new Intent(this, GraphActivity.class);
-        i.putExtra("tweak",true);
+        i.putExtra("tweak", true);
         startActivity(i);
     }
 
-    private final class LoadFragment extends AsyncTask<Void, Void, Void> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-            pb = findViewById(R.id.loadingFragment);
-            pb.setVisibility(View.VISIBLE);
-            lll = findViewById(R.id.lll);
-            lll.setVisibility(View.GONE);
-            tvv = findViewById(R.id.tvv);
-            tvv.setVisibility(View.VISIBLE);
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            loadFragment();
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void unused) {
-            lll.setVisibility(View.VISIBLE);
-            pb.setVisibility(View.GONE);
-            tvv.setVisibility(View.GONE);
-        }
-    }
-
     public void setDay(boolean b) {
-        if(Objects.equals(setCurrentDate(), getCurrentDate())) {
+        if (Objects.equals(setCurrentDate(), getCurrentDate())) {
             setCount(getCurrentDate());
 
-            if(b){
+            if (b) {
                 DayFragment.setDay();
                 NightFragment.setDay();
                 EachMealFragment.setDay();
@@ -218,7 +216,7 @@ public class TweakActivity extends AppCompatActivity {
             setNext();
             setPrev();
         } else {
-            if(today){
+            if (today) {
                 final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.slide_down);
                 jump_back_tweak.startAnimation(slide_down);
@@ -249,7 +247,7 @@ public class TweakActivity extends AppCompatActivity {
         c.add(Calendar.DATE, -1);
         String formattedDate = df.format(c.getTime());
 
-        if(db.getDate(formattedDate)) {
+        if (db.getDate(formattedDate)) {
             date_prev.setVisibility(View.VISIBLE);
         } else {
             date_prev.setVisibility(View.GONE);
@@ -261,7 +259,7 @@ public class TweakActivity extends AppCompatActivity {
         });
     }
 
-    public void setNext(){
+    public void setNext() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         try {
@@ -272,7 +270,7 @@ public class TweakActivity extends AppCompatActivity {
         c.add(Calendar.DATE, +1);
         String formattedDate = df.format(c.getTime());
 
-        if(db.getDate(formattedDate)) {
+        if (db.getDate(formattedDate)) {
             date_next.setVisibility(View.VISIBLE);
         } else {
             date_next.setVisibility(View.GONE);
@@ -284,11 +282,11 @@ public class TweakActivity extends AppCompatActivity {
         });
     }
 
-    public void setWeightVisibility(){
+    public void setWeightVisibility() {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
-        if(timeOfDay >= 6 && timeOfDay < 11) {
+        if (timeOfDay >= 6 && timeOfDay < 11) {
             weight.setVisibility(View.VISIBLE);
         } else if (timeOfDay >= 18) {
             weight.setVisibility(View.VISIBLE);
@@ -297,32 +295,34 @@ public class TweakActivity extends AppCompatActivity {
         }
     }
 
-    public static String setCurrentDate(){
-        Date c = Calendar.getInstance().getTime();
-        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-        return df.format(c);
-    }
-
-    public static String getCurrentDate() {
-        return String.valueOf(currDate.getText());
-    }
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
-
-    public static void setCount(String date) {
-        int i = db.getCount(date);
-        textView10.setText(String.valueOf(i));
-    }
-
     public void tweaksFinish(View v) {
         finish();
+    }
+
+    private final class LoadFragment extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            pb = findViewById(R.id.loadingFragment);
+            pb.setVisibility(View.VISIBLE);
+            lll = findViewById(R.id.lll);
+            lll.setVisibility(View.GONE);
+            tvv = findViewById(R.id.tvv);
+            tvv.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            loadFragment();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void unused) {
+            lll.setVisibility(View.VISIBLE);
+            pb.setVisibility(View.GONE);
+            tvv.setVisibility(View.GONE);
+        }
     }
 }

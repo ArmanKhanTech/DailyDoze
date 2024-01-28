@@ -19,6 +19,7 @@ public class InfoActivity extends AppCompatActivity {
     ImageView img;
     TextView txt, name, infoTitle;
     Drawable drawable;
+
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +34,15 @@ public class InfoActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
-        boolean b = intent.getBooleanExtra("tweak",false);
+        boolean b = intent.getBooleanExtra("tweak", false);
 
-        if(b){
+        if (b) {
             infoTitle.setText("About Tweak");
         }
 
         txt.setMovementMethod(new ScrollingMovementMethod());
 
-        switch(title){
+        switch (title) {
             case "beans":
                 drawable = getDrawable(R.drawable.beans_picture);
                 img.setImageDrawable(drawable);
@@ -278,7 +279,7 @@ public class InfoActivity extends AppCompatActivity {
         }
     }
 
-    public void infoFinish(View v){
+    public void infoFinish(View v) {
         finish();
     }
 }

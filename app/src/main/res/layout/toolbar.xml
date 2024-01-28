@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -19,46 +18,46 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/black"
-        android:textSize="30dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/nav_button"
-        android:fontFamily="sans-serif-condensed-medium" />
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textView3"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="0"
-        android:layout_toLeftOf="@+id/textView3"
         android:textColor="@color/black"
-        android:layout_centerVertical="true"
-        android:textSize="30dp"/>
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/imageView14"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="/24"
-        android:layout_toLeftOf="@+id/imageView14"
-        android:layout_centerVertical="true"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="30dp"
-        android:clickable="true"
-        android:onClick="gotoGraph"
         android:layout_height="30dp"
-        android:layout_marginRight="12dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:onClick="gotoGraph"
         app:srcCompat="@drawable/graph_icon" />
 
 </RelativeLayout>

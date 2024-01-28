@@ -8,18 +8,22 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.ResultReceiver;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
-import androidx.annotation.Nullable;
 
 @SuppressWarnings("ALL")
 public class GetAddressIntentService extends IntentService {
     private static final String IDENTIFIER = "GetAddressIntentService";
     private ResultReceiver addressResultReceiver;
+
     public GetAddressIntentService() {
         super(IDENTIFIER);
     }
+
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
         String msg;
@@ -44,8 +48,7 @@ public class GetAddressIntentService extends IntentService {
 
         try {
             addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-        }
-        catch (Exception ioException) {
+        } catch (Exception ioException) {
             Log.e("", "Error in getting address for the location.");
         }
 

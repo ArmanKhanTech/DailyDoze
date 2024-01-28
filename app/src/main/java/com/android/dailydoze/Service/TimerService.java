@@ -77,7 +77,7 @@ public class TimerService extends Service {
         return START_STICKY;
     }
 
-    public void startTimer(){
+    public void startTimer() {
         cdt = new CountDownTimer(millis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {

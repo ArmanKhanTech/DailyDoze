@@ -43,6 +43,17 @@ public class PerformMeditationActivity extends AppCompatActivity {
     ImageButton close;
     boolean b = false;
     MeditationDatabase db;
+
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +83,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         String t = intent.getStringExtra("text");
         textView.setText(t);
 
-        pB.setMax((int)l);
+        pB.setMax((int) l);
 
         play.setOnClickListener(v -> {
             startTimer(l);
@@ -93,7 +104,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(pB.getProgress() != 0) {
+                if (pB.getProgress() != 0) {
                     showWarning();
                 } else {
                     Intent intent1 = new Intent(PerformMeditationActivity.this, MeditationActivity.class);
@@ -117,7 +128,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, onBackPressedCallback);
     }
 
-    public void showWarning(){
+    public void showWarning() {
         LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.medi_finish, null);
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -133,7 +144,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String duration = String.valueOf(c - l);
-                if(!db.getDate(getCurrentDate())) {
+                if (!db.getDate(getCurrentDate())) {
                     db.addData(getCurrentDate());
                     db.changeDuration(duration, getCurrentDate());
                 } else {
@@ -160,9 +171,10 @@ public class PerformMeditationActivity extends AppCompatActivity {
                 long min = (millisUntilFinished / 60000) % 60;
                 long sec = (millisUntilFinished / 1000) % 60;
                 timer.setText(f.format(hour) + ":" + f.format(min) + ":" + f.format(sec));
-                pB.setProgress((int)millisUntilFinished);
+                pB.setProgress((int) millisUntilFinished);
                 l = millisUntilFinished;
             }
+
             public void onFinish() {
                 timer.setText("00:00:00");
             }
@@ -174,7 +186,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        if(b) {
+        if (b) {
             music.stop();
         }
     }
@@ -183,7 +195,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        if(b) {
+        if (b) {
             music.pause();
             stopWatch.cancel();
         }
@@ -193,7 +205,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        if(b) {
+        if (b) {
             music.pause();
             stopWatch.cancel();
         }
@@ -203,7 +215,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        if(b) {
+        if (b) {
             play.setVisibility(View.GONE);
             pause.setVisibility(View.VISIBLE);
             music.start();
@@ -211,23 +223,23 @@ public class PerformMeditationActivity extends AppCompatActivity {
         }
     }
 
-    public void selectBg1(){
+    public void selectBg1() {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.mediwall1));
     }
 
-    public void selectBg2(){
+    public void selectBg2() {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.mediwall2));
     }
 
-    public void selectBg3(){
+    public void selectBg3() {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.mediwall3));
     }
 
-    public void selectBg4(){
+    public void selectBg4() {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.mediwall4));
     }
 
-    public void selectBg5(){
+    public void selectBg5() {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.mediwall5));
     }
 
@@ -283,19 +295,9 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
     public void selectMusic(String file) {
         music.reset();
-        music = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(file.toLowerCase(),"raw",getPackageName()));
+        music = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(file.toLowerCase(), "raw", getPackageName()));
         music.setLooping(true);
         music.start();
-    }
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
     }
 
     private void showCustomUI() {

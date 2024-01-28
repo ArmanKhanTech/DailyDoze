@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:fillViewport="true">
 
         <LinearLayout
@@ -31,8 +30,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="66dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="10dp"
                 android:padding="10dp">
@@ -96,9 +95,9 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp"
                 android:backgroundTint="@color/purple_500"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Enter"

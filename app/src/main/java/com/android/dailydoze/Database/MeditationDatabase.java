@@ -44,7 +44,7 @@ public class MeditationDatabase extends SQLiteOpenHelper {
         db2.execSQL("UPDATE " + TABLE_NAME + " SET " + DURATION + " = " + "'" + dataToUpdate + "'" + " WHERE " + DATE + " = '" + dateToUpdate + "'");
     }
 
-    public boolean getDate(String date){
+    public boolean getDate(String date) {
         boolean b = false;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME +

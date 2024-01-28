@@ -51,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout jumpBack;
     boolean today, jump = false;
 
+    public static void dimBehind(PopupWindow popupWindow) {
+        View container = popupWindow.getContentView().getRootView();
+        Context context = popupWindow.getContentView().getContext();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
+        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        p.dimAmount = 0.5f;
+        wm.updateViewLayout(container, p);
+    }
+
     @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
         setDay();
 
-        if(!db.getDate(getCurrentDate())) {
+        if (!db.getDate(getCurrentDate())) {
             db.addDate(getCurrentDate());
         }
 
@@ -135,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             email.setText(userData.getString("email", "Email"));
             name.setText(getGreetings());
 
-            LinearLayout l1, l2, l3 , l4, l5, l6, l7, l8, l9;
+            LinearLayout l1, l2, l3, l4, l5, l6, l7, l8, l9;
 
             l1 = popupView.findViewById(R.id.twe_tweaks);
             l2 = popupView.findViewById(R.id.jump_to_date);
@@ -156,8 +166,8 @@ public class MainActivity extends AppCompatActivity {
             });
 
             l2.setOnClickListener(v14 -> {
-               openJumpDate();
-               popupWindow.dismiss();
+                openJumpDate();
+                popupWindow.dismiss();
             });
 
             l3.setOnClickListener(v18 -> {
@@ -210,193 +220,193 @@ public class MainActivity extends AppCompatActivity {
         });
 
         beans_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beans");
-            }else{
+            } else {
                 decValue("beans");
             }
         });
 
         beans_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beans");
-            }else{
+            } else {
                 decValue("beans");
             }
         });
 
         beans_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beans");
-            }else{
+            } else {
                 decValue("beans");
             }
         });
 
         berries_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("berries");
-            }else{
+            } else {
                 decValue("berries");
             }
         });
 
         greens_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("greens");
-            }else{
+            } else {
                 decValue("greens");
             }
         });
 
         greens_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("greens");
-            }else{
+            } else {
                 decValue("greens");
             }
         });
 
         othervege_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("othervege");
-            }else{
+            } else {
                 decValue("othervege");
             }
         });
 
         othervege_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("othervege");
-            }else{
+            } else {
                 decValue("othervege");
             }
         });
 
         of_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("otherfruits");
-            }else{
+            } else {
                 decValue("otherfruits");
             }
         });
 
         of_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("otherfruits");
-            }else{
+            } else {
                 decValue("otherfruits");
             }
         });
 
         of_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("otherfruits");
-            }else{
+            } else {
                 decValue("otherfruits");
             }
         });
 
         cv_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("crucivege");
-            }else{
+            } else {
                 decValue("crucivege");
             }
         });
 
         flaxseeds_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("flaxseeds");
-            }else{
+            } else {
                 decValue("flaxseeds");
             }
         });
 
         herbs_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("herbs");
-            }else{
+            } else {
                 decValue("herbs");
             }
         });
 
         nuts_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("nuts");
-            }else{
+            } else {
                 decValue("nuts");
             }
         });
 
         grains_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("grains");
-            }else{
+            } else {
                 decValue("grains");
             }
         });
 
         grains_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("grains");
-            }else{
+            } else {
                 decValue("grains");
             }
         });
 
         grains_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("grains");
-            }else{
+            } else {
                 decValue("grains");
             }
         });
 
         beve_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beve");
-            }else{
+            } else {
                 decValue("beve");
             }
         });
 
         beve_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beve");
-            }else{
+            } else {
                 decValue("beve");
             }
         });
 
         beve_cb3.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beve");
-            }else{
+            } else {
                 decValue("beve");
             }
         });
 
         beve_cb4.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beve");
-            }else{
+            } else {
                 decValue("beve");
             }
         });
 
         beve_cb5.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("beve");
-            }else{
+            } else {
                 decValue("beve");
             }
         });
 
         exercise_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if(isChecked){
+            if (isChecked) {
                 incValue("exercise");
-            }else{
+            } else {
                 decValue("exercise");
             }
         });
@@ -422,20 +432,20 @@ public class MainActivity extends AppCompatActivity {
 
             final String[] duration = {"0"};
 
-            if(today){
+            if (today) {
                 tv.setText("How many hours did you sleep today?");
                 hrs.setHint("Enter Duration in Hours");
-            } else{
+            } else {
                 duration[0] = String.valueOf(db.getSleep(getCurrentDate()));
                 hrs.setVisibility(View.GONE);
-                tv.setText("You slept for "+ duration[0] +" hours on this day.");
+                tv.setText("You slept for " + duration[0] + " hours on this day.");
                 save.setText("Okay");
             }
 
             save.setOnClickListener(v1 -> {
-                if(today){
+                if (today) {
                     duration[0] = hrs.getText().toString();
-                    if(!duration[0].isEmpty()) {
+                    if (!duration[0].isEmpty()) {
                         if (db.getDate(getCurrentDate())) {
                             db.setSleep(duration[0], getCurrentDate());
                         } else {
@@ -444,7 +454,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     popupWindow.dismiss();
-                }else{
+                } else {
                     popupWindow.dismiss();
                 }
             });
@@ -473,11 +483,11 @@ public class MainActivity extends AppCompatActivity {
                         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
                         formattedDate[0] = df.format(calendar.getTime());
 
-                        if(db.getDate(formattedDate[0])) {
+                        if (db.getDate(formattedDate[0])) {
                             currDate.setText(formattedDate[0]);
                             jump = true;
                             setDay();
-                        } else{
+                        } else {
                             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                             @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
                             int width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -517,9 +527,9 @@ public class MainActivity extends AppCompatActivity {
         c.add(Calendar.DATE, -1);
         String formattedDate = df.format(c.getTime());
 
-        if(db.getDate(formattedDate)){
+        if (db.getDate(formattedDate)) {
             date_prev.setVisibility(View.VISIBLE);
-        } else{
+        } else {
             date_prev.setVisibility(View.GONE);
         }
 
@@ -540,9 +550,9 @@ public class MainActivity extends AppCompatActivity {
         c.add(Calendar.DATE, +1);
         String formattedDate = df.format(c.getTime());
 
-        if(db.getDate(formattedDate)){
+        if (db.getDate(formattedDate)) {
             date_next.setVisibility(View.VISIBLE);
-        } else{
+        } else {
             date_next.setVisibility(View.GONE);
         }
 
@@ -558,10 +568,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void incValue(String value) {
-        if(today){
-            if(db.getDate(getCurrentDate())){
+        if (today) {
+            if (db.getDate(getCurrentDate())) {
                 db.incData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
                 db.incData(value, getCurrentDate());
             }
@@ -570,10 +580,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void decValue(String value) {
-        if(today){
-            if(db.getDate(getCurrentDate())){
+        if (today) {
+            if (db.getDate(getCurrentDate())) {
                 db.decData(value, getCurrentDate());
-            }else{
+            } else {
                 db.addDate(getCurrentDate());
             }
             setCount();
@@ -581,8 +591,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
-    public void setDay(){
-        if(Objects.equals(setCurrentDate(), getCurrentDate())){
+    public void setDay() {
+        if (Objects.equals(setCurrentDate(), getCurrentDate())) {
             setClickable(true);
             unCheckAll();
             setChecked();
@@ -598,7 +608,7 @@ public class MainActivity extends AppCompatActivity {
             setNext();
             setPrev();
         } else {
-            if(today){
+            if (today) {
                 final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.slide_down);
                 jumpBack.startAnimation(slide_down);
@@ -614,7 +624,7 @@ public class MainActivity extends AppCompatActivity {
             setPrev();
             setNext();
 
-            if(jump) {
+            if (jump) {
                 final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.slide_down);
                 jumpBack.startAnimation(slide_down);
@@ -708,98 +718,98 @@ public class MainActivity extends AppCompatActivity {
 
     public void setChecked() {
         int i = db.getData("beans", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             beans_cb1.setChecked(true);
-        } else if (i==2) {
+        } else if (i == 2) {
             beans_cb1.setChecked(true);
             beans_cb2.setChecked(true);
-        } else if (i==3) {
+        } else if (i == 3) {
             beans_cb1.setChecked(true);
             beans_cb2.setChecked(true);
             beans_cb3.setChecked(true);
         }
 
         i = db.getData("berries", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             berries_cb1.setChecked(true);
         }
 
         i = db.getData("greens", getCurrentDate());
-        if(i==1){
+        if (i == 1) {
             greens_cb1.setChecked(true);
-        } else if (i==2) {
+        } else if (i == 2) {
             greens_cb1.setChecked(true);
             greens_cb2.setChecked(true);
         }
 
         i = db.getData("othervege", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             othervege_cb1.setChecked(true);
-        } else if (i==2) {
+        } else if (i == 2) {
             othervege_cb1.setChecked(true);
             othervege_cb2.setChecked(true);
         }
 
         i = db.getData("otherfruits", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             of_cb1.setChecked(true);
-        } else if (i==2) {
+        } else if (i == 2) {
             of_cb1.setChecked(true);
             of_cb2.setChecked(true);
-        } else if (i==3) {
+        } else if (i == 3) {
             of_cb1.setChecked(true);
             of_cb2.setChecked(true);
             of_cb3.setChecked(true);
         }
 
         i = db.getData("crucivege", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             cv_cb1.setChecked(true);
         }
 
         i = db.getData("flaxseeds", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             flaxseeds_cb1.setChecked(true);
         }
 
         i = db.getData("herbs", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             herbs_cb1.setChecked(true);
         }
 
         i = db.getData("nuts", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             nuts_cb1.setChecked(true);
         }
 
         i = db.getData("grains", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             grains_cb1.setChecked(true);
-        } else if (i==2) {
+        } else if (i == 2) {
             grains_cb1.setChecked(true);
             grains_cb2.setChecked(true);
-        } else if (i==3) {
+        } else if (i == 3) {
             grains_cb1.setChecked(true);
             grains_cb2.setChecked(true);
             grains_cb3.setChecked(true);
         }
 
         i = db.getData("beve", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             beve_cb1.setChecked(true);
-        } else if (i==2) {
+        } else if (i == 2) {
             beve_cb1.setChecked(true);
             beve_cb2.setChecked(true);
-        } else if (i==3) {
+        } else if (i == 3) {
             beve_cb1.setChecked(true);
             beve_cb2.setChecked(true);
             beve_cb3.setChecked(true);
-        } else if (i==4){
+        } else if (i == 4) {
             beve_cb1.setChecked(true);
             beve_cb2.setChecked(true);
             beve_cb3.setChecked(true);
             beve_cb4.setChecked(true);
-        } else if (i==5) {
+        } else if (i == 5) {
             beve_cb1.setChecked(true);
             beve_cb2.setChecked(true);
             beve_cb3.setChecked(true);
@@ -808,19 +818,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         i = db.getData("exercise", getCurrentDate());
-        if(i==1) {
+        if (i == 1) {
             exercise_cb1.setChecked(true);
         }
-    }
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
     }
 
     public String setCurrentDate() {
@@ -841,145 +841,145 @@ public class MainActivity extends AppCompatActivity {
 
     public void beansInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","beans");
+        intent.putExtra("title", "beans");
         startActivity(intent);
     }
 
     public void berriesInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","berries");
+        intent.putExtra("title", "berries");
         startActivity(intent);
     }
 
     public void fruitsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","fruits");
+        intent.putExtra("title", "fruits");
         startActivity(intent);
     }
 
     public void crucivegeInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","crucivege");
+        intent.putExtra("title", "crucivege");
         startActivity(intent);
     }
 
     public void greensInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","greens");
+        intent.putExtra("title", "greens");
         startActivity(intent);
     }
 
     public void othervegeInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","othervege");
+        intent.putExtra("title", "othervege");
         startActivity(intent);
     }
 
     public void flexseedsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","flexseeds");
+        intent.putExtra("title", "flexseeds");
         startActivity(intent);
     }
 
     public void herbsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","herbs");
+        intent.putExtra("title", "herbs");
         startActivity(intent);
     }
 
     public void beveragesInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","beverages");
+        intent.putExtra("title", "beverages");
         startActivity(intent);
     }
 
     public void nutsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","nuts");
+        intent.putExtra("title", "nuts");
         startActivity(intent);
     }
 
-    public void grainsInfo(View v){
+    public void grainsInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","grains");
+        intent.putExtra("title", "grains");
         startActivity(intent);
     }
 
     public void exerciseInfo(View v) {
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("title","exercise");
+        intent.putExtra("title", "exercise");
         startActivity(intent);
     }
 
     public void beansCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","beans");
+        intent.putExtra("title", "beans");
         startActivity(intent);
     }
 
     public void berriesCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","berries");
+        intent.putExtra("title", "berries");
         startActivity(intent);
     }
 
     public void fruitsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","fruits");
+        intent.putExtra("title", "fruits");
         startActivity(intent);
     }
 
     public void crucivegeCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","crucivege");
+        intent.putExtra("title", "crucivege");
         startActivity(intent);
     }
 
     public void greensCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","greens");
+        intent.putExtra("title", "greens");
         startActivity(intent);
     }
 
     public void othervegeCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","othervege");
+        intent.putExtra("title", "othervege");
         startActivity(intent);
     }
 
     public void flexseedsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","flexseeds");
+        intent.putExtra("title", "flexseeds");
         startActivity(intent);
     }
 
     public void herbsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","herbs");
+        intent.putExtra("title", "herbs");
         startActivity(intent);
     }
 
     public void beveragesCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","beverages");
+        intent.putExtra("title", "beverages");
         startActivity(intent);
     }
 
     public void nutsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","nuts");
+        intent.putExtra("title", "nuts");
         startActivity(intent);
     }
 
     public void grainsCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","grains");
+        intent.putExtra("title", "grains");
         startActivity(intent);
     }
 
     public void exerciseCal(View v) {
         Intent intent = new Intent(this, CalenderActivity.class);
-        intent.putExtra("title","exercise");
+        intent.putExtra("title", "exercise");
         startActivity(intent);
     }
 
@@ -987,13 +987,13 @@ public class MainActivity extends AppCompatActivity {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
-        if(timeOfDay >= 0 && timeOfDay < 12) {
+        if (timeOfDay >= 0 && timeOfDay < 12) {
             return " Good Morning";
-        } else if(timeOfDay >= 12 && timeOfDay < 16) {
+        } else if (timeOfDay >= 12 && timeOfDay < 16) {
             return " Good Afternoon";
-        } else if(timeOfDay >= 16 && timeOfDay < 21) {
+        } else if (timeOfDay >= 16 && timeOfDay < 21) {
             return " Good Evening";
-        } else if(timeOfDay >= 21 && timeOfDay < 24) {
+        } else if (timeOfDay >= 21 && timeOfDay < 24) {
             return " Good Night";
         }
         return "";

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,544 +10,544 @@
         android:layout_height="match_parent"
         android:scrollbarThumbVertical="@color/customBlue">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-condensed-medium">
-
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:elevation="3dp"
-            android:layout_gravity="center"
+            android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="15dp"
-            android:paddingBottom="5dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/othervege_theme">
+            android:fontFamily="sans-serif-condensed-medium"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/water"
-                    android:padding="5dp"
-                    android:scaleType="centerInside"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/othervege_theme"
+                android:elevation="3dp"
+                android:paddingBottom="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/water" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Preload With \nWater"
-                            android:maxLines="2"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:maxLines="2"
+                                android:text="Preload With \nWater"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/waterInfo"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/info_icon_white"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/waterCal"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/calender_icon_white"/>
+                            <ImageView
+                                android:id="@+id/waterInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white" />
+
+                            <ImageView
+                                android:id="@+id/waterCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center|end">
+                    <CheckBox
+                        android:id="@+id/water_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/water_cb1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/water_cb2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/water_cb2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/water_cb3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/water_cb3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                </LinearLayout>
 
-            </LinearLayout>
+            </FrameLayout>
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:elevation="3dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:paddingBottom="5dp"
-            android:background="@drawable/fruits_theme">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/vinegar"
-                    android:padding="5dp"
-                    android:scaleType="centerInside"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/fruits_theme"
+                android:elevation="3dp"
+                android:paddingBottom="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vinegar" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="Incorporate \nVinegar"
-                            android:maxLines="2"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:maxLines="2"
+                                android:text="Incorporate \nVinegar"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/vinegarInfo"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/info_icon_white"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/vinegarCal"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/calender_icon_white"/>
+                            <ImageView
+                                android:id="@+id/vinegarInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white" />
+
+                            <ImageView
+                                android:id="@+id/vinegarCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center|end">
+                    <CheckBox
+                        android:id="@+id/vinegar_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/vinegar_cb1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/vinegar_cb2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/vinegar_cb2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/vinegar_cb3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/vinegar_cb3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                </LinearLayout>
 
-            </LinearLayout>
+            </FrameLayout>
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:elevation="3dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:paddingBottom="5dp"
-            android:background="@drawable/beverages_theme">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/negative_calories"
-                    android:padding="5dp"
-                    android:scaleType="centerInside"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/beverages_theme"
+                android:elevation="3dp"
+                android:paddingBottom="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/negative_calories" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:maxLines="3"
-                            android:text="Preload with \nNegative Calories \nFood"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:maxLines="3"
+                                android:text="Preload with \nNegative Calories \nFood"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
 
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/negInfo"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/info_icon_white"/>
+                            <ImageView
+                                android:id="@+id/negInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white" />
 
-                        <ImageView
-                            android:id="@+id/negCal"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/calender_icon_white"/>
+                            <ImageView
+                                android:id="@+id/negCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center|end">
+                    <CheckBox
+                        android:id="@+id/neg_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/neg_cb1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/neg_cb2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/neg_cb2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/neg_cb3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/neg_cb3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                </LinearLayout>
 
-            </LinearLayout>
+            </FrameLayout>
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:elevation="3dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:paddingBottom="5dp"
-            android:background="@drawable/cruciferous_theme">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/un_meal"
-                    android:padding="5dp"
-                    android:scaleType="centerInside"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/cruciferous_theme"
+                android:elevation="3dp"
+                android:paddingBottom="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/un_meal" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:maxLines="2"
-                            android:text="Enjoy Your Meal \nUndistracted"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:maxLines="2"
+                                android:text="Enjoy Your Meal \nUndistracted"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
 
-                        <ImageView
-                            android:id="@+id/un_mealInfo"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/info_icon_white"/>
+                        </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/un_mealCal"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/calender_icon_white"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/un_mealInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white" />
+
+                            <ImageView
+                                android:id="@+id/un_mealCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center|end">
+                    <CheckBox
+                        android:id="@+id/un_meal_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/un_meal_cb1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/un_meal_cb2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/un_meal_cb2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/un_meal_cb3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/un_meal_cb3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                </LinearLayout>
 
-            </LinearLayout>
+            </FrameLayout>
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:elevation="3dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:paddingBottom="5dp"
-            android:background="@drawable/exercise_theme">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginLeft="20dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/twenty_mins"
-                    android:padding="5dp"
-                    android:scaleType="centerInside"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/exercise_theme"
+                android:elevation="3dp"
+                android:paddingBottom="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center|start"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/twenty_mins" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top"
-                            android:text="20 Minutes Rule"
-                            android:textColor="@color/white"
-                            android:textSize="25dp"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:text="20 Minutes Rule"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/tweminInfo"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/info_icon_white"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/tweminCal"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/calender_icon_white"/>
+                            <ImageView
+                                android:id="@+id/tweminInfo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/info_icon_white" />
+
+                            <ImageView
+                                android:id="@+id/tweminCal"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/calender_icon_white" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center|end">
+                    <CheckBox
+                        android:id="@+id/twe_min_cb1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/twe_min_cb1"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/twe_min_cb2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/twe_min_cb2"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                    <CheckBox
+                        android:id="@+id/twe_min_cb3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/white_checkbox"
+                        android:button="@null"
+                        android:theme="@style/WhiteCheckbox" />
 
-                <CheckBox
-                    android:id="@+id/twe_min_cb3"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:theme="@style/WhiteCheckbox"
-                    android:background="@drawable/white_checkbox"
-                    android:button="@null"/>
+                </LinearLayout>
 
-            </LinearLayout>
+            </FrameLayout>
 
-        </FrameLayout>
-
-    </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
 
