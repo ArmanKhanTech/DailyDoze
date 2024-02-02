@@ -31,7 +31,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="7dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="6dp"
                     android:layout_marginRight="15dp"
                     android:background="@color/white"
                     android:onClick="tweaksFinish"
@@ -78,7 +78,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginRight="12dp"
+                    android:layout_marginRight="14dp"
                     android:clickable="true"
                     android:onClick="gotoGraphTweaks"
                     app:srcCompat="@drawable/graph_icon" />

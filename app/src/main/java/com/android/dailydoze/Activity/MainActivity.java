@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             email.setText(userData.getString("email", "Email"));
             name.setText(getGreetings());
 
-            LinearLayout l1, l2, l3, l4, l5, l6, l7, l8, l9;
+            LinearLayout l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11;
 
             l1 = popupView.findViewById(R.id.twe_tweaks);
             l2 = popupView.findViewById(R.id.jump_to_date);
@@ -156,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
             l7 = popupView.findViewById(R.id.about);
             l8 = popupView.findViewById(R.id.openSource);
             l9 = popupView.findViewById(R.id.backup);
+            l10 = popupView.findViewById(R.id.recommend);
+            l11 = popupView.findViewById(R.id.faq);
 
             ImageButton ib1 = popupView.findViewById(R.id.closeMenu);
             ib1.setOnClickListener(v12 -> popupWindow.dismiss());
@@ -211,6 +213,16 @@ public class MainActivity extends AppCompatActivity {
 
             l9.setOnClickListener(v16 -> {
                 startActivity(new Intent(MainActivity.this, BackupActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l10.setOnClickListener(v16 -> {
+                startActivity(new Intent(MainActivity.this, RecommendationActivity.class));
+                popupWindow.dismiss();
+            });
+
+            l11.setOnClickListener(v16 -> {
+                startActivity(new Intent(MainActivity.this, FAQActivity.class));
                 popupWindow.dismiss();
             });
 

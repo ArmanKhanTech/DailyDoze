@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Activity.GraphActivity">
+    android:background="@color/white"
+    tools:context=".Activity.FAQActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,53 +14,26 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton4"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="6dp"
             android:layout_marginEnd="15dp"
-            android:background="@color/white"
-            android:onClick="graphBack"
+            android:background="@color/transparent"
+            android:onClick="faqFinish"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/back_button_black"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/graphTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Daily Servings History"
+            android:text="FAQs"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
     </LinearLayout>
-
-    <HorizontalScrollView
-        android:id="@+id/horiScroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bargraph_theme"
-            android:padding="10dp">
-
-            <com.github.mikephil.charting.charts.CombinedChart
-                android:id="@+id/idCombineChart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
 
 </LinearLayout>

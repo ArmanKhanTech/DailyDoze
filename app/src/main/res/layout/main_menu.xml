@@ -207,6 +207,31 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:src="@drawable/recommend_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Recommendation"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/backup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -251,6 +276,31 @@
                         android:layout_marginLeft="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Open Source"
+                        android:textColor="#FF80AB"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_theme"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:padding="3dp"
+                        android:src="@drawable/faq_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="FAQs"
                         android:textColor="#FF80AB"
                         android:textSize="22dp" />
 

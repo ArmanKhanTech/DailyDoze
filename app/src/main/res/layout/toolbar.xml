@@ -6,12 +6,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nav_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="28dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="14dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="6dp"
+        android:layout_centerVertical="true"
         android:background="@drawable/menu_icon" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="12dp"
+        android:layout_marginRight="14dp"
         android:clickable="true"
         android:onClick="gotoGraph"
         app:srcCompat="@drawable/graph_icon" />
