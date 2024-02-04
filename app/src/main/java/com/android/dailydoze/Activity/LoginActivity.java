@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     Handler h = new Handler();
     private EditText email, pass;
     private Button submit;
+    private ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
     @Override
@@ -37,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         pass = findViewById(R.id.login_password);
 
         submit = findViewById(R.id.login_btn);
+
+        progressBar = findViewById(R.id.login_progressbar);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,8 +62,12 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        progressBar.setVisibility(View.VISIBLE);
+        submit.setText("");
+
         mAuth.signInWithEmailAndPassword(userEmail, userPass).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
+                progressBar.setVisibility(View.GONE);
                 h.postDelayed(() -> submit.setText("Submit"), 3000);
                 submit.setText("Successfull");
 
@@ -73,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
+                progressBar.setVisibility(View.GONE);
                 h.postDelayed(() -> submit.setText("Submit"), 3000);
                 submit.setText(Objects.requireNonNull(task.getException()).getLocalizedMessage());
             }
@@ -89,13 +98,18 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+        progressBar.setVisibility(View.VISIBLE);
+        submit.setText("");
+
         mAuth.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
+                    progressBar.setVisibility(View.GONE);
                     h.postDelayed(() -> submit.setText("Submit"), 3000);
-                    submit.setText("E-mail Sent");
+                    submit.setText("Email sent successfully");
                 } else {
+                    progressBar.setVisibility(View.GONE);
                     h.postDelayed(() -> submit.setText("Submit"), 3000);
                     submit.setText(Objects.requireNonNull(task.getException()).getLocalizedMessage());
                 }
