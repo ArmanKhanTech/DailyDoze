@@ -6,7 +6,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nav_button"
-        android:layout_width="25dp"
+        android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="14dp"
@@ -19,6 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:paddingBottom="2dp"
         android:layout_toEndOf="@+id/nav_button"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/app_name"
@@ -54,7 +56,7 @@
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="14dp"
+        android:layout_marginEnd="10dp"
         android:clickable="true"
         android:onClick="gotoGraph"
         app:srcCompat="@drawable/graph_icon" />

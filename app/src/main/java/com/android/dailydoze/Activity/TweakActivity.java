@@ -181,7 +181,7 @@ public class TweakActivity extends AppCompatActivity {
     }
 
     private void loadFragment() {
-        tabLayout = findViewById(R.id.tablayout_tweaks);
+        tabLayout = findViewById(R.id.tab_layout_tweaks);
         viewPager = findViewById(R.id.viewPager_tweaks);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new DayFragment(), "Day");
