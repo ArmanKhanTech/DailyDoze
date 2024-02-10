@@ -234,7 +234,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
-        intent.putExtra("id", id);
+        intent.putExtra("servingsNotification", id);
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, FLAG_IMMUTABLE);
         am.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);

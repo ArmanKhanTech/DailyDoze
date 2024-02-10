@@ -21,7 +21,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class TimerService extends Service {
-    public static final String CHANNEL_ID = "ForegroundServiceChannel";
+    public static final String CHANNEL_ID = "DailyDozeForegroundServiceChannel";
     public static final String COUNTDOWN_BR = "com.android.dailydoze";
     CountDownTimer cdt = null;
     String timer = "";
@@ -50,8 +50,8 @@ public class TimerService extends Service {
 
         serviceChannel = new NotificationChannel(
                 CHANNEL_ID,
-                "Foreground Service Channel",
-                NotificationManager.IMPORTANCE_DEFAULT
+                "DailyDoze Foreground Service Channel",
+                NotificationManager.IMPORTANCE_HIGH
         );
         manager = getSystemService(NotificationManager.class);
 

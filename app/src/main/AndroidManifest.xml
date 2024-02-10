@@ -18,7 +18,6 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true">
 
-        <service android:name=".Service.GetAddressIntentService" />
         <service
             android:name=".Service.TimerService"
             android:foregroundServiceType="shortService" />

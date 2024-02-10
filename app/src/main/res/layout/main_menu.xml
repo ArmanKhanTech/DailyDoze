@@ -122,6 +122,7 @@
                         android:src="@drawable/jump_icon" />
 
                     <TextView
+                        android:id="@+id/jumpToDateText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"

@@ -154,7 +154,6 @@
                     android:layout_gravity="center"
                     android:layout_centerVertical="true"
                     android:indeterminateTint="@color/white"
-                    android:indeterminateTintMode="src_in"
                     android:visibility="gone"/>
 
             </RelativeLayout>

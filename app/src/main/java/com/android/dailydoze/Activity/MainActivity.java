@@ -8,6 +8,8 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
             cv_cb1, flaxseeds_cb1, herbs_cb1, nuts_cb1, grains_cb1, grains_cb2, grains_cb3, beve_cb1, beve_cb2, beve_cb3,
             beve_cb4, beve_cb5, exercise_cb1;
-    TextView currDate, textView2, back_to_today;
+    TextView currDate, count, back_to_today;
     DailyDozeDatabase db;
     ImageButton date_prev, date_next, sleep;
     FrameLayout frameLayout;
@@ -118,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         date_prev = findViewById(R.id.date_prev);
         sleep = findViewById(R.id.sleep);
 
-        textView2 = findViewById(R.id.textView2);
+        count = findViewById(R.id.textView2);
         back_to_today = findViewById(R.id.back_to_today);
 
         setDay();
@@ -168,8 +170,14 @@ public class MainActivity extends AppCompatActivity {
             });
 
             l2.setOnClickListener(v14 -> {
-                openJumpDate();
-                popupWindow.dismiss();
+                TextView jumpToDateText = popupView.findViewById(R.id.jumpToDateText);
+                jumpToDateText.setText("Loading...");
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    if (jumpToDateText.getText().toString().equals("Loading...")) {
+                        openJumpDate();
+                        popupWindow.dismiss();
+                    }
+                });
             });
 
             l3.setOnClickListener(v18 -> {
@@ -577,7 +585,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setCount() {
         int i = db.getCount(getCurrentDate());
-        textView2.setText(String.valueOf(i));
+        count.setText(String.valueOf(i));
     }
 
     public void incValue(String value) {
@@ -1004,10 +1012,8 @@ public class MainActivity extends AppCompatActivity {
             return " Good Morning";
         } else if (timeOfDay >= 12 && timeOfDay < 16) {
             return " Good Afternoon";
-        } else if (timeOfDay >= 16 && timeOfDay < 21) {
+        } else if (timeOfDay >= 16 && timeOfDay < 24) {
             return " Good Evening";
-        } else if (timeOfDay >= 21 && timeOfDay < 24) {
-            return " Good Night";
         }
         return "";
     }
