@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="5dp"
         android:text="Answer"
+        android:lineHeight="30dp"
         android:textColor="@color/black"
-        android:textSize="22dp" />
+        android:textSize="20dp" />
 
 </LinearLayout>

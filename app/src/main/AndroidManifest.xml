@@ -34,10 +34,6 @@
         </receiver>
 
         <activity
-            android:name=".Activity.RecommendationActivity"
-            android:exported="false"
-            android:theme="@style/Theme.DailyDoze" />
-        <activity
             android:name=".Activity.FAQActivity"
             android:exported="false"
             android:theme="@style/Theme.DailyDoze" />

@@ -19,26 +19,25 @@ class FAQActivity : AppCompatActivity() {
         faqItems.add(
             FAQItem(
                 "What is DailyDoze?",
-                "This app is a simple FAQ example."
+                "DailyDoze is a health-focused app designed as a " +
+                        "checklist to inspire users to incorporate nutrient-rich " +
+                        "foods into their diets. It encourages meal planning and " +
+                        "improving the overall nutritional quality of meals. " +
+                        "Customizable to individual preferences and needs, " +
+                        "it serves as a personalized food diary, aiming to " +
+                        "promote healthier eating habits."
             )
-        )
-        faqItems.add(
-            FAQItem(
-                "How does DailyDoze work?",
-                "It displays a list of frequently asked questions and their answers."
-            )
-
         )
         faqItems.add(
             FAQItem(
                 "What is 21 Tweaks?",
-                "It displays a list of frequently asked questions and their answers."
-            )
-        )
-        faqItems.add(
-            FAQItem(
-                "How does 21 Tweaks work?",
-                "It displays a list of frequently asked questions and their answers."
+                "21 Tweaks is a 21-day challenge focused on weight loss and " +
+                        "health improvement through small, manageable adjustments to " +
+                        "daily routines. It offers a simple and effective approach to " +
+                        "achieving these goals by emphasizing gradual changes over the " +
+                        "course of the challenge. By incorporating these tweaks into daily " +
+                        "habits, participants can work towards their weight loss and health " +
+                        "objectives in a structured and achievable manner."
             )
         )
 

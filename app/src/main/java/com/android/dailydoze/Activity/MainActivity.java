@@ -217,7 +217,8 @@ public class MainActivity extends AppCompatActivity {
             });
 
             l10.setOnClickListener(v16 -> {
-                startActivity(new Intent(MainActivity.this, RecommendationActivity.class));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://diet-recommendation-system.streamlit.app"));
+                startActivity(browserIntent);
                 popupWindow.dismiss();
             });
 
