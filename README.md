@@ -96,7 +96,7 @@ Follow the below instructions to get started.
 
 ### Installation
 
-1. Clone this repository :
+1. Clone this repository 
    
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
