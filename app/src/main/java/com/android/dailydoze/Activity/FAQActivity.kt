@@ -25,7 +25,10 @@ class FAQActivity : AppCompatActivity() {
                         "improving the overall nutritional quality of meals. " +
                         "Customizable to individual preferences and needs, " +
                         "it serves as a personalized food diary, aiming to " +
-                        "promote healthier eating habits."
+                        "promote healthier eating habits. It is been observed that our diet " +
+                        "has significant impact on our sleep quality and overall health." +
+                        "DailyDoze is designed to help users make healthier food choices " +
+                        "and improve their overall health & sleep."
             )
         )
         faqItems.add(
