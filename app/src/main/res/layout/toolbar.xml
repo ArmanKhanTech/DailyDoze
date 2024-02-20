@@ -52,11 +52,11 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="12dp"
         android:clickable="true"
         android:onClick="gotoGraph"
         app:srcCompat="@drawable/graph_icon" />
