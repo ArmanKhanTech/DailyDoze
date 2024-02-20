@@ -425,7 +425,7 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 
 ## Acknowledgments
 
-* [Dr Greger's Daily Dozen](https://github.com/nutritionfactsorg/daily-dozen-android)
+* [Dr Greger's How Not to Die](https://nutritionfacts.org/book/how-not-to-die)
 
 **3rd Party Libraries**
 * [Phil Jay's MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
