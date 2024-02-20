@@ -96,7 +96,7 @@ Follow the below instructions to get started.
 
 ### Installation
 
-1. Clone this repo :
+1. Clone this repository 
    
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
@@ -161,14 +161,20 @@ Follow the below instructions to get started.
   <li>
     <p>Meditation : Goto Meditation.</p>
   </li>
-    <li>
+  <li>
     <p>Fast-Watch : Goto Fast-Watch.</p>
+  </li>
+  <li>
+    <p>Recommendation : Goto Diet Recommendation System (<a href="https://diet-recommendation-system.streamlit.app/">Link</a>).</p>
   </li>
   <li>
     <p>Backup : Goto Backup.</p>
   </li>
   <li>
-    <p>Open Source : Redirect to this Repo.</p>
+    <p>Open Source : Redirect to this repository.</p>
+  </li>
+  <li>
+    <p>FAQs : Goto FAQs.</p>
   </li>
   <li>
     <p>About : Goto About.</p>
@@ -384,6 +390,7 @@ Follow the below instructions to get started.
 - [x] Add Animations
 - [x] Add Backup
 - [x] Add Calender
+- [x] Add FAQs
 - [ ] Upload on Play Store
 
 See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a full list of proposed features (and known issues)
@@ -394,7 +401,7 @@ See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a f
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+If you have a suggestion that would make this better, please fork the repository and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 Don't forget to give the project a star! 
 
@@ -418,7 +425,7 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 
 ## Acknowledgments
 
-* [Dr Greger's Daily Dozen](https://github.com/nutritionfactsorg/daily-dozen-android)
+* [Dr Greger's How Not to Die](https://nutritionfacts.org/book/how-not-to-die)
 
 **3rd Party Libraries**
 * [Phil Jay's MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
