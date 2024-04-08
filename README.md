@@ -317,7 +317,7 @@ Follow the below instructions to get started.
     <p>This feature allows you to take backup(export) of your data or import it so you don't have to worry about losing it.</p>
   </li>
   <li>
-    <p>Simply click on Import buttton to import your data.</p>
+    <p>Simply click on Import button to import your data.</p>
   </li>
   <li>
     <p>Or click on Export button to export your data.</p>

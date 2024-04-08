@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DailyDoze</string>
+
     <string name="beans">¼ cup of hummus or bean dip \n½ cup cooked beans, split peas, lentils, tofu or tempeh \n1 cup of fresh peas or sprouted lentils</string>
     <string name="berries">½ cup fresh or frozen \n¼ cup dried</string>
     <string name="fruits">1 medium-sized fruit \n1 cup cut-up fruit \n¼ cup dried fruit</string>
@@ -45,5 +46,4 @@
         <item>Urban</item>
         <item>Rural</item>
     </string-array>
-
 </resources>

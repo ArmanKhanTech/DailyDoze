@@ -34,21 +34,21 @@ import java.util.ArrayList;
 
 @SuppressWarnings("ALL")
 public class GraphActivity extends AppCompatActivity {
-    BarData barData;
-    LineData lineData;
-    CombinedChart combinedChart;
-    CombinedData combinedData;
-    BarDataSet barDataSet;
-    LineDataSet lineDataSet;
-    ArrayList barEntriesArrayList, lineEntriesArrayList;
-    TextView tv;
-    TweaksDatabase db1;
-    DailyDozeDatabase db2;
-    String[] labels;
-    ArrayList<String> dates = new ArrayList<>();
-    DecimalFormat decimalFormat = new DecimalFormat("0.##");
-    HorizontalScrollView horiScroll;
-    String title;
+    private BarData barData;
+    private LineData lineData;
+    private CombinedChart combinedChart;
+    private CombinedData combinedData;
+    private BarDataSet barDataSet;
+    private LineDataSet lineDataSet;
+    private ArrayList barEntriesArrayList, lineEntriesArrayList;
+    private TextView tv;
+    private TweaksDatabase db1;
+    private DailyDozeDatabase db2;
+    private String[] labels;
+    private ArrayList<String> dates = new ArrayList<>();
+    private DecimalFormat decimalFormat = new DecimalFormat("0.##");
+    private HorizontalScrollView horiScroll;
+    private String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,28 +149,18 @@ public class GraphActivity extends AppCompatActivity {
 
             @Override
             public void onChartLongPressed(MotionEvent me) {
-                //
             }
-
             @Override
             public void onChartDoubleTapped(MotionEvent me) {
-                //
-
             }
-
             @Override
             public void onChartSingleTapped(MotionEvent me) {
-                //
             }
-
             @Override
             public void onChartFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY) {
-                //
             }
-
             @Override
             public void onChartScale(MotionEvent me, float scaleX, float scaleY) {
-                //
             }
 
             @Override
@@ -218,7 +208,7 @@ public class GraphActivity extends AppCompatActivity {
         }
     }
 
-    public void graphBack(View v) {
+    public void finish(View v) {
         finish();
     }
 }

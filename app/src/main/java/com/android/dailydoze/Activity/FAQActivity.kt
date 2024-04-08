@@ -48,7 +48,7 @@ class FAQActivity : AppCompatActivity() {
         faqListView.adapter = adapter
     }
 
-    fun faqFinish(view: View) {
+    fun finish(view: View) {
         finish()
     }
 }

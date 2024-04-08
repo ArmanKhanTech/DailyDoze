@@ -25,7 +25,7 @@
                     android:id="@+id/close"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
                     android:background="@color/transparent"
@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Background"
                 android:textColor="@color/black"
@@ -57,9 +57,9 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:scrollbars="none">
 
@@ -85,7 +85,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         app:cardCornerRadius="30dp">
 
                         <ImageView
@@ -100,7 +100,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         app:cardCornerRadius="30dp">
 
                         <ImageView
@@ -115,7 +115,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         app:cardCornerRadius="30dp">
 
                         <ImageView
@@ -130,7 +130,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         app:cardCornerRadius="30dp">
 
                         <ImageView
@@ -150,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Sound"
                 android:textColor="@color/black"
@@ -159,9 +159,9 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="40dp"
                 android:scrollbars="none">
 
@@ -208,7 +208,7 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:elevation="3dp">
 
                         <TextView
@@ -243,7 +243,7 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:elevation="3dp">
 
                         <TextView
@@ -278,7 +278,7 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:elevation="3dp">
 
                         <TextView
@@ -313,7 +313,7 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:elevation="3dp">
 
                         <TextView
@@ -348,7 +348,7 @@
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:elevation="3dp">
 
                         <TextView

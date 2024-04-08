@@ -22,7 +22,7 @@ import java.util.Objects;
 
 @SuppressWarnings("All")
 public class LoginActivity extends AppCompatActivity {
-    Handler h = new Handler();
+    private Handler h = new Handler();
     private EditText email, pass;
     private Button submit;
     private ProgressBar progressBar;

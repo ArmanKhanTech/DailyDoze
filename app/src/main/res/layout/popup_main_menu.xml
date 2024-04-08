@@ -24,7 +24,7 @@
                     android:id="@+id/closeMenu"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/transparent"
@@ -99,7 +99,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="21 Tweaks"
                         android:textColor="#FF80AB"
@@ -125,7 +125,7 @@
                         android:id="@+id/jumpToDateText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Jump to a Date"
                         android:textColor="#FF80AB"
@@ -149,7 +149,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Notifications"
                         android:textColor="#FF80AB"
@@ -174,7 +174,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Meditation"
                         android:textColor="#FF80AB"
@@ -199,7 +199,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Fast-Watch"
                         android:textColor="#FF80AB"
@@ -224,7 +224,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Recommendation"
                         android:textColor="#FF80AB"
@@ -249,7 +249,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Backup"
                         android:textColor="#FF80AB"
@@ -274,7 +274,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Open Source"
                         android:textColor="#FF80AB"
@@ -299,7 +299,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="FAQs"
                         android:textColor="#FF80AB"
@@ -324,7 +324,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="About"
                         android:textColor="#FF80AB"
@@ -351,7 +351,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-condensed-medium"
                         android:text="Logout"
                         android:textColor="#FF80AB"

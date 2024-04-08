@@ -19,7 +19,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -38,6 +37,7 @@ import com.android.dailydoze.Database.NotificationDatabase;
 import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Receiver.AlarmReceiver;
+import com.android.dailydoze.Utility.CommonUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -46,24 +46,14 @@ import java.util.Date;
 
 @SuppressWarnings("ALL")
 public class NotificationActivity extends AppCompatActivity {
-    ImageView setTime;
-    TextView status;
-    ListView list;
-    Switch sw;
-    ArrayList<DataListModel> data = new ArrayList<>();
-    ListAdapter adapter;
-    NotificationDatabase db1;
-    Drawable icon;
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
+    private ImageView setTime;
+    private TextView status;
+    private ListView list;
+    private Switch sw;
+    private ArrayList<DataListModel> data = new ArrayList<>();
+    private ListAdapter adapter;
+    private NotificationDatabase db1;
+    private Drawable icon;
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -165,15 +155,15 @@ public class NotificationActivity extends AppCompatActivity {
 
         list.setOnItemClickListener((parent, view, position, id) -> {
             DataListModel notiList = adapter.getItem(position);
-            String t = notiList.getText();
+            String t = notiList.text();
 
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
             Button bb = popupView.findViewById(R.id.delete);
@@ -184,7 +174,7 @@ public class NotificationActivity extends AppCompatActivity {
                 popupWindow.dismiss();
                 updateList();
             });
-            dimBehind(popupWindow);
+            new CommonUtil().dimBehind(popupWindow);
         });
         setTime.setOnClickListener(v -> selectTime());
     }
@@ -193,6 +183,7 @@ public class NotificationActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
+
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, R.style.PickerTheme, (timePicker, i1, i2) -> {
             setAlarm(timePicker);
             adapter.notifyDataSetChanged();
@@ -255,7 +246,7 @@ public class NotificationActivity extends AppCompatActivity {
         return (new SimpleDateFormat("hh:mm aa")).format(new Date(millis));
     }
 
-    public void notiFinish(View v) {
+    public void finish(View v) {
         finish();
     }
 }

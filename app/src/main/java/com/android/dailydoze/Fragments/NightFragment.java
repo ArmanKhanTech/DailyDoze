@@ -25,13 +25,10 @@ import java.util.Objects;
 
 public class NightFragment extends Fragment {
     @SuppressLint("StaticFieldLeak")
-    static CheckBox fast_cb1, sleep_cb1, exp_cb1;
-    static TweaksDatabase db;
-    ImageView i1, i2, i3;
-    ImageView c1, c2, c3;
+    private static CheckBox fast_cb1, sleep_cb1, exp_cb1;
+    private static TweaksDatabase db;
 
     public NightFragment() {
-        //
     }
 
     public static void setDay() {
@@ -78,13 +75,13 @@ public class NightFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_night, container, false);
 
-        i1 = view.findViewById(R.id.fastInfo);
-        i2 = view.findViewById(R.id.sleepInfo);
-        i3 = view.findViewById(R.id.expInfo);
+        ImageView i1 = view.findViewById(R.id.fastInfo);
+        ImageView i2 = view.findViewById(R.id.sleepInfo);
+        ImageView i3 = view.findViewById(R.id.expInfo);
 
-        c1 = view.findViewById(R.id.fastCal);
-        c2 = view.findViewById(R.id.sleepCal);
-        c3 = view.findViewById(R.id.expCal);
+        ImageView c1 = view.findViewById(R.id.fastCal);
+        ImageView c2 = view.findViewById(R.id.sleepCal);
+        ImageView c3 = view.findViewById(R.id.expCal);
 
         fast_cb1 = view.findViewById(R.id.fast_cb1);
         sleep_cb1 = view.findViewById(R.id.sleep_cb1);

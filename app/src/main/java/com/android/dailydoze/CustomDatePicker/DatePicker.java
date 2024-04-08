@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +36,6 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private int textSize = 19;
     private int pickerMode = 0;
     private boolean darkModeEnabled = true;
-
     private boolean isNightTheme = false;
     private DataSelectListener dataSelectListener;
 
@@ -62,6 +60,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private void setAttributes(Context context, @Nullable AttributeSet attrs) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Picker);
         final int N = a.getIndexCount();
+
         for (int i = 0; i < N; ++i) {
             int attr = a.getIndex(i);
             if (attr == R.styleable.Picker_offset) {
@@ -74,6 +73,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
                 this.pickerMode = a.getInt(attr, 0);
             }
         }
+
         a.recycle();
     }
 
@@ -93,6 +93,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         int nightModeFlags =
                 getContext().getResources().getConfiguration().uiMode &
                         Configuration.UI_MODE_NIGHT_MASK;
+
         switch (nightModeFlags) {
             case Configuration.UI_MODE_NIGHT_YES:
                 isNightTheme = true;
@@ -107,6 +108,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private void setUpInitialViews() {
         container.removeAllViews();
         container.addView(createEmptyView1(context));
+
         if (pickerMode == MONTH_ON_FIRST) {
             container.addView(createMonthView(context));
             container.addView(createDayView(context));
@@ -114,18 +116,19 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
             container.addView(createDayView(context));
             container.addView(createMonthView(context));
         }
+
         container.addView(createYearView(context));
         container.addView(createEmptyView2(context));
         setUpCalendar();
     }
 
     public void setUpCalendar() {
-        Log.i("Calendar", "setUp = " + factory.getSelectedDate().toString());
         if (darkModeEnabled) {
             checkDarkMode();
         } else {
             isNightTheme = false;
         }
+
         setUpYearView();
         setUpMonthView();
         setUpDayView();
@@ -137,6 +140,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         for (int i = 0; i < 30; i++) {
             array.add("");
         }
+
         emptyView1.setTextSize(textSize);
         emptyView2.setTextSize(textSize);
         emptyView1.setOffset(offset);
@@ -148,6 +152,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private void setUpYearView() {
         DateModel date = factory.getSelectedDate();
         List<String> years = factory.getYearList();
+
         yearView.isNightTheme = isNightTheme;
         yearView.setOffset(offset);
         yearView.setTextSize(textSize);
@@ -160,6 +165,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private void setUpMonthView() {
         List<String> months = factory.getMonthList();
         DateModel date = factory.getSelectedDate();
+
         monthView.isNightTheme = isNightTheme;
         monthView.setTextSize(textSize);
         monthView.setGravity(Gravity.CENTER);
@@ -172,6 +178,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     private void setUpDayView() {
         DateModel date = factory.getSelectedDate();
         List<String> days = factory.getDayList();
+
         dayView.isNightTheme = isNightTheme;
         dayView.setOffset(offset);
         dayView.setTextSize(textSize);

@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 
 public class DatePickerPopup extends PickerPopup {
-
     private OnDateSelectListener listener;
 
     public DatePickerPopup(@NonNull Context context, @NonNull DatePicker picker) {
@@ -40,7 +39,6 @@ public class DatePickerPopup extends PickerPopup {
         private OnDateSelectListener listener;
 
         public Builder() {
-            //
         }
 
         public Builder from(Context context) {

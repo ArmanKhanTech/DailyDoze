@@ -17,8 +17,8 @@ import com.android.dailydoze.R;
 
 @SuppressWarnings("ALL")
 public class AlarmReceiver extends BroadcastReceiver {
-    public static final String CHANNEL_ID = "DailyDozeNotifitcationChannel";
-    NotificationChannel serviceChannel;
+    private static final String CHANNEL_ID = "DailyDozeNotifitcationChannel";
+    private NotificationChannel serviceChannel;
 
     @Override
     public void onReceive(Context context, Intent intent) {

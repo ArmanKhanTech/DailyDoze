@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.MainActivity"
+    tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
     <include
         android:id="@+id/include"
@@ -32,8 +33,8 @@
                 android:id="@+id/frameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:background="@drawable/info_img_theme"
                 android:elevation="2dp">
 
@@ -71,7 +72,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="end|center"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_marginTop="3dp"
                         android:background="@color/transparent"
                         android:scaleType="centerInside"
@@ -84,7 +85,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="end|center"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@color/white"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/next_icon" />
@@ -96,8 +97,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
                 android:background="@drawable/back_to_today_theme"
                 android:gravity="center">
 
@@ -124,9 +125,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/beans_theme"
@@ -138,7 +139,8 @@
                         android:layout_gravity="top|center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -218,7 +220,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/berries_theme"
@@ -230,7 +232,8 @@
                         android:layout_gravity="top|center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -296,8 +299,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/othervege_theme"
                 android:elevation="3dp"
@@ -307,7 +310,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|start"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -325,7 +328,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:onClick="othervegeInfo"
                             android:text="Other Veggies"
                             android:textColor="@color/white"
@@ -335,7 +338,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -359,7 +362,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -387,9 +390,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/fruits_theme"
                 android:elevation="3dp"
@@ -399,7 +402,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|start"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -417,7 +420,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:onClick="fruitsInfo"
                             android:text="Other Fruits"
                             android:textColor="@color/white"
@@ -427,7 +430,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -451,7 +454,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -486,15 +489,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/greens_theme"
@@ -506,7 +510,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -578,7 +583,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/cruciferous_theme"
@@ -656,9 +661,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/herbs_theme"
                 android:elevation="3dp"
@@ -668,7 +673,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|start"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -686,7 +691,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:onClick="herbsInfo"
                             android:text="Herbs and Spices"
                             android:textColor="@color/white"
@@ -696,7 +701,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -720,7 +725,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -740,9 +745,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/nuts_theme"
                 android:elevation="3dp"
@@ -752,7 +757,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|start"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -770,7 +775,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:onClick="nutsInfo"
                             android:text="Nuts and Seeds"
                             android:textColor="@color/white"
@@ -780,7 +785,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -804,7 +809,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -823,15 +828,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/flexseeds_theme"
@@ -843,7 +849,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -908,7 +915,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/exercise_theme"
@@ -920,7 +927,8 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -986,9 +994,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/grains_theme"
                 android:elevation="3dp"
@@ -998,7 +1006,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|start"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -1016,7 +1024,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:onClick="grainsInfo"
                             android:text="Whole Grains"
                             android:textColor="@color/white"
@@ -1026,7 +1034,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1050,7 +1058,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -1086,9 +1094,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/beverages_theme"
                 android:elevation="3dp"
@@ -1098,7 +1106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|start"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -1116,7 +1124,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
                             android:onClick="beveragesInfo"
                             android:text="Beverages"
                             android:textColor="@color/white"
@@ -1126,7 +1134,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="10dp">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -1150,7 +1158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 

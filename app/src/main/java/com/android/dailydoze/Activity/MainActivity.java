@@ -1,7 +1,6 @@
 package com.android.dailydoze.Activity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -13,7 +12,6 @@ import android.os.Looper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -31,6 +29,7 @@ import com.android.dailydoze.CustomDatePicker.DatePicker;
 import com.android.dailydoze.CustomDatePicker.DatePickerPopup;
 import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.R;
+import com.android.dailydoze.Utility.CommonUtil;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.ParseException;
@@ -42,27 +41,16 @@ import java.util.Objects;
 
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
-    Button b;
-    CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
+    private Button b;
+    private CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
             cv_cb1, flaxseeds_cb1, herbs_cb1, nuts_cb1, grains_cb1, grains_cb2, grains_cb3, beve_cb1, beve_cb2, beve_cb3,
             beve_cb4, beve_cb5, exercise_cb1;
-    TextView currDate, count, back_to_today;
-    DailyDozeDatabase db;
-    ImageButton date_prev, date_next, sleep;
-    FrameLayout frameLayout;
-    LinearLayout jumpBack;
-    boolean today, jump = false;
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
-
+    private TextView currDate, count, back_to_today;
+    private DailyDozeDatabase db;
+    private ImageButton date_prev, date_next, sleep;
+    private FrameLayout frameLayout;
+    private LinearLayout jumpBack;
+    private boolean today, jump = false;
     @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,11 +119,10 @@ public class MainActivity extends AppCompatActivity {
 
         b.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.main_menu, null);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_main_menu, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
             TextView name, email;
@@ -237,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
 
             popupWindow.setAnimationStyle(R.style.PopupWindowAnimation);
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-            dimBehind(popupWindow);
+            new CommonUtil().dimBehind(popupWindow);
         });
 
         beans_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -434,6 +421,7 @@ public class MainActivity extends AppCompatActivity {
 
         jumpBack.setOnClickListener(v -> {
             String tDate = setCurrentDate();
+
             currDate.setText(tDate);
             jumpBack.setBackground(getDrawable(R.drawable.back_to_today_theme));
             back_to_today.setTextColor(Color.WHITE);
@@ -442,7 +430,8 @@ public class MainActivity extends AppCompatActivity {
 
         sleep.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
+
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
@@ -481,7 +470,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-            dimBehind(popupWindow);
+            new CommonUtil().dimBehind(popupWindow);
         });
     }
 
@@ -510,7 +499,8 @@ public class MainActivity extends AppCompatActivity {
                             setDay();
                         } else {
                             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-                            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+                            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
+
                             int width = LinearLayout.LayoutParams.MATCH_PARENT;
                             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
                             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
@@ -528,7 +518,7 @@ public class MainActivity extends AppCompatActivity {
                             });
 
                             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-                            dimBehind(popupWindow);
+                            new CommonUtil().dimBehind(popupWindow);
                         }
                     }
                 })
@@ -540,11 +530,13 @@ public class MainActivity extends AppCompatActivity {
     public void setPrev() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+
         try {
             c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+
         c.add(Calendar.DATE, -1);
         String formattedDate = df.format(c.getTime());
 
@@ -563,11 +555,13 @@ public class MainActivity extends AppCompatActivity {
     public void setNext() {
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+
         try {
             c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
+
         c.add(Calendar.DATE, +1);
         String formattedDate = df.format(c.getTime());
 
@@ -596,6 +590,7 @@ public class MainActivity extends AppCompatActivity {
                 db.addDate(getCurrentDate());
                 db.incData(value, getCurrentDate());
             }
+
             setCount();
         }
     }
@@ -607,6 +602,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 db.addDate(getCurrentDate());
             }
+
             setCount();
         }
     }
@@ -634,6 +630,7 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.slide_down);
                 jumpBack.startAnimation(slide_down);
             }
+
             jumpBack.setVisibility(View.VISIBLE);
 
             today = false;

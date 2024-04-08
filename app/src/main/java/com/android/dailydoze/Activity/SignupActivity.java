@@ -19,7 +19,7 @@ import java.util.Objects;
 
 @SuppressWarnings("ALL")
 public class SignupActivity extends AppCompatActivity {
-    Handler h = new Handler();
+    private Handler h = new Handler();
     private EditText email, pass;
     private Button submit;
     private ProgressBar progressBar;
@@ -79,7 +79,7 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
-    public void signupBack(View v) {
+    public void finish(View v) {
         finish();
     }
 }

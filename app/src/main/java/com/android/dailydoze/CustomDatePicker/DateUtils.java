@@ -5,7 +5,6 @@ import java.util.Calendar;
 @SuppressWarnings("ALL")
 public class DateUtils {
     public DateUtils() {
-        //
     }
 
     public static long getTimeMiles(int year, int month, int day) {

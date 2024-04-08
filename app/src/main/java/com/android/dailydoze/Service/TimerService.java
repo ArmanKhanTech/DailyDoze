@@ -21,16 +21,15 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class TimerService extends Service {
-    public static final String CHANNEL_ID = "DailyDozeForegroundServiceChannel";
+    private static final String CHANNEL_ID = "DailyDozeForegroundServiceChannel";
     public static final String COUNTDOWN_BR = "com.android.dailydoze";
-    CountDownTimer cdt = null;
-    String timer = "";
-    long millis, remaining;
-    Intent intent = new Intent(COUNTDOWN_BR);
-    NotificationManager manager;
-    Notification notification;
-    RemoteViews notificationLayout, notificationLayoutExpanded;
-    NotificationChannel serviceChannel;
+    private final Intent intent = new Intent(COUNTDOWN_BR);
+    private CountDownTimer cdt = null;
+    private String timer = "";
+    private long millis, remaining;
+    private NotificationManager manager;
+    private Notification notification;
+    private RemoteViews notificationLayout, notificationLayoutExpanded;
 
     @Override
     public void onDestroy() {
@@ -48,7 +47,7 @@ public class TimerService extends Service {
         PendingIntent pendingIntent = PendingIntent.getActivity(this,
                 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
 
-        serviceChannel = new NotificationChannel(
+        NotificationChannel serviceChannel = new NotificationChannel(
                 CHANNEL_ID,
                 "DailyDoze Foreground Service Channel",
                 NotificationManager.IMPORTANCE_HIGH

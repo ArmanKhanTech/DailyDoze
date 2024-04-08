@@ -24,14 +24,11 @@ import java.util.Objects;
 
 public class DayFragment extends Fragment {
     @SuppressLint("StaticFieldLeak")
-    static CheckBox cumin_cb1, garlic_cb1, ginger_cb1, yeast_cb1, cumin2_cb1, cumin2_cb2, green_cb1, green_cb2, green_cb3, hyd_cb1, deflour_cb1,
+    private static CheckBox cumin_cb1, garlic_cb1, ginger_cb1, yeast_cb1, cumin2_cb1, cumin2_cb2, green_cb1, green_cb2, green_cb3, hyd_cb1, deflour_cb1,
             front_cb1, restrict_cb1, optimize_cb1, weigh_cb1, weigh_cb2, inten_cb1, inten_cb2, inten_cb3;
-    static TweaksDatabase db;
-    ImageView i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13;
-    ImageView c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13;
+    private static TweaksDatabase db;
 
     public DayFragment() {
-        //
     }
 
     public static void setDay() {
@@ -227,33 +224,33 @@ public class DayFragment extends Fragment {
             db.addDate(getCurrentDate());
         }
 
-        i1 = view.findViewById(R.id.cuminInfo);
-        i2 = view.findViewById(R.id.garlicInfo);
-        i3 = view.findViewById(R.id.gingerInfo);
-        i4 = view.findViewById(R.id.yeastInfo);
-        i5 = view.findViewById(R.id.cumin2Info);
-        i6 = view.findViewById(R.id.greenInfo);
-        i7 = view.findViewById(R.id.hydInfo);
-        i8 = view.findViewById(R.id.deflourInfo);
-        i9 = view.findViewById(R.id.frontInfo);
-        i10 = view.findViewById(R.id.restrictInfo);
-        i11 = view.findViewById(R.id.optimizeInfo);
-        i12 = view.findViewById(R.id.weighInfo);
-        i13 = view.findViewById(R.id.intenInfo);
+        ImageView i1 = view.findViewById(R.id.cuminInfo);
+        ImageView i2 = view.findViewById(R.id.garlicInfo);
+        ImageView i3 = view.findViewById(R.id.gingerInfo);
+        ImageView i4 = view.findViewById(R.id.yeastInfo);
+        ImageView i5 = view.findViewById(R.id.cumin2Info);
+        ImageView i6 = view.findViewById(R.id.greenInfo);
+        ImageView i7 = view.findViewById(R.id.hydInfo);
+        ImageView i8 = view.findViewById(R.id.deflourInfo);
+        ImageView i9 = view.findViewById(R.id.frontInfo);
+        ImageView i10 = view.findViewById(R.id.restrictInfo);
+        ImageView i11 = view.findViewById(R.id.optimizeInfo);
+        ImageView i12 = view.findViewById(R.id.weighInfo);
+        ImageView i13 = view.findViewById(R.id.intenInfo);
 
-        c1 = view.findViewById(R.id.cuminCal);
-        c2 = view.findViewById(R.id.garlicCal);
-        c3 = view.findViewById(R.id.gingerCal);
-        c4 = view.findViewById(R.id.yeastCal);
-        c5 = view.findViewById(R.id.cumin2Cal);
-        c6 = view.findViewById(R.id.greenCal);
-        c7 = view.findViewById(R.id.hydCal);
-        c8 = view.findViewById(R.id.deflourCal);
-        c9 = view.findViewById(R.id.frontCal);
-        c10 = view.findViewById(R.id.restrictCal);
-        c11 = view.findViewById(R.id.optimizeCal);
-        c12 = view.findViewById(R.id.weighCal);
-        c13 = view.findViewById(R.id.intenCal);
+        ImageView c1 = view.findViewById(R.id.cuminCal);
+        ImageView c2 = view.findViewById(R.id.garlicCal);
+        ImageView c3 = view.findViewById(R.id.gingerCal);
+        ImageView c4 = view.findViewById(R.id.yeastCal);
+        ImageView c5 = view.findViewById(R.id.cumin2Cal);
+        ImageView c6 = view.findViewById(R.id.greenCal);
+        ImageView c7 = view.findViewById(R.id.hydCal);
+        ImageView c8 = view.findViewById(R.id.deflourCal);
+        ImageView c9 = view.findViewById(R.id.frontCal);
+        ImageView c10 = view.findViewById(R.id.restrictCal);
+        ImageView c11 = view.findViewById(R.id.optimizeCal);
+        ImageView c12 = view.findViewById(R.id.weighCal);
+        ImageView c13 = view.findViewById(R.id.intenCal);
 
         cumin_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {

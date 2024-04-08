@@ -4,8 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.android.dailydoze.Model.FAQItem;
 import com.android.dailydoze.R;
@@ -14,8 +14,8 @@ import java.util.List;
 
 public class FAQAdapter extends BaseAdapter {
 
-    private Context context;
-    private List<FAQItem> faqItems;
+    private final Context context;
+    private final List<FAQItem> faqItems;
 
     public FAQAdapter(Context context, List<FAQItem> faqItems) {
         this.context = context;
@@ -40,8 +40,9 @@ public class FAQAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
+
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.faq_item, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_faq_item, parent, false);
             holder = new ViewHolder();
             holder.questionTextView = convertView.findViewById(R.id.faq_question);
             holder.answerTextView = convertView.findViewById(R.id.faq_answer);
@@ -51,8 +52,8 @@ public class FAQAdapter extends BaseAdapter {
         }
 
         FAQItem item = faqItems.get(position);
-        holder.questionTextView.setText(item.getQuestion());
-        holder.answerTextView.setText(item.getAnswer());
+        holder.questionTextView.setText(item.question());
+        holder.answerTextView.setText(item.answer());
 
         return convertView;
     }

@@ -1,7 +1,6 @@
 package com.android.dailydoze.Activity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -24,6 +22,7 @@ import com.android.dailydoze.Adapter.ListAdapter;
 import com.android.dailydoze.Database.MeditationDatabase;
 import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
+import com.android.dailydoze.Utility.CommonUtil;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -32,24 +31,14 @@ import java.util.Collections;
 
 @SuppressWarnings("ALL")
 public class MeditationActivity extends AppCompatActivity {
-    String time;
-    long millis;
-    ListView list;
-    ArrayList<DataListModel> data = new ArrayList<>();
-    ListAdapter adapter;
-    MeditationDatabase db1;
-    Drawable icon;
-    TextView hisStatus;
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
+    private String time;
+    private long millis;
+    private ListView list;
+    private ArrayList<DataListModel> data = new ArrayList<>();
+    private ListAdapter adapter;
+    private MeditationDatabase db1;
+    private Drawable icon;
+    private TextView hisStatus;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -97,17 +86,17 @@ public class MeditationActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 DataListModel mediList = adapter.getItem(position);
 
-                String t = mediList.getText();
+                String t = mediList.text();
                 String d = db1.getDuration(t);
                 d = millisToTime(Long.parseLong(d));
 
                 LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
 
                 int width = LinearLayout.LayoutParams.MATCH_PARENT;
                 int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-
                 final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
                 Button bb = popupView.findViewById(R.id.delete);
@@ -118,7 +107,7 @@ public class MeditationActivity extends AppCompatActivity {
                 bb.setOnClickListener(view1 -> {
                     popupWindow.dismiss();
                 });
-                dimBehind(popupWindow);
+                new CommonUtil().dimBehind(popupWindow);
             }
         });
 
@@ -160,7 +149,7 @@ public class MeditationActivity extends AppCompatActivity {
         finish();
     }
 
-    public void mediFinish(View v) {
+    public void finish(View v) {
         finish();
     }
 }

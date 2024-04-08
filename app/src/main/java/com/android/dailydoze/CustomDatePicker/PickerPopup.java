@@ -28,7 +28,7 @@ public class PickerPopup extends BottomSheetDialog implements IPopupInterface {
     }
 
     private void init() {
-        setContentView(R.layout.picker_popup_layout);
+        setContentView(R.layout.layout_date_picker);
         confirm = findViewById(R.id.text_confirm);
         cancel = findViewById(R.id.text_cancel);
         container = findViewById(R.id.popup_container);

@@ -79,6 +79,7 @@ public class DatePickerFactory {
 
     public List<String> getDayList() {
         int max = DateUtils.getMonthDayCount(this.selectedDate.getDate());
+
         int min = 0;
         if (this.selectedDate.getYear() == this.maxDate.getYear() && this.selectedDate.getMonth() == this.maxDate.getMonth()) {
             max = this.maxDate.getDay();
@@ -100,6 +101,7 @@ public class DatePickerFactory {
     public List<String> getMonthList() {
         String[] monthsArray = dfs.getMonths();
         List<String> monthsList = Arrays.asList(monthsArray);
+
         int max = monthsList.size();
         if (this.selectedDate.getYear() == this.maxDate.getYear()) {
             max = this.maxDate.getMonth() + 1;

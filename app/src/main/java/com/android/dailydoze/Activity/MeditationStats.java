@@ -30,9 +30,9 @@ import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 @SuppressWarnings("ALL")
 public class MeditationStats extends AppCompatActivity {
-    KonfettiView konfettiView;
-    String time;
-    TextView textView;
+    private KonfettiView konfettiView;
+    private String time;
+    private TextView textView;
     private Shape.DrawableShape drawableShape = null;
 
     @Override

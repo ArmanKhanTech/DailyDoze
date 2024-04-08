@@ -8,7 +8,6 @@ import android.graphics.ColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -68,6 +67,7 @@ public class WheelView extends ScrollView {
         if (null == items) {
             items = new ArrayList<>();
         }
+
         items.clear();
         items.addAll(list);
 
@@ -75,6 +75,7 @@ public class WheelView extends ScrollView {
             items.add(0, "");
             items.add("");
         }
+
         initData();
 
     }
@@ -83,13 +84,13 @@ public class WheelView extends ScrollView {
         if (this.offset != offset) {
             configChanged = true;
         }
+
         this.offset = offset;
     }
 
     private void init(Context context) {
         this.context = context;
 
-        Log.d(TAG, "parent: " + this.getParent());
         this.setVerticalScrollBarEnabled(false);
         this.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
@@ -99,9 +100,9 @@ public class WheelView extends ScrollView {
 
 
         scrollerTask = () -> {
-
             int newY = getScrollY();
-            if (initialY - newY == 0) { // stopped
+
+            if (initialY - newY == 0) {
                 final int remainder = initialY % itemHeight;
                 final int divided = initialY / itemHeight;
                 if (remainder == 0) {
@@ -122,18 +123,12 @@ public class WheelView extends ScrollView {
                             onSelectedCallBack();
                         });
                     }
-
-
                 }
-
-
             } else {
                 initialY = getScrollY();
                 WheelView.this.postDelayed(scrollerTask, newCheck);
             }
         };
-
-
     }
 
     public void startScrollerTask() {
@@ -158,6 +153,7 @@ public class WheelView extends ScrollView {
         if (this.textSize != textSize) {
             configChanged = true;
         }
+
         this.textSize = textSize;
     }
 
@@ -172,7 +168,9 @@ public class WheelView extends ScrollView {
     private LinearLayout createView(String item) {
         LinearLayout viewContainer = new LinearLayout(context);
         TextView tv = new TextView(context);
+
         tv.setClickable(true);
+
         LayoutParams textLP = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textLP.gravity = GRAVITY;
         tv.setLayoutParams(textLP);
@@ -181,6 +179,7 @@ public class WheelView extends ScrollView {
         tv.setText(" " + item);
         tv.setTextAlignment(ALIGNMENT);
         tv.setGravity(Gravity.CENTER);
+
         int padding = dip2px(1);
         tv.setPadding(padding, padding, padding, padding);
 
@@ -190,7 +189,6 @@ public class WheelView extends ScrollView {
 
         if (0 == itemHeight || configChanged) {
             itemHeight = getViewMeasuredHeight(tv);
-            Log.d(TAG, "itemHeight: " + itemHeight);
 
             views.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, itemHeight * displayItemCount));
             LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) this.getLayoutParams();
@@ -235,7 +233,6 @@ public class WheelView extends ScrollView {
 
                 String text = item.getText().toString();
                 item.setText(text.trim());
-
             } else if (i < position) {
                 if (i == position - 1) {
                     item.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize - 2);
@@ -247,6 +244,7 @@ public class WheelView extends ScrollView {
                     item.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize - 4);
                     item.setTextColor(context.getColor(R.color.color_grey2));
                 }
+
                 String text = item.getText().toString();
                 text = "  " + text.trim();
                 item.setText(text);
@@ -267,7 +265,6 @@ public class WheelView extends ScrollView {
                 text = "  " + text.trim();
                 item.setText(text);
             }
-
         }
     }
 
@@ -277,6 +274,7 @@ public class WheelView extends ScrollView {
             selectedAreaBorder[0] = itemHeight * offset;
             selectedAreaBorder[1] = itemHeight * (offset + 1);
         }
+
         return selectedAreaBorder;
     }
 
@@ -284,7 +282,6 @@ public class WheelView extends ScrollView {
     public void setBackground(Drawable background) {
         if (viewWidth == 0) {
             viewWidth = ((Activity) context).getWindowManager().getDefaultDisplay().getWidth();
-            Log.d(TAG, "viewWidth: " + viewWidth);
         }
 
         if (null == paint) {
@@ -302,12 +299,9 @@ public class WheelView extends ScrollView {
 
             @Override
             public void setAlpha(int alpha) {
-
             }
-
             @Override
             public void setColorFilter(ColorFilter cf) {
-
             }
 
             @SuppressLint("WrongConstant")
@@ -323,7 +317,7 @@ public class WheelView extends ScrollView {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        Log.d(TAG, "w: " + w + ", h: " + h + ", oldw: " + oldw + ", oldh: " + oldh);
+
         viewWidth = w;
         setBackground(null);
     }
@@ -333,14 +327,12 @@ public class WheelView extends ScrollView {
             if (selectedIndex - offset >= 0)
                 onWheelViewListener.onSelected(selectedIndex - offset, items.get(selectedIndex));
         }
-
     }
 
     public void setSelection(int position) {
         final int p = position;
         selectedIndex = p + offset;
         this.post(() -> WheelView.this.smoothScrollTo(0, p * itemHeight));
-
     }
 
     @Override
@@ -351,7 +343,6 @@ public class WheelView extends ScrollView {
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_UP) {
-
             startScrollerTask();
         }
         return super.onTouchEvent(ev);
@@ -375,7 +366,6 @@ public class WheelView extends ScrollView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        // Stop ScrollView from getting involved once you interact with the View
         if (ev.getActionMasked() == MotionEvent.ACTION_DOWN) {
             ViewParent p = getParent();
             if (p != null) {
@@ -388,5 +378,4 @@ public class WheelView extends ScrollView {
     public interface OnWheelViewListener {
         void onSelected(int selectedIndex, String item);
     }
-
 }

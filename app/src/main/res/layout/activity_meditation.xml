@@ -6,42 +6,37 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".Activity.MeditationActivity">
+    tools:context=".Activity.MeditationActivity"
+    tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/transparent"
+            android:onClick="finish"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/back_button_white"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:orientation="horizontal">
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Meditation"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
 
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/transparent"
-                android:onClick="mediFinish"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/back_button_white"
-                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Meditation"
-                android:textColor="@color/white"
-                android:textSize="30dp" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -51,16 +46,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/medi_heading_theme"
                 android:elevation="3dp"
@@ -76,101 +71,94 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:background="@drawable/medi_heading_theme"
                 android:onClick="openPerformMeditation"
                 android:padding="20dp"
                 app:srcCompat="@drawable/play_button_icon" />
 
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radioGroup"
-                    android:layout_width="match_parent"
+                <RadioButton
+                    android:id="@+id/fifmins"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="5dp"
+                    android:text="15 mins"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/custom_radio_text"
+                    android:textSize="20dp" />
 
-                    <RadioButton
-                        android:id="@+id/fifmins"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/custom_radio"
-                        android:button="@android:color/transparent"
-                        android:checked="true"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:padding="5dp"
-                        android:text="15 mins"
-                        android:textAlignment="center"
-                        android:textColor="@drawable/custom_radio_text"
-                        android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/thimins"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="5dp"
+                    android:text="30 mins"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/custom_radio_text"
+                    android:textSize="20dp" />
 
-                    <RadioButton
-                        android:id="@+id/thimins"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/custom_radio"
-                        android:button="@android:color/transparent"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:padding="5dp"
-                        android:text="30 mins"
-                        android:textAlignment="center"
-                        android:textColor="@drawable/custom_radio_text"
-                        android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/foumins"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="5dp"
+                    android:text="45 mins"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/custom_radio_text"
+                    android:textSize="20dp" />
 
-                    <RadioButton
-                        android:id="@+id/foumins"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/custom_radio"
-                        android:button="@android:color/transparent"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:padding="5dp"
-                        android:text="45 mins"
-                        android:textAlignment="center"
-                        android:textColor="@drawable/custom_radio_text"
-                        android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="5dp"
+                    android:text="Other"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/custom_radio_text"
+                    android:textSize="20dp" />
 
-                    <RadioButton
-                        android:id="@+id/other"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/custom_radio"
-                        android:button="@android:color/transparent"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:padding="5dp"
-                        android:text="Other"
-                        android:textAlignment="center"
-                        android:textColor="@drawable/custom_radio_text"
-                        android:textSize="20dp" />
-
-                </RadioGroup>
-
-            </LinearLayout>
+            </RadioGroup>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/medi_history_theme"
                 android:orientation="vertical"
@@ -198,7 +186,8 @@
                     android:divider="@color/transparent"
                     android:dividerHeight="10dp"
                     android:padding="5dp"
-                    android:scrollbars="none" />
+                    android:scrollbars="none"
+                    tools:ignore="NestedScrolling" />
 
                 <TextView
                     android:id="@+id/mediHisStatus"

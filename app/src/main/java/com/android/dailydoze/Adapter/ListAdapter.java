@@ -40,20 +40,20 @@ public class ListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         ViewHolder listViewHolder;
+
         if (convertView == null) {
             listViewHolder = new ViewHolder();
-            convertView = layoutInflater.inflate(R.layout.list, parent, false);
+            convertView = layoutInflater.inflate(R.layout.list_item, parent, false);
             listViewHolder.textInListView = convertView.findViewById(R.id.list_text);
             listViewHolder.imageInListView = convertView.findViewById(R.id.list_icon);
             convertView.setTag(listViewHolder);
         } else {
             listViewHolder = (ViewHolder) convertView.getTag();
         }
-        listViewHolder.textInListView.setText(listStorage.get(position).getText());
-        listViewHolder.imageInListView.setImageDrawable(listStorage.get(position).getIcon());
 
+        listViewHolder.textInListView.setText(listStorage.get(position).text());
+        listViewHolder.imageInListView.setImageDrawable(listStorage.get(position).icon());
         return convertView;
     }
 }

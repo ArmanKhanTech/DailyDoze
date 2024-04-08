@@ -1,7 +1,6 @@
 package com.android.dailydoze.Activity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
@@ -10,7 +9,6 @@ import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -24,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.Database.MeditationDatabase;
 import com.android.dailydoze.R;
+import com.android.dailydoze.Utility.CommonUtil;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -34,25 +33,15 @@ import java.util.Locale;
 
 @SuppressWarnings("ALL")
 public class PerformMeditationActivity extends AppCompatActivity {
-    MediaPlayer music;
-    ImageView imageView, play, pause, stop;
-    TextView timer, textView;
-    ProgressBar pB;
-    long l, c;
-    CountDownTimer stopWatch;
-    ImageButton close;
-    boolean b = false;
-    MeditationDatabase db;
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
+    private MediaPlayer music;
+    private ImageView imageView, play, pause, stop;
+    private TextView timer, textView;
+    private ProgressBar pb;
+    private long l, c;
+    private CountDownTimer stopWatch;
+    private ImageButton close;
+    private boolean b = false;
+    private MeditationDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +53,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         pause = findViewById(R.id.pause);
         stop = findViewById(R.id.stop);
         timer = findViewById(R.id.timer);
-        pB = findViewById(R.id.progress);
+        pb = findViewById(R.id.progress);
         textView = findViewById(R.id.text);
         close = findViewById(R.id.close);
 
@@ -83,7 +72,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         String t = intent.getStringExtra("text");
         textView.setText(t);
 
-        pB.setMax((int) l);
+        pb.setMax((int) l);
 
         play.setOnClickListener(v -> {
             startTimer(l);
@@ -104,7 +93,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (pB.getProgress() != 0) {
+                if (pb.getProgress() != 0) {
                     showWarning();
                 } else {
                     Intent intent1 = new Intent(PerformMeditationActivity.this, MeditationActivity.class);
@@ -130,7 +119,8 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
     public void showWarning() {
         LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.medi_finish, null);
+        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_medi_finish, null);
+
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
@@ -159,7 +149,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         });
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-        dimBehind(popupWindow);
+        new CommonUtil().dimBehind(popupWindow);
     }
 
     public void startTimer(long millis) {
@@ -171,7 +161,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
                 long min = (millisUntilFinished / 60000) % 60;
                 long sec = (millisUntilFinished / 1000) % 60;
                 timer.setText(f.format(hour) + ":" + f.format(min) + ":" + f.format(sec));
-                pB.setProgress((int) millisUntilFinished);
+                pb.setProgress((int) millisUntilFinished);
                 l = millisUntilFinished;
             }
 
@@ -245,7 +235,8 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
     public void mediSettings(View v) {
         LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.meditation_settings, null);
+        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_meditation_settings, null);
+
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
@@ -290,7 +281,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         m6.setOnClickListener(v112 -> selectMusic("celestial"));
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-        dimBehind(popupWindow);
+        new CommonUtil().dimBehind(popupWindow);
     }
 
     public void selectMusic(String file) {

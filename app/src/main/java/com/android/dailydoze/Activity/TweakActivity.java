@@ -1,7 +1,6 @@
 package com.android.dailydoze.Activity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -29,6 +27,7 @@ import com.android.dailydoze.Fragments.DayFragment;
 import com.android.dailydoze.Fragments.EachMealFragment;
 import com.android.dailydoze.Fragments.NightFragment;
 import com.android.dailydoze.R;
+import com.android.dailydoze.Utility.CommonUtil;
 import com.google.android.material.tabs.TabLayout;
 
 import java.text.ParseException;
@@ -42,17 +41,40 @@ import java.util.Objects;
 public class TweakActivity extends AppCompatActivity {
     public static boolean today = true;
     @SuppressLint("StaticFieldLeak")
-    static TextView currDate;
+    public static TextView currDate;
     @SuppressLint("StaticFieldLeak")
-    static TextView textView10;
+    public static TextView textView10;
     static TweaksDatabase db;
-    TabLayout tabLayout;
-    ViewPager viewPager;
-    ViewPagerAdapter viewPagerAdapter;
-    ProgressBar pb;
-    LinearLayout lll, jump_back_tweak;
-    TextView tvv;
-    ImageButton weight, date_prev, date_next;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private ViewPagerAdapter viewPagerAdapter;
+    private ProgressBar pb;
+    private LinearLayout lll, jump_back_tweak;
+    private TextView tvv;
+    private ImageButton weight, date_prev, date_next;
+
+    public static void setCount(String date) {
+        int i = db.getCount(date);
+        textView10.setText(String.valueOf(i));
+    }
+
+    private void loadFragment() {
+        tabLayout = findViewById(R.id.tab_layout_tweaks);
+        viewPager = findViewById(R.id.viewPager_tweaks);
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragment(new DayFragment(), "Day");
+        viewPagerAdapter.addFragment(new EachMealFragment(), "Meal");
+        viewPagerAdapter.addFragment(new NightFragment(), "Night");
+        viewPager.setOffscreenPageLimit(3);
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+    }
+
+    public void gotoGraphTweaks(View v) {
+        Intent i = new Intent(this, GraphActivity.class);
+        i.putExtra("tweak", true);
+        startActivity(i);
+    }
 
     public static String setCurrentDate() {
         Date c = Calendar.getInstance().getTime();
@@ -62,21 +84,6 @@ public class TweakActivity extends AppCompatActivity {
 
     public static String getCurrentDate() {
         return String.valueOf(currDate.getText());
-    }
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
-
-    public static void setCount(String date) {
-        int i = db.getCount(date);
-        textView10.setText(String.valueOf(i));
     }
 
     @SuppressLint("SetTextI18n")
@@ -110,11 +117,10 @@ public class TweakActivity extends AppCompatActivity {
 
         weight.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
 
             TextView tv = popupView.findViewById(R.id.timing);
@@ -129,11 +135,13 @@ public class TweakActivity extends AppCompatActivity {
             if (today) {
                 tv.setVisibility(View.VISIBLE);
                 et.setVisibility(View.VISIBLE);
+
                 if (timeOfDay >= 6 && timeOfDay < 11) {
                     tv.setText("Enter your morning weight");
                 } else if (timeOfDay >= 18) {
                     tv.setText("Enter your evening weight");
                 }
+
                 b.setText("Save");
             } else {
                 String morning = String.valueOf(db.getWeightMorning(getCurrentDate()));
@@ -171,115 +179,13 @@ public class TweakActivity extends AppCompatActivity {
             });
 
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-            dimBehind(popupWindow);
+            new CommonUtil().dimBehind(popupWindow);
         });
 
         setDay(false);
 
         LoadFragment loadFragment = new LoadFragment();
         loadFragment.execute();
-    }
-
-    private void loadFragment() {
-        tabLayout = findViewById(R.id.tab_layout_tweaks);
-        viewPager = findViewById(R.id.viewPager_tweaks);
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new DayFragment(), "Day");
-        viewPagerAdapter.addFragment(new EachMealFragment(), "Meal");
-        viewPagerAdapter.addFragment(new NightFragment(), "Night");
-        viewPager.setOffscreenPageLimit(3);
-        viewPager.setAdapter(viewPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-    }
-
-    public void gotoGraphTweaks(View v) {
-        Intent i = new Intent(this, GraphActivity.class);
-        i.putExtra("tweak", true);
-        startActivity(i);
-    }
-
-    public void setDay(boolean b) {
-        if (Objects.equals(setCurrentDate(), getCurrentDate())) {
-            setCount(getCurrentDate());
-
-            if (b) {
-                DayFragment.setDay();
-                NightFragment.setDay();
-                EachMealFragment.setDay();
-            }
-
-            jump_back_tweak.setVisibility(View.GONE);
-
-            today = true;
-
-            setWeightVisibility();
-            setNext();
-            setPrev();
-        } else {
-            if (today) {
-                final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
-                        R.anim.slide_down);
-                jump_back_tweak.startAnimation(slide_down);
-            }
-            jump_back_tweak.setVisibility(View.VISIBLE);
-
-            today = false;
-
-            weight.setVisibility(View.VISIBLE);
-
-            setCount(getCurrentDate());
-            DayFragment.setDay();
-            NightFragment.setDay();
-            EachMealFragment.setDay();
-            setPrev();
-            setNext();
-        }
-    }
-
-    public void setPrev() {
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-        try {
-            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-        c.add(Calendar.DATE, -1);
-        String formattedDate = df.format(c.getTime());
-
-        if (db.getDate(formattedDate)) {
-            date_prev.setVisibility(View.VISIBLE);
-        } else {
-            date_prev.setVisibility(View.GONE);
-        }
-
-        date_prev.setOnClickListener(v -> {
-            currDate.setText(formattedDate);
-            setDay(true);
-        });
-    }
-
-    public void setNext() {
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-        try {
-            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-        c.add(Calendar.DATE, +1);
-        String formattedDate = df.format(c.getTime());
-
-        if (db.getDate(formattedDate)) {
-            date_next.setVisibility(View.VISIBLE);
-        } else {
-            date_next.setVisibility(View.GONE);
-        }
-
-        date_next.setOnClickListener(v -> {
-            currDate.setText(formattedDate);
-            setDay(true);
-        });
     }
 
     public void setWeightVisibility() {
@@ -324,5 +230,95 @@ public class TweakActivity extends AppCompatActivity {
             pb.setVisibility(View.GONE);
             tvv.setVisibility(View.GONE);
         }
+    }
+
+    public void setDay(boolean b) {
+        if (Objects.equals(setCurrentDate(), getCurrentDate())) {
+            setCount(getCurrentDate());
+
+            if (b) {
+                DayFragment.setDay();
+                NightFragment.setDay();
+                EachMealFragment.setDay();
+            }
+
+            jump_back_tweak.setVisibility(View.GONE);
+
+            today = true;
+
+            setWeightVisibility();
+            setNext();
+            setPrev();
+        } else {
+            if (today) {
+                final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide_down);
+                jump_back_tweak.startAnimation(slide_down);
+            }
+            jump_back_tweak.setVisibility(View.VISIBLE);
+
+            today = false;
+
+            weight.setVisibility(View.VISIBLE);
+
+            setCount(getCurrentDate());
+
+            DayFragment.setDay();
+            NightFragment.setDay();
+            EachMealFragment.setDay();
+
+            setPrev();
+            setNext();
+        }
+    }
+
+    public void setPrev() {
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+
+        try {
+            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        c.add(Calendar.DATE, -1);
+        String formattedDate = df.format(c.getTime());
+
+        if (db.getDate(formattedDate)) {
+            date_prev.setVisibility(View.VISIBLE);
+        } else {
+            date_prev.setVisibility(View.GONE);
+        }
+
+        date_prev.setOnClickListener(v -> {
+            currDate.setText(formattedDate);
+            setDay(true);
+        });
+    }
+
+    public void setNext() {
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
+
+        try {
+            c.setTime(Objects.requireNonNull(df.parse(currDate.getText().toString())));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        c.add(Calendar.DATE, +1);
+        String formattedDate = df.format(c.getTime());
+
+        if (db.getDate(formattedDate)) {
+            date_next.setVisibility(View.VISIBLE);
+        } else {
+            date_next.setVisibility(View.GONE);
+        }
+
+        date_next.setOnClickListener(v -> {
+            currDate.setText(formattedDate);
+            setDay(true);
+        });
     }
 }

@@ -8,7 +8,6 @@ public class DateModel {
     private long date;
 
     public DateModel() {
-        //
     }
 
     public DateModel(long date) {

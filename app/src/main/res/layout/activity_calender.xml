@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activity.CalenderActivity">
+    tools:context=".Activity.CalenderActivity"
+    tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -42,7 +43,7 @@
         <LinearLayout
             android:id="@+id/calLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -54,9 +55,9 @@
                     android:id="@+id/imageButton3"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="15dp"
                     android:background="@color/white"
                     android:onClick="calBack"
                     android:scaleType="fitCenter"
@@ -79,9 +80,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/info_img_theme"
                 android:elevation="3dp"
@@ -96,8 +97,8 @@
                 android:id="@+id/calendarView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/calender_theme"
                 android:elevation="2dp"

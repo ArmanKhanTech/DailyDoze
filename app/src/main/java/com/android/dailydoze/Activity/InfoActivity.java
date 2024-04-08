@@ -16,9 +16,9 @@ import com.android.dailydoze.R;
 
 @SuppressWarnings("ALL")
 public class InfoActivity extends AppCompatActivity {
-    ImageView img;
-    TextView txt, name, infoTitle;
-    Drawable drawable;
+    private ImageView img;
+    private TextView txt, name, infoTitle;
+    private Drawable drawable;
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -279,7 +279,7 @@ public class InfoActivity extends AppCompatActivity {
         }
     }
 
-    public void infoFinish(View v) {
+    public void finish(View v) {
         finish();
     }
 }

@@ -28,13 +28,13 @@ import java.util.Locale;
 
 @SuppressWarnings("ALL")
 public class CalenderActivity extends AppCompatActivity {
-    MaterialCalendarView calendarView;
-    TextView name;
-    String title;
-    ProgressBar pb;
-    TweaksDatabase db1;
-    DailyDozeDatabase db2;
-    ArrayList<String> dates = new ArrayList<>();
+    private MaterialCalendarView calendarView;
+    private TextView name;
+    private String title;
+    private ProgressBar pb;
+    private TweaksDatabase db1;
+    private DailyDozeDatabase db2;
+    private ArrayList<String> dates = new ArrayList<>();
 
     @SuppressLint("ResourceType")
     @Override
@@ -215,6 +215,7 @@ public class CalenderActivity extends AppCompatActivity {
                 Log.d("date", date);
             }
         }
+
         calendarView.addDecorator(new EventDecorator(datesToMark));
         return;
     }
@@ -242,6 +243,7 @@ public class CalenderActivity extends AppCompatActivity {
                 Log.d("date", date);
             }
         }
+
         calendarView.addDecorator(new EventDecorator(datesToMark));
         return;
     }

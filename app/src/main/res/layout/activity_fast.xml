@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="#BBDEFB"
     android:orientation="vertical"
-    tools:context=".Activity.FastActivity">
+    tools:context=".Activity.FastActivity"
+    tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,11 +17,11 @@
             android:id="@+id/imageButton30"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="15dp"
             android:background="@color/transparent"
-            android:onClick="fastBack"
+            android:onClick="finish"
             android:scaleType="fitCenter"
             android:src="@drawable/back_button_blue"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -44,7 +45,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <FrameLayout
@@ -86,9 +87,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@color/customBlue"
                 android:fontFamily="sans-serif-condensed-medium"
@@ -101,9 +102,9 @@
                 android:id="@+id/llll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:background="@drawable/fast_history_theme"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -182,7 +183,7 @@
                     android:id="@+id/thehrs"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_radio_two"
                     android:button="@android:color/transparent"
@@ -198,8 +199,8 @@
                     android:id="@+id/sixhrs"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_radio_two"
                     android:button="@android:color/transparent"
@@ -214,8 +215,8 @@
                     android:id="@+id/ninhrs"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_radio_two"
                     android:button="@android:color/transparent"
@@ -230,8 +231,8 @@
                     android:id="@+id/twehrs"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_radio_two"
                     android:button="@android:color/transparent"
@@ -248,9 +249,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/fast_history_theme"
                 android:orientation="vertical"
@@ -278,7 +279,8 @@
                     android:divider="@color/transparent"
                     android:dividerHeight="10dp"
                     android:padding="5dp"
-                    android:scrollbars="none" />
+                    android:scrollbars="none"
+                    tools:ignore="NestedScrolling" />
 
                 <TextView
                     android:id="@+id/fastHisStatus"

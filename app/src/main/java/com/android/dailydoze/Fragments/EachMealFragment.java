@@ -24,14 +24,11 @@ import java.util.Objects;
 
 public class EachMealFragment extends Fragment {
     @SuppressLint("StaticFieldLeak")
-    static CheckBox water_cb1, water_cb2, water_cb3, vinegar_cb1, vinegar_cb2, vinegar_cb3, neg_cb1, neg_cb2, neg_cb3, un_meal_cb1, un_meal_cb2,
+    private static CheckBox water_cb1, water_cb2, water_cb3, vinegar_cb1, vinegar_cb2, vinegar_cb3, neg_cb1, neg_cb2, neg_cb3, un_meal_cb1, un_meal_cb2,
             un_meal_cb3, twe_min_cb1, twe_min_cb2, twe_min_cb3;
-    static TweaksDatabase db;
-    ImageView i1, i2, i3, i4, i5;
-    ImageView c1, c2, c3, c4, c5;
+    private static TweaksDatabase db;
 
     public EachMealFragment() {
-        //
     }
 
     public static void setDay() {
@@ -155,17 +152,17 @@ public class EachMealFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_each_meal, container, false);
 
-        i1 = view.findViewById(R.id.waterInfo);
-        i2 = view.findViewById(R.id.vinegarInfo);
-        i3 = view.findViewById(R.id.negInfo);
-        i4 = view.findViewById(R.id.un_mealInfo);
-        i5 = view.findViewById(R.id.tweminInfo);
+        ImageView i1 = view.findViewById(R.id.waterInfo);
+        ImageView i2 = view.findViewById(R.id.vinegarInfo);
+        ImageView i3 = view.findViewById(R.id.negInfo);
+        ImageView i4 = view.findViewById(R.id.un_mealInfo);
+        ImageView i5 = view.findViewById(R.id.tweminInfo);
 
-        c1 = view.findViewById(R.id.waterCal);
-        c2 = view.findViewById(R.id.vinegarCal);
-        c3 = view.findViewById(R.id.negCal);
-        c4 = view.findViewById(R.id.un_mealCal);
-        c5 = view.findViewById(R.id.tweminCal);
+        ImageView c1 = view.findViewById(R.id.waterCal);
+        ImageView c2 = view.findViewById(R.id.vinegarCal);
+        ImageView c3 = view.findViewById(R.id.negCal);
+        ImageView c4 = view.findViewById(R.id.un_mealCal);
+        ImageView c5 = view.findViewById(R.id.tweminCal);
 
         water_cb1 = view.findViewById(R.id.water_cb1);
         water_cb2 = view.findViewById(R.id.water_cb2);

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Activity.SignupActivity">
+    tools:context=".Activity.SignupActivity"
+    tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,11 +19,11 @@
             android:id="@+id/imageButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
             android:background="@color/white"
-            android:onClick="signupBack"
+            android:onClick="finish"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/back_button_black"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
@@ -62,9 +63,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/edittext_signup_theme"
                 android:paddingLeft="10dp"
@@ -75,21 +76,21 @@
                     style="@style/CustomEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:backgroundTint="@color/black"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    tools:ignore="Autofill" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:layout_gravity="left|center"
+                    android:layout_gravity="start|center"
                     android:src="@drawable/email_icon" />
 
             </RelativeLayout>
@@ -97,9 +98,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
                 android:background="@drawable/edittext_signup_theme"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp">
@@ -109,21 +110,21 @@
                     style="@style/CustomEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:backgroundTint="@color/black"
                     android:hint="Password"
                     android:inputType="numberPassword"
                     android:singleLine="true"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    tools:ignore="Autofill" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:layout_gravity="left|center"
+                    android:layout_gravity="start|center"
                     android:background="@color/white"
                     android:src="@drawable/password_icon" />
 
@@ -132,9 +133,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginEnd="15dp">
 
                 <Button
                     android:id="@+id/signup_btn"
@@ -170,7 +171,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Already a member?"
                     android:textColor="@color/black"
@@ -181,10 +182,10 @@
                     android:id="@+id/login_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     android:clickable="true"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:onClick="signupBack"
+                    android:onClick="finish"
                     android:text="Login"
                     android:textColor="@color/purple_500"
                     android:textSize="20dp"

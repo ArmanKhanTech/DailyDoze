@@ -1,7 +1,6 @@
 package com.android.dailydoze.Activity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -9,7 +8,6 @@ import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -23,6 +21,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.RenderMode;
 import com.android.dailydoze.R;
+import com.android.dailydoze.Utility.CommonUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,20 +32,10 @@ import java.util.Objects;
 
 @SuppressWarnings("ALL")
 public class BackupActivity extends AppCompatActivity {
-    LottieAnimationView lottieAnimationView, loading;
-    AppCompatButton b1, b2;
-    ScrollView scrollView;
-    String what;
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
+    private LottieAnimationView lottieAnimationView, loading;
+    private AppCompatButton b1, b2;
+    private ScrollView scrollView;
+    private String what;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +152,7 @@ public class BackupActivity extends AppCompatActivity {
             for (File databaseFile : databases) {
                 final String backupFilename = databaseFile.getName() + ".db";
                 File backupFile = new File(sd, backupFilename);
+
                 FileChannel inputChannel = null;
                 FileChannel outputChannel = null;
 
@@ -202,7 +192,7 @@ public class BackupActivity extends AppCompatActivity {
     public void openDialog(String msg) {
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams")
-        View popupView = layoutInflater.inflate(R.layout.get_weight, null);
+        View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
@@ -233,11 +223,7 @@ public class BackupActivity extends AppCompatActivity {
         });
 
         popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
-        dimBehind(popupWindow);
-    }
-
-    public void backupFinish(View v) {
-        finish();
+        new CommonUtil().dimBehind(popupWindow);
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -248,7 +234,6 @@ public class BackupActivity extends AppCompatActivity {
 
             scrollView.setVisibility(View.GONE);
             loading.setVisibility(View.VISIBLE);
-
             loading.playAnimation();
         }
 
@@ -267,9 +252,12 @@ public class BackupActivity extends AppCompatActivity {
             super.onPostExecute(results);
 
             openDialog(what);
-
             scrollView.setVisibility(View.VISIBLE);
             loading.setVisibility(View.GONE);
         }
+    }
+
+    public void finish(View v) {
+        finish();
     }
 }

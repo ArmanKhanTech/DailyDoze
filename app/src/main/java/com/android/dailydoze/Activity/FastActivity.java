@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -32,6 +31,7 @@ import com.android.dailydoze.Database.FastDatabase;
 import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Service.TimerService;
+import com.android.dailydoze.Utility.CommonUtil;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
@@ -45,35 +45,26 @@ import java.util.Locale;
 
 @SuppressWarnings("ALL")
 public class FastActivity extends AppCompatActivity {
-    String time;
-    long millis = 10800000, millisDone = 0;
-    Button fast;
-    TextView start, end, fastStatus, timer;
-    ListView list;
-    Drawable icon;
-    ArrayList<DataListModel> data = new ArrayList<>();
-    ListAdapter adapter;
-    Boolean b = false;
-    FastDatabase db;
-    LinearLayout linearLayout;
-    RadioGroup rG;
-    ProgressBar pB;
+    private String time;
+    private long millis = 10800000, millisDone = 0;
+    private Button fast;
+    private TextView start, end, fastStatus, timer;
+    private ListView list;
+    private Drawable icon;
+    private ArrayList<DataListModel> data = new ArrayList<>();
+    private ListAdapter adapter;
+    private Boolean b = false;
+    private FastDatabase db;
+    private LinearLayout linearLayout;
+    private RadioGroup rg;
+    private ProgressBar pb;
+
     final private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             updateGUI(intent);
         }
     };
-
-    public static void dimBehind(PopupWindow popupWindow) {
-        View container = popupWindow.getContentView().getRootView();
-        Context context = popupWindow.getContentView().getContext();
-        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams p = (WindowManager.LayoutParams) container.getLayoutParams();
-        p.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        p.dimAmount = 0.5f;
-        wm.updateViewLayout(container, p);
-    }
 
     public static String getCurrentTime() {
         DateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
@@ -94,9 +85,9 @@ public class FastActivity extends AppCompatActivity {
         start.setText(getCurrentTime());
         end.setText(addTime(3));
 
-        pB = findViewById(R.id.progressFast);
-        pB.setMax((int) millis);
-        pB.setProgress((int) millis);
+        pb = findViewById(R.id.progressFast);
+        pb.setMax((int) millis);
+        pb.setProgress((int) millis);
 
         fastStatus = findViewById(R.id.fastHisStatus);
 
@@ -104,8 +95,8 @@ public class FastActivity extends AppCompatActivity {
 
         fast.setOnClickListener(v -> {
             if (fast.getText().equals("Start")) {
-                pB.setMax((int) millis);
-                pB.setProgress((int) millis);
+                pb.setMax((int) millis);
+                pb.setProgress((int) millis);
 
                 Intent intent = new Intent(this, TimerService.class);
                 intent.putExtra("millis", millis);
@@ -118,7 +109,7 @@ public class FastActivity extends AppCompatActivity {
         timer = findViewById(R.id.timerFast);
 
         linearLayout = findViewById(R.id.llll);
-        rG = findViewById(R.id.radioGroup2);
+        rg = findViewById(R.id.radioGroup2);
         list = findViewById(R.id.fastList);
 
         list.setOnTouchListener((v, event) -> {
@@ -147,7 +138,7 @@ public class FastActivity extends AppCompatActivity {
             fastStatus.setVisibility(View.GONE);
         }
 
-        rG.setOnCheckedChangeListener((group, checkedId) -> {
+        rg.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.thehrs:
                     millis = 10800000;
@@ -187,16 +178,16 @@ public class FastActivity extends AppCompatActivity {
 
         list.setOnItemClickListener((parent, view, position, id) -> {
             DataListModel fastList = adapter.getItem(position);
-            String t = fastList.getText();
+            String t = fastList.text();
             String d = db.getDuration(t);
 
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.noti_popup, null);
+            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-
             final PopupWindow popupWindow = new PopupWindow(popupView, width, height, true);
+
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
             Button bb = popupView.findViewById(R.id.delete);
@@ -205,30 +196,8 @@ public class FastActivity extends AppCompatActivity {
 
             bb.setText("Okay");
             bb.setOnClickListener(view1 -> popupWindow.dismiss());
-            dimBehind(popupWindow);
+            new CommonUtil().dimBehind(popupWindow);
         });
-    }
-
-    public void cancelTimer() {
-        if (db.getDate(getCurrentDate())) {
-            db.changeDuration(millisToTime(millisDone), getCurrentDate());
-        } else {
-            db.addData(getCurrentDate());
-            db.changeDuration(millisToTime(millisDone), getCurrentDate());
-        }
-
-        rG.check(R.id.thehrs);
-        timer.setText("03:00:00");
-        fast.setText("Start");
-        rG.setVisibility(View.VISIBLE);
-        linearLayout.setVisibility(View.VISIBLE);
-        pB.setMax((int) millis);
-        pB.setProgress((int) millis);
-
-        Intent intent = new Intent(this, TimerService.class);
-        stopService(intent);
-
-        updateList();
     }
 
     public void updateList() {
@@ -271,26 +240,32 @@ public class FastActivity extends AppCompatActivity {
         try {
             unregisterReceiver(broadcastReceiver);
         } catch (Exception e) {
-            //
         }
         super.onStop();
     }
 
-    @SuppressLint("SetTextI18n")
-    private void updateGUI(Intent intent) {
-        if (intent.getExtras() != null) {
-            time = intent.getStringExtra("timer");
-            b = intent.getBooleanExtra("status", false);
-            millisDone = intent.getLongExtra("millisUntilFinished", 0);
-
-            if (b) {
-                timer.setText(time);
-                fast.setText("Stop");
-                rG.setVisibility(View.GONE);
-                linearLayout.setVisibility(View.GONE);
-                pB.setProgress((int) ((int) millis - millisDone));
-            }
+    public void cancelTimer() {
+        if (db.getDate(getCurrentDate())) {
+            db.changeDuration(millisToTime(millisDone), getCurrentDate());
+        } else {
+            db.addData(getCurrentDate());
+            db.changeDuration(millisToTime(millisDone), getCurrentDate());
         }
+
+        rg.check(R.id.thehrs);
+        timer.setText("03:00:00");
+        fast.setText("Start");
+
+        rg.setVisibility(View.VISIBLE);
+        linearLayout.setVisibility(View.VISIBLE);
+
+        pb.setMax((int) millis);
+        pb.setProgress((int) millis);
+
+        Intent intent = new Intent(this, TimerService.class);
+        stopService(intent);
+
+        updateList();
     }
 
     public String millisToTime(long t) {
@@ -308,13 +283,32 @@ public class FastActivity extends AppCompatActivity {
         return dateFormat.format(cal.getTime());
     }
 
-    public void fastBack(View v) {
-        finish();
+    @SuppressLint("SetTextI18n")
+    private void updateGUI(Intent intent) {
+        if (intent.getExtras() != null) {
+            time = intent.getStringExtra("timer");
+            b = intent.getBooleanExtra("status", false);
+            millisDone = intent.getLongExtra("millisUntilFinished", 0);
+
+            if (b) {
+                timer.setText(time);
+                fast.setText("Stop");
+
+                rg.setVisibility(View.GONE);
+                linearLayout.setVisibility(View.GONE);
+
+                pb.setProgress((int) ((int) millis - millisDone));
+            }
+        }
     }
 
     public String getCurrentDate() {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         return df.format(c);
+    }
+
+    public void finish(View v) {
+        finish();
     }
 }
