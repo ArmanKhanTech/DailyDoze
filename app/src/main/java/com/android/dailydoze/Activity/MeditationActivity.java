@@ -99,12 +99,12 @@ public class MeditationActivity extends AppCompatActivity {
 
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-                Button bb = popupView.findViewById(R.id.delete);
+                Button b = popupView.findViewById(R.id.delete);
                 TextView tv = popupView.findViewById(R.id.notiPopText);
 
                 tv.setText("You meditated for " + d + " on " + t);
-                bb.setText("Okay");
-                bb.setOnClickListener(view1 -> {
+                b.setText("Okay");
+                b.setOnClickListener(view1 -> {
                     popupWindow.dismiss();
                 });
                 new CommonUtil().dimBehind(popupWindow);

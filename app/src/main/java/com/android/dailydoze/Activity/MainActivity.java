@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         date_prev = findViewById(R.id.date_prev);
         sleep = findViewById(R.id.sleep);
 
-        count = findViewById(R.id.textView2);
+        count = findViewById(R.id.count_main);
         back_to_today = findViewById(R.id.back_to_today);
 
         setDay();
@@ -444,7 +444,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (today) {
                 tv.setText("How many hours did you sleep today?");
-                hrs.setHint("Enter Duration in Hours");
+                hrs.setHint("Duration in Hours");
             } else {
                 duration[0] = String.valueOf(db.getSleep(getCurrentDate()));
                 hrs.setVisibility(View.GONE);

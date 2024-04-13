@@ -43,37 +43,19 @@ public class TweakActivity extends AppCompatActivity {
     @SuppressLint("StaticFieldLeak")
     public static TextView currDate;
     @SuppressLint("StaticFieldLeak")
-    public static TextView textView10;
+    public static TextView count;
     static TweaksDatabase db;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
     private ProgressBar pb;
-    private LinearLayout lll, jump_back_tweak;
-    private TextView tvv;
+    private LinearLayout linearLayout, jump_back_tweak;
+    private TextView textView;
     private ImageButton weight, date_prev, date_next;
 
     public static void setCount(String date) {
         int i = db.getCount(date);
-        textView10.setText(String.valueOf(i));
-    }
-
-    private void loadFragment() {
-        tabLayout = findViewById(R.id.tab_layout_tweaks);
-        viewPager = findViewById(R.id.viewPager_tweaks);
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new DayFragment(), "Day");
-        viewPagerAdapter.addFragment(new EachMealFragment(), "Meal");
-        viewPagerAdapter.addFragment(new NightFragment(), "Night");
-        viewPager.setOffscreenPageLimit(3);
-        viewPager.setAdapter(viewPagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
-    }
-
-    public void gotoGraphTweaks(View v) {
-        Intent i = new Intent(this, GraphActivity.class);
-        i.putExtra("tweak", true);
-        startActivity(i);
+        count.setText(String.valueOf(i));
     }
 
     public static String setCurrentDate() {
@@ -94,7 +76,7 @@ public class TweakActivity extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        textView10 = findViewById(R.id.textView10);
+        count = findViewById(R.id.count_tweak);
         currDate = findViewById(R.id.date_tweak);
         weight = findViewById(R.id.weight_tweak);
         date_prev = findViewById(R.id.date_prev_tweak);
@@ -188,6 +170,24 @@ public class TweakActivity extends AppCompatActivity {
         loadFragment.execute();
     }
 
+    private void loadFragment() {
+        tabLayout = findViewById(R.id.tab_layout_tweaks);
+        viewPager = findViewById(R.id.viewPager_tweaks);
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragment(new DayFragment(), "Day");
+        viewPagerAdapter.addFragment(new EachMealFragment(), "Meal");
+        viewPagerAdapter.addFragment(new NightFragment(), "Night");
+        viewPager.setOffscreenPageLimit(3);
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
+    }
+
+    public void gotoGraphTweaks(View v) {
+        Intent i = new Intent(this, GraphActivity.class);
+        i.putExtra("tweak", true);
+        startActivity(i);
+    }
+
     public void setWeightVisibility() {
         Calendar c = Calendar.getInstance();
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
@@ -212,10 +212,10 @@ public class TweakActivity extends AppCompatActivity {
 
             pb = findViewById(R.id.loadingFragment);
             pb.setVisibility(View.VISIBLE);
-            lll = findViewById(R.id.lll);
-            lll.setVisibility(View.GONE);
-            tvv = findViewById(R.id.tvv);
-            tvv.setVisibility(View.VISIBLE);
+            linearLayout = findViewById(R.id.lll);
+            linearLayout.setVisibility(View.GONE);
+            textView = findViewById(R.id.tvv);
+            textView.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -226,9 +226,9 @@ public class TweakActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void unused) {
-            lll.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.VISIBLE);
             pb.setVisibility(View.GONE);
-            tvv.setVisibility(View.GONE);
+            textView.setVisibility(View.GONE);
         }
     }
 

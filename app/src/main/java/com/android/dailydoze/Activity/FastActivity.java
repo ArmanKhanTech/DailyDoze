@@ -190,12 +190,12 @@ public class FastActivity extends AppCompatActivity {
 
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-            Button bb = popupView.findViewById(R.id.delete);
+            Button b = popupView.findViewById(R.id.delete);
             TextView tv = popupView.findViewById(R.id.notiPopText);
             tv.setText("You fasted for " + d + " on " + t);
 
-            bb.setText("Okay");
-            bb.setOnClickListener(view1 -> popupWindow.dismiss());
+            b.setText("Okay");
+            b.setOnClickListener(view1 -> popupWindow.dismiss());
             new CommonUtil().dimBehind(popupWindow);
         });
     }

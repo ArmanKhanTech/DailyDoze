@@ -1,112 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,SpUsage,AutoFill">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:fillViewport="true">
+        android:layout_margin="40dp"
+        android:background="@drawable/popup_theme"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Enter Date"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="40dp"
-            android:background="@drawable/popup_theme"
-            android:orientation="vertical">
+            android:layout_height="66dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/day"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_weight="1"
+                android:background="@drawable/info_img_theme"
+                android:gravity="center"
+                android:hint="DD"
+                android:inputType="number" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Enter Date"
-                android:textAlignment="center"
+                android:layout_marginStart="20dp"
+                android:text="/"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="30dp"
                 android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="66dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp">
+            <EditText
+                android:id="@+id/month"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/info_img_theme"
+                android:gravity="center"
+                android:hint="MM"
+                android:inputType="number" />
 
-                <EditText
-                    android:id="@+id/day"
-                    android:layout_width="0dp"
-                    android:layout_height="43dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/info_img_theme"
-                    android:gravity="center"
-                    android:hint="DD"
-                    android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="/"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
+            <EditText
+                android:id="@+id/year"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/info_img_theme"
+                android:gravity="center"
+                android:hint="YYYY"
+                android:inputType="number" />
 
-                <EditText
-                    android:id="@+id/month"
-                    android:layout_width="0dp"
-                    android:layout_height="43dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/info_img_theme"
-                    android:gravity="center"
-                    android:hint="MM"
-                    android:inputType="number" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="/"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/year"
-                    android:layout_width="0dp"
-                    android:layout_height="43dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/info_img_theme"
-                    android:gravity="center"
-                    android:hint="YYYY"
-                    android:inputType="number" />
-
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/enter"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/purple_500"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Enter"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
 
         </LinearLayout>
 
-    </ScrollView>
+        <Button
+            android:id="@+id/enter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/purple_500"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Enter"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
-</FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

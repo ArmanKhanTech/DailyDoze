@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/fast_history_theme"
@@ -13,6 +14,7 @@
         android:layout_gravity="center"
         android:text="03:00:00"
         android:textColor="@color/customBlue"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        tools:ignore="HardcodedText,SpUsage" />
 
 </LinearLayout>

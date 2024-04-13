@@ -26,8 +26,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         Animation animation = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in);
         textView.startAnimation(animation);
 
-        Handler h2 = new Handler();
-        h2.postDelayed(() -> {
+        Handler h = new Handler();
+        h.postDelayed(() -> {
             SharedPreferences mPrefs = getSharedPreferences("MySharedPref", MODE_PRIVATE);
             boolean b = mPrefs.getBoolean("user", false);
 

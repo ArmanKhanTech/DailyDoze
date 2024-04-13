@@ -114,7 +114,7 @@ public class TimerService extends Service {
     private void refreshNotification() {
         notificationLayout.setTextViewText(R.id.notiTimerSmall, timer);
         notificationLayoutExpanded.setTextViewText(R.id.notiTimerLarge, timer);
-        notificationLayoutExpanded.setProgressBar(R.id.notiTimerProgess, (int) millis, (int) remaining, false);
+        notificationLayoutExpanded.setProgressBar(R.id.notiTimerProgress, (int) millis, (int) remaining, false);
         manager.notify(1, notification);
     }
 

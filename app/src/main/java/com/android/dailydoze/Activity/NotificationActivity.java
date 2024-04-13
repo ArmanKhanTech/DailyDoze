@@ -24,11 +24,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -49,7 +49,7 @@ public class NotificationActivity extends AppCompatActivity {
     private ImageView setTime;
     private TextView status;
     private ListView list;
-    private Switch sw;
+    private SwitchCompat sw;
     private ArrayList<DataListModel> data = new ArrayList<>();
     private ListAdapter adapter;
     private NotificationDatabase db1;
@@ -166,8 +166,8 @@ public class NotificationActivity extends AppCompatActivity {
 
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-            Button bb = popupView.findViewById(R.id.delete);
-            bb.setOnClickListener(view1 -> {
+            Button b = popupView.findViewById(R.id.delete);
+            b.setOnClickListener(view1 -> {
                 int idOf = db1.readID(t);
                 cancelNotification(idOf);
                 db1.deleteNotification(t);
