@@ -101,7 +101,7 @@ Follow the below instructions to get started.
    ```sh
    git clone https://github.com/ArmanKhanTech/DailyDoze.git
    ```
-2. Paste your firebase credentials file in `/app`. Its the one you will download from your firebase console called _google-services.json_.
+2. Paste your firebase credentials file in `/app`. Its the one you will download from your project's firebase console called `google-services.json`.
 
 
 
@@ -150,37 +150,37 @@ Follow the below instructions to get started.
 <h3>2. Menu</h3>
 <ul>
   <li>
-    <p>21 Tweaks : Goto 21 Tweaks challenge.</p>
+    <p>21 Tweaks: Goto 21 Tweaks challenge.</p>
   </li>
   <li>
-    <p>Jump to a Date : Directly jump to any day you want inorder to check your daily servings stats for that day.</p>
+    <p>Jump to a Date: Directly jump to any day you want inorder to check your daily servings stats for that day.</p>
   </li>
   <li>
-    <p>Notifications : Goto Notifications.</p>
+    <p>Notifications: Goto Notifications.</p>
   </li>
   <li>
-    <p>Meditation : Goto Meditation.</p>
+    <p>Meditation: Goto Meditation.</p>
   </li>
   <li>
-    <p>Fast-Watch : Goto Fast-Watch.</p>
+    <p>Fast-Watch: Goto Fast-Watch.</p>
   </li>
   <li>
-    <p>Recommendation : Goto Diet Recommendation System (<a href="https://diet-recommendation-system.streamlit.app/">Link</a>).</p>
+    <p>Recommendation: Goto Diet Recommendation System (<a href="https://diet-recommendation-system.streamlit.app/">Link</a>).</p>
   </li>
   <li>
-    <p>Backup : Goto Backup.</p>
+    <p>Backup: Goto Backup.</p>
   </li>
   <li>
-    <p>Open Source : Redirect to this repository.</p>
+    <p>Open Source: Redirect to this repository.</p>
   </li>
   <li>
-    <p>FAQs : Goto FAQs.</p>
+    <p>FAQs: Goto FAQs.</p>
   </li>
   <li>
-    <p>About : Goto About.</p>
+    <p>About: Goto About.</p>
   </li>
   <li>
-    <p>Logout : Logout.</p>
+    <p>Logout: Logout.</p>
   </li>
 </ul>
 <br>
@@ -391,7 +391,6 @@ Follow the below instructions to get started.
 - [x] Add Backup
 - [x] Add Calender
 - [x] Add FAQs
-- [ ] Upload on Play Store
 
 See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a full list of proposed features (and known issues)
 
