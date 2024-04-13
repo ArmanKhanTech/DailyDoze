@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.android.dailydoze.Adapter.FAQAdapter
-import com.android.dailydoze.Model.FAQItem
+import com.android.dailydoze.Model.FAQItemModel
 import com.android.dailydoze.R
 
 class FAQActivity : AppCompatActivity() {
@@ -15,9 +15,9 @@ class FAQActivity : AppCompatActivity() {
 
         val faqListView = findViewById<ListView>(R.id.faq_list)
 
-        val faqItems: MutableList<FAQItem> = ArrayList()
-        faqItems.add(
-            FAQItem(
+        val faqItemModels: MutableList<FAQItemModel> = ArrayList()
+        faqItemModels.add(
+            FAQItemModel(
                 "What is DailyDoze?",
                 "DailyDoze is a health-focused app designed as a " +
                         "checklist to inspire users to incorporate nutrient-rich " +
@@ -31,8 +31,8 @@ class FAQActivity : AppCompatActivity() {
                         "and improve their overall health & sleep."
             )
         )
-        faqItems.add(
-            FAQItem(
+        faqItemModels.add(
+            FAQItemModel(
                 "What is 21 Tweaks?",
                 "21 Tweaks is a 21-day challenge focused on weight loss and " +
                         "health improvement through small, manageable adjustments to " +
@@ -44,7 +44,7 @@ class FAQActivity : AppCompatActivity() {
             )
         )
 
-        val adapter = FAQAdapter(this, faqItems)
+        val adapter = FAQAdapter(this, faqItemModels)
         faqListView.adapter = adapter
     }
 

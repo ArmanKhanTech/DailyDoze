@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.android.dailydoze.Model.FAQItem;
+import com.android.dailydoze.Model.FAQItemModel;
 import com.android.dailydoze.R;
 
 import java.util.List;
@@ -15,21 +15,21 @@ import java.util.List;
 public class FAQAdapter extends BaseAdapter {
 
     private final Context context;
-    private final List<FAQItem> faqItems;
+    private final List<FAQItemModel> faqItemModels;
 
-    public FAQAdapter(Context context, List<FAQItem> faqItems) {
+    public FAQAdapter(Context context, List<FAQItemModel> faqItemModels) {
         this.context = context;
-        this.faqItems = faqItems;
+        this.faqItemModels = faqItemModels;
     }
 
     @Override
     public int getCount() {
-        return faqItems.size();
+        return faqItemModels.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return faqItems.get(position);
+        return faqItemModels.get(position);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class FAQAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        FAQItem item = faqItems.get(position);
+        FAQItemModel item = faqItemModels.get(position);
         holder.questionTextView.setText(item.question());
         holder.answerTextView.setText(item.answer());
 

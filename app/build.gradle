@@ -5,9 +5,9 @@ plugins {
 }
 
 android {
-    namespace 'com.android.dailydoze'
-
     compileSdk 34
+
+    namespace 'com.android.dailydoze'
 
     defaultConfig {
         applicationId "com.android.dailydoze"
@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation platform('com.google.firebase:firebase-bom:32.8.0')
     implementation 'com.google.android.gms:play-services-auth:21.0.0'
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
@@ -46,7 +47,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-gcm:17.0.0'
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation platform('com.google.firebase:firebase-bom:32.8.0')
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
