@@ -59,19 +59,6 @@ public class FastActivity extends AppCompatActivity {
     private RadioGroup rg;
     private ProgressBar pb;
 
-    final private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            updateGUI(intent);
-        }
-    };
-
-    public static String getCurrentTime() {
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
-        Calendar cal = Calendar.getInstance();
-        return dateFormat.format(cal.getTime());
-    }
-
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -200,6 +187,19 @@ public class FastActivity extends AppCompatActivity {
         });
     }
 
+    final private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateGUI(intent);
+        }
+    };
+
+    public static String getCurrentTime() {
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
+        Calendar cal = Calendar.getInstance();
+        return dateFormat.format(cal.getTime());
+    }
+
     public void updateList() {
         ArrayList<String> time = db.getAllDate();
         data.clear();
@@ -241,6 +241,7 @@ public class FastActivity extends AppCompatActivity {
             unregisterReceiver(broadcastReceiver);
         } catch (Exception e) {
         }
+
         super.onStop();
     }
 

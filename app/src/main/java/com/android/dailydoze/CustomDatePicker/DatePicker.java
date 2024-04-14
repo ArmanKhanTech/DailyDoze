@@ -98,6 +98,7 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
             case Configuration.UI_MODE_NIGHT_YES:
                 isNightTheme = true;
                 break;
+
             case Configuration.UI_MODE_NIGHT_NO:
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
                 isNightTheme = false;

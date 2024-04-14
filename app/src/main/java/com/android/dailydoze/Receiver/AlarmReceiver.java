@@ -47,7 +47,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         serviceChannel = new NotificationChannel(
                 CHANNEL_ID,
-                "DailyDoze Notification Channel",
+                "Push Notification",
                 NotificationManager.IMPORTANCE_DEFAULT
         );
         notificationManager.createNotificationChannel(serviceChannel);

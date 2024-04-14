@@ -13,7 +13,6 @@ import com.android.dailydoze.R;
 import java.util.List;
 
 public class FAQAdapter extends BaseAdapter {
-
     private final Context context;
     private final List<FAQItemModel> faqItemModels;
 
@@ -40,7 +39,6 @@ public class FAQAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.list_faq_item, parent, false);
             holder = new ViewHolder();
@@ -54,7 +52,6 @@ public class FAQAdapter extends BaseAdapter {
         FAQItemModel item = faqItemModels.get(position);
         holder.questionTextView.setText(item.question());
         holder.answerTextView.setText(item.answer());
-
         return convertView;
     }
 

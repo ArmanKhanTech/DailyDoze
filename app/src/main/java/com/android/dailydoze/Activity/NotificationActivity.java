@@ -28,7 +28,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -38,6 +37,7 @@ import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Receiver.AlarmReceiver;
 import com.android.dailydoze.Utility.CommonUtil;
+import com.google.android.material.materialswitch.MaterialSwitch;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class NotificationActivity extends AppCompatActivity {
     private ImageView setTime;
     private TextView status;
     private ListView list;
-    private SwitchCompat sw;
+    private MaterialSwitch sw;
     private ArrayList<DataListModel> data = new ArrayList<>();
     private ListAdapter adapter;
     private NotificationDatabase db1;
@@ -131,6 +131,8 @@ public class NotificationActivity extends AppCompatActivity {
                         componentName,
                         PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                         PackageManager.DONT_KILL_APP);
+
+                sw.setThumbTintList(ContextCompat.getColorStateList(this, R.color.white));
             } else {
                 SharedPreferences.Editor editor = getSharedPreferences("notiSwitch", MODE_PRIVATE).edit();
                 editor.putBoolean("State", false);
@@ -146,6 +148,8 @@ public class NotificationActivity extends AppCompatActivity {
                         componentName,
                         PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                         PackageManager.DONT_KILL_APP);
+
+                sw.setThumbTintList(ContextCompat.getColorStateList(this, R.color.customBlue));
             }
         });
 

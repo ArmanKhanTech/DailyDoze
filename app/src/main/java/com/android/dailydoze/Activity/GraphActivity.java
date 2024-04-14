@@ -174,8 +174,8 @@ public class GraphActivity extends AppCompatActivity {
         barEntriesArrayList = new ArrayList<>();
         lineEntriesArrayList = new ArrayList<>();
 
-        dates = db2.getAllDate();
         float f = 0.00F;
+        dates = db2.getAllDate();
         labels = new String[dates.size()];
 
         for (int i = 0; i < dates.size(); i++) {
@@ -192,9 +192,9 @@ public class GraphActivity extends AppCompatActivity {
         barEntriesArrayList = new ArrayList<>();
         lineEntriesArrayList = new ArrayList<>();
 
-        dates = db1.getAllDate();
         float f = 0.00F;
         int weight;
+        dates = db1.getAllDate();
         labels = new String[dates.size()];
 
         for (int i = 0; i < dates.size(); i++) {

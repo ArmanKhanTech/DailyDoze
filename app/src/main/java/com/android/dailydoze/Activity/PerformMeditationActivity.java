@@ -175,7 +175,6 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         if (b) {
             music.stop();
         }
@@ -184,7 +183,6 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
         if (b) {
             music.pause();
             stopWatch.cancel();
@@ -194,7 +192,6 @@ public class PerformMeditationActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         if (b) {
             music.pause();
             stopWatch.cancel();

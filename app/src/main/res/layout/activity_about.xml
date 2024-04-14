@@ -59,7 +59,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Inspired from the Book : How Not to Diet by Dr. Michael Greger"
+        android:text="Inspired from the Book : How Not to Die by Dr. Michael Greger"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"

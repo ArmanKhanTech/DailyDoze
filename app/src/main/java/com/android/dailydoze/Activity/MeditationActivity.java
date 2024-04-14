@@ -117,14 +117,17 @@ public class MeditationActivity extends AppCompatActivity {
                     time = "Meditation for 15 minutes";
                     millis = 900000;
                     break;
+
                 case R.id.thimins:
                     time = "Meditation for 30 minutes";
                     millis = 1800000;
                     break;
+
                 case R.id.foumins:
                     time = "Meditation for 45 minutes";
                     millis = 2700000;
                     break;
+
                 case R.id.other:
                     time = "Meditation for 1 hour";
                     millis = 3600000;

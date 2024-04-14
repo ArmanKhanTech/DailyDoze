@@ -2,7 +2,6 @@
     <style name="Theme.DailyDoze" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/customBlue</item>
         <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>

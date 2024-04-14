@@ -49,7 +49,7 @@ public class TimerService extends Service {
 
         NotificationChannel serviceChannel = new NotificationChannel(
                 CHANNEL_ID,
-                "DailyDoze Foreground Service Channel",
+                "Foreground Service",
                 NotificationManager.IMPORTANCE_HIGH
         );
         manager = getSystemService(NotificationManager.class);

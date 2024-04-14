@@ -53,6 +53,10 @@ public class TweakActivity extends AppCompatActivity {
     private TextView textView;
     private ImageButton weight, date_prev, date_next;
 
+    public static String getCurrentDate() {
+        return String.valueOf(currDate.getText());
+    }
+
     public static void setCount(String date) {
         int i = db.getCount(date);
         count.setText(String.valueOf(i));
@@ -62,10 +66,6 @@ public class TweakActivity extends AppCompatActivity {
         Date c = Calendar.getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
         return df.format(c);
-    }
-
-    public static String getCurrentDate() {
-        return String.valueOf(currDate.getText());
     }
 
     @SuppressLint("SetTextI18n")
@@ -128,6 +128,7 @@ public class TweakActivity extends AppCompatActivity {
             } else {
                 String morning = String.valueOf(db.getWeightMorning(getCurrentDate()));
                 String evening = String.valueOf(db.getWeightEvening(getCurrentDate()));
+
                 tv.setText("You weighed " + morning + " kg in morning and " + evening + " kg in evening on this day.");
                 et.setVisibility(View.GONE);
                 b.setText("Okay");
@@ -157,6 +158,7 @@ public class TweakActivity extends AppCompatActivity {
                         popupWindow.dismiss();
                     }
                 }
+
                 popupWindow.dismiss();
             });
 
@@ -174,9 +176,11 @@ public class TweakActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tab_layout_tweaks);
         viewPager = findViewById(R.id.viewPager_tweaks);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+
         viewPagerAdapter.addFragment(new DayFragment(), "Day");
         viewPagerAdapter.addFragment(new EachMealFragment(), "Meal");
         viewPagerAdapter.addFragment(new NightFragment(), "Night");
+
         viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -199,10 +203,6 @@ public class TweakActivity extends AppCompatActivity {
         } else {
             weight.setVisibility(View.GONE);
         }
-    }
-
-    public void tweaksFinish(View v) {
-        finish();
     }
 
     private final class LoadFragment extends AsyncTask<Void, Void, Void> {
@@ -320,5 +320,9 @@ public class TweakActivity extends AppCompatActivity {
             currDate.setText(formattedDate);
             setDay(true);
         });
+    }
+
+    public void finish(View v) {
+        finish();
     }
 }
