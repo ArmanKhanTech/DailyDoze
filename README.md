@@ -117,7 +117,7 @@ Follow the below instructions to get started.
 <h3>1. DailyDoze</h3>
 <ul>
   <li>
-    <p>DailyDoze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Die.</p>
+    <p>DailyDoze contains the checklist of all the healthy food you should include in your daily diet inorder to live a healthy life. Based on Dr. Greger's How Not to Diet.</p>
   </li>
   <li>
     <p>It also inputs your daily sleep duration allowing you to keep track of it. Click on the moon icon to do so.</p>
@@ -424,7 +424,7 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 
 ## Acknowledgments
 
-* [Dr Greger's How Not to Die](https://nutritionfacts.org/book/how-not-to-die)
+* [Dr Greger's How Not to Diet](https://nutritionfacts.org/book/how-not-to-diet)
 
 **3rd Party Libraries**
 * [Phil Jay's MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
