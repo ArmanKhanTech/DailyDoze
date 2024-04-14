@@ -135,8 +135,9 @@
                     android:elevation="5dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Import"
+                    android:textAllCaps="false"
                     android:textColor="#FFF8E1"
-                    android:textSize="15dp" />
+                    android:textSize="20dp" />
 
             </LinearLayout>
 
@@ -192,8 +193,9 @@
                     android:elevation="5dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Export"
+                    android:textAllCaps="false"
                     android:textColor="#FFF8E1"
-                    android:textSize="15dp" />
+                    android:textSize="20dp" />
 
             </LinearLayout>
 
