@@ -42,7 +42,7 @@ public class CalenderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calender);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        pb = findViewById(R.id.loading);
+        pb = findViewById(R.id.loading_progress);
         name = findViewById(R.id.calName);
         calendarView = findViewById(R.id.calendarView);
 
@@ -282,10 +282,6 @@ public class CalenderActivity extends AppCompatActivity {
         return;
     }
 
-    public void calBack(View v) {
-        finish();
-    }
-
     private final class LoadCal extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
@@ -305,5 +301,9 @@ public class CalenderActivity extends AppCompatActivity {
             pb.setVisibility(View.GONE);
             calendarView.setVisibility(View.VISIBLE);
         }
+    }
+
+    public void finish(View v) {
+        finish();
     }
 }
