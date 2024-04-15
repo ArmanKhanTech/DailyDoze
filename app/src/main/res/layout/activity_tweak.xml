@@ -11,7 +11,7 @@
     tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
     <LinearLayout
-        android:id="@+id/lll"
+        android:id="@+id/tweaks_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -75,10 +75,11 @@
                     android:textSize="30dp" />
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="12dp"
+                    android:scaleType="centerCrop"
                     android:clickable="true"
                     android:onClick="gotoGraphTweaks"
                     app:srcCompat="@drawable/graph_icon" />
@@ -230,7 +231,7 @@
         android:orientation="vertical">
 
         <ProgressBar
-            android:id="@+id/loadingFragment"
+            android:id="@+id/loading_progress"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
@@ -238,7 +239,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/tvv"
+            android:id="@+id/loading_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

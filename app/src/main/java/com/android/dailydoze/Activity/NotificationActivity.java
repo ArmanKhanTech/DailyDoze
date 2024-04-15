@@ -101,6 +101,8 @@ public class NotificationActivity extends AppCompatActivity {
                     componentName,
                     PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                     PackageManager.DONT_KILL_APP);
+
+            sw.setThumbTintList(ContextCompat.getColorStateList(this, R.color.white));
         } else {
             setTime.setVisibility(View.INVISIBLE);
             list.setVisibility(View.INVISIBLE);
@@ -110,6 +112,8 @@ public class NotificationActivity extends AppCompatActivity {
                     componentName,
                     PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                     PackageManager.DONT_KILL_APP);
+
+            sw.setThumbTintList(ContextCompat.getColorStateList(this, R.color.customBlue));
         }
 
         sw.setOnCheckedChangeListener((buttonView, isChecked) -> {

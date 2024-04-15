@@ -210,12 +210,13 @@ public class TweakActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            pb = findViewById(R.id.loadingFragment);
-            pb.setVisibility(View.VISIBLE);
-            linearLayout = findViewById(R.id.lll);
-            linearLayout.setVisibility(View.GONE);
-            textView = findViewById(R.id.tvv);
+            pb = findViewById(R.id.loading_progress);
+            linearLayout = findViewById(R.id.tweaks_layout);
+            textView = findViewById(R.id.loading_text);
+
             textView.setVisibility(View.VISIBLE);
+            pb.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.GONE);
         }
 
         @Override
