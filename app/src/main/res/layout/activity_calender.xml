@@ -53,13 +53,13 @@
 
                 <ImageButton
                     android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_height="32dp"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="6dp"
                     android:layout_marginEnd="20dp"
+                    android:layout_gravity="center"
                     android:background="@color/white"
                     android:onClick="finish"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/back_button_black"
                     tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
