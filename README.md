@@ -56,7 +56,7 @@
 
 
 
-## About The Project
+## About the Project
 
 <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/916e3d39-50f9-4943-b470-25d08c9b9fb2" alt="Logo" width="300" height="600">
 
@@ -376,7 +376,6 @@ Follow the below instructions to get started.
 
 
 
-<!-- ROADMAP -->
 ## Roadmap
 
 - [x] Add Login & Registration
