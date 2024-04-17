@@ -68,7 +68,7 @@ Wanna meditate or wanna keep track of your daily fasting this app lets you do it
 
 **Supports Android 10 & above only.**
 
-### Built With
+### Built with
 
 * [![Java][Java]][Java-url]
 * [![Firebase][Firebase]][Firebase-url]
