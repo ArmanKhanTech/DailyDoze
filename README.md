@@ -90,6 +90,9 @@ Follow the below instructions to get started.
   <li>
     <p>Firebase Account</p>
   </li>
+  <li>
+    <p>Java 8+</p>
+  </li>
 </ol>
 
 
