@@ -1,7 +1,6 @@
 package com.android.dailydoze.Activity;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,7 +30,7 @@ import com.android.dailydoze.Database.FastDatabase;
 import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Service.TimerService;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
@@ -47,11 +46,11 @@ import java.util.Locale;
 public class FastActivity extends AppCompatActivity {
     private String time;
     private long millis = 10800000, millisDone = 0;
+
     private Button fast;
     private TextView start, end, fastStatus, timer;
     private ListView list;
     private Drawable icon;
-    private ArrayList<DataListModel> data = new ArrayList<>();
     private ListAdapter adapter;
     private Boolean b = false;
     private FastDatabase db;
@@ -59,7 +58,8 @@ public class FastActivity extends AppCompatActivity {
     private RadioGroup rg;
     private ProgressBar pb;
 
-    @SuppressLint("ClickableViewAccessibility")
+    private ArrayList<DataListModel> data = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -158,8 +158,11 @@ public class FastActivity extends AppCompatActivity {
         });
 
         if (Build.VERSION.SDK_INT >= 33) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                        this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
             }
         }
 
@@ -169,7 +172,7 @@ public class FastActivity extends AppCompatActivity {
             String d = db.getDuration(t);
 
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
+            View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -183,7 +186,7 @@ public class FastActivity extends AppCompatActivity {
 
             b.setText("Okay");
             b.setOnClickListener(view1 -> popupWindow.dismiss());
-            new CommonUtil().dimBehind(popupWindow);
+            new CommonUtility().dimBehind(popupWindow);
         });
     }
 
@@ -284,7 +287,6 @@ public class FastActivity extends AppCompatActivity {
         return dateFormat.format(cal.getTime());
     }
 
-    @SuppressLint("SetTextI18n")
     private void updateGUI(Intent intent) {
         if (intent.getExtras() != null) {
             time = intent.getStringExtra("timer");

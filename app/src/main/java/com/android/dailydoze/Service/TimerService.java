@@ -21,7 +21,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class TimerService extends Service {
-    private static final String CHANNEL_ID = "DailyDozeForegroundServiceChannel";
+    private static final String CHANNEL_ID = "DailyDoze Service Notification";
     public static final String COUNTDOWN_BR = "com.android.dailydoze";
     private final Intent intent = new Intent(COUNTDOWN_BR);
     private CountDownTimer cdt = null;

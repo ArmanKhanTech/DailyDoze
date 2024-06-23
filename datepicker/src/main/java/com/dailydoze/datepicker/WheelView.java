@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -18,8 +18,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.android.dailydoze.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,25 +25,32 @@ import java.util.List;
 public class WheelView extends ScrollView {
     public static final int OFF_SET_DEFAULT = 1;
     private final int newCheck = 50;
+
     public String TAG = WheelView.class.getSimpleName();
     public boolean isNightTheme = false;
+
     int itemHeight = 0;
     int[] selectedAreaBorder;
     private int displayItemCount;
     private int selectedIndex = 1;
     private int offset = OFF_SET_DEFAULT;
-    private boolean configChanged = false;
     private int initialY;
+    private int viewWidth;
+
     private Runnable scrollerTask;
     private Context context;
+
     private LinearLayout views;
+
     private List<String> items;
     private int textSize = 19;
     private int ALIGNMENT = View.TEXT_ALIGNMENT_CENTER;
     private int GRAVITY = Gravity.CENTER;
+
     private Paint paint;
-    private int viewWidth;
     private OnWheelViewListener onWheelViewListener;
+
+    private boolean configChanged = false;
 
     public WheelView(Context context) {
         super(context);
@@ -239,10 +244,10 @@ public class WheelView extends ScrollView {
                     item.setTextColor(context.getColor(R.color.color_grey));
                 } else if (i == position - 2) {
                     item.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize - 3);
-                    item.setTextColor(context.getColor(R.color.color_grey1));
+                    item.setTextColor(context.getColor(R.color.color_dark_grey));
                 } else {
                     item.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize - 4);
-                    item.setTextColor(context.getColor(R.color.color_grey2));
+                    item.setTextColor(context.getColor(R.color.color_darker_grey));
                 }
 
                 String text = item.getText().toString();
@@ -256,10 +261,10 @@ public class WheelView extends ScrollView {
                     item.setTextColor(context.getColor(R.color.color_grey));
                 } else if (i == position + 2) {
                     item.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize - 3);
-                    item.setTextColor(context.getColor(R.color.color_grey1));
+                    item.setTextColor(context.getColor(R.color.color_dark_grey));
                 } else {
                     item.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize - 4);
-                    item.setTextColor(context.getColor(R.color.color_grey2));
+                    item.setTextColor(context.getColor(R.color.color_darker_grey));
                 }
                 String text = item.getText().toString();
                 text = "  " + text.trim();
@@ -286,7 +291,7 @@ public class WheelView extends ScrollView {
 
         if (null == paint) {
             paint = new Paint();
-            paint.setColor(context.getColor(R.color.color_grey2));
+            paint.setColor(context.getColor(R.color.color_darker_grey));
             paint.setStrokeWidth(dip2px(1f));
         }
 

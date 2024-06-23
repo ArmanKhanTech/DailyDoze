@@ -21,7 +21,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.RenderMode;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -82,7 +82,9 @@ public class BackupActivity extends AppCompatActivity {
     }
 
     private void importDB() {
-        File sd = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases");
+        File sd = new File(
+                Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases"
+        );
 
         if (sd.canWrite()) {
             File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
@@ -147,7 +149,9 @@ public class BackupActivity extends AppCompatActivity {
         }
 
         if (sd.canWrite()) {
-            final File[] databases = new File(Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases").listFiles();
+            final File[] databases = new File(
+                    Objects.requireNonNull(this.getFilesDir().getParentFile()).getPath() + "/databases"
+            ).listFiles();
 
             for (File databaseFile : databases) {
                 final String backupFilename = databaseFile.getName() + ".db";
@@ -191,7 +195,6 @@ public class BackupActivity extends AppCompatActivity {
 
     public void openDialog(String msg) {
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams")
         View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
 
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
@@ -223,8 +226,8 @@ public class BackupActivity extends AppCompatActivity {
             }
         });
 
-        popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
-        new CommonUtil().dimBehind(popupWindow);
+        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+        new CommonUtility().dimBehind(popupWindow);
     }
 
     @SuppressLint("StaticFieldLeak")

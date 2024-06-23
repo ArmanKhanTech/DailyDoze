@@ -1,6 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
@@ -22,7 +21,7 @@ import com.android.dailydoze.Adapter.ListAdapter;
 import com.android.dailydoze.Database.MeditationDatabase;
 import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -33,14 +32,16 @@ import java.util.Collections;
 public class MeditationActivity extends AppCompatActivity {
     private String time;
     private long millis;
-    private ListView list;
+
     private ArrayList<DataListModel> data = new ArrayList<>();
     private ListAdapter adapter;
+
     private MeditationDatabase db1;
+
+    private ListView list;
     private Drawable icon;
     private TextView hisStatus;
 
-    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,7 +92,7 @@ public class MeditationActivity extends AppCompatActivity {
                 d = millisToTime(Long.parseLong(d));
 
                 LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-                @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
+                View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
 
                 int width = LinearLayout.LayoutParams.MATCH_PARENT;
                 int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -107,7 +108,7 @@ public class MeditationActivity extends AppCompatActivity {
                 b.setOnClickListener(view1 -> {
                     popupWindow.dismiss();
                 });
-                new CommonUtil().dimBehind(popupWindow);
+                new CommonUtility().dimBehind(popupWindow);
             }
         });
 

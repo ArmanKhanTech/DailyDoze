@@ -54,7 +54,8 @@ public class MeditationStats extends AppCompatActivity {
 
         textView.setText(time);
 
-        final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.celebration);
+        final Drawable drawable = ContextCompat
+                .getDrawable(getApplicationContext(), R.drawable.celebration);
         assert drawable != null;
         drawableShape = new Shape.DrawableShape(drawable, true);
 

@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.WindowManager
 import android.widget.PopupWindow
 
-class CommonUtil {
+class CommonUtility {
     fun dimBehind(popupWindow: PopupWindow) {
         val container = popupWindow.contentView.rootView
         val context = popupWindow.contentView.context

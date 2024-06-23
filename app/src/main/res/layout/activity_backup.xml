@@ -7,11 +7,12 @@
     android:background="#FFF8E1"
     android:orientation="vertical"
     tools:context=".Activity.GraphActivity"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -23,8 +24,7 @@
             android:background="@color/transparent"
             android:onClick="finish"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/back_button_peach"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+            app:srcCompat="@drawable/back_button_peach" />
 
         <TextView
             android:layout_width="wrap_content"

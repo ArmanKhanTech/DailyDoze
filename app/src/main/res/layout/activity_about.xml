@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Activity.AboutActivity"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <ImageButton
         android:layout_width="30dp"
         android:layout_height="32dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:background="@color/white"
         android:onClick="finish"
@@ -23,8 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/back_button_black"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+        app:srcCompat="@drawable/back_button_black" />
 
     <ImageView
         android:id="@+id/imageView3"

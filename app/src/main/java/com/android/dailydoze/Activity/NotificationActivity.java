@@ -3,7 +3,6 @@ package com.android.dailydoze.Activity;
 import static android.app.PendingIntent.FLAG_IMMUTABLE;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.DatePickerDialog;
 import android.app.PendingIntent;
@@ -36,7 +35,7 @@ import com.android.dailydoze.Database.NotificationDatabase;
 import com.android.dailydoze.Model.DataListModel;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Receiver.AlarmReceiver;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
 import com.google.android.material.materialswitch.MaterialSwitch;
 
 import java.text.SimpleDateFormat;
@@ -50,12 +49,13 @@ public class NotificationActivity extends AppCompatActivity {
     private TextView status;
     private ListView list;
     private MaterialSwitch sw;
-    private ArrayList<DataListModel> data = new ArrayList<>();
-    private ListAdapter adapter;
-    private NotificationDatabase db1;
     private Drawable icon;
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    private ArrayList<DataListModel> data = new ArrayList<>();
+
+    private ListAdapter adapter;
+    private NotificationDatabase db1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,8 +157,11 @@ public class NotificationActivity extends AppCompatActivity {
             }
         });
 
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                    this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
         }
 
         list.setOnItemClickListener((parent, view, position, id) -> {
@@ -166,7 +169,7 @@ public class NotificationActivity extends AppCompatActivity {
             String t = notiList.text();
 
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
+            View popupView = layoutInflater.inflate(R.layout.popup_notification, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -182,7 +185,7 @@ public class NotificationActivity extends AppCompatActivity {
                 popupWindow.dismiss();
                 updateList();
             });
-            new CommonUtil().dimBehind(popupWindow);
+            new CommonUtility().dimBehind(popupWindow);
         });
         setTime.setOnClickListener(v -> selectTime());
     }
@@ -192,7 +195,9 @@ public class NotificationActivity extends AppCompatActivity {
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
 
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this, R.style.PickerTheme, (timePicker, i1, i2) -> {
+        TimePickerDialog timePickerDialog = new TimePickerDialog(
+                this, R.style.PickerTheme, (timePicker, i1, i2
+        ) -> {
             setAlarm(timePicker);
             adapter.notifyDataSetChanged();
         }, hour, minute, false);
@@ -244,12 +249,14 @@ public class NotificationActivity extends AppCompatActivity {
     public void cancelNotification(int id) {
         AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                getApplicationContext(), id, intent,
+                PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE
+        );
         am.cancel(pendingIntent);
         pendingIntent.cancel();
     }
 
-    @SuppressLint("DefaultLocale")
     public String convert(long millis) {
         return (new SimpleDateFormat("hh:mm aa")).format(new Date(millis));
     }

@@ -40,7 +40,9 @@ public class FAQAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.list_faq_item, parent, false);
+            convertView = LayoutInflater
+                    .from(context)
+                    .inflate(R.layout.list_faq_item, parent, false);
             holder = new ViewHolder();
             holder.questionTextView = convertView.findViewById(R.id.faq_question);
             holder.answerTextView = convertView.findViewById(R.id.faq_answer);

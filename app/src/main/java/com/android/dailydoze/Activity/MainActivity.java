@@ -25,11 +25,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.dailydoze.CustomDatePicker.DatePicker;
-import com.android.dailydoze.CustomDatePicker.DatePickerPopup;
 import com.android.dailydoze.Database.DailyDozeDatabase;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
+import com.dailydoze.datepicker.DatePicker;
+import com.dailydoze.datepicker.DatePickerPopup;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.ParseException;
@@ -42,16 +42,18 @@ import java.util.Objects;
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     private Button b;
-    private CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1, greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
-            cv_cb1, flaxseeds_cb1, herbs_cb1, nuts_cb1, grains_cb1, grains_cb2, grains_cb3, beve_cb1, beve_cb2, beve_cb3,
-            beve_cb4, beve_cb5, exercise_cb1;
+    private CheckBox beans_cb1, beans_cb2, beans_cb3, berries_cb1,
+            greens_cb1, greens_cb2, othervege_cb1, othervege_cb2, of_cb1, of_cb2, of_cb3,
+            cv_cb1, flaxseeds_cb1, herbs_cb1, nuts_cb1, grains_cb1, grains_cb2,
+            grains_cb3, beve_cb1, beve_cb2, beve_cb3, beve_cb4, beve_cb5, exercise_cb1;
     private TextView currDate, count, back_to_today;
     private DailyDozeDatabase db;
     private ImageButton date_prev, date_next, sleep;
     private FrameLayout frameLayout;
     private LinearLayout jumpBack;
+
     private boolean today, jump = false;
-    @SuppressLint({"NonConstantResourceId", "ClickableViewAccessibility", "UseCompatLoadingForDrawables"})
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
         b.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_main_menu, null);
+            View popupView = layoutInflater.inflate(R.layout.popup_main_menu, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -201,7 +203,10 @@ public class MainActivity extends AppCompatActivity {
             });
 
             l8.setOnClickListener(v16 -> {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ArmanKhanTech/DailyDoze"));
+                Intent browserIntent = new Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://github.com/ArmanKhanTech/DailyDoze")
+                );
                 startActivity(browserIntent);
                 popupWindow.dismiss();
             });
@@ -212,7 +217,10 @@ public class MainActivity extends AppCompatActivity {
             });
 
             l10.setOnClickListener(v16 -> {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://diet-recommendation-system.streamlit.app"));
+                Intent browserIntent = new Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://diet-recommendation-system.streamlit.app")
+                );
                 startActivity(browserIntent);
                 popupWindow.dismiss();
             });
@@ -224,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
 
             popupWindow.setAnimationStyle(R.style.PopupWindowAnimation);
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-            new CommonUtil().dimBehind(popupWindow);
+            new CommonUtility().dimBehind(popupWindow);
         });
 
         beans_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -430,7 +438,7 @@ public class MainActivity extends AppCompatActivity {
 
         sleep.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
+            View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -470,7 +478,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-            new CommonUtil().dimBehind(popupWindow);
+            new CommonUtility().dimBehind(popupWindow);
         });
     }
 
@@ -499,7 +507,7 @@ public class MainActivity extends AppCompatActivity {
                             setDay();
                         } else {
                             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-                            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
+                            View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
 
                             int width = LinearLayout.LayoutParams.MATCH_PARENT;
                             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -518,11 +526,10 @@ public class MainActivity extends AppCompatActivity {
                             });
 
                             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-                            new CommonUtil().dimBehind(popupWindow);
+                            new CommonUtility().dimBehind(popupWindow);
                         }
                     }
-                })
-                .build();
+                }).build();
 
         datePickerPopup.show();
     }

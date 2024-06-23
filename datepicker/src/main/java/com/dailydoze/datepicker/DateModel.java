@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
 @SuppressWarnings("ALL")
 public class DateModel {
@@ -54,7 +54,10 @@ public class DateModel {
     }
 
     public String toString() {
-        return "DateModel{year=" + this.year + ", month=" + this.month + ", day=" + this.day + ", date=" + this.date + '}';
+        return "DateModel{" +
+                "year=" + this.year + ", " +
+                "month=" + this.month + ", " +
+                "day=" + this.day + ", " +
+                "date=" + this.date + '}';
     }
-
 }

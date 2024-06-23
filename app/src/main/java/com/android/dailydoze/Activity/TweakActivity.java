@@ -27,7 +27,7 @@ import com.android.dailydoze.Fragments.DayFragment;
 import com.android.dailydoze.Fragments.EachMealFragment;
 import com.android.dailydoze.Fragments.NightFragment;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
 import com.google.android.material.tabs.TabLayout;
 
 import java.text.ParseException;
@@ -40,9 +40,8 @@ import java.util.Objects;
 @SuppressWarnings("ALL")
 public class TweakActivity extends AppCompatActivity {
     public static boolean today = true;
-    @SuppressLint("StaticFieldLeak")
+
     public static TextView currDate;
-    @SuppressLint("StaticFieldLeak")
     public static TextView count;
     static TweaksDatabase db;
     private TabLayout tabLayout;
@@ -99,7 +98,7 @@ public class TweakActivity extends AppCompatActivity {
 
         weight.setOnClickListener(v -> {
             LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
+            View popupView = layoutInflater.inflate(R.layout.popup_get_weight, null);
 
             int width = LinearLayout.LayoutParams.MATCH_PARENT;
             int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -129,7 +128,8 @@ public class TweakActivity extends AppCompatActivity {
                 String morning = String.valueOf(db.getWeightMorning(getCurrentDate()));
                 String evening = String.valueOf(db.getWeightEvening(getCurrentDate()));
 
-                tv.setText("You weighed " + morning + " kg in morning and " + evening + " kg in evening on this day.");
+                tv.setText(
+                        "You weighed " + morning + " kg in morning and " + evening + " kg in evening on this day.");
                 et.setVisibility(View.GONE);
                 b.setText("Okay");
             }
@@ -163,7 +163,7 @@ public class TweakActivity extends AppCompatActivity {
             });
 
             popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-            new CommonUtil().dimBehind(popupWindow);
+            new CommonUtility().dimBehind(popupWindow);
         });
 
         setDay(false);

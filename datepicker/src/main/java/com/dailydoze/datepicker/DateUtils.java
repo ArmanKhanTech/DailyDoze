@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
 import java.util.Calendar;
 

@@ -3,7 +3,6 @@ package com.android.dailydoze.Fragments;
 import static com.android.dailydoze.Activity.TweakActivity.getCurrentDate;
 import static com.android.dailydoze.Activity.TweakActivity.setCurrentDate;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,7 +23,6 @@ import java.util.Objects;
 
 
 public class NightFragment extends Fragment {
-    @SuppressLint("StaticFieldLeak")
     private static CheckBox fast_cb1, sleep_cb1, exp_cb1;
     private static TweaksDatabase db;
 

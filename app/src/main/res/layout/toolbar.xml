@@ -35,26 +35,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/textView3"
+        android:layout_toStartOf="@+id/count_total"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="0"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/count_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginEnd="10dp"
-        android:layout_toStartOf="@+id/imageView14"
+        android:layout_toStartOf="@+id/open_graph"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="/24"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/open_graph"
         android:layout_width="30dp"
         android:layout_height="25dp"
         android:layout_alignParentEnd="true"

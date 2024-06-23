@@ -1,6 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
@@ -22,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dailydoze.Database.MeditationDatabase;
 import com.android.dailydoze.R;
-import com.android.dailydoze.Utility.CommonUtil;
+import com.android.dailydoze.Utility.CommonUtility;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -37,10 +36,12 @@ public class PerformMeditationActivity extends AppCompatActivity {
     private ImageView imageView, play, pause, stop;
     private TextView timer, textView;
     private ProgressBar pb;
+    private ImageButton close;
+
     private long l, c;
     private CountDownTimer stopWatch;
-    private ImageButton close;
     private boolean b = false;
+
     private MeditationDatabase db;
 
     @Override
@@ -96,7 +97,8 @@ public class PerformMeditationActivity extends AppCompatActivity {
                 if (pb.getProgress() != 0) {
                     showWarning();
                 } else {
-                    Intent intent1 = new Intent(PerformMeditationActivity.this, MeditationActivity.class);
+                    Intent intent1 = new Intent(
+                            PerformMeditationActivity.this, MeditationActivity.class);
                     startActivity(intent1);
                     finish();
                 }
@@ -119,7 +121,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
     public void showWarning() {
         LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_medi_finish, null);
+        View popupView = layoutInflater.inflate(R.layout.popup_medi_finish, null);
 
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -141,7 +143,8 @@ public class PerformMeditationActivity extends AppCompatActivity {
                     db.changeDuration(duration, getCurrentDate());
                 }
 
-                Intent intent = new Intent(PerformMeditationActivity.this, MeditationStats.class);
+                Intent intent = new Intent(
+                        PerformMeditationActivity.this, MeditationStats.class);
                 intent.putExtra("time", duration);
                 startActivity(intent);
                 finish();
@@ -149,7 +152,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
         });
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-        new CommonUtil().dimBehind(popupWindow);
+        new CommonUtility().dimBehind(popupWindow);
     }
 
     public void startTimer(long millis) {
@@ -232,7 +235,7 @@ public class PerformMeditationActivity extends AppCompatActivity {
 
     public void mediSettings(View v) {
         LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        @SuppressLint("InflateParams") View popupView = layoutInflater.inflate(R.layout.popup_meditation_settings, null);
+        View popupView = layoutInflater.inflate(R.layout.popup_meditation_settings, null);
 
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -278,12 +281,14 @@ public class PerformMeditationActivity extends AppCompatActivity {
         m6.setOnClickListener(v112 -> selectMusic("celestial"));
 
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-        new CommonUtil().dimBehind(popupWindow);
+        new CommonUtility().dimBehind(popupWindow);
     }
 
     public void selectMusic(String file) {
         music.reset();
-        music = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(file.toLowerCase(), "raw", getPackageName()));
+        music = MediaPlayer.create(
+                getApplicationContext(), getResources().getIdentifier(
+                        file.toLowerCase(), "raw", getPackageName()));
         music.setLooping(true);
         music.start();
     }

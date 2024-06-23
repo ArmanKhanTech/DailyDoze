@@ -1,6 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
@@ -31,11 +30,12 @@ public class CalenderActivity extends AppCompatActivity {
     private TextView name;
     private String title;
     private ProgressBar pb;
+
     private TweaksDatabase db1;
     private DailyDozeDatabase db2;
+
     private ArrayList<String> dates = new ArrayList<>();
 
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

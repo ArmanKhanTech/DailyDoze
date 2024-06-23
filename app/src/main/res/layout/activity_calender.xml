@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Activity.CalenderActivity"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -35,79 +35,72 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/calLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbarThumbVertical="@android:color/black">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/calLayout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:onClick="finish"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/back_button_black"
-                    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="History"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-
-            </LinearLayout>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:onClick="finish"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/back_button_black" />
 
             <TextView
-                android:id="@+id/calName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/info_img_theme"
-                android:elevation="3dp"
+                android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:padding="10dp"
-                android:text="Beans"
-                android:textAlignment="center"
+                android:text="History"
                 android:textColor="@color/black"
-                android:textSize="25dp" />
-
-            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/calender_theme"
-                android:elevation="2dp"
-                app:mcv_dateTextAppearance="@style/MCVDateTextAppearance"
-                app:mcv_headerTextAppearance="@style/MCVTitleTextAppearance"
-                app:mcv_selectionColor="@color/white"
-                app:mcv_weekDayTextAppearance="@style/MCVWeekTextAppearance" />
+                android:textSize="30dp" />
 
         </LinearLayout>
 
-    </ScrollView>
+        <TextView
+            android:id="@+id/calName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/info_img_theme"
+            android:elevation="3dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:padding="10dp"
+            android:text="Beans"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/calender_theme"
+            android:elevation="2dp"
+            app:mcv_dateTextAppearance="@style/MCVDateTextAppearance"
+            app:mcv_headerTextAppearance="@style/MCVTitleTextAppearance"
+            app:mcv_selectionColor="@color/white"
+            app:mcv_weekDayTextAppearance="@style/MCVWeekTextAppearance" />
+
+    </LinearLayout>
 
 </FrameLayout>

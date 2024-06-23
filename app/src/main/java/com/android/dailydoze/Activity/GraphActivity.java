@@ -40,15 +40,20 @@ public class GraphActivity extends AppCompatActivity {
     private CombinedData combinedData;
     private BarDataSet barDataSet;
     private LineDataSet lineDataSet;
-    private ArrayList barEntriesArrayList, lineEntriesArrayList;
     private TextView tv;
-    private TweaksDatabase db1;
-    private DailyDozeDatabase db2;
+    private HorizontalScrollView horiScroll;
+
     private String[] labels;
     private ArrayList<String> dates = new ArrayList<>();
-    private DecimalFormat decimalFormat = new DecimalFormat("0.##");
-    private HorizontalScrollView horiScroll;
+
     private String title;
+
+    private ArrayList barEntriesArrayList, lineEntriesArrayList;
+
+    private TweaksDatabase db1;
+    private DailyDozeDatabase db2;
+
+    private DecimalFormat decimalFormat = new DecimalFormat("0.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,12 +143,16 @@ public class GraphActivity extends AppCompatActivity {
 
         combinedChart.setOnChartGestureListener(new OnChartGestureListener() {
             @Override
-            public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
+            public void onChartGestureStart(
+                    MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture
+            ) {
                 horiScroll.requestDisallowInterceptTouchEvent(true);
             }
 
             @Override
-            public void onChartGestureEnd(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
+            public void onChartGestureEnd(
+                    MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture
+            ) {
                 horiScroll.requestDisallowInterceptTouchEvent(false);
             }
 
@@ -165,7 +174,9 @@ public class GraphActivity extends AppCompatActivity {
 
             @Override
             public void onChartTranslate(MotionEvent me, float dX, float dY) {
-                horiScroll.requestDisallowInterceptTouchEvent(combinedChart.getLowestVisibleX() != combinedChart.getXAxis().getAxisMinimum() && combinedChart.getHighestVisibleX() != combinedChart.getXAxis().getAxisMaximum());
+                horiScroll.requestDisallowInterceptTouchEvent(
+                        combinedChart.getLowestVisibleX() != combinedChart.getXAxis().getAxisMinimum()
+                                && combinedChart.getHighestVisibleX() != combinedChart.getXAxis().getAxisMaximum());
             }
         });
     }

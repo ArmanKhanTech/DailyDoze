@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DailyDoze"
 include ':app'
+include ':datepicker'

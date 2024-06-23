@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,8 +12,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-import com.android.dailydoze.CustomDatePicker.Interface.DateFactoryListener;
-import com.android.dailydoze.R;
+import com.dailydoze.datepicker.Interface.DateFactoryListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,19 +23,24 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
     public static final int DAY_ON_FIRST = 1;
     private final static int MAX_TEXT_SIZE = 50;
     private final static int MAX_OFFSET = 3;
+
     private Context context;
+
     private LinearLayout container;
-    private int offset = 3;
     private DatePickerFactory factory;
     private WheelView dayView;
     private WheelView monthView;
     private WheelView yearView;
     private WheelView emptyView1;
     private WheelView emptyView2;
+
+    private int offset = 3;
     private int textSize = 19;
     private int pickerMode = 0;
+
     private boolean darkModeEnabled = true;
     private boolean isNightTheme = false;
+
     private DataSelectListener dataSelectListener;
 
     public DatePicker(Context context) {
@@ -204,7 +208,8 @@ public class DatePicker extends LinearLayout implements DateFactoryListener {
         monthView = new WheelView(context);
         LayoutParams lp = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         monthView.setLayoutParams(lp);
-        monthView.setOnWheelViewListener((selectedIndex, item) -> factory.setSelectedMonth(factory.getMonthMin() + selectedIndex));
+        monthView
+                .setOnWheelViewListener((selectedIndex, item) -> factory.setSelectedMonth(factory.getMonthMin() + selectedIndex));
         LinearLayout ly = wheelContainerView(3.0f);
         ly.addView(monthView);
         return ly;

@@ -24,8 +24,10 @@ import java.util.Objects;
 
 public class DayFragment extends Fragment {
     @SuppressLint("StaticFieldLeak")
-    private static CheckBox cumin_cb1, garlic_cb1, ginger_cb1, yeast_cb1, cumin2_cb1, cumin2_cb2, green_cb1, green_cb2, green_cb3, hyd_cb1, deflour_cb1,
-            front_cb1, restrict_cb1, optimize_cb1, weigh_cb1, weigh_cb2, inten_cb1, inten_cb2, inten_cb3;
+    private static CheckBox cumin_cb1, garlic_cb1, ginger_cb1, yeast_cb1, cumin2_cb1,
+            cumin2_cb2, green_cb1, green_cb2, green_cb3, hyd_cb1, deflour_cb1,
+            front_cb1, restrict_cb1, optimize_cb1, weigh_cb1, weigh_cb2,
+            inten_cb1, inten_cb2, inten_cb3;
     private static TweaksDatabase db;
 
     public DayFragment() {
@@ -584,5 +586,4 @@ public class DayFragment extends Fragment {
             TweakActivity.setCount(getCurrentDate());
         }
     }
-
 }

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="backgroundColor">#FFFFFF</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
     <color name="color_grey">#999999</color>
-    <color name="color_grey1">#bbbbbb</color>
-    <color name="color_grey2">#dfdfdf</color>
+    <color name="color_dark_grey">#7F7F7F</color>
+    <color name="color_darker_grey">#646464</color>
+    <color name="white">#FFFFFF</color>
     <color name="color_text">#000000</color>
     <declare-styleable name="Picker">
         <attr name="offset" format="integer" />

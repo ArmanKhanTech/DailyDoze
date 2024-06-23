@@ -1,101 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fillViewport="true"
+    android:orientation="vertical"
     android:scrollbarThumbVertical="@android:color/black"
     tools:context=".Activity.InfoActivity"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
-        <LinearLayout
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:onClick="finish"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/back_button_black" />
+
+        <TextView
+            android:id="@+id/infoTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/white"
-                android:onClick="finish"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/back_button_black"
-                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/infoTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="About Serving"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/infoName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/info_img_theme"
-            android:elevation="3dp"
+            android:layout_gravity="center_vertical"
             android:fontFamily="sans-serif-condensed-medium"
-            android:padding="10dp"
-            android:text="Beans"
-            android:textAlignment="center"
+            android:text="About Serving"
             android:textColor="@color/black"
-            android:textSize="25dp" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            app:cardCornerRadius="30dp">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_gravity="center_horizontal"
-                android:elevation="2dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/beans_picture" />
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/info_text_theme"
-            android:elevation="3dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:padding="20dp"
-            android:text="@string/beans"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="30dp" />
 
     </LinearLayout>
 
-</ScrollView>
+    <TextView
+        android:id="@+id/infoName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/info_img_theme"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="10dp"
+        android:text="Beans"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="30dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/beans_picture" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/info_text_theme"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="20dp"
+        android:text="@string/beans"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+</LinearLayout>

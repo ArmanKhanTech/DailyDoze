@@ -1,6 +1,6 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
-import com.android.dailydoze.CustomDatePicker.Interface.DateFactoryListener;
+import com.dailydoze.datepicker.Interface.DateFactoryListener;
 
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
@@ -10,9 +10,11 @@ import java.util.List;
 @SuppressWarnings("ALL")
 public class DatePickerFactory {
     private static final DateFormatSymbols dfs = new DateFormatSymbols();
+
     private DateModel maxDate;
     private DateModel minDate;
     private DateModel selectedDate;
+
     private DateFactoryListener listener;
     private int monthMin;
 
@@ -81,11 +83,15 @@ public class DatePickerFactory {
         int max = DateUtils.getMonthDayCount(this.selectedDate.getDate());
 
         int min = 0;
-        if (this.selectedDate.getYear() == this.maxDate.getYear() && this.selectedDate.getMonth() == this.maxDate.getMonth()) {
+        if (this.selectedDate.getYear() ==
+                this.maxDate.getYear() && this.selectedDate.getMonth() == this.maxDate.getMonth()
+        ) {
             max = this.maxDate.getDay();
         }
 
-        if (this.selectedDate.getYear() == this.minDate.getYear() && this.selectedDate.getMonth() == this.minDate.getMonth()) {
+        if (this.selectedDate.getYear() ==
+                this.minDate.getYear() && this.selectedDate.getMonth() == this.minDate.getMonth()
+        ) {
             min = this.minDate.getDay() - 1;
         }
 

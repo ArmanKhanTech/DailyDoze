@@ -1,6 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -14,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.dailydoze.R;
 
 @SuppressWarnings("ALL")
-@SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

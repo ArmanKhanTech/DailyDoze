@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
 import android.content.Context;
 
@@ -18,7 +18,9 @@ public class DatePickerPopup extends PickerPopup {
         confirm.setOnClickListener(view -> {
             if (listener != null) {
                 DateModel dateModel = new DateModel(picker.getDate());
-                listener.onDateSelected(picker, dateModel.getDate(), dateModel.getDay(), dateModel.getMonth(), dateModel.getYear());
+                listener.onDateSelected(
+                        picker, dateModel.getDate(), dateModel.getDay(), dateModel.getMonth(), dateModel.getYear()
+                );
             }
             dismiss();
         });

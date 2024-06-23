@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Activity.MeditationStats"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <ImageButton
         android:id="@+id/closeStats"

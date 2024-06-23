@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.PerformMeditationActivity"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <ImageView
         android:layout_width="match_parent"
@@ -39,8 +39,7 @@
                 android:layout_marginHorizontal="15dp"
                 android:background="@color/transparent"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/close_icon"
-                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+                app:srcCompat="@drawable/close_icon" />
 
         </LinearLayout>
 

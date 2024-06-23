@@ -41,7 +41,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/color_grey2" />
+        android:background="@android:color/darker_gray" />
 
     <LinearLayout
         android:id="@+id/popup_container"

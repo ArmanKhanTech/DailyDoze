@@ -24,7 +24,8 @@ import java.util.Objects;
 
 public class EachMealFragment extends Fragment {
     @SuppressLint("StaticFieldLeak")
-    private static CheckBox water_cb1, water_cb2, water_cb3, vinegar_cb1, vinegar_cb2, vinegar_cb3, neg_cb1, neg_cb2, neg_cb3, un_meal_cb1, un_meal_cb2,
+    private static CheckBox water_cb1, water_cb2, water_cb3, vinegar_cb1, vinegar_cb2,
+            vinegar_cb3, neg_cb1, neg_cb2, neg_cb3, un_meal_cb1, un_meal_cb2,
             un_meal_cb3, twe_min_cb1, twe_min_cb2, twe_min_cb3;
     private static TweaksDatabase db;
 

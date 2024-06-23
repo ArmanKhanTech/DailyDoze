@@ -1,6 +1,5 @@
 package com.android.dailydoze.Activity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
@@ -20,7 +19,6 @@ public class InfoActivity extends AppCompatActivity {
     private TextView txt, name, infoTitle;
     private Drawable drawable;
 
-    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker;
+package com.dailydoze.datepicker;
 
 import android.content.Context;
 import android.view.View;
@@ -7,8 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.android.dailydoze.CustomDatePicker.Interface.IPopupInterface;
-import com.android.dailydoze.R;
+import com.dailydoze.datepicker.Interface.IPopupInterface;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 @SuppressWarnings("ALL")

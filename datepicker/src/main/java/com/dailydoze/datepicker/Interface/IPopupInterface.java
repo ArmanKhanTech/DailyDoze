@@ -1,4 +1,4 @@
-package com.android.dailydoze.CustomDatePicker.Interface;
+package com.dailydoze.datepicker.Interface;
 
 import android.view.View;
 

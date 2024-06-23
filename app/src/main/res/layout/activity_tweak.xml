@@ -8,7 +8,7 @@
     android:fontFamily="sans-serif-condensed-medium"
     android:orientation="vertical"
     tools:context=".Activity.TweakActivity"
-    tools:ignore="HardcodedText,SpUsage,ContentDescription">
+    tools:ignore="HardcodedText,SpUsage,ContentDescription,SpeakableTextPresentCheck">
 
     <LinearLayout
         android:id="@+id/tweaks_layout"
@@ -19,72 +19,65 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp">
+            android:layout_marginVertical="10dp">
 
-            <LinearLayout
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:onClick="finish"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/back_button_black" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:orientation="horizontal">
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/back_button"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="21 Tweaks"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
 
-                <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="32dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:onClick="finish"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/back_button_black"
-                    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="21 Tweaks"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/count_tweak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/count_total"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/count_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/open_graph"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="/37"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/open_graph"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
                 android:layout_alignParentEnd="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/count_tweak"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="0"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="/37"
-                    android:textColor="@color/black"
-                    android:textSize="30dp" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="15dp"
-                    android:scaleType="centerCrop"
-                    android:clickable="true"
-                    android:onClick="gotoGraphTweaks"
-                    app:srcCompat="@drawable/graph_icon" />
-
-            </LinearLayout>
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:clickable="true"
+                android:onClick="gotoGraphTweaks"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/graph_icon" />
 
         </RelativeLayout>
 
