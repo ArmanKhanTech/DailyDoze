@@ -93,6 +93,9 @@ Follow the below instructions to get started.
   <li>
     <p>Java 8+</p>
   </li>
+   <li>
+    <p>Kotlin 1.9+</p>
+  </li>
 </ol>
 
 
