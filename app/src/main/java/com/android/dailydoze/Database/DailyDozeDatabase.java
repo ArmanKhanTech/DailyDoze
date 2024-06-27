@@ -77,7 +77,8 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     public void incData(String dataToUpdate, String dateToUpdate) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(dataToUpdate));
@@ -85,7 +86,8 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
         }
 
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate + " = " + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate +
+                " = " + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
         c.close();
     }
 
@@ -93,7 +95,8 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     public void decData(String dataToUpdate, String dateToUpdate) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(dataToUpdate));
@@ -101,7 +104,8 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
         }
 
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate + " = " + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate +
+                " = " + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
         c.close();
     }
 
@@ -139,7 +143,8 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     public int getData(String dataToGet, String dateToGet) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + dataToGet + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + dataToGet + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(dataToGet));
@@ -152,14 +157,16 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public void setSleep(String sleep, String date) {
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + SLEEP + " = " + sleep + " WHERE " + DATE + " = '" + date + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + SLEEP + " = " +
+                sleep + " WHERE " + DATE + " = '" + date + "'");
     }
 
     @SuppressLint("Range")
     public int getSleep(String date) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + SLEEP + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + SLEEP + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(SLEEP));
@@ -187,8 +194,10 @@ public class DailyDozeDatabase extends SQLiteOpenHelper {
     public int getCount(String dateToGet) {
         int sum = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + BEANS + "," + BERRIES + "," + GREENS + "," + OTHERVEGE + "," + OTHERFRUITS + "," + CRUCIVEGE + "," + FLAXSEEDS + "," + HERBS
-                + "," + NUTS + "," + GRAINS + "," + BEVE + "," + EXERCISE + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + BEANS + "," + BERRIES + "," + GREENS + "," +
+                OTHERVEGE + "," + OTHERFRUITS + "," + CRUCIVEGE + "," + FLAXSEEDS + "," + HERBS
+                + "," + NUTS + "," + GRAINS + "," + BEVE + "," + EXERCISE + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
 
         if (c.moveToFirst()) {
             String[] columnNames = c.getColumnNames();

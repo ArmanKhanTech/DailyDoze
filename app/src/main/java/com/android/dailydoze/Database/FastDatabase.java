@@ -40,7 +40,8 @@ public class FastDatabase extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public void changeDuration(String dataToUpdate, String dateToUpdate) {
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + DURATION + " = " + "'" + dataToUpdate + "'" + " WHERE " + DATE + " = '" + dateToUpdate + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + DURATION + " = " +
+                "'" + dataToUpdate + "'" + " WHERE " + DATE + " = '" + dateToUpdate + "'");
     }
 
     public boolean getDate(String date) {
@@ -79,7 +80,8 @@ public class FastDatabase extends SQLiteOpenHelper {
     public String getDuration(String date) {
         String dura = "";
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + DURATION + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + DURATION + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
 
         if (c.moveToFirst()) {
             dura = c.getString(c.getColumnIndex(DURATION));

@@ -107,7 +107,8 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     public void incData(String dataToUpdate, String dateToUpdate) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(dataToUpdate));
@@ -115,7 +116,8 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         }
 
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate + " = " + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate + " = "
+                + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
         c.close();
     }
 
@@ -123,7 +125,8 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     public void decData(String dataToUpdate, String dateToUpdate) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + dataToUpdate + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToUpdate + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(dataToUpdate));
@@ -131,7 +134,8 @@ public class TweaksDatabase extends SQLiteOpenHelper {
         }
 
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate + " = " + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + dataToUpdate + " = "
+                + i + " WHERE " + DATE + " = '" + dateToUpdate + "'");
         c.close();
     }
 
@@ -153,7 +157,8 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     public int getData(String dataToGet, String dateToGet) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + dataToGet + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + dataToGet + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(dataToGet));
@@ -181,9 +186,12 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     public int getCount(String dateToGet) {
         int sum = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + BLACK_CUMIN + "," + GARLIC + "," + GINGER + "," + YEAST + "," + CUMIN + "," + TEA + "," + HYDRATED + "," + DEFLOUR
-                + "," + FRONTLOAD + "," + TIMERESTRICT + "," + OPTIMIZE + "," + WEIGH + "," + INTENTIONS + "," + WATER + "," + VINEGAR + "," + NEG_CAL +
-                "," + UN_MEAL + "," + TWE_MIN + "," + FAST + "," + SLEEP + "," + EXP + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + BLACK_CUMIN + "," + GARLIC + "," + GINGER +
+                "," + YEAST + "," + CUMIN + "," + TEA + "," + HYDRATED + "," + DEFLOUR
+                + "," + FRONTLOAD + "," + TIMERESTRICT + "," + OPTIMIZE + "," + WEIGH + "," +
+                INTENTIONS + "," + WATER + "," + VINEGAR + "," + NEG_CAL +
+                "," + UN_MEAL + "," + TWE_MIN + "," + FAST + "," + SLEEP + "," + EXP +
+                " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + dateToGet + "'", null);
 
         if (c.moveToFirst()) {
             String[] columnNames = c.getColumnNames();
@@ -215,14 +223,16 @@ public class TweaksDatabase extends SQLiteOpenHelper {
 
     public void setWeight(String time, String date, String weight) {
         SQLiteDatabase db2 = this.getReadableDatabase();
-        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + time + " = " + weight + " WHERE " + DATE + " = '" + date + "'");
+        db2.execSQL("UPDATE " + TABLE_NAME + " SET " + time + " = " +
+                weight + " WHERE " + DATE + " = '" + date + "'");
     }
 
     @SuppressLint("Range")
     public int getWeightMorning(String date) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + WEIGHT_MORNING + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + WEIGHT_MORNING + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(WEIGHT_MORNING));
@@ -236,7 +246,8 @@ public class TweaksDatabase extends SQLiteOpenHelper {
     public int getWeightEvening(String date) {
         int i = 0;
         SQLiteDatabase db1 = this.getWritableDatabase();
-        Cursor c = db1.rawQuery("SELECT " + WEIGHT_EVENING + " FROM " + TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
+        Cursor c = db1.rawQuery("SELECT " + WEIGHT_EVENING + " FROM " +
+                TABLE_NAME + " WHERE " + DATE + " = '" + date + "'", null);
 
         if (c.moveToFirst()) {
             i = c.getInt(c.getColumnIndex(WEIGHT_EVENING));
