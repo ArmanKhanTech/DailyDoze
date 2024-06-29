@@ -380,27 +380,6 @@ Follow the below instructions to get started.
     <p>This feature uses Firebase Authentication.</p>
   </li>
 </ul>
-<br>
-
-
-
-## Roadmap
-
-- [x] Signup
-- [x] Login
-- [x] Daily Doze
-- [x] Info
-- [x] Menu
-- [x] 21 Tweaks
-- [x] Notifications
-- [x] Meditation
-- [x] Fast-Watch
-- [x] Animations
-- [x] Backup
-- [x] Calender
-- [x] FAQs
-
-See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a full list of proposed features (and known issues)
 
 
 
