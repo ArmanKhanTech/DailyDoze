@@ -380,7 +380,6 @@ Follow the below instructions to get started.
     <p>This feature uses Firebase Authentication.</p>
   </li>
 </ul>
-<br>
 
 
 
