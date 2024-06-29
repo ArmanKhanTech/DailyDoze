@@ -384,26 +384,6 @@ Follow the below instructions to get started.
 
 
 
-## Roadmap
-
-- [x] Signup
-- [x] Login
-- [x] Daily Doze
-- [x] Info
-- [x] Menu
-- [x] 21 Tweaks
-- [x] Notifications
-- [x] Meditation
-- [x] Fast-Watch
-- [x] Animations
-- [x] Backup
-- [x] Calender
-- [x] FAQs
-
-See the [open issues](https://github.com/ArmanKhanTech/DailyDoze/issues) for a full list of proposed features (and known issues)
-
-
-
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
