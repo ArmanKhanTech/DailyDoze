@@ -16,6 +16,7 @@
   <h3 align="center">DailyDoze</h3>
   <p align="center">Status: Completed</p>
   <p align="center">A checklist to help you live a healthy life & much more.</p>
+  
   <p align="center">
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
     <br />
