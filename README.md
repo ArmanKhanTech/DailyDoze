@@ -7,7 +7,6 @@
 
 
 
-<br />
 <div align="center">
   <a href="https://github.com/ArmanKhanTech/DailyDoze">
     <img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c6ee876a-0625-4699-afc1-2ac150b7f908" alt="Logo" width="80" height="80">
