@@ -6,7 +6,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
 <br />
 <div align="center">
   <a href="https://github.com/ArmanKhanTech/DailyDoze">
@@ -14,21 +13,18 @@
   </a>
 
   <h3 align="center">DailyDoze</h3>
-
   <p align="center">Status: Completed</p>
+  <p align="center">A checklist to help you live a healthy life & much more.</p>
   
   <p align="center">
-    A checklist to help you live a healthy life & much more.
-    <br />
     <a href="https://github.com/ArmanKhanTech/DailyDoze"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/ArmanKhanTech/DailyDoze/issues">Report a Bug</a>
     ·
     <a href="https://github.com/ArmanKhanTech/DailyDoze/issues">Request new Feature</a>
   </p>
 </div>
-
+<br />
 
 
 <details>
@@ -48,7 +44,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -60,7 +55,7 @@
 
 ## About the Project
 
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/916e3d39-50f9-4943-b470-25d08c9b9fb2" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/916e3d39-50f9-4943-b470-25d08c9b9fb2" alt="Screenshot" width="300" height="600">
 
 DailyDoze is simply a checklist to inspire you to include some of the healthiest foods in your diet. This health-focused app is designed to help you think about meal planning and how you can improve the nutrient density of your meals. It is an aspirational minimum that can be customized to meet your specific needs. Think of it as your food diary. Inspired by Dr Greger's How Not to Diet.
 
@@ -116,10 +111,10 @@ Follow the below instructions to get started.
 ## Usage
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f0522e5c-a061-43d3-b705-6ad24d772f0a" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/60f45eca-ddcc-423a-a5f3-a47f6333e123" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/66e981e7-f303-43a3-89e9-0fae37703344" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/f0522e5c-a061-43d3-b705-6ad24d772f0a" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/60f45eca-ddcc-423a-a5f3-a47f6333e123" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/13b11040-ba6a-4bde-988e-0e29a0e1d2ad" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/66e981e7-f303-43a3-89e9-0fae37703344" alt="Screenshot" width="300" height="600">
 </div>
 
 <h3>1. DailyDoze</h3>
@@ -152,8 +147,8 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/54643182-bfce-44da-b695-69f2e031321d" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/654c4ff5-6fcf-4695-8cee-16c13c565550" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/54643182-bfce-44da-b695-69f2e031321d" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/654c4ff5-6fcf-4695-8cee-16c13c565550" alt="Screenshot" width="300" height="600">
 </div>
 <h3>2. Menu</h3>
 <ul>
@@ -188,16 +183,16 @@ Follow the below instructions to get started.
     <p>About: Goto About.</p>
   </li>
   <li>
-    <p>Logout: Logout.</p>
+    <p>Screenshotut: Screenshotut.</p>
   </li>
 </ul>
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b4c894c4-65b8-4629-8f2e-f3570f1dcda1" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/9b357d28-256c-4da5-9b28-e5b10326ae7f" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00e1ff92-e1a0-4e26-8b62-f3e2ba9e6bad" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/74c1f32d-ac91-43fc-9b95-632eaa664da8" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/b4c894c4-65b8-4629-8f2e-f3570f1dcda1" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/9b357d28-256c-4da5-9b28-e5b10326ae7f" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00e1ff92-e1a0-4e26-8b62-f3e2ba9e6bad" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/74c1f32d-ac91-43fc-9b95-632eaa664da8" alt="Screenshot" width="300" height="600">
 </div>
 <h3>3. 21 Tweaks</h3>
 <ul>
@@ -238,10 +233,10 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/816db7d3-8d61-4dcd-a86c-009bc08e164e" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e5d7740f-3cba-462e-9820-e2ed565df5bb" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00f8f9c0-2e1d-4454-97d0-f182a5738a67" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7f92b4fc-9e9e-4376-aae4-79fc70b0a1e9" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/816db7d3-8d61-4dcd-a86c-009bc08e164e" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/e5d7740f-3cba-462e-9820-e2ed565df5bb" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/00f8f9c0-2e1d-4454-97d0-f182a5738a67" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/7f92b4fc-9e9e-4376-aae4-79fc70b0a1e9" alt="Screenshot" width="300" height="600">
 </div>
 <h3>4. Notifications</h3>
 <ul>
@@ -264,10 +259,10 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/bc909fdd-49ac-416d-ab5b-5a0f17203574" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1751a12b-b233-4a31-bbe9-8597afa73241" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/bc909fdd-49ac-416d-ab5b-5a0f17203574" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/0c157bdb-d194-41e8-92c1-ca484f42cb05" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/da8946f5-262f-44d7-9162-1b4f78b85ecf" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/1751a12b-b233-4a31-bbe9-8597afa73241" alt="Screenshot" width="300" height="600">
 </div>
 <h3>5. Meditation</h3>
 <ul>
@@ -290,10 +285,10 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/45eda09b-fe3d-4b9f-8af4-b6fd1fd17081" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/566f85b6-e08f-4f0e-b7ce-ca7436af53a8" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a326e538-c913-4168-9722-42824b1fba3f" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c017b209-caf2-4539-af3c-374313cbb492" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/45eda09b-fe3d-4b9f-8af4-b6fd1fd17081" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/566f85b6-e08f-4f0e-b7ce-ca7436af53a8" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/a326e538-c913-4168-9722-42824b1fba3f" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c017b209-caf2-4539-af3c-374313cbb492" alt="Screenshot" width="300" height="600">
 </div>
 <h3>6. Fast-Watch</h3>
 <ul>
@@ -316,8 +311,8 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/aaa0924c-70d2-4ca3-a8c8-81b3ab96ed1a" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/89e10d40-ddce-4bbc-b0df-8fe0a35dfea3" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/aaa0924c-70d2-4ca3-a8c8-81b3ab96ed1a" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/89e10d40-ddce-4bbc-b0df-8fe0a35dfea3" alt="Screenshot" width="300" height="600">
 </div>
 <h3>7. Backup</h3>
 <ul>
@@ -340,8 +335,8 @@ Follow the below instructions to get started.
 <br>
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/fbd15889-6e72-487d-b3d8-9cb111f0324e" alt="Logo" width="300" height="600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/53296e54-c127-4b0a-8a3c-f9924dfcb21d" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/fbd15889-6e72-487d-b3d8-9cb111f0324e" alt="Screenshot" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/53296e54-c127-4b0a-8a3c-f9924dfcb21d" alt="Screenshot" width="300" height="600">
 </div>
 <h3>8. Info</h3>
 <ul>
@@ -353,7 +348,7 @@ Follow the below instructions to get started.
 
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ed9bd03f-5343-48c4-8a38-8d2ab4664c57" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/ed9bd03f-5343-48c4-8a38-8d2ab4664c57" alt="Screenshot" width="300" height="600">
 </div>
 <h3>9. Calender</h3>
 <ul>
@@ -365,8 +360,8 @@ Follow the below instructions to get started.
 
 
 <div>
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c785451f-0c33-4ca0-b7b9-31e11a8c6ad6" alt="Logo" width="300" height=600">
-<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/44a71cad-caec-4766-adfe-4ae415370eca" alt="Logo" width="300" height="600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/c785451f-0c33-4ca0-b7b9-31e11a8c6ad6" alt="Screenshot" width="300" height=600">
+<img src="https://github.com/ArmanKhanTech/DailyDoze/assets/92728787/44a71cad-caec-4766-adfe-4ae415370eca" alt="Screenshot" width="300" height="600">
 </div>
 <h3>10 Login & Signup</h3>
 <ul>
@@ -431,15 +426,15 @@ Project Link - [https://github.com/ArmanKhanTech/DailyDoze](https://github.com/A
 [issues-url]: https://github.com/ArmanKhanTech/DailyDoze/issues
 [license-shield]: https://img.shields.io/github/license/ArmanKhanTech/DailyDoze.svg?style=for-the-badge
 [license-url]: https://github.com/ArmanKhanTech/DailyDoze/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&Screenshot=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/arman-khan-25b624205/
-[Android]: https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white
+[Android]: https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&Screenshot=android-studio&ScreenshotColor=white
 [Android-url]: https://developer.android.com/
-[Java]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
+[Java]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&Screenshot=openjdk&ScreenshotColor=white
 [Java-url]: https://www.java.com/
-[Gradle]: https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white
+[Gradle]: https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&Screenshot=Gradle&ScreenshotColor=white
 [Gradle-url]: https://gradle.org/
-[Firebase]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
+[Firebase]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&Screenshot=Firebase&ScreenshotColor=white
 [Firebase-url]: https://firebase.google.com/
-[Sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
+[Sqlite]: https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&Screenshot=sqlite&ScreenshotColor=white
 [Sqlite-url]: https://www.sqlite.org/
