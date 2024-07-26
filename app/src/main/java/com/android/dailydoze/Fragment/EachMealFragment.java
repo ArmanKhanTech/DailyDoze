@@ -1,4 +1,4 @@
-package com.android.dailydoze.Fragments;
+package com.android.dailydoze.Fragment;
 
 import static com.android.dailydoze.Activity.TweakActivity.getCurrentDate;
 import static com.android.dailydoze.Activity.TweakActivity.setCurrentDate;

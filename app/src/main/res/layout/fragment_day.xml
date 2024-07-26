@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:scrollbarThumbVertical="@color/customBlue"
-    tools:context=".Fragments.DayFragment"
+    tools:context=".Fragment.DayFragment"
     tools:ignore="HardcodedText,SpUsage,ContentDescription">
 
     <LinearLayout
@@ -37,7 +37,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -67,7 +67,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -81,8 +81,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text=" (¼ tsp)"
+                                android:text="¼ tsp"
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
@@ -91,7 +90,8 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
 
                             <ImageView
                                 android:id="@+id/cuminInfo"
@@ -133,7 +133,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -163,7 +163,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -177,9 +177,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:text="(¼ tsp)"
+                                android:text="¼ tsp"
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
@@ -188,7 +186,8 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
 
                             <ImageView
                                 android:id="@+id/garlicInfo"
@@ -230,7 +229,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -260,7 +259,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -274,9 +273,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:text="(1 tsp)"
+                                android:text="1 tsp"
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
@@ -285,7 +282,8 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
 
                             <ImageView
                                 android:id="@+id/gingerInfo"
@@ -327,7 +325,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -357,7 +355,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -371,9 +369,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:text="(2 tsp)"
+                                android:text="2 tsp"
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
@@ -382,7 +378,8 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
 
                             <ImageView
                                 android:id="@+id/yeastInfo"
@@ -424,7 +421,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -454,7 +451,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -468,9 +465,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:text="(½ tsp)"
+                                android:text="½ tsp"
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
@@ -479,7 +474,8 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
 
                             <ImageView
                                 android:id="@+id/cumin2Info"
@@ -529,7 +525,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -560,7 +556,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -574,9 +570,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:text="(3 cps)"
+                                android:text="3 cps"
                                 android:textColor="@color/white"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
@@ -585,7 +579,8 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
 
                             <ImageView
                                 android:id="@+id/greenInfo"

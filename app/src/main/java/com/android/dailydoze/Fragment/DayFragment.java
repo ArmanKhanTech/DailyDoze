@@ -1,4 +1,4 @@
-package com.android.dailydoze.Fragments;
+package com.android.dailydoze.Fragment;
 
 import static com.android.dailydoze.Activity.TweakActivity.getCurrentDate;
 import static com.android.dailydoze.Activity.TweakActivity.setCurrentDate;
@@ -387,6 +387,22 @@ public class DayFragment extends Fragment {
                 incValue("intentions");
             } else {
                 decValue("intentions");
+            }
+        });
+
+        weigh_cb1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                incValue("weigh");
+            } else {
+                decValue("weigh");
+            }
+        });
+
+        weigh_cb2.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                incValue("weigh");
+            } else {
+                decValue("weigh");
             }
         });
 

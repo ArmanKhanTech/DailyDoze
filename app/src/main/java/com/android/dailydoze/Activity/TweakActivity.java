@@ -23,9 +23,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.android.dailydoze.Adapter.ViewPagerAdapter;
 import com.android.dailydoze.Database.TweaksDatabase;
-import com.android.dailydoze.Fragments.DayFragment;
-import com.android.dailydoze.Fragments.EachMealFragment;
-import com.android.dailydoze.Fragments.NightFragment;
+import com.android.dailydoze.Fragment.DayFragment;
+import com.android.dailydoze.Fragment.EachMealFragment;
+import com.android.dailydoze.Fragment.NightFragment;
 import com.android.dailydoze.R;
 import com.android.dailydoze.Utility.CommonUtility;
 import com.google.android.material.tabs.TabLayout;
